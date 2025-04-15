@@ -26,10 +26,10 @@ My next purchase, hopefully the vocabulary approach changes.
 
 - [Arabic with Amina](https://www.youtube.com/@Arabicwithamina) – Very nice explanations, but rather detached, without context. Useful to get inspired to learn some particular words/phrases. But putting them in context and drilling is up to you.
 - [Learn Arabic with Maha](https://www.youtube.com/@LearnArabicwithMaha) – Palestinian phrases are really cool, she explains them really well and they are easy to recall. Very motivating. She lives in italy and I think she absorbed some of the italian culture, she's very expressive when explaining :wink:
-- [ArabicPod101 YouTube](https://www.youtube.com/@arabicpod101) – Audio-visual companion to the main site
+- [ArabicPod101](https://www.youtube.com/@arabicpod101) – Audio-visual companion to the main site
 
 ## :moneybag: Resources
-#### [Dr Bulbul's Arabic Blog](https://drbulbul.com/resources-for-learners-of-arabic/) Resources section
+- [Dr Bulbul's Arabic Blog](https://drbulbul.com/resources-for-learners-of-arabic/) Resources section
 
 ---
 # Chat GPT-Offered Resources
@@ -46,12 +46,6 @@ My next purchase, hopefully the vocabulary approach changes.
 - [Arabic Core 100 Word List – 101Languages](https://www.101languages.net/arabic/most-common-arabic-words/)
 - [Anki Decks for Arabic Vocabulary](https://ankiweb.net/shared/decks/arabic)
 
-## 🎓 Courses
-
-- [ArabicPod101](https://www.arabicpod101.com/)
-- [Al-Kitaab Series (Book + Audio)](https://alkitaabtextbook.com/)
-- [Bayyinah TV - Arabic with Nouman Ali Khan](https://www.bayyinahtv.com/)
-
 ## <img src="img/udemy.png" alt="Udemy Logo" width="50" style="vertical-align: middle;"/> Udemy Courses
 
 - [Arabic Language - Learn Arabic for Beginners](https://www.udemy.com/course/arabic-language/)
@@ -67,7 +61,6 @@ My next purchase, hopefully the vocabulary approach changes.
 ## 🎧 Podcasts & Listening
 
 - [ArabicPod101 Podcast](https://www.arabicpod101.com/index.php)
-- [Learn Arabic with Maha (YouTube)](https://www.youtube.com/user/LearnArabicwithMaha)
 - [LingQ – Arabic Listening Library](https://www.lingq.com/en/learn-arabic-online/)
 
 ## ✍️ Writing & Calligraphy
