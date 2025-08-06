@@ -1,1 +1,5 @@
 .idea/
+stories/**/*.aux
+stories/**/*.log
+stories/**/*.pdf
+stories/**/*.gz
