@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.4]{Charis SIL}
+\usepackage{geometry}
+\geometry{margin=1.5cm}
+\usepackage{array}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{setspace}
+
+% Color scheme
+\definecolor{mainbg}{HTML}{F9F9F9}
+\definecolor{sectionbg}{HTML}{E3F2FD}
+\definecolor{accent}{HTML}{1976D2}
+\definecolor{accent2}{HTML}{C2185B}
+\definecolor{tableheader}{HTML}{BBDEFB}
+
+% Section title format
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0em}{}
+\titleformat{\subsection}{\bfseries\color{accent2}}{}{0em}{}
+
+% Box styles
+\tcbset{
+  colframe=accent,
+  colback=white,
+  sharp corners,
+  boxrule=0.8pt,
+  arc=3pt,
+}
+
+\begin{document}
+
+% ===== TITLE =====
+\begin{center}
+    {\Huge \bfseries Juha and the Thief – Phrase Analysis}\\[4pt]
+    {\Large \textarabic{وبحث اللص عن شيء يسرقه فلم يجد, فرأى الخزانة ففتحها وإذا بجحا فيها}}\\[6pt]
+    \emph{From the Arabic short story “Juha and the Thief”}
+\end{center}
+
+% ===== PRONUNCIATION =====
+\begin{tcolorbox}[colback=sectionbg, colframe=accent, title=Phonetic Transcription]
+\begin{spacing}{1.2}
+wa-baḥatha al-liṣṣu ʿan shayʾin yasriquhu fa-lam yajid, fa-raʾā al-khizānah fa-fataḥahā wa-idhā bi-juḥā fīhā
+\end{spacing}
+\end{tcolorbox}
+
+% ===== SECTION 1: Word-by-word literal translation =====
+\section{Word-by-Word Literal Translation}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\arabicfont}m{3cm}|m{4.5cm}|m{7cm}|}
+\hline
+\rowcolor{tableheader} Arabic & Phonetics & Literal meaning \\
+\hline
+وبحث & wa-baḥatha & and searched \\
+اللص & al-liṣṣ & the thief \\
+عن & ʿan & about / for \\
+شيء & shayʾ & thing \\
+يسرقه & yasriquhu & steal it \\
+فلم & fa-lam & so not \\
+يجد & yajid & find \\
+فرأى & fa-raʾā & so he saw \\
+الخزانة & al-khizānah & the cupboard / wardrobe \\
+ففتحها & fa-fataḥahā & so he opened it \\
+وإذا & wa-idhā & and suddenly / behold \\
+بجحا & bi-juḥā & with Juha \\
+فيها & fīhā & inside it \\
+\hline
+\end{tabular}
+
+% ===== SECTION 2: Adapted translation =====
+\section{Adapted Translation}
+\begin{tcolorbox}[colback=sectionbg]
+The thief searched for something to steal but found nothing. Then he saw the cupboard, opened it, and there was Juha inside!
+\end{tcolorbox}
+
+% ===== SECTION 3: Word-by-word analysis =====
+\section{Word-by-Word Analysis}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|>{\arabicfont}m{2.5cm}|m{2.5cm}|m{3cm}|m{6cm}|}
+\hline
+\rowcolor{tableheader} Arabic & Root & Part of Speech & Grammar / Notes \\
+\hline
+وبحث & ب-ح-ث & Verb (past) & 3rd person masc. sing., connected with \textarabic{و} meaning “and” \\
+اللص & ل-ص-ص & Noun & Definite (with \textarabic{ال}), “thief” \\
+عن & --- & Prep. & Means “about/for” \\
+شيء & ش-ي-ء & Noun & “thing”; indefinite \\
+يسرقه & س-ر-ق & Verb (present) + pron. suffix & “he steals it” \\
+فلم & --- & Connector + negation & \textarabic{ف} = so, \textarabic{لم} = did not \\
+يجد & و-ج-د & Verb (present jussive) & “he find” (negated by \textarabic{لم}) \\
+فرأى & ر-أ-ي & Verb (past) & “so he saw” \\
+الخزانة & خ-ز-ن & Noun & “the cupboard”; definite \\
+ففتحها & ف-ت-ح & Verb (past) + pron. suffix & “so he opened it” \\
+وإذا & --- & Fixed phrase & “and suddenly” / “behold” \\
+بجحا & --- & Prep. + proper name & \textarabic{ب} = with, “Juha” \\
+فيها & --- & Prep. + pron. suffix & “inside it” \\
+\hline
+\end{tabular}
+
+% ===== SECTION 4: Full phrase analysis =====
+\section{Full Phrase Analysis}
+\begin{itemize}[noitemsep]
+    \item Sequence uses \textarabic{ف} connectors to show quick events.
+    \item \textarabic{وإذا} signals surprise.
+    \item Verbs alternate between past for narration and present (jussive) for negation.
+    \item The suffixes \textarabic{ـه} and \textarabic{ـها} replace separate pronouns.
+\end{itemize}
+
+% ===== SECTION 5: Similar phrases =====
+\section{Similar Phrases}
+\begin{itemize}
+    \item \textarabic{فلم يجد شيئاً} – So he didn’t find anything.
+    \item \textarabic{وإذا بالباب يفتح} – And suddenly the door opened.
+    \item \textarabic{بحثت عن كتابي فلم أجده} – I looked for my book but didn’t find it.
+\end{itemize}
+
+% ===== SECTION 6: Levantine Dialect Version =====
+\section{Levantine Dialect}
+\begin{tcolorbox}[colback=sectionbg]
+\textarabic{ودوّر الحرامي على شي يسرقو، وما لقى، فشاف الخزانة وفتحها، وإذَا بجحا جوّا}
+\end{tcolorbox}
+\textbf{Notes:}  
+\begin{itemize}
+    \item \textarabic{ودوّر} instead of \textarabic{وبحث} – more colloquial.  
+    \item \textarabic{ما لقى} instead of \textarabic{فلم يجد} – typical negation pattern.  
+    \item \textarabic{جوّا} instead of \textarabic{فيها}.  
+\end{itemize}
+
+% ===== SECTION 7: Extra Learning Notes =====
+\section{Extra Learning Notes}
+\begin{itemize}
+    \item The word \textarabic{اللص} always takes shadda on \textarabic{ص}.
+    \item \textarabic{وإذا} is a storytelling trigger for surprise.
+    \item In spoken Arabic, many suffix pronouns are shortened.
+\end{itemize}
+
+\end{document}
+

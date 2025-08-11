@@ -28,13 +28,17 @@ jobs:
 
     - name: Compile all PDFs
       run: |
+        rm -rf output
         mkdir -p output
         for texfile in $(find stories -name "*.tex"); do
           echo "Compiling $texfile..."
           subdir=$(dirname "$texfile")
-          outdir="output/$subdir"
-          mkdir -p "$outdir"
-          xelatex -output-directory="$outdir" "$texfile"
+          tmpdir=$(mktemp -d)
+          xelatex -output-directory="$tmpdir" "$texfile"
+          mkdir -p "output/$subdir"
+          # Copy only the PDF to output preserving folder structure
+          cp "$tmpdir/$(basename "${texfile%.tex}.pdf")" "output/$subdir/"
+          rm -rf "$tmpdir"
         done
 
     - name: Deploy to gh-pages
