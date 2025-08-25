@@ -1,0 +1,289 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,arabic]{babel}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[table]{xcolor} % for \rowcolor in tables
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\usepackage{arabtex}
+\usepackage{utf8}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\geometry{margin=1.5cm}
+\usepackage{tcolorbox}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Learning Poster}\\
+\large Juha and the Thief — Dialogue Analysis\\
+\normalsize \textarabic{فَخَافَ اللِّصُّ وَلَكِنَّهُ تَشَجَّعَ وَقَالَ: مَاذَا تَفْعَلُ هُنَا يَا شَيْخ؟}}
+\author{Teaching Material for Arabic Students}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Text Analysis}]
+\centering
+\textarabic{فخاف اللص ولكنه تشجع وقال: ماذا تفعل هنا يا شيخ؟}
+\\[0.5em]
+\textbf{Without Diacritics}
+\\[1em]
+\textarabic{فَخَافَ اللِّصُّ وَلَكِنَّهُ تَشَجَّعَ وَقَالَ: مَاذَا تَفْعَلُ هُنَا يَا شَيْخ؟}
+\\[0.5em]
+\textbf{With Full Diacritics}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{Word-by-Word English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor]
+\textbf{Literal:} So feared • the thief • and • but he • encouraged himself • and • said: • what • you do • here • oh • old man? \\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} The thief was afraid, but he gathered courage and said: "What are you doing here, old man?"
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{فَخَافَ} — \textbf{fa-xāfa} [fa-xaːfa]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & so he was afraid/feared \\
+\textbf{Root} & \textarabic{خ-و-ف} (x-w-f) \\
+\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
+\textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (so/then) prefix \\
+\textbf{Simple Form} & \textarabic{خَافَ} (he was afraid) [xaːfa] \\
+\textbf{Examples} & \textarabic{خَافَ مِنَ الظَّلَام} (he was afraid of the dark) [xaːfa mina ẓ-ẓalaːm], \textarabic{لَا تَخَف} (don't be afraid) [laː taxaf] \\
+\bottomrule
+\end{tabular}
+
+\textbf{Conjugation Examples:}
+\begin{multicols}{2}
+\small
+\textarabic{خِفْتُ} — I was afraid [xiftu] \\
+\textarabic{خِفْتَ} — you were afraid (m.) [xifta] \\
+\textarabic{خَافَتْ} — she was afraid [xaːfat] \\
+\textarabic{يَخَاف} — he fears (pres.) [yaxaːf] \\
+\textarabic{تَخَاف} — she fears (pres.) [taxaːf] \\
+\textarabic{خَوْف} — fear (noun) [xawf]
+\end{multicols}
+
+\subsection{\textarabic{اللِّصُّ} — \textbf{al-liṣṣu} [alˈliʂˈʂu]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the thief \\
+\textbf{Root} & \textarabic{ل-ص-ص} (l-ṣ-ṣ) \\
+\textbf{Pattern} & \textarabic{ال} + noun definite article + singular noun \\
+\textbf{Grammar} & Noun, definite, nominative case (subject of verb) \\
+\textbf{Examples} & \textarabic{اللِّصُّ هَرَبَ} (the thief escaped) [al-liṣṣu haraba], \textarabic{اللُّصُوص يَسْرِقُون} (the thieves steal) [al-luṣuːṣ yasriquːn] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{وَ} — \textbf{wa} [wa]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & and \\
+\textbf{Grammar} & Coordinating conjunction (attached to following word) \\
+\textbf{Examples} & \textarabic{أَكَلَ وَشَرِبَ} (he ate and drank) [ʔakala wa-ʃariba], \textarabic{قَامَ وَذَهَبَ} (he got up and left) [qaːma wa-ðahaba] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{لَكِنَّهُ} — \textbf{lakinnahu} [laːkinːahu]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & but he \\
+\textbf{Components} & \textarabic{لَكِنَّ} (but) + attached pronoun \textarabic{هُ} (he/him) \\
+\textbf{Grammar} & \textarabic{لَكِنَّ} is an exceptive particle that requires accusative case \\
+\textbf{Simple Form} & \textarabic{لَكِن} (but, however) [laːkin] \\
+\textbf{Examples} & \textarabic{لَكِنَّهَا ذَكِيَّة} (but she is smart) [laːkinnahaː ðakiyya], \textarabic{لَكِنَّنِي أُحِبُّك} (but I love you) [laːkinnaniiː ʔuħibbuk] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{تَشَجَّعَ} — \textbf{taʃajjaʕa} [taʃaˈdʒːaʕa]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & he encouraged himself, he gathered courage \\
+\textbf{Root} & \textarabic{ش-ج-ع} (ʃ-j-ʕ) \\
+\textbf{Pattern} & Form V \textarabic{تَفَعَّلَ} (tafaʕʕala) — reflexive/intensive \\
+\textbf{Grammar} & Past tense, 3rd person masculine singular \\
+\textbf{Simple Forms} & \textarabic{شَجَعَ} (he encouraged) [ʃajaʕa], \textarabic{شُجَاع} (brave, noun) [ʃujaːʕ] \\
+\textbf{Examples} & \textarabic{تَشَجَّعْتُ وَقُلْتُ الحَقِيقَة} (I gathered courage and told the truth) [taʃajjaʕtu wa-qultu l-ħaqiiqa] \\
+\bottomrule
+\end{tabular}
+
+\textbf{Form V Conjugation:}
+\begin{multicols}{2}
+\small
+\textarabic{تَشَجَّعْتُ} — I gathered courage [taʃajjaʕtu] \\
+\textarabic{تَشَجَّعْتَ} — you gathered courage (m.) [taʃajjaʕta] \\
+\textarabic{تَشَجَّعَتْ} — she gathered courage [taʃajjaʕat] \\
+\textarabic{يَتَشَجَّع} — he gathers courage (pres.) [yataʃajjaʕ] \\
+\textarabic{تَتَشَجَّع} — she gathers courage (pres.) [tataʃajjaʕ]
+\end{multicols}
+
+\subsection{\textarabic{قَالَ} — \textbf{qaːla} [qaːla]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & he said \\
+\textbf{Root} & \textarabic{ق-و-ل} (q-w-l) \\
+\textbf{Pattern} & Form I, past tense, 3rd person masculine singular \\
+\textbf{Examples} & \textarabic{قَالَ الحَقِيقَة} (he told the truth) [qaːla l-ħaqiiqa], \textarabic{مَا قَالَ شَيْئًا} (he didn't say anything) [maː qaːla ʃayʔan] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{مَاذَا} — \textbf{maːðaː} [maːðaː]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & what \\
+\textbf{Components} & \textarabic{مَا} (what) + \textarabic{ذَا} (this/that) \\
+\textbf{Grammar} & Interrogative pronoun \\
+\textbf{Examples} & \textarabic{مَاذَا تُرِيد؟} (what do you want?) [maːðaː turiːd?], \textarabic{مَاذَا حَدَث؟} (what happened?) [maːðaː ħadaða?] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{تَفْعَلُ} — \textbf{tafʕalu} [tafʕalu]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & you do \\
+\textbf{Root} & \textarabic{ف-ع-ل} (f-ʕ-l) \\
+\textbf{Pattern} & Form I, present tense, 2nd person masculine singular \\
+\textbf{Grammar} & Present tense verb in indicative mood \\
+\textbf{Simple Form} & \textarabic{فَعَلَ} (he did) [faʕala] \\
+\textbf{Examples} & \textarabic{مَاذَا فَعَلْت؟} (what did you do?) [maːðaː faʕalt?], \textarabic{يَفْعَل الخَيْر} (he does good) [yafʕal al-xayr] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{هُنَا} — \textbf{hunaː} [hunaː]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & here \\
+\textbf{Grammar} & Adverb of place \\
+\textbf{Examples} & \textarabic{تَعَالَ إِلَى هُنَا} (come here) [taʕaːl ʔilaː hunaː], \textarabic{أَسْكُن هُنَا} (I live here) [ʔaskun hunaː] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{يَا} — \textbf{yaː} [jaː]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & oh (vocative particle) \\
+\textbf{Grammar} & Vocative particle used for calling/addressing \\
+\textbf{Examples} & \textarabic{يَا أُمِّي} (oh my mother) [jaː ʔummii], \textarabic{يَا صَدِيقِي} (oh my friend) [jaː ṣadiiqii] \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{شَيْخ} — \textbf{ʃayx} [ʃajx]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & old man, elder, sheikh \\
+\textbf{Root} & \textarabic{ش-ي-خ} (ʃ-y-x) \\
+\textbf{Grammar} & Masculine noun, vocative case (after \textarabic{يَا}) \\
+\textbf{Examples} & \textarabic{الشَّيْخ حَكِيم} (the old man is wise) [aʃ-ʃayx ħakiim], \textarabic{شُيُوخ القَرْيَة} (the elders of the village) [ʃuyuːx al-qarya] \\
+\bottomrule
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor]
+\textbf{Grammatical Structure:}\\
+Sequential connector + past verb + subject + conjunction + exceptive particle with pronoun + reflexive past verb + conjunction + past verb + colon + interrogative + present verb + adverb + vocative + noun \\
+\\
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item The prefix \textarabic{فَ} connects this action to the previous narrative sequence
+\item \textarabic{لَكِنَّهُ} combines the exceptive particle \textarabic{لَكِنَّ} with attached pronoun \textarabic{هُ}
+\item Form V verb \textarabic{تَشَجَّعَ} indicates reflexive action (he encouraged himself)
+\item The colon (:) introduces direct speech in Arabic writing
+\item \textarabic{مَاذَا تَفْعَل} is a standard interrogative structure (what + you do)
+\item \textarabic{يَا شَيْخ} shows vocative addressing, common in Arabic dialogue
+\item The phrase shows emotional progression: fear → courage → confrontation
+\end{itemize}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{فَخَافَ الوَلَد وَ لَكِنَّهُ تَشَجَّعَ وَ سَأَلَ: أَيْنَ أُمِّي؟}\\
+The boy was afraid, but he gathered courage and asked: "Where is my mother?" [fa-xaːfa l-walad wa laːkinnahu taʃajjaʕa wa saʔal: ʔayna ʔummii?]
+
+\item \textarabic{فَتَرَدَّدَت البِنْت وَ لَكِنَّهَا تَشَجَّعَت وَ قَالَت: مَن أَنْت؟}\\
+The girl hesitated, but she gathered courage and said: "Who are you?" [fa-taraddadat al-bint wa laːkinnahaː taʃajjaʕat wa qaːlat: man ʔant?]
+
+\item \textarabic{فَصَمَتَ الرَّجُل وَ لَكِنَّهُ تَكَلَّمَ وَ سَأَل: مَاذَا تُرِيد مِنِّي؟}\\
+The man was silent, but he spoke and asked: "What do you want from me?" [fa-ṣamata r-rajul wa laːkinnahu takallam wa saʔal: maːðaː turiid minnii?]
+
+\item \textarabic{فَتَعِبَ العَامِل وَ لَكِنَّهُ اسْتَمَرَّ وَ قَال: سَأُكْمِل العَمَل}\\
+The worker was tired, but he continued and said: "I will complete the work." [fa-taʕiba l-ʕaːmil wa laːkinnahu istamarr wa qaːl: saʔukmil al-ʕamal]
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shaami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version}]
+\textarabic{فخاف اللص بس تشجع وقال: شو عم تعمل هون يا عم؟}\\
+\textbf{Phonetic:} [fa-xaːf il-liṣṣ bass tʃajjaʕ w-qaːl: ʃuː ʕam taʕmil hoːn yaː ʕamm?]\\
+\textbf{Translation:} The thief was afraid, but he gathered courage and said: "What are you doing here, man?"
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{لَكِن} → \textarabic{بس} (bass) — "but" becomes simpler
+\item \textarabic{مَاذَا} → \textarabic{شو} (ʃuː) — "what" is simplified
+\item \textarabic{تَفْعَل} → \textarabic{عم تعمل} (ʕam taʕmil) — present continuous with \textarabic{عم}
+\item \textarabic{هُنَا} → \textarabic{هون} (hoːn) — "here" with different vowel
+\item \textarabic{شَيْخ} → \textarabic{عم} (ʕamm) — informal address for older men
+\item Definite article: \textarabic{ال} → \textarabic{ال} (often pronounced as \textit{il-})
+\end{itemize}
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context}]
+\textbf{Character Development:} This phrase shows the thief's internal conflict and growing boldness. The progression from fear to courage to confrontation is typical of Arabic storytelling.
+
+\textbf{Politeness Markers:} Even though confronting an intruder, the thief uses \textarabic{يَا شَيْخ} (respectful address), showing Arabic cultural emphasis on politeness even in tense situations.
+
+\textbf{Dialogue Markers:} The colon (:) and the interrogative structure create dramatic tension, common in Juha stories.
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+\begin{enumerate}
+\item \textbf{Emotional Arc:} Remember \textit{Fear → Courage → Action} (\textarabic{خَوْف → شَجَاعَة → عَمَل})
+\item \textbf{Conjunction Pattern:} \textarabic{فَ...وَ...وَ} creates narrative flow
+\item \textbf{Form V Pattern:} \textarabic{تَشَجَّعَ} follows the pattern \textarabic{تَفَعَّلَ} for reflexive actions
+\item \textbf{Question Structure:} \textarabic{مَاذَا + present verb} is the standard "what are you doing" pattern
+\end{enumerate}
+
+\subsection{Related Vocabulary Family}
+\begin{multicols}{2}
+\textbf{Fear family:}\\
+\textarabic{خَوْف} — fear [xawf]\\
+\textarabic{خَائِف} — afraid [xaːʔif]\\
+\textarabic{مُخِيف} — scary [muxiif]\\
+\textarabic{تَخْوِيف} — intimidation [taxwiif]\\
+
+\textbf{Courage family:}\\
+\textarabic{شَجَاعَة} — courage [ʃajaːʕa]\\
+\textarabic{شُجَاع} — brave [ʃujaːʕ]\\
+\textarabic{تَشْجِيع} — encouragement [taʃjiiʕ]\\
+\textarabic{مُشَجِّع} — encouraging [muʃajjiʕ]
+\end{multicols}
+
+\end{document}
