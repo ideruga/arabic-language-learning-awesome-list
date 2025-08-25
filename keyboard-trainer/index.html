@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arabic Typing Trainer — Neon Prototype</title>
+  <style>
+    /* --- Theme ------------------------------------------------------------ */
+    :root{
+      --bg:#0a0b12;            /* deep space */
+      --panel:#0f1220;
+      --text:#d9e2ff;          /* soft neon ink */
+      --muted:#9fb1ff;
+      --accent:#68f0ff;        /* cyan glow */
+      --accent-2:#b06bff;      /* purple glow */
+      --ok:#23d18b;            /* green */
+      --bad:#ff4d6d;           /* pink-red */
+      --key:#15182a;
+      --key-edge:#20263d;
+      --radius:18px;
+      --shadow:0 0 12px rgba(104,240,255,.35), 0 0 24px rgba(176,107,255,.25);
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin:0; padding:18px; color:var(--text);
+      background: radial-gradient(1200px 600px at 70% -20%, rgba(176,107,255,.12), transparent),
+                  radial-gradient(800px 600px at -10% 120%, rgba(104,240,255,.10), transparent),
+                  var(--bg);
+      font-family: "Fira Code", Consolas, "Courier New", monospace;
+      display:grid; grid-template-rows:auto auto 1fr auto; gap:14px;
+    }
+
+    h1{margin:0; text-shadow:0 0 12px rgba(176,107,255,.45)}
+
+    .bar{
+      display:flex; gap:12px; align-items:center; flex-wrap:wrap;
+      background: linear-gradient(180deg, rgba(176,107,255,.07), rgba(104,240,255,.05));
+      border:1px solid rgba(175, 180, 255, .18);
+      border-radius:var(--radius);
+      padding:12px 14px; box-shadow:var(--shadow);
+    }
+    .bar label{font-size:14px; color:var(--muted)}
+    .bar select, .bar button{
+      background:var(--panel); color:var(--text);
+      border:1px solid var(--key-edge); border-radius:12px;
+      padding:8px 12px; cursor:pointer;
+      transition: box-shadow .15s ease, transform .06s ease;
+    }
+    .bar button:hover, .bar select:hover{ box-shadow:0 0 0 2px rgba(104,240,255,.25) }
+    .bar button:active{ transform: translateY(1px) }
+
+    .console{
+      display:grid; gap:10px;
+      background: linear-gradient(180deg, rgba(13,16,30,.8), rgba(13,16,30,.6));
+      border:1px solid rgba(175, 180, 255, .12);
+      border-radius:var(--radius);
+      padding:16px; box-shadow:var(--shadow);
+    }
+
+    .target{
+      font-size: clamp(22px, 4.3vw, 36px);
+      line-height: 1.8; direction: rtl;
+      background: var(--panel);
+      border: 1px dashed rgba(104,240,255,.25);
+      padding: 16px; border-radius: 12px; min-height: 72px;
+      word-wrap: break-word;
+    }
+    .cursor{ position:relative; display:inline-block; min-width:1ch; border-bottom:2px solid var(--accent); box-shadow:0 2px 12px rgba(104,240,255,.5); animation:pulse 1.2s ease-in-out infinite; }
+    @keyframes pulse{0%,100%{opacity:.7}50%{opacity:1}}
+
+    .progress { height: 10px; width:100%; background:#0c0f18; border-radius:8px; border:1px solid rgba(104,240,255,.18); overflow:hidden }
+    .progress > div{ height:100%; width:0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+
+    .stats{ display:flex; gap:14px; flex-wrap:wrap; font-size:14px }
+    .pill{ background: rgba(104,240,255,.08); padding:6px 10px; border:1px solid rgba(104,240,255,.22); border-radius:999px }
+
+    .kbd { display:grid; gap:10px; }
+    .row { display:grid; grid-auto-flow:column; gap:8px; justify-content:center; }
+    .key{
+      user-select:none; min-width:38px; height:46px;
+      padding:4px 10px; display:flex; align-items:center; justify-content:center;
+      background: radial-gradient(80% 140% at 30% 20%, rgba(176,107,255,.15), transparent), var(--key);
+      border:1px solid var(--key-edge); border-radius:12px; position:relative;
+      box-shadow: inset 0 0 10px rgba(0,0,0,.25);
+      transition: transform .05s ease, box-shadow .15s ease, border-color .15s ease, background .2s ease;
+      font-size:18px;
+    }
+    .key.glow { box-shadow: 0 0 12px rgba(104,240,255,.45), inset 0 0 10px rgba(104,240,255,.1); border-color: rgba(104,240,255,.55); }
+    .key.press { transform: translateY(2px); }
+    .key.ok { background: radial-gradient(80% 120% at 50% 10%, rgba(35,209,139,.28), transparent), var(--key); border-color: rgba(35,209,139,.65); box-shadow: 0 0 12px rgba(35,209,139,.45); }
+    .key.bad { background: radial-gradient(80% 120% at 50% 10%, rgba(255,77,109,.25), transparent), var(--key); border-color: rgba(255,77,109,.6); box-shadow: 0 0 12px rgba(255,77,109,.45); }
+
+    .footer{opacity:.7; font-size:12px; text-align:center}
+
+    /* Progressive Letter Pair Selector */
+    .pair-selector {
+      display: grid; gap: 8px; background: var(--panel);
+      border: 1px solid var(--key-edge); border-radius: 12px;
+      padding: 12px; margin: 8px 0;
+    }
+    .pair-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 12px; border-radius: 8px; cursor: pointer;
+      background: rgba(104,240,255,.05);
+      border: 1px solid rgba(104,240,255,.15);
+      transition: all .2s ease;
+    }
+    .pair-item:hover, .pair-item.active {
+      background: rgba(104,240,255,.12);
+      border-color: rgba(104,240,255,.35);
+      box-shadow: 0 0 8px rgba(104,240,255,.25);
+    }
+    .pair-item.selected {
+      background: rgba(104,240,255,.18);
+      border-color: rgba(104,240,255,.55);
+      box-shadow: 0 0 12px rgba(104,240,255,.35);
+    }
+    .pair-name {
+      font-size: 18px; font-weight: bold;
+      color: var(--text); direction: rtl;
+    }
+    .pair-desc {
+      font-size: 12px; color: var(--muted);
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <h1>Arabic Typing Trainer — Prototype</h1>
+
+  <!-- Controls / Menus -->
+  <div class="bar" role="toolbar" aria-label="controls">
+    <label> Mode
+      <select id="mode">
+        <option value="letters">Letters</option>
+        <option value="words">Words</option>
+        <option value="texts">Texts</option>
+      </select>
+    </label>
+    <label> Lesson
+      <select id="lesson"></select>
+      <div id="pairSelector" class="pair-selector" style="display:none;"></div>
+    </label>
+    <label> Length
+      <select id="length">
+        <option value="20">20</option>
+        <option value="40" selected>40</option>
+        <option value="80">80</option>
+      </select>
+    </label>
+    <button id="startBtn">Start</button>
+    <button id="pauseBtn">Pause</button>
+    <button id="resetBtn">Reset</button>
+    <span class="pill">English keys → Arabic output (no OS switch)</span>
+  </div>
+
+  <!-- Console / Exercise -->
+  <div class="console">
+    <div id="textDisplay" class="target" dir="rtl">Press "Start" to begin.</div>
+    <div class="progress"><div id="progressFill"></div></div>
+  </div>
+
+  <!-- Virtual Keyboard -->
+  <div class="console">
+    <div id="keyboard" class="kbd"></div>
+    <div class="pill" style="margin-top:8px; width:max-content">Key preview glows for the next character</div>
+  </div>
+
+  <!-- Stats -->
+  <div class="console">
+    <div class="stats">
+      <div class="pill">Accuracy: <span id="acc">0%</span></div>
+      <div class="pill">WPM: <span id="wpm">0</span></div>
+      <div class="pill">Hits: <span id="hits">0</span></div>
+      <div class="pill">Misses: <span id="miss">0</span></div>
+      <div class="pill">Time: <span id="timer">0.0s</span></div>
+    </div>
+  </div>
+
+  <footer class="footer">Neon UI • Maintainable JS • Extensible lessons (letters → words → texts)</footer>
+
+  <script>
+  // ======================================================================
+  //  Arabic Typing Trainer — Full Prototype (Menus + Stats + Key Preview)
+  //  • English keyboard → Arabic mapping (no OS language switch needed)
+  //  • Neon virtual keyboard with correctness glow & next-letter preview
+  //  • Modes: letters / words / texts (sample data for words/texts)
+  //  • Clean state & rendering logic, easy to extend
+  // ======================================================================
+
+  // Visual Arabic keyboard rows (for highlighting only)
+  const ARABIC_KEYBOARD_ROWS = [
+    ["ض","ص","ث","ق","ف","غ","ع","ه","خ","ح","ج","د"],
+    ["ش","س","ي","ب","ل","ا","ت","ن","م","ك","ط"],
+    ["ئ","ء","ؤ","ر","لا","ى","ة","و","ز","ظ"]
+  ];
+
+  // Mapping from EN keys to Arabic glyphs
+  const KEYMAP = {
+    'q':'ض','w':'ص','e':'ث','r':'ق','t':'ف','y':'غ','u':'ع','i':'ه','o':'خ','p':'ح','[':'ج',
+    'a':'ش','s':'س','d':'ي','f':'ب','g':'ل','h':'ا','j':'ت','k':'ن','l':'م',';':'ك','\'':'ط',
+    'z':'ئ','x':'ء','c':'ؤ','v':'ر','b':'لا','n':'ى','m':'ة',',':'و','.':'ز','/':'ظ','`':'د','-':'−','=':'=' , ' ':' '
+  };
+
+  // Progressive Letter Pairs System (based on finger positioning)
+  const LETTER_PAIRS = [
+    { name: 'ت-ن', chars: ['ت', 'ن'], fingers: 'Index fingers (home row)' },
+    { name: 'ب-م', chars: ['ب', 'م'], fingers: 'Index fingers (lower row)' },
+    { name: 'ل-ك', chars: ['ل', 'ك'], fingers: 'Index fingers (upper row)' },
+    { name: 'ا-ي', chars: ['ا', 'ي'], fingers: 'Index fingers (extended)' },
+    { name: 'ش-س', chars: ['ش', 'س'], fingers: 'Middle fingers' },
+    { name: 'ف-ق', chars: ['ف', 'ق'], fingers: 'Ring fingers' },
+    { name: 'غ-ع', chars: ['غ', 'ع'], fingers: 'Pinky fingers' },
+    { name: 'ه-خ', chars: ['ه', 'خ'], fingers: 'Extended reach' },
+    { name: 'ح-ج', chars: ['ح', 'ج'], fingers: 'Far reach' },
+    { name: 'د-ط', chars: ['د', 'ط'], fingers: 'Special keys' }
+  ];
+
+  // Legacy lessons (kept for compatibility)
+  const LETTER_LESSONS = [
+    { id:'L1A', name:'Index Right (ت ب ل ا)', chars:[...'تبلا'] },
+    { id:'L1B', name:'Index Left (ش س ي)', chars:[...'شسي'] },
+    { id:'L1C', name:'Both Index Mix', chars:[...'تبلاشسي'] },
+    { id:'L1D', name:'Middle/Ring/Pinky Mix', chars:[...'نممكطددجحخهعغفق'] },
+    { id:'L1E', name:'All Core Letters', chars: uniqueChars(ARABIC_KEYBOARD_ROWS.flat().join('')) }
+  ];
+
+  const WORD_BANK = [
+    'باب','بيت','ماء','نور','قمر','شمس','كتاب','مدرسة','طريق','قلب','سهل','وردة','سمك','قلم','وقت'
+  ];
+
+  const TEXT_BANK = [
+    'خَرَجَ جُحَا لَيْلًا فَسَمِعَ صَوْتًا، فَقَالَ: مَنْ هُنَاكَ؟ فَقَالَ اللِّصُّ: أَنَا الرِّيحُ. فَقَالَ جُحَا: سَوْفَ أُغْلِقُ الْبَابَ قَبْلَ أَنْ تَدْخُلَ!'
+  ];
+
+  // --- DOM
+  const els = {
+    keyboard: document.getElementById('keyboard'),
+    textDisplay: document.getElementById('textDisplay'),
+    progressFill: document.getElementById('progressFill'),
+    acc: document.getElementById('acc'),
+    wpm: document.getElementById('wpm'),
+    hits: document.getElementById('hits'),
+    miss: document.getElementById('miss'),
+    timer: document.getElementById('timer'),
+    mode: document.getElementById('mode'),
+    lesson: document.getElementById('lesson'),
+    pairSelector: document.getElementById('pairSelector'),
+    length: document.getElementById('length'),
+    startBtn: document.getElementById('startBtn'),
+    pauseBtn: document.getElementById('pauseBtn'),
+    resetBtn: document.getElementById('resetBtn'),
+  };
+
+  // --- State
+  const state = {
+    mode: 'letters',
+    lesson: LETTER_LESSONS[0],
+    selectedPairIndex: 0, // For progressive pair selection
+    sequence: '',
+    index: 0,
+    hits: 0,
+    miss: 0,
+    startedAt: null,
+    pausedAt: null,
+    running: false,
+    keyIndex: new Map(),
+    ticker: null,
+  };
+
+  // --- Init
+  renderKeyboard();
+  populateLessons();
+  bindControls();
+  resetSession();
+
+  function renderKeyboard(){
+    els.keyboard.innerHTML = '';
+    state.keyIndex.clear();
+    ARABIC_KEYBOARD_ROWS.forEach(rowChars => {
+      const row = document.createElement('div');
+      row.className = 'row';
+      rowChars.forEach(ch => {
+        const key = document.createElement('div');
+        key.className = 'key';
+        key.dataset.char = ch;
+        key.innerHTML = `<span class="label">${escapeHtml(ch)}</span>`;
+        row.appendChild(key);
+        state.keyIndex.set(ch, key);
+      });
+      els.keyboard.appendChild(row);
+    });
+  }
+
+  function populateLessons(){
+    els.lesson.innerHTML = '';
+    const list = (state.mode === 'letters') ? LETTER_LESSONS : [];
+    if(state.mode === 'letters'){
+      list.forEach(ls => addOption(els.lesson, ls.id, ls.name));
+    } else if(state.mode === 'words'){
+      addOption(els.lesson, 'W1', 'Basic Words');
+    } else if(state.mode === 'texts'){
+      addOption(els.lesson, 'T1', 'Juha — Short Excerpt');
+    }
+    // select first
+    els.lesson.selectedIndex = 0;
+    if(state.mode === 'letters') state.lesson = LETTER_LESSONS[0];
+  }
+
+  function addOption(sel, value, label){
+    const opt = document.createElement('option');
+    opt.value = value; opt.textContent = label; sel.appendChild(opt);
+  }
+
+  function bindControls(){
+    els.mode.addEventListener('change', () => {
+      state.mode = els.mode.value;
+      populateLessons();
+      resetSession();
+    });
+
+    els.lesson.addEventListener('change', () => {
+      if(state.mode === 'letters'){
+        const id = els.lesson.value;
+        state.lesson = LETTER_LESSONS.find(l=>l.id===id) || LETTER_LESSONS[0];
+      }
+      resetSession();
+    });
+
+    els.length.addEventListener('change', () => resetSession());
+
+    els.startBtn.addEventListener('click', startDrill);
+    els.pauseBtn.addEventListener('click', togglePause);
+    els.resetBtn.addEventListener('click', resetSession);
+
+    window.addEventListener('keydown', onKeyDown);
+  }
+
+  // --- Session control
+  function resetSession(){
+    state.sequence = '';
+    state.index = 0;
+    state.hits = 0;
+    state.miss = 0;
+    state.startedAt = null;
+    state.pausedAt = null;
+    state.running = false;
+    stopTicker();
+    updateStats();
+    renderSequencePlaceholder();
+    updateProgress();
+    clearKeyFeedback();
+  }
+
+  function startDrill(){
+    const len = parseInt(els.length.value, 10);
+    if(state.mode === 'letters'){
+      state.sequence = createLettersDrill(state.lesson.chars, len);
+    } else if(state.mode === 'words'){
+      state.sequence = createWordsDrill(WORD_BANK, Math.max(6, Math.floor(len/3)));
+    } else {
+      state.sequence = pickText(TEXT_BANK);
+    }
+
+    state.index = 0;
+    state.hits = 0;
+    state.miss = 0;
+    state.startedAt = performance.now();
+    state.pausedAt = null;
+    state.running = true;
+    startTicker();
+    renderSequence();
+    updateProgress();
+    previewNextKey();
+  }
+
+  function togglePause(){
+    if(!state.running && state.startedAt){
+      // resume
+      state.running = true;
+      if(state.pausedAt){
+        const pausedMs = performance.now() - state.pausedAt;
+        state.startedAt += pausedMs; // shift start so elapsed excludes pause
+      }
+      startTicker();
+      previewNextKey();
+      return;
+    }
+    if(state.running){
+      state.running = false;
+      state.pausedAt = performance.now();
+      stopTicker();
+      clearPreviews();
+    }
+  }
+
+  function startTicker(){ stopTicker(); state.ticker = setInterval(updateStats, 120); }
+  function stopTicker(){ if(state.ticker){ clearInterval(state.ticker); state.ticker = null; } }
+
+  // --- Drill Generators
+  function createLettersDrill(charset, length){
+    const out = [];
+    for(let i=0;i<length;i++){
+      if (i>0 && i%7===0) { out.push(' '); continue; }
+      out.push( pick(charset) );
+    }
+    return out.join('');
+  }
+  function createWordsDrill(words, count){
+    const chosen = [];
+    for(let i=0;i<count;i++) chosen.push(pick(words));
+    return chosen.join(' ');
+  }
+  function pickText(texts){ return pick(texts); }
+  function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+  // --- Rendering
+  function renderSequence(){
+    const s = state.sequence; const i = state.index;
+    const before = escapeHtml(s.slice(0,i));
+    const cur = s[i] ? escapeHtml(s[i]) : '';
+    const after = escapeHtml(s.slice(i+1));
+    els.textDisplay.innerHTML = `${before}<span class="cursor">${cur}</span>${after}`;
+  }
+  function renderSequencePlaceholder(){ els.textDisplay.textContent = 'Press "Start" to begin.'; }
+
+  function updateProgress(){
+    const total = Math.max(state.sequence.length, 1);
+    const pct = (state.index / total) * 100;
+    els.progressFill.style.width = pct + '%';
+  }
+
+  function updateStats(){
+    const total = state.hits + state.miss;
+    const acc = total ? Math.round((state.hits/total)*100) : 0;
+    els.acc.textContent = acc + '%';
+
+    const elapsedMs = state.startedAt ? (performance.now() - state.startedAt) : 0;
+    const elapsedMin = Math.max(elapsedMs/60000, 1/60000);
+    const wpm = Math.round(((state.hits)/5) / elapsedMin);
+    els.wpm.textContent = String(wpm);
+
+    els.hits.textContent = String(state.hits);
+    els.miss.textContent = String(state.miss);
+    els.timer.textContent = (elapsedMs/1000).toFixed(1) + 's';
+  }
+
+  // --- Input Handling
+  function onKeyDown(ev){
+    if(!state.running) return;
+
+    const key = (ev.key === ' ') ? ' ' : ev.key; // allow space
+    const mapped = KEYMAP[key];
+
+    // Backspace: optional stepping back
+    if(ev.key === 'Backspace'){
+      if(state.index>0) state.index--;
+      renderSequence(); updateProgress(); previewNextKey();
+      return;
+    }
+
+    // Ignore if not mapped and not space
+    if(mapped === undefined && key !== ' ') return;
+
+    const expected = state.sequence[state.index];
+    const inputChar = (key === ' ') ? ' ' : mapped;
+
+    if(inputChar === expected){
+      state.hits++;
+      flashKey(inputChar, true);
+      state.index++;
+      renderSequence(); updateProgress();
+      if(state.index >= state.sequence.length){ finish(); return; }
+      previewNextKey();
+    } else {
+      state.miss++;
+      flashKey(inputChar, false);
+      // softly hint the expected key
+      hintExpected(expected);
+    }
+
+    updateStats();
+  }
+
+  function finish(){
+    state.running = false; stopTicker(); clearPreviews();
+    // celebratory glow for used keys
+    new Set([...state.sequence]).forEach(ch => flashTransient(ch, 'glow', 420));
+  }
+
+  // --- Keyboard Feedback
+  function flashKey(ch, ok){
+    const el = state.keyIndex.get(ch);
+    if(!el) return; // space or non-key
+    el.classList.add('press');
+    el.classList.add(ok ? 'ok' : 'bad');
+    setTimeout(()=>{ el.classList.remove('press','ok','bad'); }, 180);
+  }
+  function hintExpected(ch){
+    const el = state.keyIndex.get(ch);
+    if(!el) return;
+    el.classList.add('glow'); setTimeout(()=> el.classList.remove('glow'), 260);
+  }
+  function previewNextKey(){
+    clearPreviews();
+    const ch = state.sequence[state.index];
+    const el = state.keyIndex.get(ch);
+    if(el) el.classList.add('glow');
+  }
+  function clearPreviews(){ state.keyIndex.forEach(el=> el.classList.remove('glow')); }
+  function clearKeyFeedback(){ state.keyIndex.forEach(el => el.classList.remove('ok','bad','press','glow')); }
+  function flashTransient(ch, cls, ms){ const el = state.keyIndex.get(ch); if(!el) return; el.classList.add(cls); setTimeout(()=>el.classList.remove(cls), ms); }
+
+  // --- Utils
+  function escapeHtml(str){ return String(str).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+  function uniqueChars(s){ return [...new Set([...s].filter(Boolean))]; }
+
+  // Accessibility shortcuts
+  window.addEventListener('keydown', (e)=>{
+    if(e.key === 'Enter' && !state.running) startDrill();
+    if(e.key === 'Escape') resetSession();
+  });
+
+  // Focus to capture keys reliably
+  window.addEventListener('load', ()=>{ document.body.tabIndex = -1; document.body.focus(); });
+  </script>
+</body>
+</html>
