@@ -31,6 +31,10 @@ My next purchase, hopefully the vocabulary approach changes.
 ## :moneybag: Resources
 - [Dr Bulbul's Arabic Blog](https://drbulbul.com/resources-for-learners-of-arabic/) Resources section
 
+## :coin: My humble contribution
+### Stories breakdown and analysis
+- Juha and the thief [Part1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Part2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Part3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf)
+
 ---
 # Chat GPT-Offered Resources
 
