@@ -25,6 +25,7 @@ jobs:
           texlive-fonts-recommended \
           texlive-latex-extra \
           fonts-sil-charis
+          fonts-david-clm
 
     - name: Compile all PDFs
       run: |
