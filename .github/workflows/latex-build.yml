@@ -24,7 +24,7 @@ jobs:
           texlive-lang-arabic \
           texlive-fonts-recommended \
           texlive-latex-extra \
-          fonts-sil-charis
+          fonts-sil-charis \
           fonts-sil-ezra
 
     - name: Compile all PDFs
