@@ -1,25 +1,28 @@
 \documentclass[a4paper,12pt]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[english,arabic]{babel}
+%\usepackage[english,arabic]{babel}
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{array}
 \usepackage{multicol}
-\usepackage{xcolor}
 \usepackage[table]{xcolor}
 \usepackage{polyglossia}
 \setmainlanguage{english}
 \setotherlanguage{arabic}
+\setotherlanguage{hebrew}
 \usepackage{arabtex}
-\usepackage{utf8}
 \usepackage{fontspec}
 \setmainfont{Charis SIL}
 \newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{David CLM}[Script=Hebrew]
 \geometry{margin=1.5cm}
-\usepackage{tcolorbox}
+\usepackage[most]{tcolorbox}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{microtype}
+
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
 
@@ -40,7 +43,7 @@
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase}]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
 \centering
 \textarabic{فقال جحا: متأسف يا سيدي, فإني أعرف أنك لن يجد ما تسرقه, و لهذا استحيت خجلا منك}
 \\[0.5em]
@@ -53,10 +56,10 @@
 
 % ======================== Translations ========================
 \section{English Translation}
-\begin{tcolorbox}[colback=white,colframe=accentcolor]
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
 \textbf{Literal:} So said Juha: Sorry oh my master, for indeed I know that you will not find what to steal it, and for this I felt ashamed shame from you \\
 \textit{[Arabic order retained for direct mapping]}\\[0.5em]
-\textbf{Adapted:} So Juha said: "I'm sorry, sir, for I know that you won't find anything to steal, and that's why I felt ashamed for you."
+\textbf{Adapted:} So Juha said: ``I'm sorry, sir, for I know that you won't find anything to steal, and that's why I felt ashamed for you.''
 \end{tcolorbox}
 
 % ======================== Detailed Word Analysis ========================
@@ -69,17 +72,21 @@
 \textbf{Root} & \textarabic{ق-و-ل} (q-w-l) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
 \textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (fa-) prefix \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{قَوْل} [qawl] & Present: \textarabic{يَقُولُ} [jaquːlu] & Past: \textarabic{قَالَ} [qaːla]
-\end{tabular} \\
-\textbf{Examples} & \makecell[l]{
+\midrule \\
+\textbf{Table of Conjugations} &  \makecell[l]{
+Infinitive: \textarabic{قَوْل} [qawl] \\
+Present: \textarabic{يَقُولُ} [jaquːlu] \\
+Past: \textarabic{قَالَ} [qaːla]
+} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{قَالَ الرَّجُلُ الحَقَّ} - The man said the truth [qaːla r-radʒulu l-ħaqqa]\\
 2. \textarabic{سَيَقُولُ لَكَ غَداً} - He will tell you tomorrow [sajaquːlu laka ɣadan]\\
 3. \textarabic{قُلْ لِي مَاذَا حَدَثَ} - Tell me what happened [qul liː maːðaː ħadaθa]
-} \\
+} } \\
+\midrule \\
 \textbf{Synonyms} & \textarabic{تَكَلَّمَ} (spoke), \textarabic{تَحَدَّثَ} (talked), \textarabic{نَطَقَ} (uttered) \\
-\textbf{Etymology} & From Proto-Semitic *qwl, related to Hebrew קול (qol) "voice" \\
+\textbf{Etymology} & From Proto-Semitic *qwl, related to Hebrew \texthebrew{קול} (qol) ``voice'' \\
 \bottomrule
 \end{tabular}
 
@@ -89,12 +96,13 @@ Infinitive: \textarabic{قَوْل} [qawl] & Present: \textarabic{يَقُولُ
 \textbf{Translation} & Juha (proper name) \\
 \textbf{Root} & N/A (proper noun) \\
 \textbf{Pattern} & N/A \\
-\textbf{Grammar} & Proper noun, masculine, nominative case (subject of قال) \\
+\textbf{Grammar} & Proper noun, masculine, nominative case (subject of \textarabic{قال}) \\
 \textbf{Table of Conjugations} & N/A (proper noun - no conjugation) \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{جُحَا رَجُلٌ حَكِيمٌ} - Juha is a wise man [dʒuħaː radʒulun ħakiːmun]\\
 2. \textarabic{قِصَصُ جُحَا مَشْهُورَةٌ} - Juha's stories are famous [qisˤasˤu dʒuħaː maʃhuːratun]\\
-3. \textarabic{ضَحِكَ جُحَا كَثِيراً} - Juha laughed a lot [dˤaħika dʒuħaː kaθiːran]\\
+3. \textarabic{ضَحِكَ جُحَا كَثِيراً} - Juha laughed a lot [dˤaħika dʒuħaː kaθiːran]
+}} \\
 \textbf{Synonyms} & N/A (proper name) \\
 \textbf{Etymology} & Famous character in Arabic folklore, possibly from Turkish Nasreddin Hoca \\
 \bottomrule
@@ -105,18 +113,25 @@ Infinitive: \textarabic{قَوْل} [qawl] & Present: \textarabic{يَقُولُ
 \toprule
 \textbf{Translation} & sorry / regretful \\
 \textbf{Root} & \textarabic{أ-س-ف} (ʔ-s-f) \\
-\textbf{Pattern} & \textarabic{مُتَفَعِّل} (mutafaʕʕil) - Form V active participle \\
-\textbf{Grammar} & Active participle, masculine singular, nominative (predicate) \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{تَأَسُّف} [taʔassuf] & Present: \textarabic{يَتَأَسَّفُ} [jataʔassafu] & Past: \textarabic{تَأَسَّفَ} [taʔassafa]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Pattern} & \textarabic{مُتَفَعِّل} (mutafaʕʕil) - Form V active participle\\
+\textbf{Grammar} & \makecell[l]{\parbox{9.5cm}{
+	Active participle, masculine singular, nominative (predicate)
+}} \\
+
+\textbf{Table of Conjugations} & \makecell[l]{
+Infinitive: \textarabic{تَأَسُّف} [taʔassuf] \\
+Present: \textarabic{يَتَأَسَّفُ} [jataʔassafu] \\
+Past: \textarabic{تَأَسَّفَ} [taʔassafa]
+} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{أَنَا مُتَأَسِّفٌ جِدّاً} - I am very sorry [ʔanaː mutaʔassifun dʒiddan]\\
 2. \textarabic{تَأَسَّفَ عَلَى خَطَئِهِ} - He regretted his mistake [taʔassafa ʕalaː xatˤaʔihi]\\
-3. \textarabic{سَيَتَأَسَّفُ لاحِقاً} - He will regret later [sajataʔassafu laːħiqan]\\
+3. \textarabic{سَيَتَأَسَّفُ لاحِقاً} - He will regret later [sajataʔassafu laːħiqan]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{آسِف} (sorry), \textarabic{نَادِم} (remorseful), \textarabic{حَزِين} (sad) \\
-\textbf{Etymology} & From root meaning "grief, sorrow" \\
+\textbf{Etymology} & From root meaning ``grief, sorrow'' \\
 \bottomrule
 \end{tabular}
 
@@ -128,10 +143,12 @@ Infinitive: \textarabic{تَأَسُّف} [taʔassuf] & Present: \textarabic{ي�
 \textbf{Pattern} & N/A \\
 \textbf{Grammar} & Vocative particle used for calling/addressing \\
 \textbf{Table of Conjugations} & N/A (invariable particle) \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{يَا أَخِي} - O my brother [jaː ʔaxiː]\\
 2. \textarabic{يَا اللهُ} - O God [jaː ʔallaːhu]\\
-3. \textarabic{يَا لَيْتَنِي} - Oh, if only I... [jaː lajtaniː]\\
+3. \textarabic{يَا لَيْتَنِي} - Oh, if only I... [jaː lajtaniː]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{أَيُّهَا} (O - formal), \textarabic{هَيَا} (come on) \\
 \textbf{Etymology} & Ancient Semitic vocative particle \\
 \bottomrule
@@ -143,17 +160,19 @@ Infinitive: \textarabic{تَأَسُّف} [taʔassuf] & Present: \textarabic{ي�
 \textbf{Translation} & my master / my sir \\
 \textbf{Root} & \textarabic{س-و-د} (s-w-d) \\
 \textbf{Pattern} & \textarabic{فَعِّل} (faʕʕil) with 1st person possessive suffix \\
-\textbf{Grammar} & Noun, masculine, genitive case (after vocative), with possessive pronoun ـي \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{ll}
-Singular: \textarabic{سَيِّد} [sajjid] & Plural: \textarabic{سَادَة} [saːda] or \textarabic{أَسْيَاد} [ʔasjaːd]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Grammar} & Noun, masculine, genitive case (after vocative), with possessive pronoun \textarabic{ـي} \\
+\textbf{Table of Conjugations} & \makecell[l]{
+Singular: \textarabic{سَيِّد} [sajjid]\\
+Plural: \textarabic{سَادَة} [saːda] or \textarabic{أَسْيَاد} [ʔasjaːd]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{هُوَ سَيِّدُ القَوْمِ} - He is the master of the people [huwa sajjidu l-qawmi]\\
 2. \textarabic{أَطَعْتُ سَيِّدِي} - I obeyed my master [ʔatˤaʕtu sajjidiː]\\
-3. \textarabic{السَّيِّدُ مُحَمَّد} - Mr. Muhammad [as-sajjidu muħammad]\\
+3. \textarabic{السَّيِّدُ مُحَمَّد} - Mr. Muhammad [as-sajjidu muħammad]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{مَوْلَى} (master), \textarabic{رَبّ} (lord), \textarabic{صَاحِب} (owner) \\
-\textbf{Etymology} & From root meaning "to be black, to prevail, to rule" \\
+\textbf{Etymology} & From root meaning ``to be black, to prevail, to rule'' \\
 \bottomrule
 \end{tabular}
 
@@ -163,15 +182,19 @@ Singular: \textarabic{سَيِّد} [sajjid] & Plural: \textarabic{سَادَة}
 \textbf{Translation} & for indeed I / for I am \\
 \textbf{Root} & N/A (compound particle) \\
 \textbf{Pattern} & N/A \\
-\textbf{Grammar} & Conjunction فَ + emphatic particle إِنَّ + 1st person pronoun suffix \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{ll}
-\textarabic{إِنَّنِي / إِنِّي} (I) & \textarabic{إِنَّكَ} (you m.) & \textarabic{إِنَّهُ} (he) & \textarabic{إِنَّنَا} (we)
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Grammar} & Conjunction \textarabic{فَ} + emphatic particle 1 + \textarabic{إِنَّ} +1st person pronoun suffix \\
+\textbf{Table of Conjugations} & \makecell[l]{
+\textarabic{إِنَّنِي / إِنِّي} (I)\\
+\textarabic{إِنَّكَ} (you m.)\\
+\textarabic{إِنَّهُ} (he)\\
+\textarabic{إِنَّنَا} (we)
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{إِنِّي أُحِبُّكَ} - Indeed I love you [ʔinniː ʔuħibbuka]\\
 2. \textarabic{فَإِنَّهُ صَادِقٌ} - For indeed he is truthful [faʔinnahu sˤaːdiqun]\\
-3. \textarabic{إِنَّنَا مُسْلِمُونَ} - Indeed we are Muslims [ʔinnanaː muslimuːna]\\
+3. \textarabic{إِنَّنَا مُسْلِمُونَ} - Indeed we are Muslims [ʔinnanaː muslimuːna]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{لَأَنَّنِي} (because I), \textarabic{حَقّاً أَنَا} (truly I) \\
 \textbf{Etymology} & Classical Arabic emphatic construction \\
 \bottomrule
@@ -184,16 +207,19 @@ Singular: \textarabic{سَيِّد} [sajjid] & Plural: \textarabic{سَادَة}
 \textbf{Root} & \textarabic{ع-ر-ف} (ʕ-r-f) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
 \textbf{Grammar} & Present tense verb, 1st person singular, Form I \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{مَعْرِفَة} [maʕrifa] & Present: \textarabic{أَعْرِفُ} [ʔaʕrifu] & Past: \textarabic{عَرَفْتُ} [ʕaraftu]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Table of Conjugations} & \makecell[l]{
+Infinitive: \textarabic{مَعْرِفَة} [maʕrifa]\\
+Present: \textarabic{أَعْرِفُ} [ʔaʕrifu]\\
+Past: \textarabic{عَرَفْتُ} [ʕaraftu]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{عَرَفْتُ الحَقِيقَةَ} - I knew the truth [ʕaraftu l-ħaqiːqata]\\
 2. \textarabic{يَعْرِفُ كُلَّ شَيْءٍ} - He knows everything [jaʕrifu kulla ʃajʔin]\\
-3. \textarabic{سَأَعْرِفُ غَداً} - I will know tomorrow [saʔaʕrifu ɣadan]\\
+3. \textarabic{سَأَعْرِفُ غَداً} - I will know tomorrow [saʔaʕrifu ɣadan]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{عَلِمَ} (knew), \textarabic{دَرَى} (was aware), \textarabic{فَهِمَ} (understood) \\
-\textbf{Etymology} & From root meaning "to recognize, to know" \\
+\textbf{Etymology} & From root meaning ``to recognize, to know'' \\
 \bottomrule
 \end{tabular}
 
@@ -203,15 +229,20 @@ Infinitive: \textarabic{مَعْرِفَة} [maʕrifa] & Present: \textarabic{أ
 \textbf{Translation} & that you \\
 \textbf{Root} & N/A (particle with pronoun) \\
 \textbf{Pattern} & N/A \\
-\textbf{Grammar} & Subordinating particle أَنَّ + 2nd person masculine pronoun \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{ll}
-\textarabic{أَنَّنِي} (that I) & \textarabic{أَنَّكَ} (that you m.) & \textarabic{أَنَّهُ} (that he) & \textarabic{أَنَّنَا} (that we)
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Grammar} & Subordinating particle 2 + \textarabic{أَنَّ}nd person masculine pronoun \\
+\textbf{Table of Conjugations} & \makecell[l]{
+\textarabic{أَنَّنِي} (that I)\\
+\textarabic{أَنَّكَ} (that you m.)\\
+\textarabic{أَنَّهُ} (that he)\\
+\textarabic{أَنَّنَا} (that we)
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{أَظُنُّ أَنَّكَ مُحِقٌّ} - I think that you are right [ʔaðˤunnu ʔannaka muħiqqun]\\
 2. \textarabic{عَلِمْتُ أَنَّهُ قَادِمٌ} - I knew that he is coming [ʕalimtu ʔannahu qaːdimun]\\
-3. \textarabic{قَالَ أَنَّنَا أَصْدِقَاء} - He said that we are friends [qaːla ʔannanaː ʔasˤdiqaːʔ]\\
+3. \textarabic{قَالَ أَنَّنَا أَصْدِقَاء} - He said that we are friends [qaːla ʔannanaː ʔasˤdiqaːʔ]
+}} \\
+\midrule
+
 \textbf{Synonyms} & \textarabic{بِأَنَّكَ} (that you - with preposition) \\
 \textbf{Etymology} & Classical Arabic subordinating construction \\
 \bottomrule
@@ -225,10 +256,12 @@ Infinitive: \textarabic{مَعْرِفَة} [maʕrifa] & Present: \textarabic{أ
 \textbf{Pattern} & N/A \\
 \textbf{Grammar} & Negation particle that requires subjunctive mood \\
 \textbf{Table of Conjugations} & N/A (invariable particle) \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{لَنْ أَنْسَى} - I will not forget [lan ʔansaː]\\
 2. \textarabic{لَنْ يَحْدُثَ هَذَا} - This will not happen [lan jaħduθa haːðaː]\\
-3. \textarabic{لَنْ نَتَأَخَّرَ} - We will not be late [lan nataʔaxxara]\\
+3. \textarabic{لَنْ نَتَأَخَّرَ} - We will not be late [lan nataʔaxxara]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{لا} (not - general), \textarabic{مَا} (not - past) \\
 \textbf{Etymology} & Classical Arabic future negation \\
 \bottomrule
@@ -240,17 +273,20 @@ Infinitive: \textarabic{مَعْرِفَة} [maʕrifa] & Present: \textarabic{أ
 \textbf{Translation} & you find / you will find \\
 \textbf{Root} & \textarabic{و-ج-د} (w-dʒ-d) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
-\textbf{Grammar} & Present tense verb, 2nd person masculine singular, subjunctive mood (after لن) \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{وُجُود} [wuʤuːd] & Present: \textarabic{تَجِدُ} [taʤidu] & Past: \textarabic{وَجَدْتَ} [waʤadta]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Grammar} & Present tense verb, 2nd person masculine singular, subjunctive mood (after \textarabic{لن}) \\
+\textbf{Table of Conjugations} & \makecell[l]{
+Infinitive: \textarabic{وُجُود} [wuʤuːd]\\
+Present: \textarabic{تَجِدُ} [taʤidu]\\
+Past: \textarabic{وَجَدْتَ} [waʤadta]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{وَجَدْتُ الكِتَابَ} - I found the book [waʤadtu l-kitaːba]\\
 2. \textarabic{سَتَجِدُ الطَّرِيقَ} - You will find the way [sataʤidu tˤ-tˤariːqa]\\
-3. \textarabic{يَجِدُونَ صُعُوبَةً} - They find difficulty [jaʤiduːna sˤuʕuːbatan]\\
+3. \textarabic{يَجِدُونَ صُعُوبَةً} - They find difficulty [jaʤiduːna sˤuʕuːbatan]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{لَقِيَ} (encountered), \textarabic{عَثَرَ عَلَى} (came across) \\
-\textbf{Etymology} & From root meaning "to find, to exist" \\
+\textbf{Etymology} & From root meaning ``to find, to exist'' \\
 \bottomrule
 \end{tabular}
 
@@ -262,10 +298,12 @@ Infinitive: \textarabic{وُجُود} [wuʤuːd] & Present: \textarabic{تَجِ
 \textbf{Pattern} & N/A \\
 \textbf{Grammar} & Relative pronoun, indeclinable \\
 \textbf{Table of Conjugations} & N/A (invariable) \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{مَا تُرِيدُ} - What you want [maː turiːdu]\\
 2. \textarabic{أَعْطِنِي مَا عِنْدَكَ} - Give me what you have [ʔaʕtˤiniː maː ʕindaka]\\
-3. \textarabic{فَعَلْتُ مَا طَلَبْتَ} - I did what you asked [faʕaltu maː tˤalabta]\\
+3. \textarabic{فَعَلْتُ مَا طَلَبْتَ} - I did what you asked [faʕaltu maː tˤalabta]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{الَّذِي} (that which - definite), \textarabic{مَاذَا} (what - interrogative) \\
 \textbf{Etymology} & Ancient Semitic interrogative/relative pronoun \\
 \bottomrule
@@ -278,16 +316,19 @@ Infinitive: \textarabic{وُجُود} [wuʤuːd] & Present: \textarabic{تَجِ
 \textbf{Root} & \textarabic{س-ر-ق} (s-r-q) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
 \textbf{Grammar} & Present tense verb, 2nd person masculine singular, with 3rd person masculine object pronoun \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{سَرِقَة} [sariqa] & Present: \textarabic{تَسْرِقُ} [tasriqu] & Past: \textarabic{سَرَقْتَ} [saraqta]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Table of Conjugations} & \makecell[l]{
+Infinitive: \textarabic{سَرِقَة} [sariqa] \\
+Present: \textarabic{تَسْرِقُ} [tasriqu] \\
+Past: \textarabic{سَرَقْتَ} [saraqta]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{سَرَقَ المَالَ} - He stole the money [saraqa l-maːla]\\
 2. \textarabic{لا تَسْرِقْ} - Don't steal [laː tasriq]\\
-3. \textarabic{سَيَسْرِقُونَ كُلَّ شَيْءٍ} - They will steal everything [sajasriquːna kulla ʃajʔin]\\
+3. \textarabic{سَيَسْرِقُونَ كُلَّ شَيْءٍ} - They will steal everything [sajasriquːna kulla ʃajʔin]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{نَهَبَ} (plundered), \textarabic{اخْتَلَسَ} (embezzled), \textarabic{غَصَبَ} (usurped) \\
-\textbf{Etymology} & From root meaning "to steal, to rob" \\
+\textbf{Etymology} & From root meaning ``to steal, to rob'' \\
 \bottomrule
 \end{tabular}
 
@@ -297,12 +338,14 @@ Infinitive: \textarabic{سَرِقَة} [sariqa] & Present: \textarabic{تَسْ
 \textbf{Translation} & and for this / and therefore \\
 \textbf{Root} & N/A (compound) \\
 \textbf{Pattern} & N/A \\
-\textbf{Grammar} & Conjunction وَ + preposition لِ + demonstrative pronoun هَذا \\
+\textbf{Grammar} & Conjunction \textarabic{وَ} + preposition \textarabic{لِ} + demonstrative pronoun \textarabic{هَذا} \\
 \textbf{Table of Conjugations} & N/A \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{وَلِهَذَا السَّبَبِ} - And for this reason [walihaːðaː s-sababi]\\
 2. \textarabic{لِهَذَا جِئْتُ} - For this I came [lihaːðaː dʒiʔtu]\\
-3. \textarabic{وَلِذَلِكَ} - And for that [waliðaːlika]\\
+3. \textarabic{وَلِذَلِكَ} - And for that [waliðaːlika]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{لِذَلِكَ} (therefore), \textarabic{وَبِالتَّالِي} (and consequently) \\
 \textbf{Etymology} & Classical Arabic causal construction \\
 \bottomrule
@@ -315,16 +358,19 @@ Infinitive: \textarabic{سَرِقَة} [sariqa] & Present: \textarabic{تَسْ
 \textbf{Root} & \textarabic{ح-ي-ي} (ħ-j-j) \\
 \textbf{Pattern} & \textarabic{اسْتَفْعَلَ} (istafʕala) - Form X \\
 \textbf{Grammar} & Past tense verb, 1st person singular, Form X (seeking/reflexive) \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{lll}
-Infinitive: \textarabic{اسْتِحْيَاء} [istiħjaːʔ] & Present: \textarabic{أَسْتَحْيِي} [ʔastaħjiː] & Past: \textarabic{اسْتَحْيَيْتُ} [istaħjajtu]
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Table of Conjugations} & \makecell[l]{
+Infinitive: \textarabic{اسْتِحْيَاء} [istiħjaːʔ] \\
+Present: \textarabic{أَسْتَحْيِي} [ʔastaħjiː] \\
+Past: \textarabic{اسْتَحْيَيْتُ} [istaħjajtu]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{اسْتَحْيَيْتُ مِنْ فِعْلِي} - I was ashamed of my action [istaħjajtu min fiʕliː]\\
 2. \textarabic{يَسْتَحْيِي مِنَ الكَلامِ} - He is shy to speak [jastaħjiː mina l-kalaːmi]\\
-3. \textarabic{لا تَسْتَحْيِ} - Don't be shy [laː tastaħjiː]\\
+3. \textarabic{لا تَسْتَحْيِ} - Don't be shy [laː tastaħjiː]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{خَجِلَ} (was embarrassed), \textarabic{اسْتَحَى} (alternative form) \\
-\textbf{Etymology} & From root meaning "life, modesty, shame" \\
+\textbf{Etymology} & From root meaning ``life, modesty, shame'' \\
 \bottomrule
 \end{tabular}
 
@@ -336,12 +382,14 @@ Infinitive: \textarabic{اسْتِحْيَاء} [istiħjaːʔ] & Present: \texta
 \textbf{Pattern} & \textarabic{فَعَل} (faʕal) \\
 \textbf{Grammar} & Verbal noun (masdar), accusative case (adverbial/reason) \\
 \textbf{Table of Conjugations} & N/A (verbal noun - no conjugation) \\
-\textbf{Examples} & 
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{اِحْمَرَّ خَجَلاً} - He turned red from embarrassment [iħmarra xadʒalan]\\
 2. \textarabic{مَاتَ خَجَلاً} - He died of shame [maːta xadʒalan]\\
-3. \textarabic{الخَجَلُ صِفَةٌ حَمِيدَةٌ} - Modesty is a good quality [al-xaʒalu sˤifatun ħamiːdatun]\\
+3. \textarabic{الخَجَلُ صِفَةٌ حَمِيدَةٌ} - Modesty is a good quality [al-xaʒalu sˤifatun ħamiːdatun]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{حَيَاء} (modesty), \textarabic{اِرْتِبَاك} (confusion), \textarabic{حَرَج} (embarrassment) \\
-\textbf{Etymology} & From root meaning "to be ashamed, confused" \\
+\textbf{Etymology} & From root meaning ``to be ashamed, confused'' \\
 \bottomrule
 \end{tabular}
 
@@ -351,15 +399,19 @@ Infinitive: \textarabic{اسْتِحْيَاء} [istiħjaːʔ] & Present: \texta
 \textbf{Translation} & from you / for you (on your behalf) \\
 \textbf{Root} & N/A (preposition with pronoun) \\
 \textbf{Pattern} & N/A \\
-\textbf{Grammar} & Preposition مِنْ + 2nd person masculine pronoun suffix \\
-\textbf{Table of Conjugations} & 
-\begin{tabular}{ll}
-مِنّي (from me) & مِنكَ (from you m.) & مِنهُ (from him) & مِنّا (from us)
-\end{tabular} \\
-\textbf{Examples} & 
+\textbf{Grammar} & Preposition \textarabic{مِنْ} + 2nd person masculine pronoun suffix \\
+\textbf{Table of Conjugations} & \makecell[l]{
+\textarabic{مِنّي} (from me) \\
+\textarabic{مِنكَ} (from you m.) \\
+\textarabic{مِنهُ} (from him) \\
+\textarabic{مِنّا} (from us)
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{جِئتُ مِنكَ} - I came from you [dʒiʔtu minka]\\
 2. \textarabic{أَخَذتُ مِنهُ} - I took from him [ʔaxaðtu minhu]\\
-3. \textarabic{نَسمَعُ مِنكُم} - We hear from you (pl.) [nasmaʕu minkum]\\
+3. \textarabic{نَسمَعُ مِنكُم} - We hear from you (pl.) [nasmaʕu minkum]
+}} \\
+\midrule
 \textbf{Synonyms} & \textarabic{عَنكَ} (from you - different context), \textarabic{لَكَ} (for you) \\
 \textbf{Etymology} & Classical Arabic preposition with pronominal suffixes \\
 \bottomrule
@@ -367,11 +419,9 @@ Infinitive: \textarabic{اسْتِحْيَاء} [istiħjaːʔ] & Present: \texta
 
 % ======================== Phrase Analysis ========================
 \section{Phrase Analysis}
-
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
 \textbf{Grammatical Structure:}\\
 Sequential connector + past verb + proper noun subject + colon + active participle predicate + vocative particle + possessed noun + conjunction + emphatic particle with pronoun + present verb + subordinating particle with pronoun + negation particle + present subjunctive verb + relative pronoun + present verb with object pronoun + conjunction + prepositional phrase + past verb + verbal noun (reason) + preposition with pronoun \\
-\\
 \textbf{Key Grammar Points:}
 \begin{itemize}
 \item The prefix \textarabic{فَ} connects this statement to the previous narrative sequence
@@ -390,44 +440,43 @@ Sequential connector + past verb + proper noun subject + colon + active particip
 
 \begin{enumerate}
 \item \textarabic{فَقالَ الرَّجُلُ: مُتَأَسِّفٌ يا صَديقي، فَإِنّي أَعرِفُ أَنَّكَ لَن تَجِدَ ما تَبحَثُ عَنهُ}\\
-So the man said: "Sorry my friend, for I know that you won't find what you are looking for" [faqaːla r-radʒulu: mutaʔassifun jaː sˤadiːqiː, faʔinniː ʔaʕrifu ʔannaka lan tadʒida maː tabħaθu ʕanhu]
+So the man said: ``Sorry my friend, for I know that you won't find what you are looking for'' [faqaːla r-radʒulu: mutaʔassifun jaː sˤadiːqiː, faʔinniː ʔaʕrifu ʔannaka lan tadʒida maː tabħaθu ʕanhu]
 
 \item \textarabic{وَقالَت البِنتُ: مُتَأَسِّفَةٌ يا أُستاذي، فَإِنّي أَعلَمُ أَنَّكَ لَن تَجِدَ الجَوابَ هُنا}\\
-And the girl said: "Sorry professor, for I know that you won't find the answer here" [waqaːlat al-bintu: mutaʔassifatun jaː ʔustaːðiː, faʔinniː ʔaʕlamu ʔannaka lan tadʒida l-dʒawaːba hunaː]
+And the girl said: ``Sorry professor, for I know that you won't find the answer here'' [waqaːlat al-bintu: mutaʔassifatun jaː ʔustaːðiː, faʔinniː ʔaʕlamu ʔannaka lan tadʒida l-dʒawaːba hunaː]
 
 \item \textarabic{فَأَجابَ الطّالِبُ: مُعتَذِرٌ يا دُكتور، لَكِنّي أَظُنُّ أَنَّكَ لَن تَجِدَ الكِتابَ الآن}\\
-So the student answered: "Apologetic, doctor, but I think that you won't find the book now" [faʔadʒaːba tˤ-tˤaːlibu: muʕtaðirun jaː duktuːr, laːkinniː ʔaðˤunnu ʔannaka lan tadʒida l-kitaːba l-ʔaːn]
+So the student answered: ``Apologetic, doctor, but I think that you won't find the book now'' [faʔadʒaːba tˤ-tˤaːlibu: muʕtaðirun jaː duktuːr, laːkinniː ʔaðˤunnu ʔannaka lan tadʒida l-kitaːba l-ʔaːn]
 
 \item \textarabic{وَقالَ التّاجِرُ: آسِفٌ يا زَبون، وَلَكِنّي أَعرِفُ أَنَّكَ لَن تَجِدَ هَذا البِضاعَةَ عِندي}\\
-And the merchant said: "Sorry customer, but I know that you won't find this merchandise with me" [waqaːla t-taːdʒiru: ʔaːsifun jaː zabuːn, walaːkinniː ʔaʕrifu ʔannaka lan tadʒida haːða l-bidˤaːʕata ʕindiː]
+And the merchant said: ``Sorry customer, but I know that you won't find this merchandise with me'' [waqaːla t-taːdʒiru: ʔaːsifun jaː zabuːn, walaːkinniː ʔaʕrifu ʔannaka lan tadʒida haːða l-bidˤaːʕata ʕindiː]
 \end{enumerate}
 
 % ======================== Levantine Dialect Version ========================
 \section{Levantine (Shaami) Arabic Dialect}
 
-\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version}]
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
 \textarabic{فَقال جُحا: آسِف يا سيّدي، لأنّي بَعرِف إنّك مش رَح تِلاقي شي تِسرُقُه، وَلَهيك استَحَيت مِنّك}\\
 \textbf{Phonetic:} [faqaːl dʒuħaː: ʔaːsif jaː sajjiːdiː, laʔanniː baʕrif innak miʃ raħ tilaːʔiː ʃiː tisruːqu, walaheːk istaħeːt minnak]\\
-\textbf{Translation:} So Juha said: "Sorry sir, because I know that you won't find anything to steal, and that's why I felt ashamed for you."
+\textbf{Translation:} So Juha said: ``Sorry sir, because I know that you won't find anything to steal, and that's why I felt ashamed for you.''
 \end{tcolorbox}
-
 \textbf{Key Dialectal Changes:}
 \begin{itemize}
-\item \textarabic{مُتَأَسِّف} → \textarabic{آسِف} (ʔaːsif) – simplified form of "sorry"
-\item \textarabic{فَإِنّي} → \textarabic{لأنّي} (laʔanniː) – "because I" instead of "for indeed I"
-\item \textarabic{أَعرِف} → \textarabic{بَعرِف} (baʕrif) – present continuous with بـ prefix
+\item \textarabic{مُتَأَسِّف} → \textarabic{آسِف} (ʔaːsif) – simplified form of ``sorry''
+\item \textarabic{فَإِنّي} → \textarabic{لأنّي} (laʔanniː) – ``because I'' instead of ``for indeed I''
+\item \textarabic{أَعرِف} → \textarabic{بَعرِف} (baʕrif) – present continuous with \textarabic{بـ} prefix
 \item \textarabic{أَنَّك} → \textarabic{إنّك} (innak) – simplified subordinating particle
-\item \textarabic{لَن} → \textarabic{مش رَح} (miʃ raħ) – future negation with "will not"
-\item \textarabic{تَجِد} → \textarabic{تِلاقي} (tilaːʔiː) – dialectal verb "to find"
-\item \textarabic{ما} → \textarabic{شي} (ʃiː) – "something/anything" instead of relative "what"
-\item \textarabic{وَلِهَذا} → \textarabic{وَلَهيك} (walaheːk) – "and that's why" in dialect
+\item \textarabic{لَن} → \textarabic{مش رَح} (miʃ raħ) – future negation with ``will not''
+\item \textarabic{تَجِد} → \textarabic{تِلاقي} (tilaːʔiː) – dialectal verb ``to find''
+\item \textarabic{ما} → \textarabic{شي} (ʃiː) – ``something/anything'' instead of relative ``what''
+\item \textarabic{وَلِهَذا} → \textarabic{وَلَهيك} (walaheːk) – ``and that's why'' in dialect
 \item \textarabic{استَحيَيت} → \textarabic{استَحَيت} (istaħeːt) – simplified past tense form
 \end{itemize}
 
 % ======================== Additional Learning Notes ========================
 \section{Additional Learning Notes}
 
-\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context}]
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context},breakable]
 \textbf{Juha's Character:} This phrase exemplifies Juha's paradoxical wisdom - he apologizes to a thief not for being robbed, but for disappointing the thief by having nothing worth stealing. This reversal of expectations is classic Juha humor.
 
 \textbf{Social Politeness:} Even in this absurd situation, Juha maintains formal politeness markers (\textarabic{يا سَيِّدي}), showing how deeply embedded courtesy is in Arabic culture.
@@ -439,7 +488,7 @@ And the merchant said: "Sorry customer, but I know that you won't find this merc
 
 \subsection{Memory Tips}
 \begin{enumerate}
-\item \textbf{Emotional Progression:} Remember \textit{Apology → Explanation → Shame} (\textarabic{اعتِذار → تَفسير → خَجَل})
+\item \textbf{Emotional Progression:} Remember \textit{Apology → Explanation → Shame} (\textarabic{اعتِذار} →  \textarabic{تَفسير} → \textarabic{خَجَل})
 \item \textbf{Particle Chain:} \textarabic{فَ...فَإِنّي...وَلِهَذا} creates logical flow (so → for indeed → and therefore)
 \item \textbf{Form X Pattern:} \textarabic{استَحيَيت} follows pattern \textarabic{استَفعَل} for self-directed emotions
 \item \textbf{Negation Structure:} \textarabic{لَن + subjunctive} is standard future negation pattern
@@ -448,6 +497,7 @@ And the merchant said: "Sorry customer, but I know that you won't find this merc
 
 \subsection{Related Vocabulary Family}
 \begin{multicols}{2}
+
 \textbf{Emotion family:}\\
 \textarabic{أَسَف} – sorrow [ʔasaf]\\
 \textarabic{خَجَل} – shame [xadʒal]\\
