@@ -35,7 +35,7 @@ jobs:
           echo "Compiling $texfile..."
           subdir=$(dirname "$texfile")
           tmpdir=$(mktemp -d)
-          xelatex -output-directory="$tmpdir" "$texfile"
+          xelatex -output-directory="$tmpdir" -interaction=batchmode "$texfile"
           mkdir -p "output/$subdir"
           # Copy only the PDF to output preserving folder structure
           cp "$tmpdir/$(basename "${texfile%.tex}.pdf")" "output/$subdir/"
