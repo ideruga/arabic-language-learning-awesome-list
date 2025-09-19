@@ -152,7 +152,6 @@
     <button id="startBtn">Start</button>
     <button id="pauseBtn">Pause</button>
     <button id="resetBtn">Reset</button>
-    <span class="pill">English keys → Arabic output (no OS switch)</span>
   </div>
 
   <!-- Console / Exercise -->
@@ -294,18 +293,77 @@
   }
 
   function populateLessons(){
-    els.lesson.innerHTML = '';
-    const list = (state.mode === 'letters') ? LETTER_LESSONS : [];
     if(state.mode === 'letters'){
-      list.forEach(ls => addOption(els.lesson, ls.id, ls.name));
-    } else if(state.mode === 'words'){
-      addOption(els.lesson, 'W1', 'Basic Words');
-    } else if(state.mode === 'texts'){
-      addOption(els.lesson, 'T1', 'Juha — Short Excerpt');
+      // Show progressive pair selector
+      els.lesson.style.display = 'none';
+      els.pairSelector.style.display = 'grid';
+      renderPairSelector();
+    } else {
+      // Show traditional dropdown
+      els.lesson.style.display = 'block';
+      els.pairSelector.style.display = 'none';
+      els.lesson.innerHTML = '';
+      
+      if(state.mode === 'words'){
+        addOption(els.lesson, 'W1', 'Basic Words');
+      } else if(state.mode === 'texts'){
+        addOption(els.lesson, 'T1', 'Juha — Short Excerpt');
+      }
+      els.lesson.selectedIndex = 0;
     }
-    // select first
-    els.lesson.selectedIndex = 0;
-    if(state.mode === 'letters') state.lesson = LETTER_LESSONS[0];
+  }
+
+  function renderPairSelector(){
+    els.pairSelector.innerHTML = '';
+    
+    LETTER_PAIRS.forEach((pair, index) => {
+      const item = document.createElement('div');
+      item.className = 'pair-item';
+      item.dataset.index = index;
+      
+      if(index === state.selectedPairIndex) {
+        item.classList.add('selected');
+      }
+      
+      item.innerHTML = `
+        <div class="pair-name">${pair.name}</div>
+        <div class="pair-desc">${pair.fingers}</div>
+      `;
+      
+      // Hover event for progressive selection
+      item.addEventListener('mouseenter', () => {
+        updatePairPreview(index);
+      });
+      
+      // Click event for selection
+      item.addEventListener('click', () => {
+        selectPair(index);
+      });
+      
+      els.pairSelector.appendChild(item);
+    });
+    
+    // Clear preview when mouse leaves selector
+    els.pairSelector.addEventListener('mouseleave', () => {
+      const items = els.pairSelector.querySelectorAll('.pair-item');
+      items.forEach(item => item.classList.remove('active'));
+    });
+  }
+
+  function updatePairPreview(hoverIndex){
+    const items = els.pairSelector.querySelectorAll('.pair-item');
+    items.forEach((item, index) => {
+      item.classList.remove('active');
+      if(index <= hoverIndex) {
+        item.classList.add('active');
+      }
+    });
+  }
+
+  function selectPair(pairIndex){
+    state.selectedPairIndex = pairIndex;
+    renderPairSelector();
+    resetSession();
   }
 
   function addOption(sel, value, label){
@@ -356,7 +414,9 @@
   function startDrill(){
     const len = parseInt(els.length.value, 10);
     if(state.mode === 'letters'){
-      state.sequence = createLettersDrill(state.lesson.chars, len);
+      // Use progressive pairs system
+      const availableChars = getProgressiveChars(state.selectedPairIndex);
+      state.sequence = createLettersDrill(availableChars, len);
     } else if(state.mode === 'words'){
       state.sequence = createWordsDrill(WORD_BANK, Math.max(6, Math.floor(len/3)));
     } else {
@@ -397,6 +457,15 @@
 
   function startTicker(){ stopTicker(); state.ticker = setInterval(updateStats, 120); }
   function stopTicker(){ if(state.ticker){ clearInterval(state.ticker); state.ticker = null; } }
+
+  // --- Progressive Character Selection
+  function getProgressiveChars(maxPairIndex){
+    const chars = new Set();
+    for(let i = 0; i <= maxPairIndex; i++){
+      LETTER_PAIRS[i].chars.forEach(ch => chars.add(ch));
+    }
+    return [...chars];
+  }
 
   // --- Drill Generators
   function createLettersDrill(charset, length){
