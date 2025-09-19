@@ -1,0 +1,204 @@
+\documentclass[letter,12pt]{article}
+
+
+\usepackage[most]{tcolorbox}
+\usepackage{makecell}
+\usepackage[utf8]{inputenc}
+\usepackage[english,arabic]{babel}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{arabtex}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large <Title - a short summary of the phrase in English>\\
+\normalsize \textarabic{<arabic phrase to analyse>}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase}]
+\centering
+\textarabic{<original arabic phrase>}
+\\[0.5em]
+\textbf{Without Diacritics}
+\\[1em]
+\textarabic{<arabic phrase with full diactricts>}
+\\[0.5em]
+\textbf{With Full Diacritics}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor]
+\textbf{Literal:} <Literal word-by-word phrase translation into english> \\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} <Adapted phrase translation into english>"
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{فَقَالَ} — [faqaːla]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & so he said / then he said \\
+\textbf{Root} & \textarabic{ق-و-ل} (q-w-l) \\
+\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
+\textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (fa-) prefix \\
+\midrule \\
+\textbf{Table of Conjugations} &  \makecell[l]{
+Infinitive: \textarabic{قَوْل} [qawl] \\
+Present: \textarabic{يَقُولُ} [jaquːlu] \\
+Past: \textarabic{قَالَ} [qaːla]
+} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{قَالَ الرَّجُلُ الحَقَّ} - The man said the truth [qaːla r-radʒulu l-ħaqqa]\\
+2. \textarabic{سَيَقُولُ لَكَ غَداً} - He will tell you tomorrow [sajaquːlu laka ɣadan]\\
+3. \textarabic{قُلْ لِي مَاذَا حَدَثَ} - Tell me what happened [qul liː maːðaː ħadaθa]
+} } \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{تَكَلَّمَ} (spoke), \textarabic{تَحَدَّثَ} (talked), \textarabic{نَطَقَ} (uttered) \\
+\textbf{Etymology} & From Proto-Semitic *qwl, related to Hebrew \texthebrew{קול} (qol) ``voice'' \\
+\bottomrule
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Sequential connector + past verb + proper noun subject + colon + active participle predicate + vocative particle + possessed noun + conjunction + emphatic particle with pronoun + present verb + subordinating particle with pronoun + negation particle + present subjunctive verb + relative pronoun + present verb with object pronoun + conjunction + prepositional phrase + past verb + verbal noun (reason) + preposition with pronoun \\
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item The prefix \textarabic{فَ} connects this statement to the previous narrative sequence
+\item \textarabic{مُتَأَسِّفٌ} is a Form V active participle functioning as a predicate
+\item \textarabic{فَإِنّي} combines causal conjunction with emphatic particle for strong assertion
+\item \textarabic{لَن تَجِدَ} uses future negation requiring subjunctive mood
+\item \textarabic{ما تَسرِقُهُ} is a relative clause with attached object pronoun
+\item \textarabic{خَجَلاً} functions as an adverbial accusative expressing reason/manner
+\item The phrase shows empathetic irony - apologizing to the thief for having nothing to steal
+\item Form X verb \textarabic{استَحيَيتُ} indicates reflexive emotional state
+\end{itemize}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{فَقالَ الرَّجُلُ: مُتَأَسِّفٌ يا صَديقي، فَإِنّي أَعرِفُ أَنَّكَ لَن تَجِدَ ما تَبحَثُ عَنهُ}\\
+So the man said: ``Sorry my friend, for I know that you won't find what you are looking for'' [faqaːla r-radʒulu: mutaʔassifun jaː sˤadiːqiː, faʔinniː ʔaʕrifu ʔannaka lan tadʒida maː tabħaθu ʕanhu]
+
+\item \textarabic{وَقالَت البِنتُ: مُتَأَسِّفَةٌ يا أُستاذي، فَإِنّي أَعلَمُ أَنَّكَ لَن تَجِدَ الجَوابَ هُنا}\\
+And the girl said: ``Sorry professor, for I know that you won't find the answer here'' [waqaːlat al-bintu: mutaʔassifatun jaː ʔustaːðiː, faʔinniː ʔaʕlamu ʔannaka lan tadʒida l-dʒawaːba hunaː]
+
+\item \textarabic{فَأَجابَ الطّالِبُ: مُعتَذِرٌ يا دُكتور، لَكِنّي أَظُنُّ أَنَّكَ لَن تَجِدَ الكِتابَ الآن}\\
+So the student answered: ``Apologetic, doctor, but I think that you won't find the book now'' [faʔadʒaːba tˤ-tˤaːlibu: muʕtaðirun jaː duktuːr, laːkinniː ʔaðˤunnu ʔannaka lan tadʒida l-kitaːba l-ʔaːn]
+
+\item \textarabic{وَقالَ التّاجِرُ: آسِفٌ يا زَبون، وَلَكِنّي أَعرِفُ أَنَّكَ لَن تَجِدَ هَذا البِضاعَةَ عِندي}\\
+And the merchant said: ``Sorry customer, but I know that you won't find this merchandise with me'' [waqaːla t-taːdʒiru: ʔaːsifun jaː zabuːn, walaːkinniː ʔaʕrifu ʔannaka lan tadʒida haːða l-bidˤaːʕata ʕindiː]
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shaami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{فَقال جُحا: آسِف يا سيّدي، لأنّي بَعرِف إنّك مش رَح تِلاقي شي تِسرُقُه، وَلَهيك استَحَيت مِنّك}\\
+\textbf{Phonetic:} [faqaːl dʒuħaː: ʔaːsif jaː sajjiːdiː, laʔanniː baʕrif innak miʃ raħ tilaːʔiː ʃiː tisruːqu, walaheːk istaħeːt minnak]\\
+\textbf{Translation:} So Juha said: ``Sorry sir, because I know that you won't find anything to steal, and that's why I felt ashamed for you.''
+\end{tcolorbox}
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{مُتَأَسِّف} → \textarabic{آسِف} (ʔaːsif) – simplified form of ``sorry''
+\item \textarabic{فَإِنّي} → \textarabic{لأنّي} (laʔanniː) – ``because I'' instead of ``for indeed I''
+\item \textarabic{أَعرِف} → \textarabic{بَعرِف} (baʕrif) – present continuous with \textarabic{بـ} prefix
+\item \textarabic{أَنَّك} → \textarabic{إنّك} (innak) – simplified subordinating particle
+\item \textarabic{لَن} → \textarabic{مش رَح} (miʃ raħ) – future negation with ``will not''
+\item \textarabic{تَجِد} → \textarabic{تِلاقي} (tilaːʔiː) – dialectal verb ``to find''
+\item \textarabic{ما} → \textarabic{شي} (ʃiː) – ``something/anything'' instead of relative ``what''
+\item \textarabic{وَلِهَذا} → \textarabic{وَلَهيك} (walaheːk) – ``and that's why'' in dialect
+\item \textarabic{استَحيَيت} → \textarabic{استَحَيت} (istaħeːt) – simplified past tense form
+\end{itemize}
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context},breakable]
+\textbf{Juha's Character:} This phrase exemplifies Juha's paradoxical wisdom - he apologizes to a thief not for being robbed, but for disappointing the thief by having nothing worth stealing. This reversal of expectations is classic Juha humor.
+
+\textbf{Social Politeness:} Even in this absurd situation, Juha maintains formal politeness markers (\textarabic{يا سَيِّدي}), showing how deeply embedded courtesy is in Arabic culture.
+
+\textbf{Empathetic Irony:} The phrase demonstrates sophisticated Arabic literary technique - expressing genuine concern for someone whose intentions are harmful, creating both humor and moral commentary.
+
+\textbf{Narrative Function:} This statement serves as the climax of the Juha story, where his unexpected response transforms a potentially threatening situation into a moment of absurd comedy.
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+\begin{enumerate}
+\item \textbf{Emotional Progression:} Remember \textit{Apology → Explanation → Shame} (\textarabic{اعتِذار} →  \textarabic{تَفسير} → \textarabic{خَجَل})
+\item \textbf{Particle Chain:} \textarabic{فَ...فَإِنّي...وَلِهَذا} creates logical flow (so → for indeed → and therefore)
+\item \textbf{Form X Pattern:} \textarabic{استَحيَيت} follows pattern \textarabic{استَفعَل} for self-directed emotions
+\item \textbf{Negation Structure:} \textarabic{لَن + subjunctive} is standard future negation pattern
+\item \textbf{Ironic Politeness:} The contrast between \textarabic{يا سَيِّدي} (respectful address) and \textarabic{تَسرِق} (you steal) creates the humor
+\end{enumerate}
+
+\subsection{Related Vocabulary Family}
+\begin{multicols}{2}
+
+\textbf{Emotion family:}\\
+\textarabic{أَسَف} – sorrow [ʔasaf]\\
+\textarabic{خَجَل} – shame [xadʒal]\\
+\textarabic{حَياء} – modesty [ħajaːʔ]\\
+\textarabic{ارتِباك} – embarrassment [irtabaːk]\\
+\textarabic{نَدَم} – regret [nadam]\\
+
+\textbf{Knowledge family:}\\
+\textarabic{مَعرِفَة} – knowledge [maʕrifa]\\
+\textarabic{عِلم} – science/knowledge [ʕilm]\\
+\textarabic{دِراية} – awareness [diraːja]\\
+\textarabic{فَهم} – understanding [fahm]\\
+\textarabic{إدراك} – perception [ʔidraːk]\\
+
+\textbf{Theft family:}\\
+\textarabic{سَرِقَة} – theft [sariqa]\\
+\textarabic{سارِق} – thief [saːriq]\\
+\textarabic{مَسروق} – stolen (item) [masruːq]\\
+\textarabic{نَهب} – plundering [nahb]\\
+\textarabic{اختِلاس} – embezzlement [ixtilaːs]\\
+
+\textbf{Politeness family:}\\
+\textarabic{سَيِّد} – master/sir [sajjid]\\
+\textarabic{أُستاذ} – professor/teacher [ʔustaːð]\\
+\textarabic{دُكتور} – doctor [duktuːr]\\
+\textarabic{مَولى} – master/lord [mawlaː]\\
+\textarabic{صاحِب} – owner/sir [sˤaːħib]
+\end{multicols}
+
+\end{document}

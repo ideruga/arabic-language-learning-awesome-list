@@ -3,3 +3,4 @@ stories/**/*.aux
 stories/**/*.log
 stories/**/*.pdf
 stories/**/*.gz
+stories/**/*.synctex(busy)
