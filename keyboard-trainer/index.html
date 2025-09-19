@@ -98,6 +98,21 @@
       display: grid; gap: 8px; background: var(--panel);
       border: 1px solid var(--key-edge); border-radius: 12px;
       padding: 12px; margin: 8px 0;
+      height: 40px; overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+      z-index: 10;
+      width: 280px;
+    }
+    .pair-selector:hover {
+      height: auto;
+      max-height: 500px;
+      position: absolute;
+      /*top: 8px;*/
+      /*left: 100px;*/
+      width: 280px;
+      box-shadow: 0 4px 16px rgba(104,240,255,.2);
+      transform: translate(0,0);
     }
     .pair-item {
       display: flex; align-items: center; justify-content: space-between;
@@ -140,7 +155,7 @@
     </label>
     <label> Lesson
       <select id="lesson"></select>
-      <div id="pairSelector" class="pair-selector" style="display:none;"></div>
+      <span id="pairSelector" class="pair-selector" style="display:none;"></span>
     </label>
     <label> Length
       <select id="length">
@@ -325,6 +340,11 @@
         item.classList.add('selected');
       }
       
+      // Only show selected pair when collapsed
+      if(index > state.selectedPairIndex) {
+        item.style.display = 'none';
+      }
+      
       item.innerHTML = `
         <div class="pair-name">${pair.name}</div>
         <div class="pair-desc">${pair.fingers}</div>
@@ -343,10 +363,20 @@
       els.pairSelector.appendChild(item);
     });
     
-    // Clear preview when mouse leaves selector
+    // Show all items on hover, hide on leave
+    els.pairSelector.addEventListener('mouseenter', () => {
+      const items = els.pairSelector.querySelectorAll('.pair-item');
+      items.forEach(item => item.style.display = 'flex');
+    });
+    
     els.pairSelector.addEventListener('mouseleave', () => {
       const items = els.pairSelector.querySelectorAll('.pair-item');
-      items.forEach(item => item.classList.remove('active'));
+      items.forEach((item, index) => {
+        item.classList.remove('active');
+        if(index > state.selectedPairIndex) {
+          item.style.display = 'none';
+        }
+      });
     });
   }
 
