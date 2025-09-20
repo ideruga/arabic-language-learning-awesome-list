@@ -64,6 +64,7 @@
       background: var(--panel);
       border: 1px dashed rgba(104,240,255,.25);
       padding: 16px; border-radius: 12px; min-height: 72px;
+      text-align: center;
       word-wrap: break-word;
     }
     .cursor{ position:relative; display:inline-block; min-width:1ch; border-bottom:2px solid var(--accent); box-shadow:0 2px 12px rgba(104,240,255,.5); animation:pulse 1.2s ease-in-out infinite; }
@@ -108,11 +109,11 @@
       height: auto;
       max-height: 500px;
       position: absolute;
-      /*top: 8px;*/
-      /*left: 100px;*/
+      top: 40px;
+      left: 225px;
       width: 280px;
       box-shadow: 0 4px 16px rgba(104,240,255,.2);
-      transform: translate(0,0);
+      /*transform: translate(100px,0);*/
     }
     .pair-item {
       display: flex; align-items: center; justify-content: space-between;
@@ -155,8 +156,8 @@
     </label>
     <label> Lesson
       <select id="lesson"></select>
-      <span id="pairSelector" class="pair-selector" style="display:none;"></span>
     </label>
+    <div id="pairSelector" class="pair-selector" style="display:none;"></div>
     <label> Length
       <select id="length">
         <option value="20">20</option>
@@ -172,7 +173,6 @@
   <!-- Console / Exercise -->
   <div class="console">
     <div id="textDisplay" class="target" dir="rtl">Press "Start" to begin.</div>
-    <div class="progress"><div id="progressFill"></div></div>
   </div>
 
   <!-- Virtual Keyboard -->
@@ -219,7 +219,11 @@
 
   // Progressive Letter Pairs System (based on finger positioning)
   const LETTER_PAIRS = [
-    { name: 'ت-ن', chars: ['ت', 'ن'], fingers: 'Index fingers (home row)' },
+    { name: 'ت-ب', chars: ['ت', 'ب'], fingers: 'Index fingers (home row)' },
+    { name: 'ت-ي', chars: ['ن', 'ي'], fingers: 'Middle fingers (home row)' },
+    { name: 'م-س', chars: ['م', 'س'], fingers: 'Ring fingers (home row)' },
+    { name: 'ك-ش', chars: ['ك', 'ش'], fingers: 'Pinky fingers (home row)' },
+
     { name: 'ب-م', chars: ['ب', 'م'], fingers: 'Index fingers (lower row)' },
     { name: 'ل-ك', chars: ['ل', 'ك'], fingers: 'Index fingers (upper row)' },
     { name: 'ا-ي', chars: ['ا', 'ي'], fingers: 'Index fingers (extended)' },
@@ -501,10 +505,9 @@
   function createLettersDrill(charset, length){
     const out = [];
     for(let i=0;i<length;i++){
-      if (i>0 && i%7===0) { out.push(' '); continue; }
       out.push( pick(charset) );
     }
-    return out.join('');
+    return out.join(' ');
   }
   function createWordsDrill(words, count){
     const chosen = [];
@@ -569,6 +572,9 @@
       state.hits++;
       flashKey(inputChar, true);
       state.index++;
+      if (state.mode === 'letters') {
+        state.index++;
+      }
       renderSequence(); updateProgress();
       if(state.index >= state.sequence.length){ finish(); return; }
       previewNextKey();
