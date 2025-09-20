@@ -1,3 +1,5 @@
+name: Deploy the Keyboard Trainer
+
 on:
   push:
     branches:
