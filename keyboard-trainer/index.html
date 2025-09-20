@@ -237,16 +237,20 @@
     { name: 'ت-ي', chars: ['ن', 'ي'], fingers: 'Middle fingers (home row)' },
     { name: 'م-س', chars: ['م', 'س'], fingers: 'Ring fingers (home row)' },
     { name: 'ك-ش', chars: ['ك', 'ش'], fingers: 'Pinky fingers (home row)' },
+    { name: 'ط', chars: ['ط'], fingers: 'Pinky fingers Ext (home row)' },
 
-    { name: 'ب-م', chars: ['ب', 'م'], fingers: 'Index fingers (lower row)' },
-    { name: 'ل-ك', chars: ['ل', 'ك'], fingers: 'Index fingers (upper row)' },
-    { name: 'ا-ي', chars: ['ا', 'ي'], fingers: 'Index fingers (extended)' },
-    { name: 'ش-س', chars: ['ش', 'س'], fingers: 'Middle fingers' },
-    { name: 'ف-ق', chars: ['ف', 'ق'], fingers: 'Ring fingers' },
-    { name: 'غ-ع', chars: ['غ', 'ع'], fingers: 'Pinky fingers' },
-    { name: 'ه-خ', chars: ['ه', 'خ'], fingers: 'Extended reach' },
-    { name: 'ح-ج', chars: ['ح', 'ج'], fingers: 'Far reach' },
-    { name: 'د-ط', chars: ['د', 'ط'], fingers: 'Special keys' }
+    { name: 'ع-ق', chars: ['ع', 'ق'], fingers: 'Index fingers (upper row)' },
+    { name: 'غ-ف', chars: ['غ', 'ف'], fingers: 'Index fingers (upper row)' },
+    { name: 'ه-ث', chars: ['ه', 'ث'], fingers: 'Middle fingers (upper row)' },
+    { name: 'خ-ص', chars: ['خ', 'ص'], fingers: 'Ring fingers (upper row)' },
+    { name: 'ج-ح-ض', chars: ['ح', 'ض', 'ج'], fingers: 'Pinky fingers (upper row)' },
+    { name: 'د-ذ', chars: ['د', 'ذ'], fingers: 'Pinky fingers Ext (upper row)' },
+
+    { name: 'ة-ر', chars: ['ة', 'ر'], fingers: 'Index fingers (lower row)' },
+    { name: 'ى-لا', chars: ['ى', 'لا'], fingers: 'Index fingers (lower row)' },
+    { name: 'و-ؤ', chars: ['و', 'ؤ'], fingers: 'Middle fingers (lower row)' },
+    { name: 'ز-ء', chars: ['ز', 'ء'], fingers: 'Ring fingers (lower row)' },
+    { name: 'ظ-ئ', chars: ['ظ', 'ئ'], fingers: 'Pinky fingers (lower row)' },
   ];
 
   // Legacy lessons (kept for compatibility)
@@ -298,6 +302,7 @@
     startedAt: null,
     pausedAt: null,
     running: false,
+    awaitingAdvancement: false,
     keyIndex: new Map(),
     ticker: null,
   };
@@ -477,11 +482,22 @@
     state.startedAt = null;
     state.pausedAt = null;
     state.running = false;
+    state.awaitingAdvancement = false;
     stopTicker();
     updateStats();
     renderSequencePlaceholder();
     updateProgress();
     clearKeyFeedback();
+  }
+  
+  function advanceToNextLevel(){
+    if(state.selectedPairIndex < LETTER_PAIRS.length - 1){
+      state.selectedPairIndex++;
+      renderPairDisplay();
+      renderPairSelector();
+      state.awaitingAdvancement = false;
+      resetSession();
+    }
   }
 
   function startDrill(){
@@ -564,7 +580,7 @@
     const after = escapeHtml(s.slice(i+1));
     els.textDisplay.innerHTML = `${before}<span class="cursor">${cur}</span>${after}`;
   }
-  function renderSequencePlaceholder(){ els.textDisplay.textContent = 'Press "Start" to begin.'; }
+  function renderSequencePlaceholder(){ els.textDisplay.textContent = 'Press "Enter" to begin.'; }
 
   function updateProgress(){
     const total = Math.max(state.sequence.length, 1);
@@ -589,6 +605,7 @@
 
   // --- Input Handling
   function onKeyDown(ev){
+    console.debug('keydown check');
     if(!state.running) return;
 
     const key = (ev.key === ' ') ? ' ' : ev.key; // allow space
@@ -631,6 +648,29 @@
     state.running = false; stopTicker(); clearPreviews();
     // celebratory glow for used keys
     new Set([...state.sequence]).forEach(ch => flashTransient(ch, 'glow', 420));
+    
+    // Show congratulations for letter mode
+    if(state.mode === 'letters'){
+      showCongratulations();
+    }
+  }
+  
+  function showCongratulations(){
+    const canAdvance = state.selectedPairIndex < LETTER_PAIRS.length - 1;
+    const message = canAdvance ? 
+      'Great job! Press Enter to advance to the next level.' :
+      'Congratulations! You\'ve completed all levels!';
+    
+    els.textDisplay.innerHTML = `
+      <div style="text-align: center; color: var(--ok); font-size: 24px; margin: 20px 0;">
+        🎉 Exercise Complete! 🎉
+      </div>
+      <div style="text-align: center; font-size: 18px;">
+        ${message}
+      </div>
+    `;
+    
+    state.awaitingAdvancement = canAdvance;
   }
 
   // --- Keyboard Feedback
@@ -662,7 +702,15 @@
 
   // Accessibility shortcuts
   window.addEventListener('keydown', (e)=>{
-    if(e.key === 'Enter' && !state.running) startDrill();
+    e.stopPropagation()
+    if(e.key === 'Enter' && !state.running) {
+      if(state.awaitingAdvancement && state.mode === 'letters'){
+        advanceToNextLevel();
+        startDrill();
+      } else {
+        startDrill();
+      }
+    }
     if(e.key === 'Escape') resetSession();
   });
 
