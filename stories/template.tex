@@ -22,6 +22,8 @@
 \geometry{margin=1.5cm}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
@@ -44,7 +46,7 @@
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase}]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
 \centering
 \textarabic{<original arabic phrase>}
 \\[0.5em]
@@ -57,7 +59,7 @@
 
 % ======================== Translations ========================
 \section{English Translation}
-\begin{tcolorbox}[colback=white,colframe=accentcolor]
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
 \textbf{Literal:} <Literal word-by-word phrase translation into english> \\
 \textit{[Arabic order retained for direct mapping]}\\[0.5em]
 \textbf{Adapted:} <Adapted phrase translation into english>"
@@ -69,17 +71,12 @@
 \subsection{\textarabic{فَقَالَ} — [faqaːla]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
+
 \textbf{Translation} & so he said / then he said \\
 \textbf{Root} & \textarabic{ق-و-ل} (q-w-l) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
 \textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (fa-) prefix \\
 \midrule \\
-\textbf{Table of Conjugations} &  \makecell[l]{
-Infinitive: \textarabic{قَوْل} [qawl] \\
-Present: \textarabic{يَقُولُ} [jaquːlu] \\
-Past: \textarabic{قَالَ} [qaːla]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{قَالَ الرَّجُلُ الحَقَّ} - The man said the truth [qaːla r-radʒulu l-ħaqqa]\\
 2. \textarabic{سَيَقُولُ لَكَ غَداً} - He will tell you tomorrow [sajaquːlu laka ɣadan]\\
@@ -89,6 +86,104 @@ Past: \textarabic{قَالَ} [qaːla]
 \textbf{Synonyms} & \textarabic{تَكَلَّمَ} (spoke), \textarabic{تَحَدَّثَ} (talked), \textarabic{نَطَقَ} (uttered) \\
 \textbf{Etymology} & From Proto-Semitic *qwl, related to Hebrew \texthebrew{קול} (qol) ``voice'' \\
 \bottomrule
+\end{tabular}
+
+\subsection{Conjugation}
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{قَالَ} [qāla] & \textarabic{يَقُولُ} [yaqūlu] \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{قَالَتْ} [qālat] & \textarabic{تَقُولُ} [taqūlu] \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{قَالَا} [qālā] & \textarabic{يَقُولَانِ} [yaqūlāni] \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{قَالَتَا} [qālatā] & \textarabic{تَقُولَانِ} [taqūlāni] \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{قَالُوا} [qālū] & \textarabic{يَقُولُونَ} [yaqūlūna] \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{قُلْنَ} [qulna] & \textarabic{يَقُلْنَ} [yaqulna] \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{قُلْتَ} [qulta] & \textarabic{تَقُولُ} [taqūlu] \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{قُلْتِ} [qulti] & \textarabic{تَقُولِينَ} [taqūlīna] \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{قُلْتُمَا} [qultumā] & \textarabic{تَقُولَانِ} [taqūlāni] \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{قُلْتُمْ} [qultum] & \textarabic{تَقُولُونَ} [taqūlūna] \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{قُلْتُنَّ} [qultunna] & \textarabic{تَقُلْنَ} [taqulna] \\
+\hline
+\textbf{1st person singular} & \textarabic{قُلْتُ} [qultu] & \textarabic{أَقُولُ} [aqūlu] \\
+\hline
+\textbf{1st person plural} & \textarabic{قُلْنَا} [qulnā] & \textarabic{نَقُولُ} [naqūlu] \\
+\hline
+\end{longtable}
+
+\subsubsection*{Conjugation Notes}
+\begin{itemize}
+  \item The \textbf{future} is formed with the prefix \textarabic{سَ} [sa-] or \textarabic{سَوْفَ} [sawfa] before the imperfect (e.g., \textarabic{سَيَقُولُ} “he will say”).
+  \item The \textbf{moods of the imperfect}: 
+    \begin{itemize}
+      \item Indicative: \textarabic{يَقُولُ} [yaqūlu] 
+      \item Subjunctive: \textarabic{لَنْ يَقُولَ} [lan yaqūla]
+      \item Jussive: \textarabic{لَمْ يَقُلْ} [lam yaqul]
+      \item Imperative: \textarabic{قُلْ} [qul!]
+    \end{itemize}
+  \item \textbf{Passive voice}: 
+    \begin{itemize}
+      \item Perfect: \textarabic{قِيلَ} [qīla] – it was said
+      \item Imperfect: \textarabic{يُقَالُ} [yuqālu] – it is said
+    \end{itemize}
+\end{itemize}
+
+\subsection{\textarabic{سَيِّدِي} — [sajjidiː]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & my master / my sir \\
+\textbf{Root} & \textarabic{س-و-د} (s-w-d) \\
+\textbf{Pattern} & \textarabic{فَعِّل} (faʕʕil) with 1st person possessive suffix \\
+\textbf{Grammar} & Noun, masculine, genitive case (after vocative), with possessive pronoun \textarabic{ـي} \\
+\textbf{Table of Conjugations} & \makecell[l]{
+Singular: \textarabic{سَيِّد} [sajjid]\\
+Plural: \textarabic{سَادَة} [saːda] or \textarabic{أَسْيَاد} [ʔasjaːd]
+} \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{هُوَ سَيِّدُ القَوْمِ} - He is the master of the people [huwa sajjidu l-qawmi]\\
+2. \textarabic{أَطَعْتُ سَيِّدِي} - I obeyed my master [ʔatˤaʕtu sajjidiː]\\
+3. \textarabic{السَّيِّدُ مُحَمَّد} - Mr. Muhammad [as-sajjidu muħammad]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{مَوْلَى} (master), \textarabic{رَبّ} (lord), \textarabic{صَاحِب} (owner) \\
+\textbf{Etymology} & From root meaning ``to be black, to prevail, to rule'' \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Declension Matrix}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With Suffix (1st sg.)} \\
+\hline
+\multirow{3}{*}{Singular (\textarabic{مفرد})} 
+ & Nominative   & \textarabic{سَيِّدٌ} (sajjidun) & \textarabic{السَّيِّدُ} (as-sajjidu) & \textarabic{سَيِّدِي} (sajjidī) \\
+ & Accusative   & \textarabic{سَيِّدًا} (sajjidan) & \textarabic{السَّيِّدَ} (as-sajjida) & \textarabic{سَيِّدِيَ} (sajjidiyya) \\
+ & Genitive     & \textarabic{سَيِّدٍ} (sajjidin) & \textarabic{السَّيِّدِ} (as-sajjidi) & \textarabic{سَيِّدِي} (sajjidī) \\
+\hline
+\multirow{3}{*}{Dual (\textarabic{مثنّى})} 
+ & Nominative   & \textarabic{سَيِّدَانِ} (sajjidāni) & \textarabic{السَّيِّدَانِ} (as-sajjidāni) & \textarabic{سَيِّدَايَ} (sajjidāya) \\
+ & Acc/Gen      & \textarabic{سَيِّدَيْنِ} (sajjidaini) & \textarabic{السَّيِّدَيْنِ} (as-sajjidaini) & \textarabic{سَيِّدَيَّ} (sajjidayya) \\
+\hline
+\multirow{6}{*}{Plural (\textarabic{جمع})} 
+  & \multirow{2}{*}{Nominative}    & \textarabic{سَادَةٌ} (sādah) & \textarabic{السَّادَةُ} (as-sādatu) & \textarabic{سَادَتِي} (sādatī) \\
+  &                                                   & \textarabic{أَسْيَادٌ} (ʔasyādun) & \textarabic{الأَسْيَادُ} (al-ʔasyādu) & \textarabic{أَسْيَادِي} (ʔasyādī) \\
+  & \multirow{2}{*}{Accusative}      & \textarabic{سَادَةً} (sādatan) & \textarabic{السَّادَةَ} (as-sādata) & \textarabic{سَادَتِيَ} (sādatīya) \\
+  &                                                    & \textarabic{أَسْيَادًا} (ʔasyādan) & \textarabic{الأَسْيَادَ} (al-ʔasyāda) & \textarabic{أَسْيَادِيَ} (ʔasyādiyya) \\
+  & \multirow{2}{*}{Genitive}          & \textarabic{سَادَةٍ} (sādatin) & \textarabic{السَّادَةِ} (as-sādati) & \textarabic{سَادَتِي} (sādatī) \\
+  &                                                    & \textarabic{أَسْيَادٍ} (ʔasyādin) & \textarabic{الأَسْيَادِ} (al-ʔasyādi) & \textarabic{أَسْيَادِي} (ʔasyādī) \\
+\hline
 \end{tabular}
 
 % ======================== Phrase Analysis ========================
