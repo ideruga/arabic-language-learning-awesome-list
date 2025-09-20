@@ -27,4 +27,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./keyboard-trainer
+          destination_dir: keyboard-trainer
           keep_files: true
