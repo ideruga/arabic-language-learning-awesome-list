@@ -702,8 +702,9 @@
 
   // Accessibility shortcuts
   window.addEventListener('keydown', (e)=>{
-    e.stopPropagation()
     if(e.key === 'Enter' && !state.running) {
+      e.preventDefault();
+      e.stopPropagation();
       if(state.awaitingAdvancement && state.mode === 'letters'){
         advanceToNextLevel();
         startDrill();
@@ -711,7 +712,11 @@
         startDrill();
       }
     }
-    if(e.key === 'Escape') resetSession();
+    if(e.key === 'Escape') {
+      e.preventDefault();
+      e.stopPropagation();
+      resetSession();
+    }
   });
 
   // Focus to capture keys reliably

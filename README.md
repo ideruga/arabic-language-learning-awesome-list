@@ -33,8 +33,8 @@ My next purchase, hopefully the vocabulary approach changes.
 
 ## :coin: My humble contribution
 ### Stories breakdown and analysis
-- Juha and the thief [Part1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Part2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Part3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf)
-
+- Juha and the thief [Part 1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Part 2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Part 3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf), [Part 4](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-04.pdf)
+- [Arabic keyboard trainer](https://ideruga.github.io/arabic-language-learning-awesome-list/keyboard-trainer/index.html)
 ---
 # Chat GPT-Offered Resources
 
