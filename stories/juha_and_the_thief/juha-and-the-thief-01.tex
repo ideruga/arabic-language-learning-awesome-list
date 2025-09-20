@@ -21,6 +21,8 @@
 \geometry{margin=1.5cm}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
@@ -35,26 +37,26 @@
 
 \title{\textbf{\Large Arabic Phrase Analyser}\\
 \large Juha Hides from a Thief in His House\\
-\normalsize \textarabic{شَعَرَ جُحا بِلِصٍّ في دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}}
+\normalsize \textarabic{شَعَرَ جُحا بِلِصٍّ فِي دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}}
 \author{Igor Deruga}
 \date{}
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase}]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
 \centering
 \textarabic{شعر جحا بلص في داره ليلا، فقام إلى خزانة غرفة البوم واختبأ فيها}
 \\[0.5em]
 \textbf{Without Diacritics}
 \\[1em]
-\textarabic{شَعَرَ جُحا بِلِصٍّ في دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}
+\textarabic{شَعَرَ جُحا بِلِصٍّ فِي دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}
 \\[0.5em]
 \textbf{With Full Diacritics}
 \end{tcolorbox}
 
 % ======================== Translations ========================
 \section{English Translation}
-\begin{tcolorbox}[colback=white,colframe=accentcolor]
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
 \textbf{Literal:} Felt Juha with-thief in house-his night, so-stood to closet room the-owl and-hid in-it \\
 \textit{[Arabic order retained for direct mapping]}\\[0.5em]
 \textbf{Adapted:} Juha felt a thief in his house at night, so he went to the closet of the owl room and hid in it
@@ -63,7 +65,7 @@
 % ======================== Detailed Word Analysis ========================
 \section{Detailed Word Analysis}
 
-\subsection{\textarabic{شَعَرَ} – [ʃaʕara]}
+\subsection{\textarabic{شَعَرَ} — [ʃaʕara]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & felt / sensed \\
@@ -71,14 +73,8 @@
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
 \textbf{Grammar} & Past tense verb, 3rd person masculine singular, active voice \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Infinitive: \textarabic{شُعُورٌ} [ʃuʕuːr] \\
-Present: \textarabic{يَشْعُرُ} [jaʃʕuru] \\
-Past: \textarabic{شَعَرَ} [ʃaʕara]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
-1. \textarabic{شَعَرَ الرَّجُلُ بِالْأَلَمِ} - The man felt pain [ʃaʕara r-radʒulu bil-ʔalam]\\
+1. \textarabic{شَعَرَ الرَّجُلُ بِالأَلَمِ} - The man felt pain [ʃaʕara r-radʒulu bil-ʔalam]\\
 2. \textarabic{يَشْعُرُ بِالسَّعَادَةِ} - He feels happiness [jaʃʕuru bis-saʕaːda]\\
 3. \textarabic{سَيَشْعُرُ بِالنَّدَمِ} - He will feel regret [sajaʃʕuru bin-nadam]
 }} \\
@@ -88,7 +84,53 @@ Past: \textarabic{شَعَرَ} [ʃaʕara]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{جُحا} – [dʒuħaː]}
+\subsection{Conjugation}
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{شَعَرَ} [ʃaʕara] & \textarabic{يَشْعُرُ} [jaʃʕuru] \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{شَعَرَتْ} [ʃaʕarat] & \textarabic{تَشْعُرُ} [taʃʕuru] \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{شَعَرَا} [ʃaʕaraː] & \textarabic{يَشْعُرَانِ} [jaʃʕuraːni] \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{شَعَرَتَا} [ʃaʕarataː] & \textarabic{تَشْعُرَانِ} [taʃʕuraːni] \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{شَعَرُوا} [ʃaʕaruː] & \textarabic{يَشْعُرُونَ} [jaʃʕuruːna] \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{شَعَرْنَ} [ʃaʕarna] & \textarabic{يَشْعُرْنَ} [jaʃʕurna] \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{شَعَرْتَ} [ʃaʕarta] & \textarabic{تَشْعُرُ} [taʃʕuru] \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{شَعَرْتِ} [ʃaʕarti] & \textarabic{تَشْعُرِينَ} [taʃʕuriːna] \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{شَعَرْتُمَا} [ʃaʕartumaː] & \textarabic{تَشْعُرَانِ} [taʃʕuraːni] \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{شَعَرْتُمْ} [ʃaʕartum] & \textarabic{تَشْعُرُونَ} [taʃʕuruːna] \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{شَعَرْتُنَّ} [ʃaʕartunna] & \textarabic{تَشْعُرْنَ} [taʃʕurna] \\
+\hline
+\textbf{1st person singular} & \textarabic{شَعَرْتُ} [ʃaʕartu] & \textarabic{أَشْعُرُ} [ʔaʃʕuru] \\
+\hline
+\textbf{1st person plural} & \textarabic{شَعَرْنَا} [ʃaʕarnaː] & \textarabic{نَشْعُرُ} [naʃʕuru] \\
+\hline
+\end{longtable}
+
+\subsubsection*{Conjugation Notes}
+\begin{itemize}
+  \item The \textbf{future} is formed with the prefix \textarabic{سَ} [sa-] or \textarabic{سَوْفَ} [sawfa] before the imperfect (e.g., \textarabic{سَيَشْعُرُ} "he will feel").
+  \item The \textbf{moods of the imperfect}:
+    \begin{itemize}
+      \item Indicative: \textarabic{يَشْعُرُ} [jaʃʕuru]
+      \item Subjunctive: \textarabic{لَنْ يَشْعُرَ} [lan jaʃʕura]
+      \item Jussive: \textarabic{لَمْ يَشْعُرْ} [lam jaʃʕur]
+      \item Imperative: \textarabic{اُشْعُرْ} [uʃʕur!]
+    \end{itemize}
+  \item The verb \textarabic{شَعَرَ} typically requires the preposition \textarabic{بِ} to mean "felt with/sensed"
+\end{itemize}
+
+\subsection{\textarabic{جُحا} — [dʒuħaː]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & Juha (proper name of folkloric character) \\
@@ -96,12 +138,6 @@ Past: \textarabic{شَعَرَ} [ʃaʕara]
 \textbf{Pattern} & \textarabic{فُعَلَ} pattern for names \\
 \textbf{Grammar} & Proper noun, masculine, subject of the verb \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Nominative: \textarabic{جُحا} [dʒuħaː] \\
-Genitive: \textarabic{جُحا} [dʒuħaː] \\
-Accusative: \textarabic{جُحا} [dʒuħaː]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{قَالَ جُحا شَيْئًا مُضْحِكًا} - Juha said something funny [qaːla dʒuħaː ʃajʔan mudħikan]\\
 2. \textarabic{حِكَايَاتُ جُحا مَشْهُورَةٌ} - Juha's stories are famous [ħikaːjaːtu dʒuħaː maʃhuːra]\\
@@ -113,7 +149,20 @@ Accusative: \textarabic{جُحا} [dʒuħaː]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{بِلِصٍّ} – [bilis̱s̱in]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Form} & \textbf{Usage} \\
+\hline
+Nominative & \textarabic{جُحا} [dʒuħaː] & Subject of sentence \\
+\hline
+Accusative & \textarabic{جُحا} [dʒuħaː] & Direct object \\
+\hline
+Genitive & \textarabic{جُحا} [dʒuħaː] & After prepositions, in construct \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{بِلِصٍّ} — [bilisˤsˤin]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & with a thief \\
@@ -121,16 +170,10 @@ Accusative: \textarabic{جُحا} [dʒuħaː]
 \textbf{Pattern} & \textarabic{فِعْل} (fiʕl) with preposition \textarabic{بِ} \\
 \textbf{Grammar} & Preposition + indefinite noun, genitive case, masculine singular \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Nominative: \textarabic{لِصٌّ} [lis̱s̱un] \\
-Genitive: \textarabic{لِصٍّ} [lis̱s̱in] \\
-Accusative: \textarabic{لِصًّا} [lis̱s̱an]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
-1. \textarabic{قَبَضَ الشُّرْطِيُّ عَلَى اللِّصِّ} - The policeman caught the thief [qabaða ʃ-ʃurtˤijju ʕala l-lis̱s̱i]\\
-2. \textarabic{دَخَلَ لِصٌّ إِلَى البَيْتِ} - A thief entered the house [daxala lis̱s̱un ʔila l-bajti]\\
-3. \textarabic{سَيُعَاقِبُ القَاضِي اللُّصُوصَ} - The judge will punish the thieves [sajuʕaːqibu l-qaːɮˤi l-lus̱uːs̱a]
+1. \textarabic{قَبَضَ الشُّرْطِيُّ عَلَى اللِّصِّ} - The policeman caught the thief [qabaðˤa ʃ-ʃurtˤijju ʕala l-lisˤsˤi]\\
+2. \textarabic{دَخَلَ لِصٌّ إِلَى البَيْتِ} - A thief entered the house [daxala lisˤsˤun ʔila l-bajti]\\
+3. \textarabic{سَيُعَاقِبُ القَاضِي اللُّصُوصَ} - The judge will punish the thieves [sajuʕaːqibu l-qaːdˤi l-lusˤuːsˤa]
 }} \\
 \midrule \\
 \textbf{Synonyms} & \textarabic{سَارِق} (thief), \textarabic{حَرَامِيّ} (burglar), \textarabic{نَشَّال} (pickpocket) \\
@@ -138,7 +181,24 @@ Accusative: \textarabic{لِصًّا} [lis̱s̱an]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{في دَارِهِ} – [fiː daːrihi]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Singular}
+ & Nominative   & \textarabic{لِصٌّ} (lisˤsˤun) & \textarabic{اللِّصُّ} (al-lisˤsˤu) \\
+ & Accusative   & \textarabic{لِصًّا} (lisˤsˤan) & \textarabic{اللِّصَّ} (al-lisˤsˤa) \\
+ & Genitive     & \textarabic{لِصٍّ} (lisˤsˤin) & \textarabic{اللِّصِّ} (al-lisˤsˤi) \\
+\hline
+\multirow{3}{*}{Plural}
+ & Nominative   & \textarabic{لُصُوصٌ} (lusˤuːsˤun) & \textarabic{اللُّصُوصُ} (al-lusˤuːsˤu) \\
+ & Accusative   & \textarabic{لُصُوصًا} (lusˤuːsˤan) & \textarabic{اللُّصُوصَ} (al-lusˤuːsˤa) \\
+ & Genitive     & \textarabic{لُصُوصٍ} (lusˤuːsˤin) & \textarabic{اللُّصُوصِ} (al-lusˤuːsˤi) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{فِي دَارِهِ} — [fiː daːrihi]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & in his house \\
@@ -146,12 +206,6 @@ Accusative: \textarabic{لِصًّا} [lis̱s̱an]
 \textbf{Pattern} & \textarabic{فَاعِل} (faːʕil) + possessive pronoun \\
 \textbf{Grammar} & Preposition + definite noun in genitive + 3rd person masculine singular possessive \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-My house: \textarabic{دَارِي} [daːriː] \\
-Your house (m.): \textarabic{دَارُكَ} [daːruka] \\
-His house: \textarabic{دَارُهُ} [daːruhu]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{دَارُ الأُسْتَاذِ كَبِيرَةٌ} - The professor's house is big [daːru l-ʔustaːði kabiːra]\\
 2. \textarabic{سَأَزُورُ دَارَكَ غَدًا} - I will visit your house tomorrow [saʔazuːru daːraka ɣadan]\\
@@ -163,7 +217,20 @@ His house: \textarabic{دَارُهُ} [daːruhu]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{لَيْلًا} – [lajlan]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Person} & \textbf{Nominative} & \textbf{Accusative} & \textbf{Genitive} \\
+\hline
+My house & \textarabic{دَارِي} [daːriː] & \textarabic{دَارِيَ} [daːrijja] & \textarabic{دَارِي} [daːriː] \\
+\hline
+Your house (m.) & \textarabic{دَارُكَ} [daːruka] & \textarabic{دَارَكَ} [daːraka] & \textarabic{دَارِكَ} [daːrika] \\
+\hline
+His house & \textarabic{دَارُهُ} [daːruhu] & \textarabic{دَارَهُ} [daːrahu] & \textarabic{دَارِهِ} [daːrihi] \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{لَيْلًا} — [lajlan]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & at night / nocturnally \\
@@ -171,16 +238,10 @@ His house: \textarabic{دَارُهُ} [daːruhu]
 \textbf{Pattern} & \textarabic{فَعْل} (fajl) in accusative (adverbial) \\
 \textbf{Grammar} & Adverbial accusative of time, indefinite \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Nominative: \textarabic{لَيْلٌ} [lajlun] \\
-Genitive: \textarabic{لَيْلٍ} [lajlin] \\
-Accusative: \textarabic{لَيْلًا} [lajlan]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
-1. \textarabic{نَامَ الطِّفْلُ لَيْلًا} - The child slept at night [naːma t̪-t̪iflu lajlan]\\
-2. \textarabic{اللَّيْلُ طَوِيلٌ} - The night is long [al-lajlu t̪awiːl]\\
-3. \textarabic{سَيَسْهَرُ في اللَّيْلِ} - He will stay up at night [sajasharu fiː l-lajli]
+1. \textarabic{نَامَ الطِّفْلُ لَيْلًا} - The child slept at night [naːma tˤ-tˤiflu lajlan]\\
+2. \textarabic{اللَّيْلُ طَوِيلٌ} - The night is long [al-lajlu tˤawiːl]\\
+3. \textarabic{سَيَسْهَرُ فِي اللَّيْلِ} - He will stay up at night [sajasharu fiː l-lajli]
 }} \\
 \midrule \\
 \textbf{Synonyms} & \textarabic{عَشِيَّة} (evening), \textarabic{ظَلَام} (darkness), \textarabic{دُجَى} (dark night) \\
@@ -188,7 +249,24 @@ Accusative: \textarabic{لَيْلًا} [lajlan]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{فَقَامَ} – [faqaːma]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Singular}
+ & Nominative   & \textarabic{لَيْلٌ} (lajlun) & \textarabic{اللَّيْلُ} (al-lajlu) \\
+ & Accusative   & \textarabic{لَيْلًا} (lajlan) & \textarabic{اللَّيْلَ} (al-lajla) \\
+ & Genitive     & \textarabic{لَيْلٍ} (lajlin) & \textarabic{اللَّيْلِ} (al-lajli) \\
+\hline
+\multirow{3}{*}{Plural}
+ & Nominative   & \textarabic{لَيَالٍ} (lajaːlin) & \textarabic{اللَّيَالِي} (al-lajaːliː) \\
+ & Accusative   & \textarabic{لَيَالِيَ} (lajaːlija) & \textarabic{اللَّيَالِيَ} (al-lajaːlija) \\
+ & Genitive     & \textarabic{لَيَالٍ} (lajaːlin) & \textarabic{اللَّيَالِي} (al-lajaːliː) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{فَقَامَ} — [faqaːma]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & so he stood up / then he got up \\
@@ -196,24 +274,51 @@ Accusative: \textarabic{لَيْلًا} [lajlan]
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) with conjunction prefix \\
 \textbf{Grammar} & Past tense verb, 3rd person masculine singular, with \textarabic{فَ} conjunction \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Infinitive: \textarabic{قِيَامٌ} [qijaːm] \\
-Present: \textarabic{يَقُومُ} [jaquːmu] \\
-Past: \textarabic{قَامَ} [qaːma]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{قَامَ الرَّجُلُ مِنْ كُرْسِيِّهِ} - The man got up from his chair [qaːma r-radʒulu min kursijjihi]\\
-2. \textarabic{يَقُومُ كُلَّ صَبَاحٍ بَاكِرًا} - He gets up early every morning [jaquːmu kulla s̱abaːħin baːkiran]\\
+2. \textarabic{يَقُومُ كُلَّ صَبَاحٍ بَاكِرًا} - He gets up early every morning [jaquːmu kulla sˤabaːħin baːkiran]\\
 3. \textarabic{قَامُوا جَمِيعًا} - They all stood up [qaːmuː dʒamiːʕan]
 }} \\
 \midrule \\
-\textbf{Synonyms} & \textarabic{وَقَفَ} (stood), \textarabic{نَهَضَ} (rose up), \textarabic{اِسْتَقَامَ} (straightened up) \\
+\textbf{Synonyms} & \textarabic{وَقَفَ} (stood), \textarabic{نَهَضَ} (rose up), \textarabic{اسْتَقَامَ} (straightened up) \\
 \textbf{Etymology} & From Proto-Semitic *qwm, related to Hebrew \texthebrew{קום} (qum) "rise" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{إِلَى خِزَانَةِ} – [ʔilaː xizaːnati]}
+\subsection{Conjugation}
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{قَامَ} [qaːma] & \textarabic{يَقُومُ} [jaquːmu] \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{قَامَتْ} [qaːmat] & \textarabic{تَقُومُ} [taquːmu] \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{قَامَا} [qaːmaː] & \textarabic{يَقُومَانِ} [jaquːmaːni] \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{قَامَتَا} [qaːmataː] & \textarabic{تَقُومَانِ} [taquːmaːni] \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{قَامُوا} [qaːmuː] & \textarabic{يَقُومُونَ} [jaquːmuːna] \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{قُمْنَ} [qumna] & \textarabic{يَقُمْنَ} [jaqumna] \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{قُمْتَ} [qumta] & \textarabic{تَقُومُ} [taquːmu] \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{قُمْتِ} [qumti] & \textarabic{تَقُومِينَ} [taquːmiːna] \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{قُمْتُمَا} [qumtumaː] & \textarabic{تَقُومَانِ} [taquːmaːni] \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{قُمْتُمْ} [qumtum] & \textarabic{تَقُومُونَ} [taquːmuːna] \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{قُمْتُنَّ} [qumtunna] & \textarabic{تَقُمْنَ} [taqumna] \\
+\hline
+\textbf{1st person singular} & \textarabic{قُمْتُ} [qumtu] & \textarabic{أَقُومُ} [ʔaquːmu] \\
+\hline
+\textbf{1st person plural} & \textarabic{قُمْنَا} [qumnaː] & \textarabic{نَقُومُ} [naquːmu] \\
+\hline
+\end{longtable}
+
+\subsection{\textarabic{إِلَى خِزَانَةِ} — [ʔilaː xizaːnati]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & to the closet / toward the cabinet \\
@@ -221,16 +326,10 @@ Past: \textarabic{قَامَ} [qaːma]
 \textbf{Pattern} & \textarabic{فِعَالَة} (fiʕaːla) \\
 \textbf{Grammar} & Preposition + definite noun in genitive case, feminine singular \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Nominative: \textarabic{خِزَانَةٌ} [xizaːnatun] \\
-Genitive: \textarabic{خِزَانَةِ} [xizaːnati] \\
-Accusative: \textarabic{خِزَانَةً} [xizaːnatan]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{فَتَحَ خِزَانَةَ المَلَابِسِ} - He opened the clothes closet [fataħa xizaːnata l-malaːbisi]\\
 2. \textarabic{خِزَانَةُ الكُتُبِ مُمْتَلِئَةٌ} - The book cabinet is full [xizaːnatu l-kutubi mumtaliʔa]\\
-3. \textarabic{اِشْتَرَى خِزَانَةً جَدِيدَةً} - He bought a new closet [ʔiʃtaraː xizaːnatan dʒadiːda]
+3. \textarabic{اشْتَرَى خِزَانَةً جَدِيدَةً} - He bought a new closet [ʔiʃtaraː xizaːnatan dʒadiːda]
 }} \\
 \midrule \\
 \textbf{Synonyms} & \textarabic{دُولَاب} (wardrobe), \textarabic{صُنْدُوق} (chest), \textarabic{خَزِينَة} (treasury/storage) \\
@@ -238,7 +337,24 @@ Accusative: \textarabic{خِزَانَةً} [xizaːnatan]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{غُرْفَةِ البُومِ} – [ɣurfati l-buːmi]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Singular}
+ & Nominative   & \textarabic{خِزَانَةٌ} (xizaːnatun) & \textarabic{الخِزَانَةُ} (al-xizaːnatu) \\
+ & Accusative   & \textarabic{خِزَانَةً} (xizaːnatan) & \textarabic{الخِزَانَةَ} (al-xizaːnata) \\
+ & Genitive     & \textarabic{خِزَانَةٍ} (xizaːnatin) & \textarabic{الخِزَانَةِ} (al-xizaːnati) \\
+\hline
+\multirow{3}{*}{Plural}
+ & Nominative   & \textarabic{خِزَانَاتٌ} (xizaːnaːtun) & \textarabic{الخِزَانَاتُ} (al-xizaːnaːtu) \\
+ & Accusative   & \textarabic{خِزَانَاتٍ} (xizaːnaːtin) & \textarabic{الخِزَانَاتِ} (al-xizaːnaːti) \\
+ & Genitive     & \textarabic{خِزَانَاتٍ} (xizaːnaːtin) & \textarabic{الخِزَانَاتِ} (al-xizaːnaːti) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{غُرْفَةِ البُومِ} — [ɣurfati l-buːmi]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & the owl's room / room of the owl \\
@@ -246,16 +362,10 @@ Accusative: \textarabic{خِزَانَةً} [xizaːnatan]
 \textbf{Pattern} & \textarabic{فُعْلَة} (fuʕla) + \textarabic{فُعْل} (fuʕl) \\
 \textbf{Grammar} & Definite noun in genitive + definite noun in genitive (possessive construct) \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Room (nom.): \textarabic{غُرْفَةٌ} [ɣurfatun] \\
-Room (gen.): \textarabic{غُرْفَةِ} [ɣurfati] \\
-Owl: \textarabic{البُومُ} [al-buːmu]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{غُرْفَةُ النَّوْمِ وَاسِعَةٌ} - The bedroom is spacious [ɣurfatu n-nawmi waːsiʕa]\\
-2. \textarabic{البُومُ يَطِيرُ لَيْلًا} - The owl flies at night [al-buːmu jat̪iːru lajlan]\\
-3. \textarabic{سَمِعَ صَوْتَ البُومِ} - He heard the owl's sound [samiʕa s̱awta l-buːmi]
+2. \textarabic{البُومُ يَطِيرُ لَيْلًا} - The owl flies at night [al-buːmu jatˤiːru lajlan]\\
+3. \textarabic{سَمِعَ صَوْتَ البُومِ} - He heard the owl's sound [samiʕa sˤawta l-buːmi]
 }} \\
 \midrule \\
 \textbf{Synonyms} & \textarabic{حُجْرَة} (room), \textarabic{قَاعَة} (hall); \textarabic{بُومَة} (female owl) \\
@@ -263,34 +373,81 @@ Owl: \textarabic{البُومُ} [al-buːmu]
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{وَاخْتَبَأَ فِيهَا} – [waxtabaʔa fiːhaː]}
+\subsubsection*{Full Declension Matrix}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Word} & \textbf{Nominative} & \textbf{Accusative} & \textbf{Genitive} \\
+\hline
+Room (indef.) & \textarabic{غُرْفَةٌ} [ɣurfatun] & \textarabic{غُرْفَةً} [ɣurfatan] & \textarabic{غُرْفَةٍ} [ɣurfatin] \\
+\hline
+Room (def.) & \textarabic{الغُرْفَةُ} [al-ɣurfatu] & \textarabic{الغُرْفَةَ} [al-ɣurfata] & \textarabic{الغُرْفَةِ} [al-ɣurfati] \\
+\hline
+Owl & \textarabic{البُومُ} [al-buːmu] & \textarabic{البُومَ} [al-buːma] & \textarabic{البُومِ} [al-buːmi] \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{وَاخْتَبَأَ فِيهَا} — [waxtabaʔa fiːhaː]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & and hid in it \\
 \textbf{Root} & \textarabic{خ-ب-أ} (x-b-ʔ) \\
-\textbf{Pattern} & \textarabic{اِفْتَعَلَ} (ʔiftaʕala - Form VIII) \\
+\textbf{Pattern} & \textarabic{افْتَعَلَ} (ʔiftaʕala - Form VIII) \\
 \textbf{Grammar} & Past tense verb Form VIII, 3rd person masculine singular + preposition + pronoun \\
 \midrule \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Infinitive: \textarabic{اِخْتِبَاء} [ʔixtibaːʔ] \\
-Present: \textarabic{يَخْتَبِئُ} [jaxtabiʔu] \\
-Past: \textarabic{اِخْتَبَأَ} [ʔixtabaʔa]
-} \\
-\midrule
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
-1. \textarabic{اِخْتَبَأَ الطِّفْلُ تَحْتَ السَّرِيرِ} - The child hid under the bed [ʔixtabaʔa t̪-t̪iflu taħta s-sariːri]\\
-2. \textarabic{يَخْتَبِئُ اللُّصُوصُ في الظَّلَامِ} - Thieves hide in darkness [jaxtabiʔu l-lus̱uːs̱u fiː ð-ð̩alaːmi]\\
+1. \textarabic{اخْتَبَأَ الطِّفْلُ تَحْتَ السَّرِيرِ} - The child hid under the bed [ʔixtabaʔa tˤ-tˤiflu taħta s-sariːri]\\
+2. \textarabic{يَخْتَبِئُ اللُّصُوصُ فِي الظَّلَامِ} - Thieves hide in darkness [jaxtabiʔu l-lusˤuːsˤu fiː ðˤ-ðˤalaːmi]\\
 3. \textarabic{سَيَخْتَبِئُ هُنَاكَ} - He will hide there [sajaxtabiʔu hunaːka]
 }} \\
 \midrule \\
-\textbf{Synonyms} & \textarabic{اِسْتَتَرَ} (concealed himself), \textarabic{تَوَارَى} (disappeared), \textarabic{كَمَنَ} (lay in ambush) \\
+\textbf{Synonyms} & \textarabic{اسْتَتَرَ} (concealed himself), \textarabic{تَوَارَى} (disappeared), \textarabic{كَمَنَ} (lay in ambush) \\
 \textbf{Etymology} & From root x-b-ʔ meaning "to be hidden/concealed" \\
 \bottomrule
 \end{tabular}
 
+\subsection{Conjugation}
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{اخْتَبَأَ} [ʔixtabaʔa] & \textarabic{يَخْتَبِئُ} [jaxtabiʔu] \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{اخْتَبَأَتْ} [ʔixtabaʔat] & \textarabic{تَخْتَبِئُ} [taxtabiʔu] \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{اخْتَبَآ} [ʔixtabaʔaː] & \textarabic{يَخْتَبِئَانِ} [jaxtabiʔaːni] \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{اخْتَبَأَتَا} [ʔixtabaʔataː] & \textarabic{تَخْتَبِئَانِ} [taxtabiʔaːni] \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{اخْتَبَؤُوا} [ʔixtabaʔuː] & \textarabic{يَخْتَبِئُونَ} [jaxtabiʔuːna] \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{اخْتَبَأْنَ} [ʔixtabaʔna] & \textarabic{يَخْتَبِئْنَ} [jaxtabiʔna] \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{اخْتَبَأْتَ} [ʔixtabaʔta] & \textarabic{تَخْتَبِئُ} [taxtabiʔu] \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{اخْتَبَأْتِ} [ʔixtabaʔti] & \textarabic{تَخْتَبِئِينَ} [taxtabiʔiːna] \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{اخْتَبَأْتُمَا} [ʔixtabaʔtumaː] & \textarabic{تَخْتَبِئَانِ} [taxtabiʔaːni] \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{اخْتَبَأْتُمْ} [ʔixtabaʔtum] & \textarabic{تَخْتَبِئُونَ} [taxtabiʔuːna] \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{اخْتَبَأْتُنَّ} [ʔixtabaʔtunna] & \textarabic{تَخْتَبِئْنَ} [taxtabiʔna] \\
+\hline
+\textbf{1st person singular} & \textarabic{اخْتَبَأْتُ} [ʔixtabaʔtu] & \textarabic{أَخْتَبِئُ} [ʔaxtabiʔu] \\
+\hline
+\textbf{1st person plural} & \textarabic{اخْتَبَأْنَا} [ʔixtabaʔnaː] & \textarabic{نَخْتَبِئُ} [naxtabiʔu] \\
+\hline
+\end{longtable}
+
+\subsubsection*{Conjugation Notes}
+\begin{itemize}
+  \item Form VIII verbs like \textarabic{اخْتَبَأَ} often indicate reflexive or intensive action
+  \item The pattern \textarabic{افْتَعَلَ} (ʔiftaʕala) shows the characteristic \textarabic{ت} infixed after the first radical
+  \item \textarabic{فِيهَا} [fiːhaː] is the feminine pronoun referring back to \textarabic{خِزَانَة} (closet)
+\end{itemize}
+
 % ======================== Phrase Analysis ========================
 \section{Phrase Analysis}
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Grammatical Structure},breakable]
 \textbf{Grammatical Structure:}\\
 Past verb + proper noun subject + preposition + indefinite noun (genitive) + prepositional phrase + adverbial accusative + conjunction + past verb + preposition + definite noun construct (genitive) + conjunction + Form VIII past verb + prepositional phrase with pronoun \\
 
@@ -311,50 +468,51 @@ Past verb + proper noun subject + preposition + indefinite noun (genitive) + pre
 \section{Similar Phrases for Practice}
 
 \begin{enumerate}
-\item \textarabic{سَمِعَ عَلِيٌّ صَوْتًا في بَيْتِهِ لَيْلًا، فَذَهَبَ إِلَى المَطْبَخِ وَاخْتَبَأَ خَلْفَ البَابِ}\\
-Ali heard a sound in his house at night, so he went to the kitchen and hid behind the door [samiʕa ʕalijjun s̱awtan fiː bajtihi lajlan, faðahaba ʔila l-mat̪baxi waxtabaʔa xalfa l-baːbi]
+\item \textarabic{سَمِعَ عَلِيٌّ صَوْتًا فِي بَيْتِهِ لَيْلًا، فَذَهَبَ إِلَى المَطْبَخِ وَاخْتَبَأَ خَلْفَ البَابِ}\\
+Ali heard a sound in his house at night, so he went to the kitchen and hid behind the door [samiʕa ʕalijjun sˤawtan fiː bajtihi lajlan, faðahaba ʔila l-matˤbaxi waxtabaʔa xalfa l-baːbi]
 
-\item \textarabic{أَحَسَّتْ فَاطِمَةُ بِحَرَكَةٍ في الحَدِيقَةِ صَبَاحًا، فَمَشَتْ إِلَى النَّافِذَةِ وَنَظَرَتْ مِنْهَا}\\
-Fatima sensed movement in the garden in the morning, so she walked to the window and looked through it [ʔaħassat faːt̪imatun biħarakatin fiː l-ħadiːqati s̱abaːħan, famaʃat ʔila n-naːfiðati wanaðarat minhaː]
+\item \textarabic{أَحَسَّتْ فَاطِمَةُ بِحَرَكَةٍ فِي الحَدِيقَةِ صَبَاحًا، فَمَشَتْ إِلَى النَّافِذَةِ وَنَظَرَتْ مِنْهَا}\\
+Fatima sensed movement in the garden in the morning, so she walked to the window and looked through it [ʔaħassat faːtˤimatun biħarakatin fiː l-ħadiːqati sˤabaːħan, famaʃat ʔila n-naːfiðati wanaðarat minhaː]
 
-\item \textarabic{شَعَرَ الحَارِسُ بِخَطَرٍ في المَتْحَفِ مَسَاءً، فَرَكَضَ إِلَى غُرْفَةِ المُرَاقَبَةِ وَاتَّصَلَ بِالشُّرْطَةِ}\\
-The guard felt danger in the museum in the evening, so he ran to the surveillance room and called the police [ʃaʕara l-ħaːrisu bixat̪arin fiː l-matħafi masaːʔan, farakaða ʔila ɣurfati l-muraːqabati watsas̱ala biʃ-ʃurt̪ati]
+\item \textarabic{شَعَرَ الحَارِسُ بِخَطَرٍ فِي المَتْحَفِ مَسَاءً، فَرَكَضَ إِلَى غُرْفَةِ المُرَاقَبَةِ وَاتَّصَلَ بِالشُّرْطَةِ}\\
+The guard felt danger in the museum in the evening, so he ran to the surveillance room and called the police [ʃaʕara l-ħaːrisu bixatˤarin fiː l-matħafi masaːʔan, farakaðˤa ʔila ɣurfati l-muraːqabati wattasˤala biʃ-ʃurtˤati]
 
-\item \textarabic{لَمَسَ الوَلَدُ شَيْئًا غَرِيبًا في الصُّنْدُوقِ ظُهْرًا، فَفَتَحَ الغِطَاءَ وَوَجَدَ كَنْزًا قَدِيمًا}\\
-The boy touched something strange in the box at noon, so he opened the lid and found an old treasure [lamasa l-waladu ʃajʔan ɣariːban fiː s̱-s̱unduːqi ð̩uhran, fafataħa l-ɣit̪aːʔa wawadʒada kanzan qadiːman]
+\item \textarabic{لَمَسَ الوَلَدُ شَيْئًا غَرِيبًا فِي الصُّنْدُوقِ ظُهْرًا، فَفَتَحَ الغِطَاءَ وَوَجَدَ كَنْزًا قَدِيمًا}\\
+The boy touched something strange in the box at noon, so he opened the lid and found an old treasure [lamasa l-waladu ʃajʔan ɣariːban fiː sˤ-sˤunduːqi ðˤuhran, fafataħa l-ɣitˤaːʔa wawadʒada kanzan qadiːman]
 \end{enumerate}
 
 % ======================== Levantine Dialect Version ========================
 \section{Levantine (Shaami) Arabic Dialect}
 
 \begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
-\textarabic{حَسَّ جُحا بِحَرَامِيّ بِبَيْتُه بِاللَّيْل، فَقَامَ عَ خِزَانِة أُوضِة البُومِة وَخَبَّى حَالُه جُوَّاتَهَا}\\
-\textbf{Phonetic:} [ħass dʒuħaː biħaraːmijj bibejtu bil-leel, faqaːm ʕa xizaːnet ʔoːɮet el-buːme wxabba ħaːlu dʒuwwaːtehaː]\\
+\textarabic{حَسَّ جُحا بِحَرَامِيّ بِبَيْتُه بِاللَّيْل، فَقَامَ عَ خِزَانة أُوضِة البُومَة وَخَبَّى حَالُه جُوَّاتَهَا}\\
+\textbf{Phonetic:} [ħass dʒuħaː biħaraːmijj bibejtu bil-leel, faqaːm ʕa xizaːnet ʔoːðˤet el-buːme wxabba ħaːlu dʒuwwaːtehaː]\\
 \textbf{Translation:} Juha sensed a thief in his house at night, so he went to the closet of the owl's room and hid himself inside it.
 \end{tcolorbox}
+
 \textbf{Key Dialectal Changes:}
 \begin{itemize}
-\item \textarabic{شَعَرَ} → \textarabic{حَسَّ} (ħass) – dialectal verb for "sensed"
-\item \textarabic{لِصّ} → \textarabic{حَرَامِيّ} (ħaraːmijj) – common dialectal word for "thief"
-\item \textarabic{دَارِهِ} → \textarabic{بَيْتُه} (bejtu) – "house" in dialect form
-\item \textarabic{لَيْلًا} → \textarabic{بِاللَّيْل} (bil-leel) – "at night" with definite article
-\item \textarabic{إِلَى} → \textarabic{عَ} (ʕa) – shortened preposition "to"
-\item \textarabic{غُرْفَة} → \textarabic{أُوضِة} (ʔoːɮa) – dialectal word for "room"
-\item \textarabic{اخْتَبَأَ} → \textarabic{خَبَّى حَالُه} (xabba ħaːlu) – "hid himself" in dialect
-\item \textarabic{فِيهَا} → \textarabic{جُوَّاتَهَا} (dʒuwwaːtehaː) – "inside it" in dialect
+\item \textarabic{شَعَرَ} → \textarabic{حَسَّ} (ħass) — dialectal verb for "sensed"
+\item \textarabic{لِصّ} → \textarabic{حَرَامِيّ} (ħaraːmijj) — common dialectal word for "thief"
+\item \textarabic{دَارِهِ} → \textarabic{بَيْتُه} (bejtu) — "house" in dialect form
+\item \textarabic{لَيْلًا} → \textarabic{بِاللَّيْل} (bil-leel) — "at night" with definite article
+\item \textarabic{إِلَى} → \textarabic{عَ} (ʕa) — shortened preposition "to"
+\item \textarabic{غُرْفَة} → \textarabic{أُوضِة} (ʔoːðˤa) — dialectal word for "room"
+\item \textarabic{اخْتَبَأَ} → \textarabic{خَبَّى حَالُه} (xabba ħaːlu) — "hid himself" in dialect
+\item \textarabic{فِيهَا} → \textarabic{جُوَّاتَهَا} (dʒuwwaːtehaː) — "inside it" in dialect
 \end{itemize}
 
 % ======================== Additional Learning Notes ========================
 \section{Additional Learning Notes}
 
 \begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context},breakable]
-\textbf{Juha's Character:} This opening sets the stage for classic Juha humor. Instead of confronting the thief or calling for help, Juha chooses to hide – an unexpected response that will lead to an ironic twist.
+\textbf{Juha's Character:} This opening sets the stage for classic Juha humor. Instead of confronting the thief or calling for help, Juha chooses to hide — an unexpected response that will lead to an ironic twist.
 
 \textbf{The Owl Room:} The mention of \textarabic{غُرْفَة البُوم} (owl room) adds folkloric atmosphere. Owls in Middle Eastern culture often symbolize wisdom or mystery, fitting for Juha's unconventional wisdom.
 
 \textbf{Narrative Technique:} The sequence uses \textarabic{فَ} (fa-) to create rapid succession of events: sensing → standing → moving → hiding, building suspense for the comedic resolution.
 
-\textbf{Social Commentary:} The story subtly comments on how the poor (Juha) respond to theft – not with anger or fear, but with an awareness of their own poverty that leads to empathy.
+\textbf{Social Commentary:} The story subtly comments on how the poor (Juha) respond to theft — not with anger or fear, but with an awareness of their own poverty that leads to empathy.
 \end{tcolorbox}
 
 \subsection{Memory Tips}
@@ -363,58 +521,58 @@ The boy touched something strange in the box at noon, so he opened the lid and f
 \item \textbf{Preposition Pattern:} \textarabic{بِ} (with/by) → \textarabic{فِي} (in) → \textarabic{إِلَى} (to) → \textarabic{فِي} (in)
 \item \textbf{Time Marker:} \textarabic{لَيْلًا} in accusative shows "when" something happens
 \item \textbf{Conjunction Chain:} No conjunction → \textarabic{فَ} (so/then) → \textarabic{وَ} (and) creates narrative flow
-\item \textbf{Form VIII Pattern:} \textarabic{اِخْتَبَأَ} follows \textarabic{اِفْتَعَلَ} pattern for reflexive actions
+\item \textbf{Form VIII Pattern:} \textarabic{اخْتَبَأَ} follows \textarabic{افْتَعَلَ} pattern for reflexive actions
 \end{enumerate}
 
 \subsection{Related Vocabulary Family}
 \begin{multicols}{2}
 
 \textbf{Sensation family:}\\
-\textarabic{شُعُور} – feeling [ʃuʕuːr]\\
-\textarabic{إِحْسَاس} – sensation [ʔiħsaːs]\\
-\textarabic{لَمْس} – touch [lams]\\
-\textarabic{سَمْع} – hearing [samʕ]\\
-\textarabic{رُؤْيَة} – sight [ruʔja]\\
+\textarabic{شُعُور} — feeling [ʃuʕuːr]\\
+\textarabic{إِحْسَاس} — sensation [ʔiħsaːs]\\
+\textarabic{لَمْس} — touch [lams]\\
+\textarabic{سَمْع} — hearing [samʕ]\\
+\textarabic{رُؤْيَة} — sight [ruʔja]\\
 
 \textbf{Movement family:}\\
-\textarabic{قِيَام} – standing [qijaːm]\\
-\textarabic{مَشْي} – walking [maʃj]\\
-\textarabic{جَرْي} – running [dʒarj]\\
-\textarabic{حَرَكَة} – movement [ħaraka]\\
-\textarabic{انْتِقَال} – transition [ʔintiqaːl]\\
+\textarabic{قِيَام} — standing [qijaːm]\\
+\textarabic{مَشْي} — walking [maʃj]\\
+\textarabic{جَرْي} — running [dʒarj]\\
+\textarabic{حَرَكَة} — movement [ħaraka]\\
+\textarabic{انْتِقَال} — transition [ʔintiqaːl]\\
 
 \textbf{House parts family:}\\
-\textarabic{غُرْفَة} – room [ɣurfa]\\
-\textarabic{مَطْبَخ} – kitchen [mat̪bax]\\
-\textarabic{حَمَّام} – bathroom [ħammaːm]\\
-\textarabic{صَالَة} – living room [s̱aːla]\\
-\textarabic{شُرْفَة} – balcony [ʃurfa]\\
+\textarabic{غُرْفَة} — room [ɣurfa]\\
+\textarabic{مَطْبَخ} — kitchen [matˤbax]\\
+\textarabic{حَمَّام} — bathroom [ħammaːm]\\
+\textarabic{صَالَة} — living room [sˤaːla]\\
+\textarabic{شُرْفَة} — balcony [ʃurfa]\\
 
 \textbf{Hiding family:}\\
-\textarabic{إِخْفَاء} – concealment [ʔixfaːʔ]\\
-\textarabic{اسْتِتَار} – hiding [ʔisitaːr]\\
-\textarabic{تَوَارِي} – disappearance [tawaːriː]\\
-\textarabic{كُمُون} – lurking [kumuːn]\\
-\textarabic{احْتِجَاب} – veiling [ʔiħtidʒaːb]\\
+\textarabic{إِخْفَاء} — concealment [ʔixfaːʔ]\\
+\textarabic{اسْتِتَار} — hiding [ʔisitaːr]\\
+\textarabic{تَوَارِي} — disappearance [tawaːriː]\\
+\textarabic{كُمُون} — lurking [kumuːn]\\
+\textarabic{احْتِجَاب} — veiling [ʔiħtidʒaːb]\\
 
 \textbf{Time expressions:}\\
-\textarabic{لَيْلًا} – at night [lajlan]\\
-\textarabic{نَهَارًا} – during the day [nahaːran]\\
-\textarabic{صَبَاحًا} – in the morning [s̱abaːħan]\\
-\textarabic{مَسَاءً} – in the evening [masaːʔan]\\
-\textarabic{ظُهْرًا} – at noon [ð̩uhran]\\
+\textarabic{لَيْلًا} — at night [lajlan]\\
+\textarabic{نَهَارًا} — during the day [nahaːran]\\
+\textarabic{صَبَاحًا} — in the morning [sˤabaːħan]\\
+\textarabic{مَسَاءً} — in the evening [masaːʔan]\\
+\textarabic{ظُهْرًا} — at noon [ðˤuhran]\\
 
 \textbf{Animals family:}\\
-\textarabic{بُوم} – owl [buːm]\\
-\textarabic{عُصْفُور} – sparrow [ʕus̱fuːr]\\
-\textarabic{نَسْر} – eagle [nasr]\\
-\textarabic{غُرَاب} – crow [ɣuraːb]\\
-\textarabic{صَقْر} – falcon [s̱aqr]
+\textarabic{بُوم} — owl [buːm]\\
+\textarabic{عُصْفُور} — sparrow [ʕusˤfuːr]\\
+\textarabic{نَسْر} — eagle [nasr]\\
+\textarabic{غُرَاب} — crow [ɣuraːb]\\
+\textarabic{صَقْر} — falcon [sˤaqr]
 \end{multicols}
 
 \subsection{Grammar Focus Points}
 
-\begin{tcolorbox}[colback=white,colframe=headercolor,title=\textbf{Key Grammatical Constructions}]
+\begin{tcolorbox}[colback=white,colframe=headercolor,title=\textbf{Key Grammatical Constructions},breakable]
 \textbf{1. Sensation Verbs with Prepositions:}
 \begin{itemize}
 \item \textarabic{شَعَرَ بِـ} (felt/sensed with)
@@ -427,7 +585,7 @@ The boy touched something strange in the box at noon, so he opened the lid and f
 \begin{itemize}
 \item \textarabic{لَيْلًا} (at night) - indefinite accusative
 \item \textarabic{صَبَاحًا} (in the morning) - indefinite accusative
-\item \textarabic{في اللَّيْلِ} (at night) - prepositional phrase alternative
+\item \textarabic{فِي اللَّيْلِ} (at night) - prepositional phrase alternative
 \end{itemize}
 
 \textbf{3. Possessive Constructs (إضافة):}
@@ -439,10 +597,298 @@ The boy touched something strange in the box at noon, so he opened the lid and f
 
 \textbf{4. Form VIII Verbs:}
 \begin{itemize}
-\item Pattern: \textarabic{اِفْتَعَلَ} often indicates reflexive/intensive action
-\item \textarabic{اِخْتَبَأَ} (he hid himself) - reflexive hiding
-\item \textarabic{اِجْتَمَعَ} (they gathered) - mutual action
+\item Pattern: \textarabic{افْتَعَلَ} often indicates reflexive/intensive action
+\item \textarabic{اخْتَبَأَ} (he hid himself) - reflexive hiding
+\item \textarabic{اجْتَمَعَ} (they gathered) - mutual action
 \end{itemize}
 \end{tcolorbox}
+
+\subsection{Morphological Analysis Summary}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,title=\textbf{Morphological Breakdown},breakable]
+\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{4cm}|}
+\hline
+\textbf{Word} & \textbf{Root} & \textbf{Pattern} & \textbf{Morphological Category} \\
+\hline
+\textarabic{شَعَرَ} & \textarabic{ش-ع-ر} & \textarabic{فَعَلَ} & Form I Perfect Verb \\
+\hline
+\textarabic{جُحا} & — & \textarabic{فُعَلَ} & Proper Noun \\
+\hline
+\textarabic{بِلِصٍّ} & \textarabic{ل-ص-ص} & \textarabic{بِفِعْل} & Prep. + Indef. Noun \\
+\hline
+\textarabic{فِي دَارِهِ} & \textarabic{د-و-ر} & \textarabic{فِي فَاعِل} & Prep. + Poss. Noun \\
+\hline
+\textarabic{لَيْلًا} & \textarabic{ل-ي-ل} & \textarabic{فَعْلًا} & Adverbial Accusative \\
+\hline
+\textarabic{فَقَامَ} & \textarabic{ق-و-م} & \textarabic{فَفَعَلَ} & Conj. + Perfect Verb \\
+\hline
+\textarabic{إِلَى خِزَانَةِ} & \textarabic{خ-ز-ن} & \textarabic{إِلَى فِعَالَة} & Prep. + Def. Noun \\
+\hline
+\textarabic{غُرْفَةِ البُومِ} & \textarabic{غ-ر-ف/ب-و-م} & \textarabic{فُعْلَة فُعْل} & Construct State \\
+\hline
+\textarabic{وَاخْتَبَأَ} & \textarabic{خ-ب-أ} & \textarabic{وَافْتَعَلَ} & Conj. + Form VIII \\
+\hline
+\textarabic{فِيهَا} & — & \textarabic{فِي + ضمير} & Prep. + Pronoun \\
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\subsection{Syntactic Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Syntactic Tree Structure},breakable]
+\textbf{Sentence 1:} \textarabic{شَعَرَ جُحا بِلِصٍّ فِي دَارِهِ لَيْلًا}
+
+\begin{itemize}
+\item \textbf{Main Clause:} Verbal sentence (جملة فعلية)
+  \begin{itemize}
+  \item \textbf{Predicate:} \textarabic{شَعَرَ} (past tense verb)
+  \item \textbf{Subject:} \textarabic{جُحا} (proper noun, فاعل)
+  \item \textbf{Prepositional Object:} \textarabic{بِلِصٍّ} (با + مجرور)
+  \item \textbf{Locative Adjunct:} \textarabic{فِي دَارِهِ} (في + مجرور)
+  \item \textbf{Temporal Adjunct:} \textarabic{لَيْلًا} (ظرف زمان منصوب)
+  \end{itemize}
+\end{itemize}
+
+\textbf{Sentence 2:} \textarabic{فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}
+
+\begin{itemize}
+\item \textbf{Coordinated Clauses:} Two verbal sentences linked by \textarabic{وَ}
+  \begin{itemize}
+  \item \textbf{Clause 1:}
+    \begin{itemize}
+    \item \textbf{Conjunction:} \textarabic{فَ} (consequential)
+    \item \textbf{Predicate:} \textarabic{قَامَ} (past tense verb)
+    \item \textbf{Subject:} \textit{implied pronoun} (ضمير مستتر)
+    \item \textbf{Directional Adjunct:} \textarabic{إِلَى خِزَانَةِ غُرْفَةِ البُومِ}
+    \end{itemize}
+  \item \textbf{Clause 2:}
+    \begin{itemize}
+    \item \textbf{Conjunction:} \textarabic{وَ} (additive)
+    \item \textbf{Predicate:} \textarabic{اخْتَبَأَ} (Form VIII past verb)
+    \item \textbf{Subject:} \textit{implied pronoun} (ضمير مستتر)
+    \item \textbf{Locative Adjunct:} \textarabic{فِيهَا} (في + ضمير)
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Phonological Analysis}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Phonological Features},breakable]
+\textbf{Emphasis Spread (Tafkheem):}
+\begin{itemize}
+\item \textarabic{لِصّ} [lisˤsˤ] — The emphatic /sˤ/ spreads to adjacent vowels
+\item No other emphatic consonants in this phrase
+\end{itemize}
+
+\textbf{Assimilation Patterns:}
+\begin{itemize}
+\item \textarabic{اخْتَبَأَ} — The /t/ of the Form VIII prefix assimilates with certain root initials
+\item \textarabic{بِلِصّ} — The preposition vowel harmonizes with following consonant
+\end{itemize}
+
+\textbf{Syllable Structure Analysis:}
+\begin{itemize}
+\item \textarabic{شَعَرَ} — [ʃa.ʕa.ra] — CV.CV.CV (open syllables)
+\item \textarabic{جُحا} — [dʒu.ħaː] — CV.CVː (long vowel final)
+\item \textarabic{لَيْلًا} — [laj.lan] — CVC.CVC (closed syllables)
+\end{itemize}
+
+\textbf{Stress Patterns:}
+\begin{itemize}
+\item Penultimate stress in most words: [ʃaˈʕara], [qaːˈma]
+\item Final stress on long vowels: [dʒuˈħaː]
+\item Antepenultimate stress on some forms: [ʔixˈtabaʔa]
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Register and Style Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Linguistic Register},breakable]
+\textbf{Classical Arabic Features:}
+\begin{itemize}
+\item Full case marking (إعراب): \textarabic{لِصٍّ}, \textarabic{دَارِهِ}, \textarabic{خِزَانَةِ}
+\item Classical verb forms: \textarabic{شَعَرَ}, \textarabic{قَامَ}
+\item Formal sentence structure with proper conjunctions
+\item Literary vocabulary: \textarabic{غُرْفَة البُوم} (poetic/folkloric)
+\end{itemize}
+
+\textbf{Narrative Style Markers:}
+\begin{itemize}
+\item Sequential conjunctions: \textarabic{فَ} (then), \textarabic{وَ} (and)
+\item Past tense throughout (narrative perfect)
+\item Third person perspective (omniscient narrator)
+\item Folkloric elements: character name \textarabic{جُحا}, setting details
+\end{itemize}
+
+\textbf{Semantic Field:}
+\begin{itemize}
+\item \textbf{Sensation:} \textarabic{شَعَرَ} (felt)
+\item \textbf{Crime:} \textarabic{لِصّ} (thief)
+\item \textbf{Domestic space:} \textarabic{دَار} (house), \textarabic{غُرْفَة} (room), \textarabic{خِزَانَة} (closet)
+\item \textbf{Movement:} \textarabic{قَامَ} (stood/went), \textarabic{اخْتَبَأَ} (hid)
+\item \textbf{Time:} \textarabic{لَيْلًا} (at night)
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Pedagogical Applications}
+
+\begin{tcolorbox}[colback=white,colframe=headercolor,title=\textbf{Teaching Applications},breakable]
+\textbf{Grammar Points for Intermediate Learners:}
+\begin{enumerate}
+\item \textbf{Preposition Usage:} \textarabic{شَعَرَ بِ} vs. \textarabic{سَمِعَ} (direct object)
+\item \textbf{Adverbial Accusative:} \textarabic{لَيْلًا}, \textarabic{صَبَاحًا}, \textarabic{مَسَاءً}
+\item \textbf{Possessive Constructs:} \textarabic{دَارِهِ} vs. \textarabic{غُرْفَةِ البُومِ}
+\item \textbf{Form VIII Verbs:} Pattern recognition and meaning
+\item \textbf{Narrative Conjunctions:} \textarabic{فَ} for sequence, \textarabic{وَ} for addition
+\end{enumerate}
+
+\textbf{Cultural Learning Objectives:}
+\begin{enumerate}
+\item Understanding Juha as a folkloric character across Arab cultures
+\item Recognizing elements of traditional storytelling
+\item Appreciating humor through character response expectations
+\item Exploring themes of poverty, wisdom, and social commentary
+\end{enumerate}
+
+\textbf{Phonetic Training Focus:}
+\begin{enumerate}
+\item Emphatic consonant production: /sˤ/ in \textarabic{لِصّ}
+\item Pharyngeal fricative: /ħ/ in \textarabic{جُحا}
+\item Glottal stop: /ʔ/ in \textarabic{اخْتَبَأَ}
+\item Vowel length distinction: /aː/ vs. /a/
+\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Comparative Analysis with Other Semitic Languages}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=dialectcolor,title=\textbf{Semitic Language Connections},breakable]
+\textbf{Hebrew Cognates:}
+\begin{itemize}
+\item \textarabic{שער} (Arabic) ↔ \texthebrew{שער} (Hebrew) — both meaning "hair/sense"
+\item \textarabic{ليل} (Arabic) ↔ \texthebrew{לילה} (Hebrew) — "night"
+\item \textarabic{دار} (Arabic) ↔ \texthebrew{דור} (Hebrew) — "generation/circle"
+\item \textarabic{قום} (Arabic) ↔ \texthebrew{קום} (Hebrew) — "rise/stand"
+\end{itemize}
+
+\textbf{Aramaic Connections:}
+\begin{itemize}
+\item Root \textarabic{ق-و-م} appears in Aramaic \textit{qam} (stood)
+\item The construct state pattern mirrors Aramaic \textit{emphata} forms
+\item Form VIII pattern has parallels in Aramaic intensive stems
+\end{itemize}
+
+\textbf{Proto-Semitic Reconstructions:}
+\begin{itemize}
+\item *\textit{šaʕar-} → \textarabic{شَعَرَ} (to feel/perceive)
+\item *\textit{lajl-} → \textarabic{لَيْل} (night)
+\item *\textit{bayt-} → \textarabic{بَيْت} (house - cf. \textarabic{دار})
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Historical Linguistic Development}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,title=\textbf{Diachronic Analysis},breakable]
+\textbf{Classical vs. Modern Standard Arabic:}
+\begin{itemize}
+\item All forms in this text remain standard in Modern Standard Arabic
+\item \textarabic{دار} is more formal/literary; \textarabic{بيت} is more common in MSA
+\item \textarabic{لص} maintains the same form and meaning across periods
+\item Form VIII verbs like \textarabic{اختبأ} are fully productive in MSA
+\end{itemize}
+
+\textbf{Dialectal Evolution Patterns:}
+\begin{itemize}
+\item Case endings lost: \textarabic{لصٍّ} → \textit{liṣṣ} (no tanween)
+\item Verb simplification: \textarabic{اختبأ} → \textarabic{خبّى} (Levantine)
+\item Preposition changes: \textarabic{إلى} → \textarabic{عَ} (Levantine)
+\item Lexical substitution: \textarabic{غرفة} → \textarabic{أوضة} (Egyptian/Levantine)
+\end{itemize}
+
+\textbf{Borrowing and Innovation:}
+\begin{itemize}
+\item \textarabic{جحا} ultimately from Persian, showing cultural transmission
+\item Core vocabulary (body parts, house, time) remains Semitic
+\item Storytelling formulas preserved across Arabic literature
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Advanced Exercises}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Practice Activities},breakable]
+\textbf{Morphological Exercises:}
+\begin{enumerate}
+\item Derive all forms of \textarabic{ش-ع-ر} in Forms I-X
+\item Create the passive voice of all verbs in the text
+\item Decline \textarabic{خزانة} with all possessive pronoun suffixes
+\item Form the dual and plural of \textarabic{غرفة البوم}
+\end{enumerate}
+
+\textbf{Syntactic Transformation:}
+\begin{enumerate}
+\item Convert the text to present tense narrative
+\item Change the subject to \textarabic{فاطمة} (feminine) and adjust agreement
+\item Transform into conditional sentences: "If Juha had felt..."
+\item Create questions for each clause using appropriate interrogatives
+\end{enumerate}
+
+\textbf{Semantic Expansion:}
+\begin{enumerate}
+\item Replace \textarabic{شعر} with \textarabic{سمع}, \textarabic{رأى}, \textarabic{وجد} and adjust syntax
+\item Substitute different times of day and adjust atmosphere
+\item Replace \textarabic{لص} with \textarabic{ضيف} (guest) and note how story changes
+\item Add descriptive adjectives to each noun
+\end{enumerate}
+
+\textbf{Cultural Research Projects:}
+\begin{enumerate}
+\item Compare this Juha story across different Arab countries
+\item Research the historical figure behind Juha/Nasreddin
+\item Collect similar trickster figures from other cultures
+\item Analyze the role of humor in Arab folk literature
+\end{enumerate}
+\end{tcolorbox}
+
+\section{Bibliography and Further Reading}
+
+\begin{tcolorbox}[colback=white,colframe=headercolor,title=\textbf{Recommended Sources},breakable]
+\textbf{Arabic Grammar References:}
+\begin{itemize}
+\item Wright, William. \textit{A Grammar of the Arabic Language}. Cambridge University Press.
+\item Ryding, Karin C. \textit{A Reference Grammar of Modern Standard Arabic}. Cambridge University Press.
+\item Holes, Clive. \textit{Modern Arabic: Structures, Functions, and Varieties}. Georgetown University Press.
+\end{itemize}
+
+\textbf{Folklore and Cultural Studies:}
+\begin{itemize}
+\item Marzolph, Ulrich. \textit{The Wise Fool: Nasreddin Hodja in World Literature}. Garland Publishing.
+\item El-Shamy, Hasan M. \textit{Folk Traditions of the Arab World}. Indiana University Press.
+\item Bushnaq, Inea. \textit{Arab Folktales}. Pantheon Books.
+\end{itemize}
+
+\textbf{Linguistic Analysis:}
+\begin{itemize}
+\item Versteegh, Kees. \textit{The Arabic Language}. Edinburgh University Press.
+\item Fischer, Wolfdietrich. \textit{Classical Arabic}. Yale University Press.
+\item Owens, Jonathan. \textit{A Linguistic History of Arabic}. Oxford University Press.
+\end{itemize}
+
+\textbf{Dialectology:}
+\begin{itemize}
+\item Brustad, Kristen. \textit{The Syntax of Spoken Arabic}. Georgetown University Press.
+\item Procházka, Stephan. \textit{The Arabic Dialects of the Levant}. Reichert Verlag.
+\item Holes, Clive. \textit{Dialect, Culture, and Society in Eastern Arabia}. Brill.
+\end{itemize}
+\end{tcolorbox}
+
+\section*{Acknowledgments}
+
+This analysis was prepared as part of advanced Arabic linguistic studies, drawing on traditional Arabic grammatical analysis (\textarabic{النحو والصرف}) combined with modern linguistic methodologies. The cultural interpretations reflect established scholarship on Arab folklore and the Juha/Nasreddin tradition.
+
+\vfill
+\begin{center}
+\textit{Compiled with XeLaTeX using Amiri Arabic font}\\
+\textit{For educational and research purposes}
+\end{center}
 
 \end{document}
