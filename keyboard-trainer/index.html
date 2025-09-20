@@ -94,26 +94,39 @@
 
     .footer{opacity:.7; font-size:12px; text-align:center}
 
+    /* Progressive Letter Pair Display */
+    .pair-display {
+      background: var(--panel); color: var(--text);
+      border: 1px solid var(--key-edge); border-radius: 12px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: box-shadow .15s ease, transform .06s ease;
+      width: 280px;
+      position: relative;
+    }
+    .pair-display:hover {
+      box-shadow: 0 0 0 2px rgba(104,240,255,.25);
+    }
+
     /* Progressive Letter Pair Selector */
     .pair-selector {
-      display: grid; gap: 8px; background: var(--panel);
-      border: 1px solid var(--key-edge); border-radius: 12px;
-      padding: 12px; margin: 8px 0;
-      height: 40px; overflow: hidden;
-      position: relative;
-      transition: all 0.3s ease;
-      z-index: 10;
-      width: 280px;
-    }
-    .pair-selector:hover {
-      height: auto;
-      max-height: 500px;
+      display: none; /* Hidden by default */
       position: absolute;
-      top: 40px;
-      left: 225px;
+      top: 0;
+      left: 0;
       width: 280px;
+      /*max-height: 500px;*/
+      overflow-y: auto;
+      background: var(--panel);
+      border: 1px solid var(--key-edge);
+      border-radius: 12px;
+      padding: 12px;
+      gap: 8px;
+      z-index: 20;
       box-shadow: 0 4px 16px rgba(104,240,255,.2);
-      /*transform: translate(100px,0);*/
+    }
+    .pair-selector.show {
+      display: grid;
     }
     .pair-item {
       display: flex; align-items: center; justify-content: space-between;
@@ -157,7 +170,8 @@
     <label> Lesson
       <select id="lesson"></select>
     </label>
-    <div id="pairSelector" class="pair-selector" style="display:none;"></div>
+    <div id="pairDisplay" class="pair-display"></div>
+    <div id="pairSelector" class="pair-selector">blah</div>
     <label> Length
       <select id="length">
         <option value="20">20</option>
@@ -178,7 +192,6 @@
   <!-- Virtual Keyboard -->
   <div class="console">
     <div id="keyboard" class="kbd"></div>
-    <div class="pill" style="margin-top:8px; width:max-content">Key preview glows for the next character</div>
   </div>
 
   <!-- Stats -->
@@ -220,6 +233,7 @@
   // Progressive Letter Pairs System (based on finger positioning)
   const LETTER_PAIRS = [
     { name: 'ت-ب', chars: ['ت', 'ب'], fingers: 'Index fingers (home row)' },
+    { name: 'ا-ل', chars: ['ا', 'ل'], fingers: 'Index fingers (home row)' },
     { name: 'ت-ي', chars: ['ن', 'ي'], fingers: 'Middle fingers (home row)' },
     { name: 'م-س', chars: ['م', 'س'], fingers: 'Ring fingers (home row)' },
     { name: 'ك-ش', chars: ['ك', 'ش'], fingers: 'Pinky fingers (home row)' },
@@ -264,6 +278,7 @@
     timer: document.getElementById('timer'),
     mode: document.getElementById('mode'),
     lesson: document.getElementById('lesson'),
+    pairDisplay: document.getElementById('pairDisplay'),
     pairSelector: document.getElementById('pairSelector'),
     length: document.getElementById('length'),
     startBtn: document.getElementById('startBtn'),
@@ -315,11 +330,13 @@
     if(state.mode === 'letters'){
       // Show progressive pair selector
       els.lesson.style.display = 'none';
-      els.pairSelector.style.display = 'grid';
+      els.pairDisplay.style.display = 'block';
+      renderPairDisplay();
       renderPairSelector();
     } else {
       // Show traditional dropdown
       els.lesson.style.display = 'block';
+      els.pairDisplay.style.display = 'none';
       els.pairSelector.style.display = 'none';
       els.lesson.innerHTML = '';
       
@@ -329,6 +346,48 @@
         addOption(els.lesson, 'T1', 'Juha — Short Excerpt');
       }
       els.lesson.selectedIndex = 0;
+    }
+  }
+
+  function renderPairDisplay(){
+    els.pairDisplay.innerHTML = '';
+    const selectedPair = LETTER_PAIRS[state.selectedPairIndex];
+      const item = document.createElement('div');
+      item.className = 'pair-item';
+      item.innerHTML = `
+      <div class="pair-name">${selectedPair.name}</div>
+      <div class="pair-desc">${selectedPair.fingers}</div>
+      `;
+    els.pairDisplay.appendChild(item);
+    // Add hover event listeners
+    els.pairDisplay.addEventListener('mouseenter', showPairSelector);
+    els.pairDisplay.addEventListener('mouseleave', hidePairSelector);
+  }
+  
+  function showPairSelector(){
+    console.debug("showing selector")
+    
+    // Get the position of the pair display element
+    const displayRect = els.pairDisplay.getBoundingClientRect();
+    const containerRect = els.pairDisplay.offsetParent.getBoundingClientRect();
+    
+    // Calculate position relative to the container
+    const top = displayRect.top - containerRect.top;
+    const left = displayRect.left - containerRect.left;
+    
+    // Position the selector
+    els.pairSelector.style.top = top + 'px';
+    els.pairSelector.style.left = left + 'px';
+    
+    els.pairSelector.classList.add('show');
+    // Also listen for mouse leave on selector itself
+    els.pairSelector.addEventListener('mouseleave', hidePairSelector);
+  }
+  
+  function hidePairSelector(e){
+    // Only hide if not moving to the selector
+    if(!e.relatedTarget || (!els.pairDisplay.contains(e.relatedTarget) && !els.pairSelector.contains(e.relatedTarget))){
+      els.pairSelector.classList.remove('show');
     }
   }
 
@@ -342,11 +401,6 @@
       
       if(index === state.selectedPairIndex) {
         item.classList.add('selected');
-      }
-      
-      // Only show selected pair when collapsed
-      if(index > state.selectedPairIndex) {
-        item.style.display = 'none';
       }
       
       item.innerHTML = `
@@ -366,22 +420,6 @@
       
       els.pairSelector.appendChild(item);
     });
-    
-    // Show all items on hover, hide on leave
-    els.pairSelector.addEventListener('mouseenter', () => {
-      const items = els.pairSelector.querySelectorAll('.pair-item');
-      items.forEach(item => item.style.display = 'flex');
-    });
-    
-    els.pairSelector.addEventListener('mouseleave', () => {
-      const items = els.pairSelector.querySelectorAll('.pair-item');
-      items.forEach((item, index) => {
-        item.classList.remove('active');
-        if(index > state.selectedPairIndex) {
-          item.style.display = 'none';
-        }
-      });
-    });
   }
 
   function updatePairPreview(hoverIndex){
@@ -396,6 +434,7 @@
 
   function selectPair(pairIndex){
     state.selectedPairIndex = pairIndex;
+    renderPairDisplay();
     renderPairSelector();
     resetSession();
   }
@@ -530,7 +569,7 @@
   function updateProgress(){
     const total = Math.max(state.sequence.length, 1);
     const pct = (state.index / total) * 100;
-    els.progressFill.style.width = pct + '%';
+    //els.progressFill.style.width = pct + '%';
   }
 
   function updateStats(){
