@@ -1,6 +1,7 @@
 \documentclass[letter,12pt]{article}
 
 
+\usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{longtable}
 \usepackage{makecell}
@@ -24,10 +25,12 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage{fancyhdr}
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\textit{<Title - a short summary of the phrase in English>}} % Right header with document title
+\fancyhead[R]{\textit{<Title - a short summary of the phrase in English>}}
 
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
