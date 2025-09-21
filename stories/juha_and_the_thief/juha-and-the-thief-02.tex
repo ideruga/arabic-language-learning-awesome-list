@@ -1,25 +1,33 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[letter,12pt]{article}
 
+\usepackage[most]{tcolorbox}
+\usepackage{makecell}
 \usepackage[utf8]{inputenc}
 \usepackage[english,arabic]{babel}
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{array}
 \usepackage{multicol}
-\usepackage{xcolor}
-\usepackage[table]{xcolor} % for \rowcolor in tables
+\usepackage[table]{xcolor}
 \usepackage{polyglossia}
 \setmainlanguage{english}
 \setotherlanguage{arabic}
+\setotherlanguage{hebrew}
 \usepackage{arabtex}
-\usepackage{utf8}
 \usepackage{fontspec}
 \setmainfont{Charis SIL}
 \newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
 \geometry{margin=1.5cm}
-\usepackage{tcolorbox}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textit{Juha and the Thief: the Thief Searches but Finds Juha}} % Right header with document title
+
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
 % Custom colors
@@ -27,18 +35,19 @@
 \definecolor{boxcolor}{RGB}{240,248,255}
 \definecolor{accentcolor}{RGB}{220,20,60}
 \definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
 
 \begin{document}
 
-\title{\textbf{\Large Arabic Learning Poster}\\
-\large Juha and the Thief – Full Phrase Analysis\\
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large The Thief Searches but Finds Juha\\
 \normalsize \textarabic{وَبَحَثَ اللَّصُّ عَنْ شَيْءٍ يَسْرِقُهُ فَلَمْ يَجِدْ، فَرَأَى الْخِزَانَةَ فَفَتَحَهَا وَإِذَا بِجُحَا فِيهَا}}
-\author{Teaching Material for Arabic Students}
+\author{Igor Deruga}
 \date{}
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Text Analysis}]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
 \centering
 \textarabic{وبحث اللص عن شيء يسرقه فلم يجد، فرأى الخزانة ففتحها وإذا بجحا فيها}
 \\[0.5em]
@@ -50,9 +59,9 @@
 \end{tcolorbox}
 
 % ======================== Translations ========================
-\section{Word-by-Word English Translation}
-\begin{tcolorbox}[colback=white,colframe=accentcolor]
-\textbf{Literal:} And searched • the thief • for • something • he steals-it • so-did not find, • then saw • the wardrobe • so opened-it • and behold • Juha • in it \\
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} And searched the thief for something he-steals-it so-not found, then-saw the-wardrobe so-opened-it and behold with-Juha in-it \\
 \textit{[Arabic order retained for direct mapping]}\\[0.5em]
 \textbf{Adapted:} The thief searched for something to steal but found nothing, then he saw the wardrobe, opened it, and behold, Juha was inside.
 \end{tcolorbox}
@@ -60,177 +69,401 @@
 % ======================== Detailed Word Analysis ========================
 \section{Detailed Word Analysis}
 
-\subsection{\textarabic{وَبَحَثَ} – \textbf{wa-baḥatha} [wabahaθa]}
+\subsection{\textarabic{وَبَحَثَ} — [wabaħaθa]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
-\textbf{Translation} & and searched/looked for \\
-\textbf{Root} & \textarabic{ب-ح-ث} (b-ḥ-θ) \\
-\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) \\
-\textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{وَ} (and) prefix \\
-\textbf{Examples} & \textarabic{بَحَثَ عَنْ كِتَابٍ} (searched for a book) [baḥatha ʕan kitābin], \textarabic{نَحْنُ نَبْحَثُ عَنْ الحَلّ} (we are searching for the solution) [naḥnu nabḥathu ʕan al-ḥall] \\
+\textbf{Translation} & and searched \\
+\textbf{Root} & \textarabic{ب-ح-ث} (b-ħ-θ) \\
+\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) with conjunction \\
+\textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{وَ} (wa-) prefix \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{بَحَثَ الطَّالِبُ عَنِ الْكِتَابِ} - The student searched for the book [baħaθa ṭ-ṭālibu ʕan il-kitābi]\\
+2. \textarabic{يَبْحَثُونَ عَنِ الْحَقِيقَةِ} - They search for the truth [yabħaθūna ʕan il-ħaqīqati]\\
+3. \textarabic{ابْحَثْ عَنْ عَمَلٍ جَدِيدٍ} - Search for new work [ibħaθ ʕan ʕamalin jadīdin]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{فَتَّشَ} (searched), \textarabic{دَوَّرَ} (looked around), \textarabic{نَقَّبَ} (investigated) \\
+\textbf{Etymology} & From Proto-Semitic *baħaθ-, related to Hebrew \texthebrew{בחש} (baħash) "to search" \\
 \bottomrule
 \end{tabular}
 
-\textbf{Conjugation Examples:}
-\begin{multicols}{2}
-\small
-\textarabic{بَحَثْتُ} – I searched [baḥaθtu] \\
-\textarabic{بَحَثْتَ} – you searched (m.) [baḥaθta] \\
-\textarabic{بَحَثَتْ} – she searched [baḥaθat] \\
-\textarabic{يَبْحَثُ} – he searches (pres.) [yabḥathu] \\
-\textarabic{تَبْحَثُ} – she searches (pres.) [tabḥathu]
-\end{multicols}
+\subsection{Conjugation}
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{بَحَثَ} [baħaθa] & \textarabic{يَبْحَثُ} [yabħaθu] \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{بَحَثَتْ} [baħaθat] & \textarabic{تَبْحَثُ} [tabħaθu] \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{بَحَثَا} [baħaθā] & \textarabic{يَبْحَثَانِ} [yabħaθāni] \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{بَحَثَتَا} [baħaθatā] & \textarabic{تَبْحَثَانِ} [tabħaθāni] \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{بَحَثُوا} [baħaθū] & \textarabic{يَبْحَثُونَ} [yabħaθūna] \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{بَحَثْنَ} [baħaθna] & \textarabic{يَبْحَثْنَ} [yabħaθna] \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{بَحَثْتَ} [baħaθta] & \textarabic{تَبْحَثُ} [tabħaθu] \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{بَحَثْتِ} [baħaθti] & \textarabic{تَبْحَثِينَ} [tabħaθīna] \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{بَحَثْتُمَا} [baħaθtumā] & \textarabic{تَبْحَثَانِ} [tabħaθāni] \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{بَحَثْتُمْ} [baħaθtum] & \textarabic{تَبْحَثُونَ} [tabħaθūna] \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{بَحَثْتُنَّ} [baħaθtunna] & \textarabic{تَبْحَثْنَ} [tabħaθna] \\
+\hline
+\textbf{1st person singular} & \textarabic{بَحَثْتُ} [baħaθtu] & \textarabic{أَبْحَثُ} [ʔabħaθu] \\
+\hline
+\textbf{1st person plural} & \textarabic{بَحَثْنَا} [baħaθnā] & \textarabic{نَبْحَثُ} [nabħaθu] \\
+\hline
+\end{longtable}
 
-\subsection{\textarabic{اللَّصُّ} – \textbf{al-liṣṣu} [alːiṣːu]}
+\subsection{\textarabic{اللَّصُّ} — [alliṣṣu]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & the thief \\
 \textbf{Root} & \textarabic{ل-ص-ص} (l-ṣ-ṣ) \\
-\textbf{Pattern} & \textarabic{ال} + noun definite article + singular noun \\
-\textbf{Grammar} & Noun, definite, nominative case (subject of verb) \\
-\textbf{Examples} & \textarabic{اللِّصُّ دَخَلَ الْبَيْتَ} (the thief entered the house) [al-liṣṣu daxala l-bayta], \textarabic{الْلُّصُوصُ يَسْرِقُونَ} (the thieves steal) [al-luṣūṣu yasriqūn] \\
+\textbf{Pattern} & \textarabic{فَعْل} (faʕl) with definite article \\
+\textbf{Grammar} & Noun, masculine, definite, nominative case (subject of verb) \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{اللِّصُّ سَرَقَ السَّيَّارَةَ} - The thief stole the car [alliṣṣu saraqa s-sayyārata]\\
+2. \textarabic{القُلُوصُ خَائِفٌ مِنَ اللِّصِّ} - The people are afraid of the thief [al-qulūṣu xāʔifun min alliṣṣi]\\
+3. \textarabic{شَاهَدْتُ اللِّصَّ يَجْرِي} - I saw the thief running [šāhadtu l-liṣṣa yajrī]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{سَارِق} (thief), \textarabic{خَاطِف} (snatcher), \textarabic{لُصُوص} (burglars, pl.) \\
+\textbf{Etymology} & From root meaning "to stick, adhere" - one who "sticks" to others' property \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{عَنْ} – \textbf{ʕan} [ʕan]}
+\subsection{\textarabic{عَنْ} — [ʕan]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
-\textbf{Translation} & about, for, from (preposition) \\
+\textbf{Translation} & about, for, from \\
 \textbf{Grammar} & Preposition governing genitive case \\
-\textbf{Examples} & \textarabic{سَأَلَتْ عَنْ الْوَقْتِ} (she asked about the time) [saʔalat ʕan al-waqti], \textarabic{يَبْحَثُ عَنْ الْكِتَابِ} (he searches for the book) [yabḥathu ʕan al-kitābi] \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{سَأَلَ عَنِ الطَّرِيقِ} - He asked about the road [saʔala ʕan iṭ-ṭarīqi]\\
+2. \textarabic{ابْتَعَدَ عَنِ الْخَطَرِ} - He moved away from danger [ibtaʕada ʕan il-xaṭari]\\
+3. \textarabic{تَحَدَّثَ عَنِ السَّفَرِ} - He talked about travel [taħaddaθa ʕan is-safari]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{مِن} (from), \textarabic{بِشَأْنِ} (regarding), \textarabic{حَوْلَ} (around/about) \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{شَيْءٍ} – \textbf{shay'in} [ʃajʔin]}
+\subsection{\textarabic{شَيْءٍ} — [šayʔin]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & something, thing \\
-\textbf{Root} & \textarabic{ش-ي-ء} (sh-y-ʔ) \\
-\textbf{Grammar} & Indefinite noun, genitive case (due to preposition \textarabic{عَنْ}) \\
-\textbf{Examples} & \textarabic{أَرِيدُ شَيْئًا} (I want something) [ʔarīdu ʃajʔan], \textarabic{هَلْ عِنْدَكَ شَيْءٌ؟} (Do you have something?) [hal ʕindaka ʃajʔun?] \\
+\textbf{Root} & \textarabic{ش-ي-ء} (š-y-ʔ) \\
+\textbf{Pattern} & \textarabic{فَعْل} (faʕl) \\
+\textbf{Grammar} & Indefinite noun, masculine, genitive case (due to preposition \textarabic{عَنْ}) \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{أُرِيدُ شَيْئاً} - I want something [ʔurīdu šayʔan]\\
+2. \textarabic{لَا شَيْءَ هُنَا} - Nothing here [lā šayʔa hunā]\\
+3. \textarabic{كُلُّ شَيْءٍ جَمِيلٌ} - Everything is beautiful [kullu šayʔin jamīlun]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{أَمْر} (matter), \textarabic{شَيْئِيَّة} (something-ness), \textarabic{كَائِن} (entity) \\
+\textbf{Etymology} & From Proto-Semitic *šayʔ-, meaning "thing, entity" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{يَسْرِقُهُ} – \textbf{yasriquhu} [jasriquhu]}
+\subsection{\textarabic{يَسْرِقُهُ} — [yasriquhu]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & he steals it \\
 \textbf{Root} & \textarabic{س-ر-ق} (s-r-q) \\
-\textbf{Pattern} & Form I, Present tense, 3rd person masculine singular + object pronoun \\
-\textbf{Grammar} & Verb + attached object pronoun \\
-\textbf{Simple Form} & \textarabic{سَرَقَ} (he stole) [saraqa] \\
-\textbf{Examples} & \textarabic{يَسْرِقُ المالَ} (he steals the money) [yasriqu l-māla], \textarabic{سَرَقْتُ سَيَّارَةً} (I stole a car) [saraqtu sayyāratan] \\
+\textbf{Pattern} & Form I, \textarabic{يَفْعِلُ} (yafʕilu) \\
+\textbf{Grammar} & Present tense verb, 3rd person masculine singular + attached object pronoun \textarabic{هُ} \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{سَرَقَ المِحْفَظَةَ} - He stole the wallet [saraqa l-miħfaẓata]\\
+2. \textarabic{اللُّصُوصُ يَسْرِقُونَ} - The thieves steal [al-luṣūṣu yasriqūna]\\
+3. \textarabic{لَا تَسْرِقْ مَالَ النَّاسِ} - Don't steal people's money [lā tasriq māla n-nāsi]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{نَهَبَ} (plundered), \textarabic{اخْتَلَسَ} (embezzled), \textarabic{غَصَبَ} (usurped) \\
+\textbf{Etymology} & From Proto-Semitic *saraq-, related to Hebrew \texthebrew{שרק} (šāraq) \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{فَلَمْ يَجِدْ} – \textbf{fa-lam yajid} [fa-lam jæjid]}
+\subsection{\textarabic{فَلَمْ يَجِدْ} — [fa-lam yajid]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & so did not find \\
-\textbf{Grammar} & \textarabic{فَ} (so) + negation \textarabic{لَمْ} + past tense verb \\
-\textbf{Verb} & \textarabic{وَجَدَ} (to find), 3rd person masc. sing., past tense \\
-\textbf{Examples} & \textarabic{لَمْ يَجِدْ الْكِتَابَ} (he did not find the book) [lam yajid al-kitāba] \\
+\textbf{Root} & \textarabic{و-ج-د} (w-j-d) \\
+\textbf{Pattern} & \textarabic{فَ} + \textarabic{لَمْ} + jussive mood \\
+\textbf{Grammar} & Conjunction + negation particle + past verb in jussive mood \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لَمْ يَجِدِ الْمِفْتَاحَ} - He did not find the key [lam yajid il-miftāħa]\\
+2. \textarabic{وَجَدْتُ الْكِتَابَ} - I found the book [wajadtu l-kitāba]\\
+3. \textarabic{سَيَجِدُ الْحَلَّ} - He will find the solution [sayajidu l-ħalla]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{عَثَرَ عَلَى} (came across), \textarabic{اكْتَشَفَ} (discovered), \textarabic{لَقِيَ} (met/found) \\
+\textbf{Etymology} & From Proto-Semitic *wajad-, meaning "to find, encounter" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{فَرَأَى} – \textbf{fa-ra'ā} [fa-raʔā]}
+\subsection{\textarabic{فَرَأَى} — [fa-raʔā]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & then he saw \\
 \textbf{Root} & \textarabic{ر-أ-ى} (r-ʔ-y) \\
-\textbf{Pattern} & Form I, past tense, 3rd person masc. sing. with prefix \textarabic{فَ} (then) \\
-\textbf{Examples} & \textarabic{رَأَى الطِّفْلَ} (he saw the child) [raʔā ṭ-ṭifla] \\
+\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) with conjunction \\
+\textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (fa-) prefix \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{رَأَى الطَّائِرَ} - He saw the bird [raʔā ṭ-ṭāʔira]\\
+2. \textarabic{تَرَى النُّجُومَ} - She sees the stars [tarā n-nujūma]\\
+3. \textarabic{رَأَيْتُ حُلْماً جَمِيلاً} - I saw a beautiful dream [raʔaytu ħulman jamīlan]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{شَاهَدَ} (witnessed), \textarabic{أَبْصَرَ} (perceived), \textarabic{نَظَرَ} (looked) \\
+\textbf{Etymology} & From Proto-Semitic *raʔay-, related to Hebrew \texthebrew{ראה} (rāʔāh) "to see" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{الْخِزَانَةَ} – \textbf{al-xizānata} [al-xizāːnata]}
+\subsection{\textarabic{الْخِزَانَةَ} — [al-xizānata]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
-\textbf{Translation} & the wardrobe (accusative) \\
+\textbf{Translation} & the wardrobe \\
 \textbf{Root} & \textarabic{خ-ز-ن} (x-z-n) \\
 \textbf{Pattern} & \textarabic{فِعَالَة} (fiʕāla) \\
-\textbf{Grammar} & Feminine noun, definite, accusative case \\
-\textbf{Examples} & \textarabic{وَضَعْتُ كُلَّ مَلَابِسِي فِي الْخِزَانَةِ} (I put all my clothes in the wardrobe) [waḍaʕtu kulla malābisi fī l-xizāna] \\
+\textbf{Grammar} & Noun, feminine, definite, accusative case (direct object) \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{فَتَحَ خِزَانَةَ الْمَلَابِسِ} - He opened the clothes wardrobe [fataħa xizānata l-malābisi]\\
+2. \textarabic{الْخِزَانَةُ مَلِيئَةٌ} - The wardrobe is full [al-xizānatu malīʔatun]\\
+3. \textarabic{اشْتَرَى خِزَانَةً جَدِيدَةً} - He bought a new wardrobe [ištarā xizānatan jadīdatan]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{دُولَاب} (closet), \textarabic{مِخْزَن} (storage), \textarabic{صُنْدُوق} (chest) \\
+\textbf{Etymology} & From root meaning "to store, keep safe" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{فَفَتَحَهَا} – \textbf{fa-fataḥahā} [fa-fataħaːha]}
+\subsection{\textarabic{فَفَتَحَهَا} — [fa-fataħahā]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & so he opened it \\
-\textbf{Root} & \textarabic{ف-ت-ح} (f-t-ḥ) \\
-\textbf{Grammar} & Past tense verb \textarabic{فَتَحَ} with prefix \textarabic{فَ} (so/then) + attached pronoun \textarabic{هَا} (it, feminine) \\
-\textbf{Examples} & \textarabic{فَتَحَ البَابَ} (he opened the door) [fataḥa l-bāba] \\
+\textbf{Root} & \textarabic{ف-ت-ح} (f-t-ħ) \\
+\textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) with conjunction and pronoun \\
+\textbf{Grammar} & Past tense verb with conjunction \textarabic{فَ} + attached feminine pronoun \textarabic{هَا} \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{فَتَحَ الْبَابَ} - He opened the door [fataħa l-bāba]\\
+2. \textarabic{تَفْتَحُ النَّافِذَةَ} - She opens the window [taftaħu n-nāfiḏata]\\
+3. \textarabic{افْتَحْ عَيْنَيْكَ} - Open your eyes [iftaħ ʕaynyka]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{شَقَّ} (split open), \textarabic{كَشَفَ} (uncovered), \textarabic{حَلَّ} (unlocked) \\
+\textbf{Etymology} & From Proto-Semitic *fataħ-, meaning "to open, breach" \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{وَإِذَا} – \textbf{wa-ʾiḏā} [wa ʔiðā]}
+\subsection{\textarabic{وَإِذَا} — [wa-ʔiḏā]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
-\textbf{Translation} & and behold / and suddenly \\
-\textbf{Grammar} & Conjunction \textarabic{وَ} (and) + particle \textarabic{إِذَا} (if/when, often used to introduce surprise) \\
-\textbf{Examples} & \textarabic{وَإِذَا الطِّفْلُ يَبْكِي} (and behold, the child is crying) [wa ʔiðā ṭ-ṭiflu yabkī] \\
+\textbf{Translation} & and behold, and suddenly \\
+\textbf{Grammar} & Conjunction \textarabic{وَ} + surprise particle \textarabic{إِذَا} \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{وَإِذَا بِالْمَطَرِ يَهْطِلُ} - And behold, rain is falling [wa-ʔiḏā bil-maṭari yahṭilu]\\
+2. \textarabic{فَتَحَ الصُّنْدُوقَ وَإِذَا بِكَنْزٍ} - He opened the box and behold, treasure [fataħa ṣ-ṣundūqa wa-ʔiḏā bi-kanzin]\\
+3. \textarabic{وَإِذَا بِهِ قَادِمٌ} - And behold, he is coming [wa-ʔiḏā bihi qādimun]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{فَجْأَةً} (suddenly), \textarabic{بَغْتَةً} (unexpectedly) \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{بِجُحَا} – \textbf{bi-Juḥā} [bi-d͡ʒuħaː]}
+\subsection{\textarabic{بِجُحَا} — [bi-juħā]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
-\textbf{Translation} & with Juha / there was Juha \\
-\textbf{Components} & Preposition \textarabic{بِ} (with/in) + proper noun \textarabic{جُحَا} \\
-\textbf{Examples} & \textarabic{رَأَيْتُ جُحَا فِي السُّوقِ} (I saw Juha in the market) [raʔaytu juḥā fī s-sūqi] \\
+\textbf{Translation} & with Juha, there was Juha \\
+\textbf{Grammar} & Preposition \textarabic{بِ} + proper noun \textarabic{جُحَا} \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{جُحَا رَجُلٌ حَكِيمٌ} - Juha is a wise man [juħā rajulun ħakīmun]\\
+2. \textarabic{قِصَّةُ جُحَا مُضْحِكَةٌ} - Juha's story is funny [qiṣṣatu juħā muḍħikatun]\\
+3. \textarabic{يُحِبُّ النَّاسُ جُحَا} - People love Juha [yuħibbu n-nāsu juħā]
+}} \\
+\midrule \\
+\textbf{Cultural Note} & Juha (also Nasreddin Hodja) is a folkloric character known for his wit and wisdom \\
 \bottomrule
 \end{tabular}
 
-\subsection{\textarabic{فِيهَا} – \textbf{fī-hā} [fiːhaː]}
+\subsection{\textarabic{فِيهَا} — [fīhā]}
 \begin{tabular}{p{3cm}p{10cm}}
 \toprule
 \textbf{Translation} & in it \\
-\textbf{Components} & \textarabic{في} (in) + \textarabic{ها} (it, feminine) \\
-\textbf{Grammar} & Prepositional phrase with attached pronoun \\
-\textbf{Examples} & \textarabic{كُتِبَ فِيهَا} (written in it) [kutiba fiːhaː] \\
+\textbf{Grammar} & Preposition \textarabic{فِي} + attached feminine pronoun \textarabic{هَا} \\
+\midrule \\
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْكِتَابُ فِي الْحَقِيبَةِ} - The book is in the bag [al-kitābu fī l-ħaqībati]\\
+2. \textarabic{يَعِيشُ فِيهَا} - He lives in it [yaʕīšu fīhā]\\
+3. \textarabic{مَا فِيهَا مِن شَكٍّ} - There is no doubt in it [mā fīhā min šakkin]
+}} \\
+\midrule \\
+\textbf{Synonyms} & \textarabic{بِدَاخِلِهَا} (inside it), \textarabic{بِهَا} (in it) \\
 \bottomrule
 \end{tabular}
 
 % ======================== Phrase Analysis ========================
 \section{Phrase Analysis}
-
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
 \textbf{Grammatical Structure:}\\
-Conjunction + verb + subject + prepositional phrase + object + negation phrase + conjunction + verb + object + conjunction + verb + subject + prepositional phrase \\
-\\
+Conjunction + past verb + definite subject + prepositional phrase + relative clause + conjunction + negation + past verb + conjunction + past verb + direct object + conjunction + past verb + object pronoun + conjunction + surprise particle + prepositional phrase + prepositional phrase \\
+
 \textbf{Key Grammar Points:}
 \begin{itemize}
-\item The prefix \textarabic{وَ} is the conjunction “and.”
-\item \textarabic{عَنْ} governs genitive case, so the noun after it is genitive (\textarabic{شَيْءٍ}).
-\item Negation \textarabic{لَمْ} with past tense verb negates the action (\textarabic{يَجِدْ}).
-\item The phrase \textarabic{فَرَأَى الْخِزَانَةَ} shows a past verb with a direct object.
-\item Attached pronouns like in \textarabic{يَسْرِقُهُ}, \textarabic{فَفَتَحَهَا}, \textarabic{فِيهَا} refer back to masculine or feminine nouns respectively.
-\item \textarabic{وَإِذَا} is a set phrase often used to introduce a sudden or surprising event.
+\item Sequential conjunctions \textarabic{وَ} and \textarabic{فَ} create narrative flow
+\item \textarabic{عَنْ} governs genitive case in \textarabic{شَيْءٍ}
+\item Relative clause \textarabic{يَسْرِقُهُ} modifies \textarabic{شَيْءٍ}
+\item Negation \textarabic{لَمْ} requires jussive mood in \textarabic{يَجِدْ}
+\item \textarabic{وَإِذَا} introduces sudden discovery
+\item Attached pronouns \textarabic{هُ} and \textarabic{هَا} show gender agreement
+\item \textarabic{بِ} in \textarabic{بِجُحَا} indicates existence/presence
 \end{itemize}
 \end{tcolorbox}
 
-% ======================== Additional Practice Phrases ========================
+% ======================== Similar Phrases for Practice ========================
 \section{Similar Phrases for Practice}
 
 \begin{enumerate}
-\item \textarabic{وَجَدَ اللَّصُّ كِتَابًا فِي الْغُرْفَةِ، فَفَتَحَهُ وَقَرَأَهُ}\\
-The thief found a book in the room, so he opened it and read it. [wajada al-liṣṣu kitāban fī l-ġurfati, fataḥahu waqaraʔahu]
+\item \textarabic{وَبَحَثَ الطِّفْلُ عَنْ لُعْبَتِهِ فَلَمْ يَجِدْهَا، فَرَأَى الصُّنْدُوقَ فَفَتَحَهُ وَإِذَا بِهَا فِيهِ}\\
+And the child searched for his toy but did not find it, then he saw the box, opened it, and behold, it was inside [wa-baħaθa ṭ-ṭiflu ʕan luʕbatihi fa-lam yajidahā, fa-raʔā ṣ-ṣundūqa fa-fataħahu wa-ʔiḏā bihā fīhi]
 
-\item \textarabic{بَحَثَ الطِّفْلُ عَنْ كُرْسِيٍّ فِي الْمَكْتَبَةِ، فَجَلَسَ عَلَيْهِ}\\
-The child searched for a chair in the library, so he sat on it. [baḥatha ṭ-ṭiflu ʕan kursiyyin fī l-maktabati, fa-jalasa ʕalayh]
+\item \textarabic{وَنَقَّبَ الْعَامِلُ عَنْ مَاءٍ فَلَمْ يَعْثُرْ، فَشَاهَدَ الْبِئْرَ فَحَفَرَهَا وَإِذَا بِالْمَاءِ يَتَدَفَّقُ}\\
+And the worker searched for water but did not find any, then he saw the well, dug it, and behold, water was gushing [wa-naqqaba l-ʕāmilu ʕan māʔin fa-lam yaʕθur, fa-šāhada l-biʔra fa-ħafarahā wa-ʔiḏā bil-māʔi yatadaffaqu]
 
-\item \textarabic{رَأَى رَجُلٌ كَلْبًا يَجْرِي فِي الشَّارِعِ، فَتَبِعَهُ}\\
-A man saw a dog running in the street, so he followed it. [raʔā rajulun kalban yajri fī ʃ-ʃāriʕi, fata biʕahu]
+\item \textarabic{وَفَتَّشَ الطَّبِيبُ عَنْ دَوَاءٍ لِلْمَرَضِ فَلَمْ يَكْتَشِفْ، فَلَاحَظَ النَّبَاتَ فَدَرَسَهُ وَإِذَا بِهِ الْعِلَاجُ}\\
+And the doctor searched for medicine for the disease but did not discover any, then he noticed the plant, studied it, and behold, it was the cure [wa-fattaša ṭ-ṭabību ʕan dawāʔin lil-maraḍi fa-lam yaktašif, fa-lāħaẓa n-nabāta fa-darasahu wa-ʔiḏā bihi l-ʕilāju]
+
+\item \textarabic{وَدَوَّرَ الطَّالِبُ عَنْ كِتَابِهِ فَلَمْ يَلْقَ، فَبَصُرَ الْمَكْتَبَةَ فَدَخَلَهَا وَإِذَا بِالْكِتَابِ عَلَى الطَّاوِلَةِ}\\
+And the student searched around for his book but did not find it, then he saw the library, entered it, and behold, the book was on the table [wa-dawwara ṭ-ṭālibu ʕan kitābihi fa-lam yalqa, fa-baṣura l-maktabata fa-daxalahā wa-ʔiḏā bil-kitābi ʕalā ṭ-ṭāwilati]
 \end{enumerate}
 
-% ======================== Levantine Dialect Tip ========================
-\section{Levantine Arabic Dialect Tip}
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shaami) Arabic Dialect}
 
-In Levantine Arabic, the verb \textarabic{بَحَثَ} (past tense) is commonly replaced by \textarabic{دَوَّرَ} \textit{(dawwar)}, which means “to search” or “to look for.”
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{وَدَوَّرَ الْحَرَامِي عَ شِي يِسْرُقُو بَسْ مَا لَاقِي، فَشَافَ الْخِزَانَة فَفَتَحَا وَإِذَا جُحَا جُوَّاتَا}\\
+\textbf{Phonetic:} [wa-dawwar il-ħarāmi ʕa ši yisruqu bass mā lāqi, fa-šāf il-xizāne fa-fataħa wa-ʔiḏā juħā juwwāta]\\
+\textbf{Translation:} And the thief searched for something to steal but didn't find anything, then he saw the wardrobe, opened it, and behold, Juha was inside it.
+\end{tcolorbox}
 
-Example: \textarabic{دَوَّر اللِّصّ عَ شِي يِسْرُقُه} \\
-\textit{[dawwar al-liṣṣ ʕa ši yisruquh]} \\
-Translation: The thief searched for something to steal.
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{بَحَثَ} → \textarabic{دَوَّرَ} (dawwar) — dialectal "searched around"
+\item \textarabic{اللَّصُّ} → \textarabic{الْحَرَامِي} (il-ħarāmi) — colloquial "thief"
+\item \textarabic{عَنْ} → \textarabic{عَ} (ʕa) — shortened preposition "for"
+\item \textarabic{شَيْءٍ} → \textarabic{شِي} (ši) — simplified "something"
+\item \textarabic{يَسْرِقُهُ} → \textarabic{يِسْرُقُو} (yisruqu) — dialectal present tense
+\item \textarabic{فَلَمْ يَجِدْ} → \textarabic{بَسْ مَا لَاقِي} (bass mā lāqi) — "but didn't find"
+\item \textarabic{رَأَى} → \textarabic{شَافَ} (šāf) — dialectal past "saw"
+\item \textarabic{فَفَتَحَهَا} → \textarabic{فَفَتَحَا} (fa-fataħa) — simplified pronoun
+\item \textarabic{فِيهَا} → \textarabic{جُوَّاتَا} (juwwāta) — dialectal "inside it"
+\end{itemize}
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context},breakable]
+\textbf{Narrative Function:} This sentence serves as the climactic moment in a Juha story where the thief's expectations are completely subverted. Instead of finding valuables, he discovers Juha hiding in the wardrobe.
+
+\textbf{Juha's Character:} Juha (Nasreddin Hodja in Turkish tradition) represents the wise fool archetype in Middle Eastern folklore. His presence in the wardrobe suggests either poverty (nothing worth stealing) or cleverness (hiding from the thief).
+
+\textbf{Literary Technique:} The phrase uses dramatic irony and surprise revelation through \textarabic{وَإِذَا} to create humor and engage the reader.
+
+\textbf{Cultural Values:} The story reflects themes of poverty, resourcefulness, and the ability to find humor in difficult situations - common motifs in Arabic folk literature.
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+\begin{enumerate}
+\item \textbf{Conjunction Chain:} \textarabic{وَ...فَ...فَ...وَ} creates narrative flow (and → so → then → and)
+\item \textbf{Verb Pattern:} Past tense verbs follow the pattern: search → find (negated) → see → open
+\item \textbf{Pronoun Agreement:} \textarabic{هُ} (masculine) refers to \textarabic{شَيْءٍ}, \textarabic{هَا} (feminine) to \textarabic{الْخِزَانَةَ}
+\item \textbf{Surprise Structure:} \textarabic{وَإِذَا بِ...} is a fixed expression for "and behold..."
+\item \textbf{Negation Rule:} \textarabic{لَمْ} + jussive = past negative (\textarabic{لَمْ يَجِدْ} not \textarabic{لَمْ يَجِدُ})
+\end{enumerate}
+
+\subsection{Related Vocabulary Family}
+\begin{multicols}{2}
+
+\textbf{Search/Investigation family:}\\
+\textarabic{بَحْث} — research [baħθ]\\
+\textarabic{تَفْتِيش} — searching [taftīš]\\
+\textarabic{تَنْقِيب} — excavation [tanqīb]\\
+\textarabic{اسْتِكْشَاف} — exploration [istikšāf]\\
+\textarabic{فَحْص} — examination [faħṣ]\\
+
+\textbf{Theft family:}\\
+\textarabic{سَرِقَة} — theft [sariqa]\\
+\textarabic{سَارِق} — thief [sāriq]\\
+\textarabic{مَسْرُوق} — stolen [masrūq]\\
+\textarabic{نَهْب} — plunder [nahb]\\
+\textarabic{لُصُوصِيَّة} — thievery [luṣūṣiyya]\\
+
+\textbf{Vision family:}\\
+\textarabic{رُؤْيَة} — vision [ruʔya]\\
+\textarabic{نَظَر} — looking [naẓar]\\
+\textarabic{إِبْصَار} — sight [ibṣār]\\
+\textarabic{مُشَاهَدَة} — watching [mušāhada]\\
+\textarabic{مُلَاحَظَة} — observation [mulāħaẓa]\\
+
+\textbf{Opening family:}\\
+\textarabic{فَتْح} — opening [fatħ]\\
+\textarabic{مِفْتَاح} — key [miftāħ]\\
+\textarabic{انْفِتَاح} — being open [infitāħ]\\
+\textarabic{فَتَّاح} — opener [fattāħ]\\
+\textarabic{مَفْتُوح} — opened [maftūħ]\\
+
+\textbf{Storage family:}\\
+\textarabic{خَزْن} — storage [xazn]\\
+\textarabic{مَخْزَن} — warehouse [maxzan]\\
+\textarabic{خِزَانَة} — cupboard [xizāna]\\
+\textarabic{خَازِن} — treasurer [xāzin]\\
+\textarabic{مُدَّخَر} — stored [muddaxar]\\
+
+\textbf{Surprise family:}\\
+\textarabic{مُفَاجَأَة} — surprise [mufājaʔa]\\
+\textarabic{بَغْتَة} — suddenly [baġta]\\
+\textarabic{فَجْأَة} — suddenly [fajʔa]\\
+\textarabic{صَدْمَة} — shock [ṣadma]\\
+\textarabic{ذُهُول} — amazement [ḏuhūl]
+\end{multicols}
+
+\subsection{Grammatical Patterns to Remember}
+
+\textbf{Sequential Narrative Pattern:}
+\begin{itemize}
+\item \textarabic{وَ + فعل} — "and [verb]" (connects to previous action)
+\item \textarabic{فَ + فعل} — "so/then [verb]" (shows result or sequence)
+\item \textarabic{وَإِذَا بِ + اسم} — "and behold [noun]" (introduces surprise)
+\end{itemize}
+
+\textbf{Negation Patterns:}
+\begin{itemize}
+\item \textarabic{لَمْ + مجزوم} — past negation with jussive mood
+\item \textarabic{مَا + فعل} — simple negation
+\item \textarabic{لَا + مضارع} — present/future negation
+\end{itemize}
+
+\textbf{Attached Pronoun Patterns:}
+\begin{itemize}
+\item Verb + \textarabic{هُ/هَا} — "he/she [verbs] it"
+\item Preposition + \textarabic{هُ/هَا} — "in/with/for it"
+\item Noun + \textarabic{هُ/هَا} — "his/her [noun]"
+\end{itemize}
 
 \end{document}
