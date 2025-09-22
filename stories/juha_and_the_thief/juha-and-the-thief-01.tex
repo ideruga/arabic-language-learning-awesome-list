@@ -1,11 +1,9 @@
-\documentclass[letter,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{longtable}
 \usepackage{makecell}
-\usepackage[utf8]{inputenc}
-\usepackage[english,arabic]{babel}
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{array}
@@ -15,7 +13,6 @@
 \setmainlanguage{english}
 \setotherlanguage{arabic}
 \setotherlanguage{hebrew}
-\usepackage{arabtex}
 \usepackage{fontspec}
 \setmainfont{Charis SIL}
 \newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
@@ -29,7 +26,9 @@
 \addtolength{\topmargin}{-2.49998pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\textit{Juha and the Thief: Juha Hides in the Closet}} 
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{Juha and the Thief: Juha Hides in the Closet}}
+\renewcommand{\headrulewidth}{0pt} % Remove header line
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
@@ -44,21 +43,15 @@
 
 \title{\textbf{\Large Arabic Phrase Analyser}\\
 \large Juha Hides from a Thief in His House\\
-\normalsize \textarabic{شَعَرَ جُحا بِلِصٍّ فِي دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}}
+\normalsize \textarabic{شعر جحا بلص في داره ليلا، فقام إلى خزانة غرفة البوم واختبأ فيها}}
 \author{Igor Deruga}
 \date{}
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diactrics},breakable]
 \centering
-\textarabic{شعر جحا بلص في داره ليلا، فقام إلى خزانة غرفة البوم واختبأ فيها}
-\\[0.5em]
-\textbf{Without Diacritics}
-\\[1em]
 \textarabic{شَعَرَ جُحا بِلِصٍّ فِي دَارِهِ لَيْلًا، فَقَامَ إِلَى خِزَانَةِ غُرْفَةِ البُومِ وَاخْتَبَأَ فِيهَا}
-\\[0.5em]
-\textbf{With Full Diacritics}
 \end{tcolorbox}
 
 % ======================== Translations ========================
@@ -887,15 +880,5 @@ The boy touched something strange in the box at noon, so he opened the lid and f
 \item Holes, Clive. \textit{Dialect, Culture, and Society in Eastern Arabia}. Brill.
 \end{itemize}
 \end{tcolorbox}
-
-\section*{Acknowledgments}
-
-This analysis was prepared as part of advanced Arabic linguistic studies, drawing on traditional Arabic grammatical analysis (\textarabic{النحو والصرف}) combined with modern linguistic methodologies. The cultural interpretations reflect established scholarship on Arab folklore and the Juha/Nasreddin tradition.
-
-\vfill
-\begin{center}
-\textit{Compiled with XeLaTeX using Amiri Arabic font}\\
-\textit{For educational and research purposes}
-\end{center}
 
 \end{document}

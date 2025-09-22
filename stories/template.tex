@@ -1,12 +1,10 @@
-\documentclass[letter,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{longtable}
 \usepackage{makecell}
-\usepackage[utf8]{inputenc}
-\usepackage[english,arabic]{babel}
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{array}
@@ -16,7 +14,6 @@
 \setmainlanguage{english}
 \setotherlanguage{arabic}
 \setotherlanguage{hebrew}
-\usepackage{arabtex}
 \usepackage{fontspec}
 \setmainfont{Charis SIL}
 \newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
@@ -30,8 +27,9 @@
 \addtolength{\topmargin}{-2.49998pt}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyfoot[C]{\thepage}
 \fancyhead[R]{\textit{<Title - a short summary of the phrase in English>}}
-
+\renewcommand{\headrulewidth}{0pt} % Remove header line
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
@@ -48,21 +46,15 @@
 
 \title{\textbf{\Large Arabic Phrase Analyser}\\
 \large <Title - a short summary of the phrase in English>\\
-\normalsize \textarabic{<arabic phrase to analyse>}}
+\normalsize \textarabic{<original arabic phrase to analyse without diactrics>}}
 \author{Igor Deruga}
 \date{}
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diactrics},breakable]
 \centering
-\textarabic{<original arabic phrase>}
-\\[0.5em]
-\textbf{Without Diacritics}
-\\[1em]
 \textarabic{<arabic phrase with full diactricts>}
-\\[0.5em]
-\textbf{With Full Diacritics}
 \end{tcolorbox}
 
 % ======================== Translations ========================
@@ -97,37 +89,37 @@
 \end{tabular}
 
 \subsection{Conjugation}
-\large \textbf{Infinitive}: \textarabic{قَالَ}
+\par{ \large \textbf{Verbal Noun}: \textarabic{قَوْل} /qawl/}
 
 \begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
 \hline
 \textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
 \hline
-\textbf{3rd person masculine singular} & \textarabic{قَالَ} [qāla] & \textarabic{يَقُولُ} [yaqūlu] \\
+\textbf{3rd person masculine singular} & \textarabic{قَالَ} /qaːla/ & \textarabic{يَقُولُ} /jaquːlu/ \\
 \hline
-\textbf{3rd person feminine singular} & \textarabic{قَالَتْ} [qālat] & \textarabic{تَقُولُ} [taqūlu] \\
+\textbf{3rd person feminine singular} & \textarabic{قَالَتْ} /qaːlat/ & \textarabic{تَقُولُ} /taquːlu/ \\
 \hline
-\textbf{3rd person masculine dual} & \textarabic{قَالَا} [qālā] & \textarabic{يَقُولَانِ} [yaqūlāni] \\
+\textbf{3rd person masculine dual} & \textarabic{قَالَا} /qaːlaː/ & \textarabic{يَقُولَانِ} /jaquːlaːni/ \\
 \hline
-\textbf{3rd person feminine dual} & \textarabic{قَالَتَا} [qālatā] & \textarabic{تَقُولَانِ} [taqūlāni] \\
+\textbf{3rd person feminine dual} & \textarabic{قَالَتَا} /qaːlataː/ & \textarabic{تَقُولَانِ} /taquːlaːni/ \\
 \hline
-\textbf{3rd person masculine plural} & \textarabic{قَالُوا} [qālū] & \textarabic{يَقُولُونَ} [yaqūlūna] \\
+\textbf{3rd person masculine plural} & \textarabic{قَالُوا} /qaːluː/ & \textarabic{يَقُولُونَ} /jaquːluːna/ \\
 \hline
-\textbf{3rd person feminine plural} & \textarabic{قُلْنَ} [qulna] & \textarabic{يَقُلْنَ} [yaqulna] \\
+\textbf{3rd person feminine plural} & \textarabic{قُلْنَ} /qulna/ & \textarabic{يَقُلْنَ} /jaqulna/ \\
 \hline
-\textbf{2nd person masculine singular} & \textarabic{قُلْتَ} [qulta] & \textarabic{تَقُولُ} [taqūlu] \\
+\textbf{2nd person masculine singular} & \textarabic{قُلْتَ} /qulta/ & \textarabic{تَقُولُ} /taquːlu/ \\
 \hline
-\textbf{2nd person feminine singular} & \textarabic{قُلْتِ} [qulti] & \textarabic{تَقُولِينَ} [taqūlīna] \\
+\textbf{2nd person feminine singular} & \textarabic{قُلْتِ} /qulti/ & \textarabic{تَقُولِينَ} /taquːliːna/ \\
 \hline
-\textbf{2nd person dual (m./f.)} & \textarabic{قُلْتُمَا} [qultumā] & \textarabic{تَقُولَانِ} [taqūlāni] \\
+\textbf{2nd person dual (m./f.)} & \textarabic{قُلْتُمَا} /qultumaː/ & \textarabic{تَقُولَانِ} /taquːlaːni/ \\
 \hline
-\textbf{2nd person masculine plural} & \textarabic{قُلْتُمْ} [qultum] & \textarabic{تَقُولُونَ} [taqūlūna] \\
+\textbf{2nd person masculine plural} & \textarabic{قُلْتُمْ} /qultum/ & \textarabic{تَقُولُونَ} /taquːluːna/ \\
 \hline
-\textbf{2nd person feminine plural} & \textarabic{قُلْتُنَّ} [qultunna] & \textarabic{تَقُلْنَ} [taqulna] \\
+\textbf{2nd person feminine plural} & \textarabic{قُلْتُنَّ} /qultunna/ & \textarabic{تَقُلْنَ} /taqulna/ \\
 \hline
-\textbf{1st person singular} & \textarabic{قُلْتُ} [qultu] & \textarabic{أَقُولُ} [aqūlu] \\
+\textbf{1st person singular} & \textarabic{قُلْتُ} /qultu/ & \textarabic{أَقُولُ} /ʔaquːlu/ \\
 \hline
-\textbf{1st person plural} & \textarabic{قُلْنَا} [qulnā] & \textarabic{نَقُولُ} [naqūlu] \\
+\textbf{1st person plural} & \textarabic{قُلْنَا} /qulnaː/ & \textarabic{نَقُولُ} /naquːlu/ \\
 \hline
 \end{longtable}
 
@@ -177,22 +169,22 @@ Plural: \textarabic{سَادَة} [saːda] or \textarabic{أَسْيَاد} [ʔa
 \hline
 \textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With Suffix (1st sg.)} \\
 \hline
-\multirow{3}{*}{Singular (\textarabic{مفرد})} 
- & Nominative   & \textarabic{سَيِّدٌ} (sajjidun) & \textarabic{السَّيِّدُ} (as-sajjidu) & \textarabic{سَيِّدِي} (sajjidī) \\
- & Accusative   & \textarabic{سَيِّدًا} (sajjidan) & \textarabic{السَّيِّدَ} (as-sajjida) & \textarabic{سَيِّدِيَ} (sajjidiyya) \\
- & Genitive     & \textarabic{سَيِّدٍ} (sajjidin) & \textarabic{السَّيِّدِ} (as-sajjidi) & \textarabic{سَيِّدِي} (sajjidī) \\
+\multirow{3}{*}{Singular (\textarabic{مفرد})}
+& Nominative & \textarabic{سَيِّدٌ} /sajjidun/ & \textarabic{السَّيِّدُ} /as.sajjidu/ & \textarabic{سَيِّدِي} /sajjidiː/ \\
+& Accusative & \textarabic{سَيِّدًا} /sajjidan/ & \textarabic{السَّيِّدَ} /as.sajjida/ & \textarabic{سَيِّدِيَ} /sajjidijja/ \\
+& Genitive & \textarabic{سَيِّدٍ} /sajjidin/ & \textarabic{السَّيِّدِ} /as.sajjidi/ & \textarabic{سَيِّدِي} /sajjidiː/ \\
 \hline
-\multirow{3}{*}{Dual (\textarabic{مثنّى})} 
- & Nominative   & \textarabic{سَيِّدَانِ} (sajjidāni) & \textarabic{السَّيِّدَانِ} (as-sajjidāni) & \textarabic{سَيِّدَايَ} (sajjidāya) \\
- & Acc/Gen      & \textarabic{سَيِّدَيْنِ} (sajjidaini) & \textarabic{السَّيِّدَيْنِ} (as-sajjidaini) & \textarabic{سَيِّدَيَّ} (sajjidayya) \\
+\multirow{3}{*}{Dual (\textarabic{مثنّى})}
+& Nominative & \textarabic{سَيِّدَانِ} /sajjidaːni/ & \textarabic{السَّيِّدَانِ} /as.sajjidaːni/ & \textarabic{سَيِّدَايَ} /sajjidaːja/ \\
+& Acc/Gen & \textarabic{سَيِّدَيْنِ} /sajjidajni/ & \textarabic{السَّيِّدَيْنِ} /as.sajjidajni/ & \textarabic{سَيِّدَيَّ} /sajjidajja/ \\
 \hline
-\multirow{6}{*}{Plural (\textarabic{جمع})} 
-  & \multirow{2}{*}{Nominative}    & \textarabic{سَادَةٌ} (sādah) & \textarabic{السَّادَةُ} (as-sādatu) & \textarabic{سَادَتِي} (sādatī) \\
-  &                                                   & \textarabic{أَسْيَادٌ} (ʔasyādun) & \textarabic{الأَسْيَادُ} (al-ʔasyādu) & \textarabic{أَسْيَادِي} (ʔasyādī) \\
-  & \multirow{2}{*}{Accusative}      & \textarabic{سَادَةً} (sādatan) & \textarabic{السَّادَةَ} (as-sādata) & \textarabic{سَادَتِيَ} (sādatīya) \\
-  &                                                    & \textarabic{أَسْيَادًا} (ʔasyādan) & \textarabic{الأَسْيَادَ} (al-ʔasyāda) & \textarabic{أَسْيَادِيَ} (ʔasyādiyya) \\
-  & \multirow{2}{*}{Genitive}          & \textarabic{سَادَةٍ} (sādatin) & \textarabic{السَّادَةِ} (as-sādati) & \textarabic{سَادَتِي} (sādatī) \\
-  &                                                    & \textarabic{أَسْيَادٍ} (ʔasyādin) & \textarabic{الأَسْيَادِ} (al-ʔasyādi) & \textarabic{أَسْيَادِي} (ʔasyādī) \\
+\multirow{6}{*}{Plural (\textarabic{جمع})}
+& \multirow{2}{*}{Nominative} & \textarabic{سَادَةٌ} /saːdatun/ & \textarabic{السَّادَةُ} /as.saːdatu/ & \textarabic{سَادَتِي} /saːdatiː/ \\
+& & \textarabic{أَسْيَادٌ} /ʔasjaːdun/ & \textarabic{الأَسْيَادُ} /al.ʔasjaːdu/ & \textarabic{أَسْيَادِي} /ʔasjaːdiː/ \\
+& \multirow{2}{*}{Accusative} & \textarabic{سَادَةً} /saːdatan/ & \textarabic{السَّادَةَ} /as.saːdata/ & \textarabic{سَادَتِيَ} /saːdatiːja/ \\
+& & \textarabic{أَسْيَادًا} /ʔasjaːdan/ & \textarabic{الأَسْيَادَ} /al.ʔasjaːda/ & \textarabic{أَسْيَادِيَ} /ʔasjaːdijja/ \\
+& \multirow{2}{*}{Genitive} & \textarabic{سَادَةٍ} /saːdatin/ & \textarabic{السَّادَةِ} /as.saːdati/ & \textarabic{سَادَتِي} /saːdatiː/ \\
+& & \textarabic{أَسْيَادٍ} /ʔasjaːdin/ & \textarabic{الأَسْيَادِ} /al.ʔasjaːdi/ & \textarabic{أَسْيَادِي} /ʔasjaːdiː/ \\
 \hline
 \end{tabular}
 

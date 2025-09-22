@@ -1,16 +1,15 @@
-\documentclass[letter,12pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
-\usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{longtable}
 \usepackage{makecell}
-\usepackage[utf8]{inputenc}
 \usepackage{tikz}
 \usepackage{geometry}
 \usepackage{array}
 \usepackage{multicol}
 \usepackage[table]{xcolor}
 \usepackage{polyglossia}
+\usepackage{fancyhdr}
 \setmainlanguage{english}
 \setotherlanguage{arabic}
 \setotherlanguage{hebrew}
@@ -23,9 +22,14 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\textit{Juha and the Thief: the Thief Searches but Finds Juha}} % Right header with document title
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{Juha and the Thief: the Thief Searches but Finds Juha}}
+\renewcommand{\headrulewidth}{0pt} % Remove header line
+
 
 \usetikzlibrary{shapes,arrows,decorations.pathmorphing}
 
@@ -40,21 +44,15 @@
 
 \title{\textbf{\Large Arabic Phrase Analyser}\\
 \large The Thief Searches but Finds Juha\\
-\normalsize \textarabic{وَبَحَثَ اللَّصُّ عَنْ شَيْءٍ يَسْرِقُهُ فَلَمْ يَجِدْ، فَرَأَى الْخِزَانَةَ فَفَتَحَهَا وَإِذَا بِجُحَا فِيهَا}}
+\normalsize \textarabic{وبحث اللص عن شيء يسرقه فلم يجد، فرأى الخزانة ففتحها وإذا بجحا فيها}}
 \author{Igor Deruga}
 \date{}
 \maketitle
 
 % ======================== Phrase Display ========================
-\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase},breakable]
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diactrics},breakable]
 \centering
-\textarabic{وبحث اللص عن شيء يسرقه فلم يجد، فرأى الخزانة ففتحها وإذا بجحا فيها}
-\\[0.5em]
-\textbf{Without Diacritics}
-\\[1em]
 \textarabic{وَبَحَثَ اللَّصُّ عَنْ شَيْءٍ يَسْرِقُهُ فَلَمْ يَجِدْ، فَرَأَى الْخِزَانَةَ فَفَتَحَهَا وَإِذَا بِجُحَا فِيهَا}
-\\[0.5em]
-\textbf{With Full Diacritics}
 \end{tcolorbox}
 
 % ======================== Translations ========================
@@ -382,11 +380,6 @@ Jussive: \textarabic{يَجِدْ} [yajid]
 \textbf{Root} & \textarabic{ر-أ-ى} (r-ʔ-y) \\
 \textbf{Pattern} & \textarabic{فَعَلَ} (faʕala) with conjunction \\
 \textbf{Grammar} & Past tense verb, 3rd person masculine singular, with conjunction \textarabic{فَ} (fa-) prefix \\
-\textbf{Table of Conjugations} & \makecell[l]{
-Perfect: \textarabic{رَأَى} [raʔā]\\
-Imperfect: \textarabic{يَرَى} [yarā]\\
-Active Participle: \textarabic{رَاءٍ} [rāʔin]
-} \\
 \textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
 1. \textarabic{رَأَى الطَّائِرَ} - He saw the bird [raʔā ṭ-ṭāʔira]\\
 2. \textarabic{تَرَى النُّجُومَ} - She sees the stars [tarā n-nujūma]\\
@@ -398,28 +391,64 @@ Active Participle: \textarabic{رَاءٍ} [rāʔin]
 \bottomrule
 \end{tabular}
 
-\subsubsection*{Full Declension Matrix}
+\subsection{Conjugation}
 
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With Suffix (1st sg.)} \\
-\hline
-\multirow{3}{*}{Singular (\textarabic{مُفْرَد})} 
- & Nominative   & \textarabic{رُؤْيَةٌ} (ruʔyatun) & \textarabic{الرُّؤْيَةُ} (ar-ruʔyatu) & \textarabic{رُؤْيَتِي} (ruʔyatī) \\
- & Accusative   & \textarabic{رُؤْيَةً} (ruʔyatan) & \textarabic{الرُّؤْيَةَ} (ar-ruʔyata) & \textarabic{رُؤْيَتِيَّ} (ruʔyatiyya) \\
- & Genitive     & \textarabic{رُؤْيَةٍ} (ruʔyatin) & \textarabic{الرُّؤْيَةِ} (ar-ruʔyati) & \textarabic{رُؤْيَتِي} (ruʔyatī) \\
-\hline
-\multirow{3}{*}{Dual (\textarabic{مُثَنَّى})} 
- & Nominative   & \textarabic{رُؤْيَتَانِ} (ruʔyatāni) & \textarabic{الرُّؤْيَتَانِ} (ar-ruʔyatāni) & \textarabic{رُؤْيَتَايَ} (ruʔyatāya) \\
- & Acc/Gen      & \textarabic{رُؤْيَتَيْنِ} (ruʔyatayni) & \textarabic{الرُّؤْيَتَيْنِ} (ar-ruʔyatayni) & \textarabic{رُؤْيَتَيَّ} (ruʔyatayya) \\
-\hline
-\multirow{3}{*}{Plural (\textarabic{جَمْع})} 
-  & Nominative    & \textarabic{رُؤىً} (ruʔan) & \textarabic{الرُّؤَى} (ar-ruʔā) & \textarabic{رُؤَايَ} (ruʔāya) \\
-  & Accusative      & \textarabic{رُؤىً} (ruʔan) & \textarabic{الرُّؤَى} (ar-ruʔā) & \textarabic{رُؤَايَ} (ruʔāya) \\
-  & Genitive          & \textarabic{رُؤىً} (ruʔan) & \textarabic{الرُّؤَى} (ar-ruʔā) & \textarabic{رُؤَايَ} (ruʔāya) \\
-\hline
-\end{tabular}
+\par{ \large \textbf{Verbal Noun}: \textarabic{رُؤْيَة} /ruʔya/}
 
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{رَأَى} /raʔā/ & \textarabic{يَرَى} /yarā/ \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{رَأَتْ} /raʔat/ & \textarabic{تَرَى} /tarā/ \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{رَأَيَا} /raʔayā/ & \textarabic{يَرَيَانِ} /yarayāni/ \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{رَأَتَا} /raʔatā/ & \textarabic{تَرَيَانِ} /tarayāni/ \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{رَأَوْا} /raʔaw/ & \textarabic{يَرَوْنَ} /yarawna/ \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{رَأَيْنَ} /raʔayna/ & \textarabic{يَرَيْنَ} /yarayna/ \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{رَأَيْتَ} /raʔayta/ & \textarabic{تَرَى} /tarā/ \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{رَأَيْتِ} /raʔayti/ & \textarabic{تَرَيْنَ} /tarayna/ \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{رَأَيْتُمَا} /raʔaytumā/ & \textarabic{تَرَيَانِ} /tarayāni/ \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{رَأَيْتُمْ} /raʔaytum/ & \textarabic{تَرَوْنَ} /tarawna/ \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{رَأَيْتُنَّ} /raʔaytunna/ & \textarabic{تَرَيْنَ} /tarayna/ \\
+\hline
+\textbf{1st person singular} & \textarabic{رَأَيْتُ} /raʔaytu/ & \textarabic{أَرَى} /ʔarā/ \\
+\hline
+\textbf{1st person plural} & \textarabic{رَأَيْنَا} /raʔaynā/ & \textarabic{نَرَى} /narā/ \\
+\hline
+\end{longtable}
+
+\subsubsection*{Conjugation Notes}
+\begin{itemize}
+  \item This is a **defective verb** (\textarabic{فعل ناقص}) where the third radical is \textarabic{ى} (weak letter)
+  \item The \textbf{future} is formed with the prefix \textarabic{سَ} [sa-] or \textarabic{سَوْفَ} [sawfa] before the imperfect (e.g., \textarabic{سَيَرَى} "he will see")
+  \item The \textbf{moods of the imperfect}: 
+    \begin{itemize}
+      \item Indicative: \textarabic{يَرَى} [yarā] 
+      \item Subjunctive: \textarabic{لَنْ يَرَى} [lan yarā]
+      \item Jussive: \textarabic{لَمْ يَرَ} [lam yara]
+      \item Imperative: \textarabic{رَ} [ra!] (rarely used due to phonetic difficulty)
+    \end{itemize}
+  \item \textbf{Passive voice}: 
+    \begin{itemize}
+      \item Perfect: \textarabic{رُئِيَ} [ruʔiya] — it was seen
+      \item Imperfect: \textarabic{يُرَى} [yurā] — it is seen
+    \end{itemize}
+  \item \textbf{Participles}:
+    \begin{itemize}
+      \item Active: \textarabic{رَاءٍ} [rāʔin] — seeing
+      \item Passive: \textarabic{مَرْئِيّ} [marʔiyy] — seen/visible
+    \end{itemize}
+\end{itemize}
 \subsection{\textarabic{الْخِزَانَةَ} — [al-xizānata]}
 
 \begin{tabular}{p{3cm}p{10cm}}
