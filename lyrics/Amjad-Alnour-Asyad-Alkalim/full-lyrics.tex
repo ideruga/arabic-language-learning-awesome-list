@@ -1,0 +1,156 @@
+% arabic_rap.tex — formatted XeLaTeX file for the supplied Arabic/English lyrics
+% Compile with: xelatex arabic_rap.tex
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,arabic]{babel}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\usepackage{arabtex}
+\usepackage{utf8}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\geometry{margin=1.5cm}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Oh My God}\\
+\large Arabic / English Rap Lyrics}
+\author{Formatted for Presentation}
+\date{}
+\maketitle
+
+% ======================== Lyrics ========================
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Stanza 1},breakable]
+Oh My God \\
+\textarabic{
+لمَ يجب عليّ تعلّم ذي اللغة العربية؟ \\
+لمَ أُقحم في مخي لغة لا طائلة منها في الدنيا؟ \\
+ما جدوى النطق بكلماتٍ من زمن قريش محكيّة؟ \\
+هل نحن بعصر عباسي أم عصر الدولة الأموية؟ \\
+في هذي الحقبة الزمنية قل لّي أين هي العربيّة \\
+بصروح العلم المبنية لن تجد كتاباً عربيا \\
+في عصر نهوض التقنية ما زالت تحبو كصبية \\
+حتى إن أَحسَنت النية \\
+سمعتها تبدو ضبابية \\
+قد برعت في وصف السيف \\
+أهدته أغاني طربية \\
+ما هذا العنف المتخفي برداء وصوف أدبية؟ \\
+قلة أشعارها في الحب والباقي قصائد حربية \\
+وكأن الشاعر موعود في الحرب بعبدٍ وسبية \\
+ثاني أصعب لغة تنطق من بعد اللغة الصينية \\
+أتقارن نفسها بحضارة أبناء الصين الشعبية؟ \\
+لا أعلم ما سر صعوبة لغة ليست بأساسية \\
+في عالم أرقام الديجتال والمصفوفات الرقمية \\
+حدثني عن لغة النصبِ لن أثق بلغة نصابة \\
+وحروف جرت بالغصبِ كلمات كان لها مهابة \\
+مجهول يبني أفعالها بضمير مستتر غابا \\
+فاعلها مرفوع دوما حتى لو يفعل بإنابة \\
+}
+Oh My God! \\
+\textarabic{
+للوصف الواحد كلمات أكثر من ألفٍ \\
+في نفس الوقت ترى كلمة قد يوصف بها مئة وصف \\
+لا أفهم منطق ذي اللغة سأهجرها بلا ذرة أسف \\
+وقتي ثمين لن أصرفه عبثاً في نحو أو صرف \\
+أتحداك بأن تذكر لي إسهاماتها في الهندسة \\
+أو بعلوم فضاء الكون بتلسكوب أو بعدسة \\
+كم مخترعا يتحدثها؟ ليس لها أي منافسة \\
+لو كانت تسهم في العلم لم نهملها في المدرسة؟ \\
+بئس حروفها إذ تتغير حسب مواقعها في الكلمة \\
+تنفصل ببعض الكلمات وفي بعضها تبدو ملتئمة \\
+لابد لقارئها غصبا أن يجتهد وأن يلتزم \\
+بالإعراب فإن لم يفعل لن نسمعه ولن نحترمه \\
+}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Stanza 2} ,breakable]
+\textarabic{
+لا تغتر بلغتك فلغتك اشتقت من بضع لغات \\
+من فارس اقتبست أيضاً، من بابل وصل لها زاد \\
+حتى الهندية تغذتها أعطتها بعض الكلمات \\
+فأرحني من لغة النسخ وسلملي على لغة الضاد \\
+}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Chorus (English)},breakable]
+Face it, man! Your language's dying \\
+Why don't you just get rid of it? \\
+Stop whining. No point in crying \\
+It's history you need to get ahead of it \\
+Oh My God! I'm not even lying \\
+I'mma teach my kids how to benefit \\
+From a language that keeps'em flying \\
+For a better future, for a better fit \\
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Stanza 3},breakable]
+\textarabic{
+لسنا في العصر العباسي ولسنا في الدولة الأموية \\
+لكن في عصر شبابٍ يتنصل من أقوى هوية \\
+في زمن شباب مهزومٍ منبهرٍ بالإنجليزية \\
+وكأن عصورنا في الماضي ما كانت أبداً ذهبية \\
+لا عجب بأن تسأل عن سر غياب اللغة العربية \\
+أن تتسال عن دورها بدهاليز البحث العلمية \\
+وإجابة سؤلك في أنها قد غابت ظلماً وبفرية \\
+من أبنائها هم ظلموها واتهموها بالرجعية \\
+اللغة تعبر عن قوة أهلها من بين الأمم \\
+ألسنه شعوب العالم يفتخر بها منذ القدم \\
+راجع تاريخك كي تعرف من هم أسياد الكلم \\
+الأدب العربي تربع زمناً في أعلى القمم \\
+تتحسس من لغه تتغزل بالسيف وشدة ضربه \\
+ما بالك لم تذكر من يتغنى ببطولات الحرب \\
+من أممٍ اخرى ولغاتٍ وأولئك من غير العرب؟ \\
+الكل يمجد أسلحته من أقصى الشرق إلى الغرب \\
+ثاني أصعب لغة تنطق مع ذلك يدرسها الصبية \\
+في كل الأقطار تردد بالقرآن لغتنا ستحيا \\
+كيف كيف تغيب دور العربي في المصفوفات الرقمية \\
+والعالم يكتب أرقاماً خرجت من رحم العربية؟ \\
+ما بالك تستهزئ بقواعد لغتك وتشكك فيها؟ \\
+تسخر من جرها من نصبها وتركت جمال قوافيها \\
+روعة لغتك ذي بينة قدحك هذا لن يخفيها \\
+شبهاتك في النقد ركيكة لو أنفخ فيها سأطفيها \\
+لم تتشكى من كثرة وتعدد كلمات الوصف؟ \\
+الأمر هنا كرداءٍ إذ نلبسه حسب الظرف \\
+لا تتوعد برحيلك عن لغتي وبغض الطرف \\
+هجرك للغة صديقي لن يفقدها ذرة شرف \\
+لو تبحث عن إسهاماتها في العلم ستجد كثيرا \\
+لكن للأسف هجرنا العلم وبات العلم أسيرا \\
+ما بين فساد في الدول به أضحى الأمر عسيرا \\
+وهروب عقول عربية فالفرص هناك وفيرة \\
+تتذمّر من شكل حروفها وكأنك طفل في روضة \\
+تبحث عن عذر لكسلك لكي تبقى في هذه الفوضى \\
+أنا متبرع دعني أدربك بقلمي فضلاً لو ترضى \\
+سجل اسمك في مدرستي وبسرعة لا تضع العرض \\
+كلمات لغات بني البشر ما كانت حكراً أو حصرا \\
+لا توجد لغة في العالم لم تأخذ شيئا من أخرى \\
+بدأت تتضح لي الرؤية أظن بأني عرفت الأمر \\
+يبدو أن العلة فيك ويبدو أن العلة كبرى \\
+}
+\end{tcolorbox}
+
+\vspace{12pt}
+{\small\textit{Formatted with XeLaTeX. Change the Arabic font if Amiri is not installed on your system.}}
+
+\end{document}

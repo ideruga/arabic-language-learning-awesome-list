@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'stories/**/*.tex'
+      - 'lyrics/**/*.tex'
   workflow_dispatch:
 
 jobs:
@@ -31,7 +32,7 @@ jobs:
       run: |
         rm -rf output
         mkdir -p output
-        for texfile in $(find stories -name "*.tex"); do
+        for texfile in $(find stories lyrics -name "*.tex"); do
           echo "Compiling $texfile..."
           subdir=$(dirname "$texfile")
           tmpdir=$(mktemp -d)

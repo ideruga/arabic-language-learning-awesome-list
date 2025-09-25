@@ -33,8 +33,16 @@ My next purchase, hopefully the vocabulary approach changes.
 
 ## :coin: My humble contribution
 ### Stories breakdown and analysis
-- Juha and the thief [Part 1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Part 2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Part 3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf), [Part 4](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-04.pdf)
-- [Arabic keyboard trainer](https://ideruga.github.io/arabic-language-learning-awesome-list/keyboard-trainer/index.html)
+- Juha and the thief ([Original Youtube Video](https://youtu.be/fy6zmTfEQdg?si=52d50VTRBGLQyj7_) by Arabic Khatawaat)\
+  [Full Text](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/full-text.pdf)\
+    Breakdown: [Phrase 1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Phrase 2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Phrase 3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf), [Phrase 4](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-04.pdf)
+
+### Lyrics breakdown and analysis
+- | أسياد الكلم (أمجد النور) [Youtube Video](https://youtu.be/IXXuFOyRsVY?si=OMxXQB-4a_4QRS3N)\
+[Full Text](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/full-lyrics.pdf)
+
+### [Arabic keyboard trainer](https://ideruga.github.io/arabic-language-learning-awesome-list/keyboard-trainer/index.html)
+
 ---
 # Chat GPT-Offered Resources
 
