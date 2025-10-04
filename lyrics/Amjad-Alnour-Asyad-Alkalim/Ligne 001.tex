@@ -1,0 +1,615 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{Why Should I Learn Arabic?}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large Why Should I Learn This Arabic Language?\\
+\normalsize \textarabic{لم يجب علي تعلم ذي اللغة العربية}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diacritics},breakable]
+\centering
+\Large\textarabic{لِمَ يَجِبُ عَلَيَّ تَعَلُّمُ ذِي اللُّغَةِ الْعَرَبِيَّةِ؟}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} For what must upon-me learning of this the-language the-Arabic? \\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} Why should I learn this Arabic language? / Why must I learn Arabic?
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{لِمَ} – [lima]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & why / for what \\
+\textbf{Root} & \textarabic{م-ا} (question particle) \\
+\textbf{Pattern} & Interrogative particle \textarabic{مَا} with preposition \textarabic{لِ} \\
+\textbf{Grammar} & Interrogative compound: \textarabic{لِ} (for) + \textarabic{مَا} (what) with elision of alif \\
+\midrule
+\textbf{Formation} & \textarabic{لِمَ} →  \textarabic{ل} + \textarabic{مَا} (when \textarabic{مَا} follows a preposition, the alif drops) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لِمَ تَبْكِي؟} - Why do you cry? [lima tabkiː]\\
+2. \textarabic{لِمَ جِئْتَ مُبَكِّرًا؟} - Why did you come early? [lima ʤiʔta muˈbakkiran]\\
+3. \textarabic{لِمَ لَا تَدْرُسُ؟} - Why don't you study? [lima laː tadrusu]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{لِمَاذَا} (limāðā), \textarabic{لِأَيِّ شَيْءٍ} (for which thing) \\
+\textbf{Etymology} & Combination of preposition \textarabic{لِ} (for/to) + interrogative \textarabic{مَا} (what) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Usage Notes}
+\begin{itemize}
+  \item \textarabic{لِمَ} is more literary/formal than \textarabic{لِمَاذَا}
+  \item The alif of \textarabic{مَا} elides after prepositions: \textarabic{لِمَ، فِيمَ، عَلَامَ، إِلَامَ}
+  \item Can be followed by verbs in different tenses depending on context
+  \item Often implies seeking justification or reason
+\end{itemize}
+
+\subsection{\textarabic{يَجِبُ} – [jaʤibu]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & must / is necessary / should \\
+\textbf{Root} & \textarabic{و-ج-ب} (w-ʤ-b) \\
+\textbf{Pattern} & \textarabic{يَفْعِلُ} (jafʕilu) - Form I imperfect \\
+\textbf{Grammar} & Present tense verb, 3rd person masculine singular, indicative mood \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{يَجِبُ عَلَيْكَ أَنْ تَذْهَبَ} - You must go [jaʤibu ʕalajka ʔan taðhaba]\\
+2. \textarabic{وَجَبَ الصَّلَاةُ} - Prayer became obligatory [waʤaba sˤ-sˤalaːtu]\\
+3. \textarabic{سَيَجِبُ عَلَيْهِ الدَّفْعُ} - He will have to pay [sajaʤibu ʕalajhi d-dafʕu]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{يَلْزَمُ} (is binding), \textarabic{يَنْبَغِي} (should), \textarabic{عَلَى} (upon/must) \\
+\textbf{Etymology} & From root meaning "to be necessary, to be incumbent, to fall due" \\
+\bottomrule
+\end{tabular}
+
+\subsection{Conjugation}
+\par{\large \textbf{Verbal Noun}: \textarabic{وُجُوب} /wuʤuːb/ - necessity, obligation}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{وَجَبَ} /waʤaba/ & \textarabic{يَجِبُ} /jaʤibu/ \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{وَجَبَتْ} /waʤabat/ & \textarabic{تَجِبُ} /taʤibu/ \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{وَجَبَا} /waʤabaː/ & \textarabic{يَجِبَانِ} /jaʤibaːni/ \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{وَجَبَتَا} /waʤabataː/ & \textarabic{تَجِبَانِ} /taʤibaːni/ \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{وَجَبُوا} /waʤabuː/ & \textarabic{يَجِبُونَ} /jaʤibuːna/ \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{وَجَبْنَ} /waʤabna/ & \textarabic{يَجِبْنَ} /jaʤibna/ \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{وَجَبْتَ} /waʤabta/ & \textarabic{تَجِبُ} /taʤibu/ \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{وَجَبْتِ} /waʤabti/ & \textarabic{تَجِبِينَ} /taʤibiːna/ \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{وَجَبْتُمَا} /waʤabtumaː/ & \textarabic{تَجِبَانِ} /taʤibaːni/ \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{وَجَبْتُمْ} /waʤabtum/ & \textarabic{تَجِبُونَ} /taʤibuːna/ \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{وَجَبْتُنَّ} /waʤabtunna/ & \textarabic{تَجِبْنَ} /taʤibna/ \\
+\hline
+\textbf{1st person singular} & \textarabic{وَجَبْتُ} /waʤabtu/ & \textarabic{أَجِبُ} /ʔaʤibu/ \\
+\hline
+\textbf{1st person plural} & \textarabic{وَجَبْنَا} /waʤabnaː/ & \textarabic{نَجِبُ} /naʤibu/ \\
+\hline
+\end{longtable}
+
+\subsubsection*{Conjugation Notes}
+\begin{itemize}
+  \item \textbf{Impersonal usage}: \textarabic{يَجِبُ} is commonly used impersonally with \textarabic{عَلَى} + pronoun suffix to express obligation
+  \item \textbf{With infinitive}: \textarabic{يَجِبُ أَنْ + subjunctive} - "must/should (do)"
+  \item \textbf{Passive voice}: 
+    \begin{itemize}
+      \item Perfect: \textarabic{وُجِبَ} [wuʤiba] – it was obligated
+      \item Imperfect: \textarabic{يُوجَبُ} [juːʤabu] – it is obligated
+    \end{itemize}
+  \item \textbf{Related forms}:
+    \begin{itemize}
+      \item Form IV: \textarabic{أَوْجَبَ} [ʔawʤaba] – to necessitate, make obligatory
+      \item Form X: \textarabic{اِسْتَوْجَبَ} [istawʤaba] – to deserve, merit
+    \end{itemize}
+\end{itemize}
+
+\subsection{\textarabic{عَلَيَّ} – [ʕalajja]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & upon me / on me \\
+\textbf{Root} & \textarabic{ع-ل-و} (ʕ-l-w) \\
+\textbf{Pattern} & Preposition \textarabic{عَلَى} + 1st person singular pronoun suffix \\
+\textbf{Grammar} & Prepositional phrase with attached pronoun, expresses obligation \\
+\midrule
+\textbf{Formation} & \textarabic{عَلَى + ي → عَلَيَّ} (the yāʔ is doubled: \textarabic{ـِيَّ}) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{عَلَيَّ دَيْنٌ كَبِيرٌ} - I have a big debt (upon me) [ʕalajja dajnun kabiːrun]\\
+2. \textarabic{يَجِبُ عَلَيَّ أَنْ أَعْمَلَ} - I must work [jaʤibu ʕalajja ʔan ʔaʕmala]\\
+3. \textarabic{عَلَيَّ مَسْؤُولِيَّةٌ} - I have responsibility [ʕalajja masʔuːlijjatun]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{يَنْبَغِي لِي} (I should), \textarabic{يَلْزَمُنِي} (it is binding on me) \\
+\textbf{Etymology} & From root meaning "to be high, elevated"; preposition indicates burden/obligation \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Pronominal Declension of \textarabic{عَلَى}}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Person} & \textbf{Singular} & \textbf{Plural} \\
+\hline
+1st person & \textarabic{عَلَيَّ} /ʕalajja/ & \textarabic{عَلَيْنَا} /ʕalajnaː/ \\
+\hline
+2nd person masc. & \textarabic{عَلَيْكَ} /ʕalajka/ & \textarabic{عَلَيْكُمْ} /ʕalajkum/ \\
+\hline
+2nd person fem. & \textarabic{عَلَيْكِ} /ʕalajki/ & \textarabic{عَلَيْكُنَّ} /ʕalajkunna/ \\
+\hline
+3rd person masc. & \textarabic{عَلَيْهِ} /ʕalajhi/ & \textarabic{عَلَيْهِمْ} /ʕalajhim/ \\
+\hline
+3rd person fem. & \textarabic{عَلَيْهَا} /ʕalajhaː/ & \textarabic{عَلَيْهِنَّ} /ʕalajhinna/ \\
+\hline
+\multicolumn{3}{|c|}{\textbf{Dual Forms}} \\
+\hline
+2nd person dual & \multicolumn{2}{c|}{\textarabic{عَلَيْكُمَا} /ʕalajkumaː/} \\
+\hline
+3rd person masc. dual & \multicolumn{2}{c|}{\textarabic{عَلَيْهِمَا} /ʕalajhimaː/} \\
+\hline
+3rd person fem. dual & \multicolumn{2}{c|}{\textarabic{عَلَيْهِمَا} /ʕalajhimaː/} \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{تَعَلُّمُ} – [taʕallumu]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & learning / studying \\
+\textbf{Root} & \textarabic{ع-ل-م} (ʕ-l-m) \\
+\textbf{Pattern} & \textarabic{تَفَعُّلٌ} (tafaʕʕulun) - Form V verbal noun \\
+\textbf{Grammar} & Verbal noun (maṣdar), nominative case, functioning as subject of \textarabic{يَجِبُ} \\
+\midrule
+\textbf{Form V Meaning} & Reflexive/intensive: to learn (for oneself), to study \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{تَعَلُّمُ اللُّغَاتِ مُفِيدٌ} - Learning languages is useful [taʕallumu l-luɣaːti mufiːdun]\\
+2. \textarabic{أَحِبُّ تَعَلُّمَ الْعِلْمِ} - I love learning knowledge [ʔuħibbu taʕalluma l-ʕilmi]\\
+3. \textarabic{تَعَلُّمُهُ سَهْلٌ} - Learning it is easy [taʕallumuhu sahlun]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{دِرَاسَة} (study), \textarabic{تَحْصِيل} (acquisition), \textarabic{اِكْتِسَاب} (gaining) \\
+\textbf{Etymology} & From root meaning "to know, to mark, to teach" (related to Hebrew \texthebrew{למד} /lamad/) \\
+\bottomrule
+\end{tabular}
+
+\subsection{Verb Conjugation: \textarabic{تَعَلَّمَ} (Form V)}
+\par{\large \textbf{Verbal Noun}: \textarabic{تَعَلُّم} /taʕallum/ - learning}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masculine singular} & \textarabic{تَعَلَّمَ} /taʕallama/ & \textarabic{يَتَعَلَّمُ} /jataʕallamu/ \\
+\hline
+\textbf{3rd person feminine singular} & \textarabic{تَعَلَّمَتْ} /taʕallamat/ & \textarabic{تَتَعَلَّمُ} /tataʕallamu/ \\
+\hline
+\textbf{3rd person masculine dual} & \textarabic{تَعَلَّمَا} /taʕallamaː/ & \textarabic{يَتَعَلَّمَانِ} /jataʕallamaːni/ \\
+\hline
+\textbf{3rd person feminine dual} & \textarabic{تَعَلَّمَتَا} /taʕallamataː/ & \textarabic{تَتَعَلَّمَانِ} /tataʕallamaːni/ \\
+\hline
+\textbf{3rd person masculine plural} & \textarabic{تَعَلَّمُوا} /taʕallamuː/ & \textarabic{يَتَعَلَّمُونَ} /jataʕallamuːna/ \\
+\hline
+\textbf{3rd person feminine plural} & \textarabic{تَعَلَّمْنَ} /taʕallamna/ & \textarabic{يَتَعَلَّمْنَ} /jataʕallamna/ \\
+\hline
+\textbf{2nd person masculine singular} & \textarabic{تَعَلَّمْتَ} /taʕallamta/ & \textarabic{تَتَعَلَّمُ} /tataʕallamu/ \\
+\hline
+\textbf{2nd person feminine singular} & \textarabic{تَعَلَّمْتِ} /taʕallamti/ & \textarabic{تَتَعَلَّمِينَ} /tataʕallamiːna/ \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{تَعَلَّمْتُمَا} /taʕallamtumaː/ & \textarabic{تَتَعَلَّمَانِ} /tataʕallamaːni/ \\
+\hline
+\textbf{2nd person masculine plural} & \textarabic{تَعَلَّمْتُمْ} /taʕallamtum/ & \textarabic{تَتَعَلَّمُونَ} /tataʕallamuːna/ \\
+\hline
+\textbf{2nd person feminine plural} & \textarabic{تَعَلَّمْتُنَّ} /taʕallamtunna/ & \textarabic{تَتَعَلَّمْنَ} /tataʕallamna/ \\
+\hline
+\textbf{1st person singular} & \textarabic{تَعَلَّمْتُ} /taʕallamtu/ & \textarabic{أَتَعَلَّمُ} /ʔataʕallamu/ \\
+\hline
+\textbf{1st person plural} & \textarabic{تَعَلَّمْنَا} /taʕallamnaː/ & \textarabic{نَتَعَلَّمُ} /nataʕallamu/ \\
+\hline
+\end{longtable}
+
+\subsubsection*{Related Forms from Root \textarabic{ع-ل-م}}
+\begin{itemize}
+  \item Form I: \textarabic{عَلِمَ} [ʕalima] – to know
+  \item Form II: \textarabic{عَلَّمَ} [ʕallama] – to teach
+  \item Form IV: \textarabic{أَعْلَمَ} [ʔaʕlama] – to inform, notify
+  \item Form V: \textarabic{تَعَلَّمَ} [taʕallama] – to learn (reflexive)
+  \item Form VI: \textarabic{تَعَالَمَ} [taʕaːlama] – to feign knowledge
+  \item Form VIII: \textarabic{اِعْتَلَمَ} [iʕtalama] – rare variant of "to know"
+\end{itemize}
+
+\subsection{\textarabic{ذِي} – [ðiː]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & this (feminine, non-standard) \\
+\textbf{Root} & Demonstrative pronoun \\
+\textbf{Pattern} & \textarabic{ذِي} (non-standard for \textarabic{هٰذِهِ}) \\
+\textbf{Grammar} & Demonstrative pronoun, genitive case (after \textarabic{تَعَلُّمُ}) \\
+\midrule
+\textbf{Note} & \makecell[l]{\parbox{9.5cm}{
+\textbf{Important}: \textarabic{ذِي} is \textbf{dialectal/non-standard}. Classical Arabic uses:\\
+• \textarabic{هٰذِهِ} [haːðihi] for feminine singular\\
+The phrase should be: \textarabic{لِمَ يَجِبُ عَلَيَّ تَعَلُّمُ هٰذِهِ اللُّغَةِ الْعَرَبِيَّةِ؟}
+}} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+\textbf{Standard forms:}\\
+1. \textarabic{هٰذَا كِتَابٌ} - This is a book (masc.) [haːðaː kitaːbun]\\
+2. \textarabic{هٰذِهِ مَدْرَسَةٌ} - This is a school (fem.) [haːðihi madrasatun]\\
+3. \textarabic{هٰؤُلَاءِ طُلَّابٌ} - These are students [haːʔulaːʔi tˤullaːbun]
+}} \\
+\midrule
+\textbf{Dialectal Usage} & In some dialects, \textarabic{ذِي/دِي} replaces \textarabic{هٰذِهِ} \\
+\textbf{Etymology} & From demonstrative root; related to \textarabic{ذَا، ذِهِ، ذَلِكَ} \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Standard Demonstrative Pronouns}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Masculine} & \textbf{Feminine} & \textbf{Common Plural} \\
+\hline
+Near (this/these) & \textarabic{هٰذَا} /haːðaː/ & \textarabic{هٰذِهِ} /haːðihi/ & \textarabic{هٰؤُلَاءِ} /haːʔulaːʔi/ \\
+\hline
+Far (that/those) & \textarabic{ذٰلِكَ} /ðaːlika/ & \textarabic{تِلْكَ} /tilka/ & \textarabic{أُولٰئِكَ} /ʔulaːʔika/ \\
+\hline
+Dual (these two) & \textarabic{هٰذَانِ} /haːðaːni/ & \textarabic{هَاتَانِ} /haːtaːni/ & — \\
+\hline
+Dual (those two) & \textarabic{ذَانِكَ} /ðaːnika/ & \textarabic{تَانِكَ} /taːnika/ & — \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{اللُّغَةِ} – [al-luɣati]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the language \\
+\textbf{Root} & \textarabic{ل-غ-و} (l-ɣ-w) \\
+\textbf{Pattern} & \textarabic{فُعْلَة} (fuʕlatun) \\
+\textbf{Grammar} & Noun, feminine, genitive case (in iḍāfa construction), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{أَتَكَلَّمُ ثَلَاثَ لُغَاتٍ} - I speak three languages [ʔatakallamu θalaːθa luɣaːtin]\\
+2. \textarabic{اللُّغَةُ الْعَرَبِيَّةُ جَمِيلَةٌ} - The Arabic language is beautiful [al-luɣatu l-ʕarabijjatu ʤamiːlatun]\\
+3. \textarabic{يَدْرُسُ لُغَةَ الْقُرْآنِ} - He studies the language of the Quran [jadrusu luɣata l-qurʔaːni]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{لِسَان} (tongue/language), \textarabic{كَلَام} (speech) \\
+\textbf{Etymology} & From root meaning "to speak idly, to be eloquent"; related to Hebrew \texthebrew{לשון} /laʃon/ \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Declension of \textarabic{اللُّغَة}}
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Singular (\textarabic{مُفْرَد})}
+& Nominative & \textarabic{لُغَةٌ} /luɣatun/ & \textarabic{اللُّغَةُ} /al-luɣatu/ \\
+& Accusative & \textarabic{لُغَةً} /luɣatan/ & \textarabic{اللُّغَةَ} /al-luɣata/ \\
+& Genitive & \textarabic{لُغَةٍ} /luɣatin/ & \textarabic{اللُّغَةِ} /al-luɣati/ \\
+\hline
+\multirow{3}{*}{Dual (\textarabic{مُثَنَّى})}
+& Nominative & \textarabic{لُغَتَانِ} /luɣataːni/ & \textarabic{اللُّغَتَانِ} /al-luɣataːni/ \\
+& Acc/Gen & \textarabic{لُغَتَيْنِ} /luɣatajni/ & \textarabic{اللُّغَتَيْنِ} /al-luɣatajni/ \\
+\hline
+\multirow{3}{*}{Plural (\textarabic{جَمْع})}
+& Nominative & \textarabic{لُغَاتٌ} /luɣaːtun/ & \textarabic{اللُّغَاتُ} /al-luɣaːtu/ \\
+& Accusative & \textarabic{لُغَاتٍ} /luɣaːtin/ & \textarabic{اللُّغَاتِ} /al-luɣaːti/ \\
+& Genitive & \textarabic{لُغَاتٍ} /luɣaːtin/ & \textarabic{اللُّغَاتِ} /al-luɣaːti/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{الْعَرَبِيَّةِ} – [al-ʕarabijjati]}
+
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the Arabic / the Arabian \\
+\textbf{Root} & \textarabic{ع-ر-ب} (ʕ-r-b) \\
+\textbf{Pattern} & \textarabic{فَعَلِيَّة} (faʕaliːja) - nisba adjective with feminine ending \\
+\textbf{Grammar} & Adjective, feminine, genitive case (agreeing with \textarabic{اللُّغَةِ}), definite \\
+\midrule
+\textbf{Formation} & Nisba adjective: \textarabic{عَرَب} + \textarabic{ـِيّ} (nisba suffix) + \textarabic{ـَة} (feminine) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الثَّقَافَةُ الْعَرَبِيَّةُ} - Arab culture [aθ-θaqaːfatu l-ʕarabijjatu]\\
+2. \textarabic{الْجَزِيرَةُ الْعَرَبِيَّةُ} - The Arabian Peninsula [al-ʤaziːratu l-ʕarabijjatu]\\
+3. \textarabic{الْأَدَبُ الْعَرَبِيُّ} - Arabic literature (masc.) [al-ʔadabu l-ʕarabijju]
+}} \\
+\midrule
+\textbf{Related Forms} & \textarabic{عَرَبٌ} (Arabs), \textarabic{عَرَبِيٌّ} (an Arab, masc.), \textarabic{عَرَبِيَّة} (an Arab woman) \\
+\textbf{Etymology} & From \textarabic{عَرَب} meaning "Arabs, Bedouins, clear expression" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Declension of \textarabic{عَرَبِيّ}}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Gender} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Masculine}
+& Nominative & \textarabic{عَرَبِيٌّ} /ʕarabijjun/ & \textarabic{الْعَرَبِيُّ} /al-ʕarabijju/ \\
+& Accusative & \textarabic{عَرَبِيًّا} /ʕarabijjan/ & \textarabic{الْعَرَبِيَّ} /al-ʕarabijja/ \\
+& Genitive & \textarabic{عَرَبِيٍّ} /ʕarabijjin/ & \textarabic{الْعَرَبِيِّ} /al-ʕarabijji/ \\
+\hline
+\multirow{3}{*}{Feminine}
+& Nominative & \textarabic{عَرَبِيَّةٌ} /ʕarabijjatun/ & \textarabic{الْعَرَبِيَّةُ} /al-ʕarabijjatu/ \\
+& Accusative & \textarabic{عَرَبِيَّةً} /ʕarabijjatan/ & \textarabic{الْعَرَبِيَّةَ} /al-ʕarabijjata/ \\
+& Genitive & \textarabic{عَرَبِيَّةٍ} /ʕarabijjatin/ & \textarabic{الْعَرَبِيَّةِ} /al-ʕarabijjati/ \\
+\hline
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Interrogative particle + present verb (impersonal) + prepositional phrase with pronoun + verbal noun (subject) + demonstrative pronoun (non-standard) + noun in genitive (iḍāfa) + adjective in genitive \\[0.5em]
+
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item \textbf{Interrogative \textarabic{لِمَ}}: Compound of \textarabic{لِ} (for) + \textarabic{مَا} (what), with elision of alif
+\item \textbf{Impersonal construction}: \textarabic{يَجِبُ عَلَيَّ} expresses necessity/obligation on the speaker
+\item \textbf{Verbal noun as subject}: \textarabic{تَعَلُّمُ} (learning) functions as the grammatical subject
+\item \textbf{Iḍāfa (construct state)}: \textarabic{تَعَلُّمُ هٰذِهِ اللُّغَةِ} - "learning of this language"
+\item \textbf{Adjective agreement}: \textarabic{الْعَرَبِيَّةِ} agrees with \textarabic{اللُّغَةِ} in gender, case, and definiteness
+\item \textbf{Non-standard demonstrative}: \textarabic{ذِي} is dialectal; standard form is \textarabic{هٰذِهِ}
+\item \textbf{Full parsing}: \\
+  - \textarabic{لِمَ}: interrogative particle (for what reason?)\\
+  - \textarabic{يَجِبُ}: imperfect verb, 3rd masc. sing., indicative\\
+  - \textarabic{عَلَيَّ}: preposition + 1st person pronoun\\
+  - \textarabic{تَعَلُّمُ}: verbal noun, nominative (subject)\\
+  - \textarabic{ذِي/هٰذِهِ}: demonstrative, genitive\\
+  - \textarabic{اللُّغَةِ}: noun, genitive (in iḍāfa)\\
+  - \textarabic{الْعَرَبِيَّةِ}: adjective, genitive
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable,title=\textbf{Syntactic Analysis}]
+\textbf{Sentence Type:} Interrogative (question)\\
+\textbf{Question Type:} Asking for reason/justification (why?)\\
+\textbf{Verb Pattern:} Impersonal verbal sentence with delayed subject\\
+\textbf{Word Order:} VSO modified to: Interrogative + V + Prepositional Phrase + S\\
+\textbf{Definiteness Chain:} \textarabic{هٰذِهِ اللُّغَةِ الْعَرَبِيَّةِ} - all definite through agreement
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{لِمَ يَجِبُ عَلَيَّ تَعَلُّمُ الرِّيَاضِيَّاتِ؟}\\
+Why should I learn mathematics? [lima jaʤibu ʕalajja taʕallumu r-rijaːdˤijjaːti]
+
+\item \textarabic{لِمَ يَجِبُ عَلَيْكَ دِرَاسَةُ التَّارِيخِ؟}\\
+Why should you study history? [lima jaʤibu ʕalajka diraːsatu t-taːriːxi]
+
+\item \textarabic{لِمَاذَا يَنْبَغِي لَنَا أَنْ نَتَعَلَّمَ اللُّغَاتِ الْأَجْنَبِيَّةَ؟}\\
+Why should we learn foreign languages? [limaːðaː janbaɣiː lanaː ʔan nataʕallama l-luɣaːti l-ʔaʤnabijjata]
+
+\item \textarabic{لِمَ عَلَيَّ أَنْ أَدْرُسَ هٰذَا الْمَوْضُوعَ؟}\\
+Why do I have to study this subject? [lima ʕalajja ʔan ʔadrusa haːðaː l-mawdˤuːʕa]
+
+\item \textarabic{لِمَ يَلْزَمُنِي تَعَلُّمُ الْبَرْمَجَةِ؟}\\
+Why is it necessary for me to learn programming? [lima jalzamuniː taʕallumu l-barʤamati]
+
+\item \textarabic{لِأَيِّ سَبَبٍ يَجِبُ أَنْ أَتَعَلَّمَ الْفَلْسَفَةَ؟}\\
+For what reason should I learn philosophy? [liʔajji sababin jaʤibu ʔan ʔataʕallama l-falsafata]
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shaami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{لَيْشْ لَازِم أَتْعَلَّمْ هَيْ اللُّغَة الْعَرَبِيَّة؟}\\
+\textbf{Phonetic:} [leːʃ laːzim ʔatʕallam haj il-luɣa l-ʕarabijje]\\
+\textbf{Translation:} Why do I have to learn this Arabic language?
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{لِمَ} → \textarabic{لَيْشْ} (leːʃ) – common Levantine "why" (from \textarabic{لِأَيِّ شَيْءٍ})
+\item \textarabic{يَجِبُ عَلَيَّ} → \textarabic{لَازِم} (laːzim) – "it's necessary/I must"
+\item \textarabic{تَعَلُّمُ} → \textarabic{أَتْعَلَّمْ} (ʔatʕallam) – first person present instead of verbal noun
+\item \textarabic{هٰذِهِ} → \textarabic{هَيْ} (haj) – dialectal demonstrative "this" (feminine)
+\item \textbf{Word order change}: Levantine uses interrogative + verb + subject, more SVO-like
+\item Final case vowels are dropped in dialect (no tanwīn or iʕrāb)
+\item \textarabic{الْ} becomes \textarabic{إِلْ} in connected speech
+\end{itemize}
+
+\subsection{Alternative Dialectal Variants}
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Dialect} & \textbf{Phrase} & \textbf{Phonetic} \\
+\hline
+Egyptian & \textarabic{لِيهْ لَازِمْ أَتْعَلِّمْ الْعَرَبِيّ؟} & [leː laːzim ʔatʕallim il-ʕarabiː] \\
+\hline
+Gulf & \textarabic{لَيْشْ لَازِمْ أَتْعَلَّمْ الْعَرَبِيّ؟} & [leːʃ laːzim ʔatʕallam il-ʕarabiː] \\
+\hline
+Moroccan & \textarabic{عْلَاشْ خَصْنِي نْتْعَلَّمْ الْعَرْبِيَّة؟} & [ʕlaːʃ xasˤniː ntʕallem l-ʕarbijja] \\
+\hline
+Iraqi & \textarabic{لَيْشْ لَازِمْ أَتْعَلَّمْ عَرَبِيّ؟} & [leːʃ laːzim ʔatʕallam ʕarabiː] \\
+\hline
+\end{tabular}
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Linguistic Context},breakable]
+\textbf{Significance of Arabic:} Arabic is one of the six official languages of the United Nations and is spoken by over 400 million native speakers across 25+ countries. It's the liturgical language of Islam and has profoundly influenced languages from Spanish to Swahili.
+
+\textbf{Classical vs. Modern Standard:} Modern Standard Arabic (MSA) is used in formal contexts, media, and literature. Classical Arabic is the language of the Quran and classical texts. Both share grammar but differ in vocabulary.
+
+\textbf{Diglossia:} Arabic exhibits strong diglossia - formal MSA coexists with regional dialects that can be mutually unintelligible. Learning MSA provides access to all Arabic speakers, while dialects are used in daily conversation.
+
+\textbf{Why Learn Arabic:}
+\begin{itemize}
+\item Access to rich literary, scientific, and philosophical heritage
+\item Career opportunities in diplomacy, translation, international business
+\item Understanding of Islamic texts and Middle Eastern culture
+\item Cognitive benefits of learning a morphologically rich language
+\item Gateway to understanding Semitic language family
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+\begin{enumerate}
+\item \textbf{Question Formation:} Remember \textarabic{لِمَ} = \textarabic{لِ} (for) + \textarabic{مَا} (what) = "for what?" = "why?"
+\item \textbf{Obligation Pattern:} \textarabic{يَجِبُ عَلَى} + pronoun is standard for "must/should"
+\item \textbf{Form V Verbs:} Doubled middle radical (\textarabic{تَعَلَّمَ}) indicates reflexive/intensive action
+\item \textbf{Nisba Adjectives:} Pattern \textarabic{فَعَلِيّ} creates relational adjectives (Arabic, Islamic, etc.)
+\item \textbf{Iḍāfa Chain:} First noun loses nunation, following nouns in genitive
+\item \textbf{Root System:} \textarabic{ع-ل-م} (knowledge) is one of the most productive roots in Arabic
+\end{enumerate}
+
+\subsection{Related Vocabulary Family}
+
+\begin{multicols}{2}
+\textbf{Education family:}\\
+\textarabic{عِلْم} – knowledge [ʕilm]\\
+\textarabic{مَعْرِفَة} – knowing [maʕrifa]\\
+\textarabic{تَعْلِيم} – teaching [taʕliːm]\\
+\textarabic{دِرَاسَة} – study [diraːsa]\\
+\textarabic{طَالِب} – student [tˤaːlib]\\
+\textarabic{مُعَلِّم} – teacher [muʕallim]\\
+\textarabic{مَدْرَسَة} – school [madrasa]\\
+\textarabic{جَامِعَة} – university [ʤaːmiʕa]\\
+
+\textbf{Language family:}\\
+\textarabic{لِسَان} – tongue/language [lisaːn]\\
+\textarabic{كَلَام} – speech [kalaːm]\\
+\textarabic{لَهْجَة} – dialect [lahʤa]\\
+\textarabic{فُصْحَى} – classical/eloquent [fusˤħaː]\\
+\textarabic{عَامِّيَّة} – colloquial [ʕaːmmijja]\\
+\textarabic{نَحْو} – grammar [naħw]\\
+\textarabic{صَرْف} – morphology [sˤarf]\\
+\textarabic{مُفْرَدَات} – vocabulary [mufradaːt]\\
+
+\textbf{Obligation family:}\\
+\textarabic{وَاجِب} – obligatory [waːʤib]\\
+\textarabic{لَازِم} – necessary [laːzim]\\
+\textarabic{ضَرُورِيّ} – necessary [dˤaruːrij]\\
+\textarabic{مَفْرُوض} – imposed [mafruːdˤ]\\
+\textarabic{حَتْمِيّ} – inevitable [ħatmij]\\
+
+\textbf{Question words:}\\
+\textarabic{مَا/مَاذَا} – what [maː/maːðaː]\\
+\textarabic{مَنْ} – who [man]\\
+\textarabic{أَيْنَ} – where [ʔajna]\\
+\textarabic{مَتَى} – when [mataː]\\
+\textarabic{كَيْفَ} – how [kajfa]\\
+\textarabic{كَمْ} – how many [kam]\\
+\textarabic{أَيّ} – which [ʔajj]\\
+\end{multicols}
+
+\section{Grammatical Notes: The Construct State (Iḍāfa)}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Structure in this phrase:} \textarabic{تَعَلُّمُ هٰذِهِ اللُّغَةِ الْعَرَبِيَّةِ}
+
+\textbf{Rules of Iḍāfa:}
+\begin{enumerate}
+\item First noun (muḍāf): \textarabic{تَعَلُّمُ} – loses nunation, cannot take \textarabic{الْ}
+\item Second noun (muḍāf ilayhi): \textarabic{اللُّغَةِ} – must be in genitive case
+\item Adjectives follow the entire construct and agree with the noun they modify
+\item \textarabic{الْعَرَبِيَّةِ} modifies \textarabic{اللُّغَةِ}, not \textarabic{تَعَلُّمُ}
+\item The demonstrative \textarabic{هٰذِهِ} can intervene in the iḍāfa as an "intruder"
+\end{enumerate}
+
+\textbf{Translation strategies:}
+\begin{itemize}
+\item Possessive: "learning's language" → "the learning of the language"
+\item English prepositional phrase: "learning of this Arabic language"
+\item Noun-noun compound: "Arabic language learning"
+\end{itemize}
+\end{tcolorbox}
+
+\section{Answers to "Why Learn Arabic?"}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,breakable]
+\textbf{Possible answers in MSA:}
+
+\begin{enumerate}
+\item \textarabic{لِأَنَّ الْعَرَبِيَّةَ لُغَةٌ غَنِيَّةٌ وَجَمِيلَةٌ}\\
+Because Arabic is a rich and beautiful language [liʔanna l-ʕarabij jata luɣatun ɣanijjatun wa ʤamiːlatun]
+
+\item \textarabic{لِفَهْمِ الْقُرْآنِ وَالتُّرَاثِ الْإِسْلَامِيِّ}\\
+To understand the Quran and Islamic heritage [lifahmi l-qurʔaːni wa t-turaːθi l-ʔislaːmijji]
+
+\item \textarabic{لِتَوْسِيعِ آفَاقِي الثَّقَافِيَّةِ}\\
+To broaden my cultural horizons [litawsiːʕi ʔaːfaːqiː θ-θaqaːfijjati]
+
+\item \textarabic{لِأَنَّهَا تُفْتَحُ أَبْوَابَ الْفُرَصِ الْمِهْنِيَّةِ}\\
+Because it opens doors of professional opportunities [liʔannahaː tuftaħu ʔabwaːba l-furasˤi l-mihnijjati]
+
+\item \textarabic{لِلتَّوَاصُلِ مَعَ مَلَايِينِ النَّاطِقِينَ بِهَا}\\
+To communicate with millions of its speakers [li t-tawaːsˤuli maʕa malaːjiːni n-naːtˤiqiːna bihaː]
+\end{enumerate}
+\end{tcolorbox}
+
+\end{document}

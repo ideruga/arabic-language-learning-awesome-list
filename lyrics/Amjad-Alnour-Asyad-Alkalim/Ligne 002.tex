@@ -1,0 +1,494 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{Why Study a Useless Language}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large Why Must I Cram a Useless Language into My Brain?\\
+\normalsize \textarabic{لم أقحم في مخي لغة لا طائلة منها في الدنيا؟}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diacritics},breakable]
+\centering
+\Large
+\textarabic{لِمَ أُقْحَمُ فِي مُخِّي لُغَةً لَا طَائِلَةَ مِنْهَا فِي الدُّنْيَا؟}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} Why am-I-being-forced-in in brain-my language-a not benefit from-it in the-world?\\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} Why must I cram a language that has no use in the world into my brain?
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{لِمَ} — [lima]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & why / for what reason \\
+\textbf{Root} & \textarabic{م-ا} (interrogative particle) \\
+\textbf{Pattern} & Combination of \textarabic{لِ} (li-) preposition + \textarabic{مَا} (maË) interrogative \\
+\textbf{Grammar} & Interrogative particle meaning ``why'', formed from preposition \textarabic{لِ} (for) + \textarabic{مَا} (what) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لِمَ تَبْكِي؟} — Why do you cry? [lima tabkiË]\\
+2. \textarabic{لِمَ لَا تَأْتِي مَعَنَا؟} — Why don't you come with us? [lima laË taÊ"tiË maÊ•anaË]\\
+3. \textarabic{لِمَ فَعَلْتَ هَٰذَا؟} — Why did you do this? [lima faÊ•alta haËÃ°aË]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{لِمَاذَا} (limaaðaː), \textarabic{لِأَيِّ شَيْءٍ} (for what thing) \\
+\textbf{Etymology} & Contraction of \textarabic{لِ} (for) + \textarabic{مَا} (what), common in Classical and Modern Standard Arabic \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\textbf{Usage Notes:}
+\begin{itemize}
+\item \textarabic{لِمَ} is more formal and classical than \textarabic{لِمَاذَا}
+\item The final \textarabic{ا} is dropped from \textarabic{مَا} when combined with \textarabic{لِ}
+\item Often used in rhetorical questions expressing frustration or disbelief
+\end{itemize}
+
+\subsection{\textarabic{أُقْحَمُ} — [Ê"uqĥamu]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & I am being forced / I am being crammed \\
+\textbf{Root} & \textarabic{ق-ح-م} (q-Ä§-m) \\
+\textbf{Pattern} & \textarabic{أُفْعَلُ} (Ê"ufÊ•alu) — Form IV passive imperfect \\
+\textbf{Grammar} & Passive voice, imperfect tense, 1st person singular, Form IV \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{أَقْحَمَ نَفْسَهُ فِي الْمُشْكِلَةِ} — He thrust himself into the problem [Ê"aqĥama nafsahu fiË l-muÅ¡kilati]\\
+2. \textarabic{لَا تُقْحِمْنِي فِي هَٰذَا الْأَمْرِ} — Don't force me into this matter [laË tuqĥimniË fiË haËÃ°aË l-Ê"amri]\\
+3. \textarabic{أُقْحِمَ الطَّالِبُ فِي الْمُنَاقَشَةِ} — The student was thrust into the discussion [Ê"uqĥima tÌ£-tÌ£aËlibu fiË l-munaËqaÅ¡ati]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{أُجْبَرُ} (I am forced), \textarabic{أُدْفَعُ} (I am pushed), \textarabic{أُحْشَرُ} (I am stuffed) \\
+\textbf{Etymology} & Form IV of root meaning ``to thrust, to plunge, to force into'' \\
+\bottomrule
+\end{tabular}
+
+\subsection{Conjugation of \textarabic{أَقْحَمَ}}
+\par{\large \textbf{Verbal Noun (Active)}: \textarabic{Ø¥ÙÙ‚Ù'Ø­ÙŽØ§Ù…} /Ê"iqĥaËm/}
+\par{\large \textbf{Verbal Noun (Passive)}: being forced/crammed}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Active)} & \textbf{Imperfect (Passive)} \\
+\hline
+\textbf{3rd person masc. sing.} & \textarabic{أَقْحَمَ} /Ê"aqĥama/ & \textarabic{يُقْحَمُ} /juqĥamu/ \\
+\hline
+\textbf{3rd person fem. sing.} & \textarabic{أَقْحَمَتْ} /Ê"aqĥamat/ & \textarabic{تُقْحَمُ} /tuqĥamu/ \\
+\hline
+\textbf{3rd person masc. dual} & \textarabic{أَقْحَمَا} /Ê"aqĥamaË/ & \textarabic{يُقْحَمَانِ} /juqĥamaËni/ \\
+\hline
+\textbf{3rd person fem. dual} & \textarabic{أَقْحَمَتَا} /Ê"aqĥamataË/ & \textarabic{تُقْحَمَانِ} /tuqĥamaËni/ \\
+\hline
+\textbf{3rd person masc. plural} & \textarabic{أَقْحَمُوا} /Ê"aqĥamuË/ & \textarabic{يُقْحَمُونَ} /juqĥamuËna/ \\
+\hline
+\textbf{3rd person fem. plural} & \textarabic{أَقْحَمْنَ} /Ê"aqĥamna/ & \textarabic{يُقْحَمْنَ} /juqĥamna/ \\
+\hline
+\textbf{2nd person masc. sing.} & \textarabic{أَقْحَمْتَ} /Ê"aqĥamta/ & \textarabic{تُقْحَمُ} /tuqĥamu/ \\
+\hline
+\textbf{2nd person fem. sing.} & \textarabic{أَقْحَمْتِ} /Ê"aqĥamti/ & \textarabic{تُقْحَمِينَ} /tuqĥamiËna/ \\
+\hline
+\textbf{2nd person dual (m./f.)} & \textarabic{أَقْحَمْتُمَا} /Ê"aqĥamtumaË/ & \textarabic{تُقْحَمَانِ} /tuqĥamaËni/ \\
+\hline
+\textbf{2nd person masc. plural} & \textarabic{أَقْحَمْتُمْ} /Ê"aqĥamtum/ & \textarabic{تُقْحَمُونَ} /tuqĥamuËna/ \\
+\hline
+\textbf{2nd person fem. plural} & \textarabic{أَقْحَمْتُنَّ} /Ê"aqĥamtunna/ & \textarabic{تُقْحَمْنَ} /tuqĥamna/ \\
+\hline
+\textbf{1st person singular} & \textarabic{أَقْحَمْتُ} /Ê"aqĥamtu/ & \textarabic{أُقْحَمُ} /Ê"uqĥamu/ \\
+\hline
+\textbf{1st person plural} & \textarabic{أَقْحَمْنَا} /Ê"aqĥamnaË/ & \textarabic{نُقْحَمُ} /nuqĥamu/ \\
+\hline
+\end{longtable}
+
+\subsection{\textarabic{فِي} — [fiË]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & in / into / within \\
+\textbf{Root} & Preposition (no root) \\
+\textbf{Pattern} & Primary preposition \\
+\textbf{Grammar} & Preposition indicating location or direction \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{فِي الْبَيْتِ} — in the house [fiË l-bajti]\\
+2. \textarabic{فِي الصَّبَاحِ} — in the morning [fiË sÌ£-sÌ£abaËÄ§i]\\
+3. \textarabic{دَخَلَ فِي الْغُرْفَةِ} — He entered into the room [daxala fiË l-É£urfati]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{بِ} (in/with — context-dependent), \textarabic{دَاخِلَ} (inside) \\
+\textbf{Etymology} & From Proto-Semitic *bi, related to Hebrew \texthebrew{בְּ} (be-) \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{مُخِّي} — [muxxiË]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & my brain \\
+\textbf{Root} & \textarabic{م-خ-خ} (m-x-x) \\
+\textbf{Pattern} & \textarabic{فُعّ} (fuÊ•Ê•) with possessive suffix \\
+\textbf{Grammar} & Noun, masculine, genitive case (after preposition), with 1st person singular possessive suffix \textarabic{ـِي} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْمُخُّ الْبَشَرِيُّ} — The human brain [al-muxxu l-baÅ¡arijju]\\
+2. \textarabic{يَسْتَخْدِمُ مُخَّهُ} — He uses his brain [jastaÊ"dimu muxxahu]\\
+3. \textarabic{مُخُّ الْعِظَامِ} — Bone marrow [muxxu l-Ê•itÌ£Ë¤aËmi]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{دِمَاغ} (brain), \textarabic{عَقْل} (mind/intellect) \\
+\textbf{Etymology} & From root meaning ``marrow, essence, core'' — Proto-Semitic origin \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Declension Matrix of \textarabic{مُخّ}}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With Suffix (1st sg.)} \\
+\hline
+\multirow{3}{*}{Singular}
+& Nominative & \textarabic{مُخٌّ} /muxxun/ & \textarabic{الْمُخُّ} /al-muxxu/ & \textarabic{مُخِّي} /muxxiË/ \\
+& Accusative & \textarabic{مُخًّا} /muxxan/ & \textarabic{الْمُخَّ} /al-muxxa/ & \textarabic{مُخِّي} /muxxijja/ \\
+& Genitive & \textarabic{مُخٍّ} /muxxin/ & \textarabic{الْمُخِّ} /al-muxxi/ & \textarabic{مُخِّي} /muxxiË/ \\
+\hline
+\multirow{3}{*}{Dual}
+& Nominative & \textarabic{مُخَّانِ} /muxxaËni/ & \textarabic{الْمُخَّانِ} /al-muxxaËni/ & \textarabic{مُخَّايَ} /muxxaËja/ \\
+& Acc/Gen & \textarabic{مُخَّيْنِ} /muxxajni/ & \textarabic{الْمُخَّيْنِ} /al-muxxajni/ & \textarabic{مُخَّيَّ} /muxxajja/ \\
+\hline
+\multirow{3}{*}{Plural}
+& Nominative & \textarabic{مِخَاخٌ} /mixaËxun/ & \textarabic{الْمِخَاخُ} /al-mixaËxu/ & \textarabic{مِخَاخِي} /mixaËxiË/ \\
+& Accusative & \textarabic{مِخَاخًا} /mixaËxan/ & \textarabic{الْمِخَاخَ} /al-mixaËxa/ & \textarabic{مِخَاخِي} /mixaËxijja/ \\
+& Genitive & \textarabic{مِخَاخٍ} /mixaËxin/ & \textarabic{الْمِخَاخِ} /al-mixaËxi/ & \textarabic{مِخَاخِي} /mixaËxiË/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{لُغَةً} — [luÉ£atan]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & a language \\
+\textbf{Root} & \textarabic{ل-غ-و} (l-É£-w) \\
+\textbf{Pattern} & \textarabic{فُعَلَة} (fuÊ•ala) \\
+\textbf{Grammar} & Noun, feminine, accusative case (object of passive verb), indefinite with tanwÄ«n \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{أَتَعَلَّمُ لُغَةً جَدِيدَةً} — I am learning a new language [Ê"ataÊ•allamu luÉ£atan dÊ'adiËdatan]\\
+2. \textarabic{اللُّغَةُ الْعَرَبِيَّةُ} — The Arabic language [al-luÉ£atu l-Ê•arabijjatu]\\
+3. \textarabic{يَتَكَلَّمُ ثَلَاثَ لُغَاتٍ} — He speaks three languages [jatakallaму Î¸alaËÎ¸a luÉ£aËtin]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{لِسَان} (tongue/language), \textarabic{كَلَام} (speech) \\
+\textbf{Etymology} & From root meaning ``to speak, to babble'' — related to Hebrew \texthebrew{לָשׁוֹן} (lashon) ``tongue'' \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Full Declension Matrix of \textarabic{لُغَة}}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With Suffix (1st sg.)} \\
+\hline
+\multirow{3}{*}{Singular}
+& Nominative & \textarabic{لُغَةٌ} /luÉ£atun/ & \textarabic{اللُّغَةُ} /al-luÉ£atu/ & \textarabic{لُغَتِي} /luÉ£atiË/ \\
+& Accusative & \textarabic{لُغَةً} /luÉ£atan/ & \textarabic{اللُّغَةَ} /al-luÉ£ata/ & \textarabic{لُغَتِي} /luÉ£atijja/ \\
+& Genitive & \textarabic{لُغَةٍ} /luÉ£atin/ & \textarabic{اللُّغَةِ} /al-luÉ£ati/ & \textarabic{لُغَتِي} /luÉ£atiË/ \\
+\hline
+\multirow{3}{*}{Dual}
+& Nominative & \textarabic{لُغَتَانِ} /luÉ£ataËni/ & \textarabic{اللُّغَتَانِ} /al-luÉ£ataËni/ & \textarabic{لُغَتَايَ} /luÉ£ataËja/ \\
+& Acc/Gen & \textarabic{لُغَتَيْنِ} /luÉ£atajni/ & \textarabic{اللُّغَتَيْنِ} /al-luÉ£atajni/ & \textarabic{لُغَتَيَّ} /luÉ£atajja/ \\
+\hline
+\multirow{3}{*}{Plural}
+& Nominative & \textarabic{لُغَاتٌ} /luÉ£aËtun/ & \textarabic{اللُّغَاتُ} /al-luÉ£aËtu/ & \textarabic{لُغَاتِي} /luÉ£aËtiË/ \\
+& Accusative & \textarabic{لُغَاتٍ} /luÉ£aËtin/ & \textarabic{اللُّغَاتِ} /al-luÉ£aËti/ & \textarabic{لُغَاتِي} /luÉ£aËtijja/ \\
+& Genitive & \textarabic{لُغَاتٍ} /luÉ£aËtin/ & \textarabic{اللُّغَاتِ} /al-luÉ£aËti/ & \textarabic{لُغَاتِي} /luÉ£aËtiË/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{لَا طَائِلَةَ مِنْهَا} — [laË tÌ£aËÊ"ilata minhaË]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & no benefit from it / no use in it \\
+\textbf{Root} & \textarabic{Ø·-ÙˆÙ„} (tÌ£-w-l) for \textarabic{طَائِلَة} \\
+\textbf{Pattern} & Negation + active participle + prepositional phrase \\
+\textbf{Grammar} & Idiomatic expression: \textarabic{لَا} (negation) + \textarabic{طَائِلَة} (benefit, fem. active participle) + \textarabic{مِنْهَا} (from it) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لَا طَائِلَةَ مِنْ هَٰذَا الْعَمَلِ} — There is no benefit from this work [laË tÌ£aËÊ"ilata min haËðaË l-Ê•amali]\\
+2. \textarabic{كَلَامٌ لَا طَائِلَةَ تَحْتَهُ} — Speech with no substance under it [kalaËmun laË tÌ£aËÊ"ilata taÄ§tahu]\\
+3. \textarabic{نِقَاشٌ لَا طَائِلَةَ فِيهِ} — A discussion with no benefit in it [niqaËÅ¡un laË tÌ£aËÊ"ilata fiËhi]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{لَا فَائِدَةَ} (no benefit), \textarabic{لَا جَدْوَىٰ} (no use), \textarabic{عَبَثٌ} (futile) \\
+\textbf{Etymology} & \textarabic{طَائِلَة} from root meaning ``to reach, to attain'' — classical idiom for ``advantage'' \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\textbf{Components:}
+\begin{itemize}
+\item \textarabic{لَا} — negation particle (no)
+\item \textarabic{طَائِلَة} — /tÌ£aËÊ"ilatan/ — benefit, advantage, use (accusative indefinite)
+\item \textarabic{مِنْ} — /min/ — from (preposition)
+\item \textarabic{ـهَا} — /-haË/ — it (feminine pronoun referring to \textarabic{لُغَة})
+\end{itemize}
+
+\subsection{\textarabic{فِي الدُّنْيَا} — [fiË d-dunjaË]}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & in the world / in this life \\
+\textbf{Root} & \textarabic{د-ن-و} (d-n-w) \\
+\textbf{Pattern} & \textarabic{فُعْلَىٰ} (fuÊ•laË) — superlative/diminutive feminine pattern \\
+\textbf{Grammar} & Prepositional phrase: \textarabic{فِي} (in) + \textarabic{الدُّنْيَا} (the world, definite, genitive) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْحَيَاةُ الدُّنْيَا} — The worldly life [al-Ä§ajaËtu d-dunjaË]\\
+2. \textarabic{فِي الدُّنْيَا وَالْآخِرَةِ} — In this world and the hereafter [fiË d-dunjaË wal-Ê"aËxirati]\\
+3. \textarabic{مَتَاعُ الدُّنْيَا} — The pleasures of the world [mataËÊ•u d-dunjaË]
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{الْعَالَم} (the world), \textarabic{الْحَيَاة} (life), \textarabic{الْكَوْن} (the universe) \\
+\textbf{Etymology} & From root meaning ``to be near, to be low'' — contrasted with \textarabic{الْآخِرَة} (the hereafter) \\
+\bottomrule
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Interrogative particle + passive imperfect verb (1st person) + prepositional phrase (location) + object noun (accusative) + relative descriptive clause (negation + noun + prepositional phrase) + prepositional phrase (scope)
+
+\vspace{0.5em}
+\textbf{Syntactic Breakdown:}
+\begin{enumerate}
+\item \textbf{\textarabic{لِمَ}} — Interrogative (why)
+\item \textbf{\textarabic{أُقْحَمُ}} — Main verb (passive imperfect, 1st person singular)
+\item \textbf{\textarabic{فِي مُخِّي}} — Prepositional phrase indicating location (into my brain)
+\item \textbf{\textarabic{لُغَةً}} — Direct object (a language, accusative indefinite)
+\item \textbf{\textarabic{لَا طَائِلَةَ مِنْهَا}} — Relative descriptive clause modifying \textarabic{لُغَة}
+\item \textbf{\textarabic{فِي الدُّنْيَا}} — Prepositional phrase indicating scope (in the world)
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item The passive voice \textarabic{أُقْحَمُ} implies external force or compulsion without naming the agent
+\item \textarabic{لِمَ} is a contracted form more literary than \textarabic{لِمَاذَا}, adding rhetorical weight
+\item The indefinite accusative \textarabic{لُغَةً} with tanwÄ«n indicates any/a language (non-specific)
+\item \textarabic{لَا طَائِلَةَ مِنْهَا} is a classical idiom meaning "no benefit/use from it"
+\item The prepositional phrase \textarabic{مِنْهَا} creates a genitive relationship (benefit FROM it)
+\item \textarabic{فِي الدُّنْيَا} emphasizes worldly/practical utility as the criterion
+\item The rhetorical question structure implies criticism of imposed language learning
+\item The metaphor \textarabic{فِي مُخِّي} (into my brain) suggests forced mental effort
+\end{itemize}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{لِمَ أُجْبَرُ عَلَىٰ دِرَاسَةِ عِلْمٍ لَا نَفْعَ مِنْهُ فِي حَيَاتِي؟}\\
+Why am I forced to study a science that has no benefit in my life? [lima Ê"uÉ¡baru Ê•alaË diraËsati Ê•ilmin laË nafÊ•a minhu fiË Ä§ajaËtiË]
+
+\item \textarabic{لِمَ نُكَلَّفُ بِحِفْظِ نُصُوصٍ لَا فَائِدَةَ فِيهَا لِلْمُسْتَقْبَلِ؟}\\
+Why are we tasked with memorizing texts that have no use for the future? [lima nukallafu biÄ§iftÌ£i nusÌ£uËsÌ£in laË faËÊ"idata fiËhaË lil-mustaqbali]
+
+\item \textarabic{لِمَ يُفْرَضُ عَلَيْنَا تَعَلُّمُ مَادَّةٍ لَا جَدْوَىٰ مِنْهَا؟}\\
+Why is learning a subject that has no use imposed upon us? [lima jufrادÌ£u Ê•alajnaË taÊ•allumu maËddatin laË É¡adwaË minhaË]
+
+\item \textarabic{لِمَ أُضْطَرُّ إِلَىٰ قِرَاءَةِ كِتَابٍ لَا مَعْنَىٰ لَهُ فِي عَصْرِنَا؟}\\
+Why am I compelled to read a book that has no meaning in our era? [lima Ê"udÌ£tÌ£arru Ê"ilaË qiraËÊ"ati kitaËbin laË maÊ•naË lahu fiË Ê•asÌ£rinaË]
+
+\item \textarabic{لِمَ نُلْزَمُ بِتَعَلُّمِ مَهَارَةٍ لَا حَاجَةَ لَنَا بِهَا؟}\\
+Why are we obliged to learn a skill we have no need for? [lima nulzamu bitaÊ•allumi mahaËratin laË Ä§aËÉ¡ata lanaË bihaË]
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shaami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{لَيْشْ بِدِّي أَحْشُرْ بِمُخِّي لُغَة مَا إِلَهَا فَايْدَة بِالدُّنْيَا؟}\\[0.3em]
+\textbf{Phonetic:} [leːʃ biddiː Ê"aÄ§ʃur bi-muxxiː luÉ£a maː Ê"ilha faËjde bi-d-dunja]\\[0.3em]
+\textbf{Translation:} Why should I cram into my brain a language that has no benefit in the world?
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{لِمَ} → \textarabic{لَيْش} (leːʃ) — common Levantine interrogative "why"
+\item \textarabic{أُقْحَمُ} → \textarabic{بِدِّي أَحْشُرْ} (biddiː Ê"aÄ§ʃur) — "I want/should cram" (active voice with helping verb)
+\item \textarabic{فِي} → \textarabic{بِ} (bi-) — dialectal preposition "in"
+\item \textarabic{لَا طَائِلَةَ مِنْهَا} → \textarabic{مَا إِلَهَا فَايْدَة} (maː Ê"ilha faËjde) — "it has no benefit" (simplified negation)
+\item \textarabic{فَائِدَة} becomes \textarabic{فَايْدَة} (faËjde) — dialectal pronunciation
+\item Passive construction becomes active with modal \textarabic{بِدِّي} (I should/want)
+\item \textarabic{أَحْشُر} used instead of \textarabic{أُقْحِم} — more colloquial verb for "stuff/cram"
+\item Overall structure simplified with fewer classical elements
+\end{itemize}
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Literary Context},breakable]
+\textbf{Educational Critique:} This phrase reflects a common sentiment among Arabic-speaking students frustrated with mandatory curricula that seem disconnected from practical life. The use of classical Arabic itself adds irony — complaining about useless language learning in formal literary Arabic.
+
+\textbf{Rhetorical Force:} The passive voice \textarabic{أُقْحَمُ} removes agency from the speaker, suggesting systemic imposition rather than personal choice. This grammatical choice strengthens the complaint by emphasizing powerlessness.
+
+\textbf{Classical Idiom:} \textarabic{لَا طَائِلَةَ مِنْهُ} is a sophisticated classical expression rarely used in modern colloquial speech, appearing primarily in formal writing and educated discourse. Its use here demonstrates high linguistic competence even while questioning language utility.
+
+\textbf{Worldly vs. Sacred:} The term \textarabic{الدُّنْيَا} specifically means "the worldly life" as opposed to \textarabic{الْآخِرَة} (the hereafter), suggesting the speaker values practical, material utility over abstract or spiritual knowledge.
+
+\textbf{Brain Metaphor:} Using \textarabic{مُخّ} (brain/marrow) rather than \textarabic{عَقْل} (mind/intellect) emphasizes the physical, forced nature of memorization — cramming into the brain rather than understanding with the mind.
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+\begin{enumerate}
+\item \textbf{Interrogative Pattern:} \textarabic{لِمَ} = \textarabic{لِ} (for) + \textarabic{مَا} (what) → "for what?" = "why?"
+\item \textbf{Passive Recognition:} \textarabic{أُقْحَمُ} has \textarabic{أُ} prefix (1st person passive marker) + \textarabic{ـُ} ending (indicative mood)
+\item \textbf{Form IV Pattern:} \textarabic{أَقْحَمَ} follows \textarabic{أَفْعَلَ} pattern — glottal stop + doubled middle root letter
+\item \textbf{Classical Idiom Chain:} \textarabic{لَا} + noun (accusative) + \textarabic{مِنْ} = "no [noun] from..."
+\item \textbf{Tanwīn Clue:} \textarabic{لُغَةً} with \textarabic{ـً} shows accusative case (direct object)
+\item \textbf{Pronoun Reference:} \textarabic{مِنْهَا} refers back to \textarabic{لُغَة} (both feminine)
+\item \textbf{Worldly Focus:} \textarabic{الدُّنْيَا} always means material world (vs. \textarabic{الْآخِرَة} spiritual realm)
+\end{enumerate}
+
+\subsection{Related Vocabulary Family}
+
+\begin{multicols}{2}
+\textbf{Learning/Education:}\\
+\textarabic{تَعَلُّم} — learning [taÊ•allum]\\
+\textarabic{دِرَاسَة} — study [diraËsa]\\
+\textarabic{حِفْظ} — memorization [Ä§iftÌ£]\\
+\textarabic{اِسْتِيعَاب} — comprehension [istiËÊ•aËb]\\
+\textarabic{مَعْرِفَة} — knowledge [maÊ•rifa]\\
+\textarabic{عِلْم} — science/knowledge [Ê•ilm]\\
+\textarabic{فَهْم} — understanding [fahm]\\
+
+\textbf{Compulsion/Force:}\\
+\textarabic{إِجْبَار} — coercion [Ê"iÉ¡baËr]\\
+\textarabic{إِكْرَاه} — compulsion [Ê"ikraËh]\\
+\textarabic{إِلْزَام} — obligation [Ê"ilzaËm]\\
+\textarabic{فَرْض} — imposition [fardÌ£]\\
+\textarabic{اِضْطِرَار} — necessity [idÌ£tÌ£iraËr]\\
+\textarabic{حَشْر} — cramming [Ä§aÊƒr]\\
+
+\textbf{Usefulness/Utility:}\\
+\textarabic{فَائِدَة} — benefit [faËÊ"ida]\\
+\textarabic{نَفْع} — usefulness [nafÊ•]\\
+\textarabic{جَدْوَىٰ} — utility [É¡adwaË]\\
+\textarabic{طَائِلَة} — advantage [tÌ£aËÊ"ila]\\
+\textarabic{مَنْفَعَة} — benefit [manfaÊ•a]\\
+\textarabic{أَهَمِّيَّة} — importance [Ê"ahammijja]\\
+
+\textbf{Negation/Futility:}\\
+\textarabic{عَبَث} — futility [Ê•abaÎ¸]\\
+\textarabic{لَا جَدْوَىٰ} — no use [laË É¡adwaË]\\
+\textarabic{بَاطِل} — vain/false [baËtÌ£il]\\
+\textarabic{سُدًى} — in vain [sudan]\\
+\textarabic{عَدِيم الْفَائِدَة} — useless [Ê•adiËmu l-faËÊ"ida]\\
+
+\textbf{Mind/Cognition:}\\
+\textarabic{عَقْل} — intellect [Ê•aql]\\
+\textarabic{ذِهْن} — mind [Ã°ihn]\\
+\textarabic{فِكْر} — thought [fikr]\\
+\textarabic{دِمَاغ} — brain [dimaËÉ£]\\
+\textarabic{وَعْي} — consciousness [waÊ•j]\\
+
+\textbf{Languages/Speech:}\\
+\textarabic{لِسَان} — tongue/language [lisaËn]\\
+\textarabic{كَلَام} — speech [kalaËm]\\
+\textarabic{لَهْجَة} — dialect [lahÉ¡a]\\
+\textarabic{نُطْق} — pronunciation [nutÌ£q]\\
+\textarabic{تَعْبِير} — expression [taÊ•biËr]\\
+\end{multicols}
+
+\section{Advanced Grammar Notes}
+
+\subsection{Passive Voice Formation in Form IV}
+
+The verb \textarabic{أُقْحَمُ} demonstrates passive voice in Form IV:
+
+\textbf{Active Form IV:} \textarabic{أَقْحَمَ} [Ê"aqĥama] — he forced/crammed\\
+\textbf{Pattern:} \textarabic{أَفْعَلَ} [Ê"afÊ•ala]
+
+\textbf{Passive Form IV:} \textarabic{أُقْحِمَ} [Ê"uqĥima] — he was forced/crammed\\
+\textbf{Pattern:} \textarabic{أُفْعِلَ} [Ê"ufÊ•ila]
+
+\textbf{Passive Imperfect:} \textarabic{يُقْحَمُ} [juqĥamu] — he is being forced\\
+\textbf{Pattern:} \textarabic{يُفْعَلُ} [jufÊ•alu]
+
+\textbf{Key Changes:}
+\begin{itemize}
+\item Perfect: \textarabic{أَ} → \textarabic{أُ} (1st vowel: a → u)
+\item Perfect: \textarabic{ـَـ} → \textarabic{ـِـ} (2nd vowel: a → i)
+\item Imperfect: \textarabic{يَ} → \textarabic{يُ} (prefix vowel: a → u)
+\item Imperfect: middle vowel deleted, final \textarabic{ـُ} added
+\end{itemize}
+
+\subsection{The Idiom \textarabic{لَا ... مِنْ}}
+
+This classical construction expresses categorical negation:
+
+\textbf{Structure:} \textarabic{لَا} + noun (accusative) + \textarabic{مِنْ} + pronoun/noun
+
+\textbf{Examples:}
+\begin{itemize}
+\item \textarabic{لَا بُدَّ مِنْهُ} — It is necessary (lit: no escape from it)
+\item \textarabic{لَا خَيْرَ فِيهِ} — There is no good in it
+\item \textarabic{لَا شَكَّ فِي ذَٰلِكَ} — There is no doubt in that
+\item \textarabic{لَا رَيْبَ فِيهِ} — There is no uncertainty in it
+\end{itemize}
+
+\subsection{Accusative of Specification}
+
+\textarabic{لُغَةً} appears in accusative case as the direct object of the passive verb. In passive constructions, what was the active object becomes the passive subject, but here it remains accusative, serving as a specification:
+
+\textbf{Active (hypothetical):} *They force me a language*\\
+\textbf{Passive:} \textarabic{أُقْحَمُ لُغَةً} — I am forced [regarding] a language
+
+This is a nuance of Form IV passive verbs that can retain accusative objects.
+
+\end{document}
