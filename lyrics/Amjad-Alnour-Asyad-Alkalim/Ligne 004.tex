@@ -1,0 +1,1258 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{titlesec}
+\titlespacing*{\section}
+  {0pt}                    % left margin
+  {3.5ex plus 2ex minus 1.5ex}  % space before (more flexible)
+  {2.3ex plus 1ex minus 0.5ex}  % space after (more flexible)
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{Are We in the Abbasid or Umayyad Era?}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large Are We in the Abbasid Era or the Umayyad State Era?\\
+\normalsize \textarabic{هل نحن بعصر عباسي أم عصر الدولة الأموية}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diacritics},breakable]
+\centering
+\Large\textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} Are we in-era Abbasid or era the-state the-Umayyad?\\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} Are we in an Abbasid era or the era of the Umayyad state?
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{هَلْ} — /hal/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & (question particle indicating yes/no question) \\
+\textbf{Root} & Interrogative particle (not from triliteral root) \\
+\textbf{Pattern} & Independent interrogative particle \\
+\textbf{Grammar} & Interrogative particle introducing polar (yes/no) questions \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{هَلْ أَنْتَ مُسْتَعِدٌّ؟} — Are you ready? /hal ʔanta mustaʕiddun/\\
+2. \textarabic{هَلْ فَهِمْتَ الدَّرْسَ؟} — Did you understand the lesson? /hal fahimta ddarsa/\\
+3. \textarabic{هَلْ يُمْكِنُكَ الْمَجِيءُ؟} — Can you come? /hal jumkinuka lmadʒiːʔu/
+}} \\
+\midrule
+\textbf{Function} & Requires yes (\textarabic{نَعَمْ}) or no (\textarabic{لَا}) answer \\
+\textbf{Etymology} & From Proto-Semitic interrogative particle; Hebrew \texthebrew{הַ} (ha-) question prefix \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Usage Notes}
+\begin{itemize}
+  \item \textarabic{هَلْ} introduces binary questions expecting yes/no answers
+  \item Different from \textarabic{مَا} (what) and \textarabic{أَ} (general interrogative particle)
+  \item Can be used with nominal or verbal sentences
+  \item Often indicates genuine inquiry or rhetorical questioning
+\end{itemize}
+
+\subsection{\textarabic{نَحْنُ} — /naħnu/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & we \\
+\textbf{Root} & Independent pronoun (not from triliteral root) \\
+\textbf{Pattern} & First person plural independent pronoun \\
+\textbf{Grammar} & Independent pronoun, nominative case (subject of nominal sentence) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{نَحْنُ طُلَّابٌ} — We are students /naħnu tˤullaːbun/\\
+2. \textarabic{نَحْنُ نَدْرُسُ الْعَرَبِيَّةَ} — We study Arabic /naħnu nadrusu lʕarabijjata/\\
+3. \textarabic{نَحْنُ هُنَا} — We are here /naħnu hunaː/
+}} \\
+\midrule
+\textbf{Related Forms} & \textarabic{نَا} (attached suffix: our/us), \textarabic{إِيَّانَا} (emphatic: us) \\
+\textbf{Etymology} & From Proto-Semitic *naħnu; Hebrew \texthebrew{אֲנַחְנוּ} (ʔanaħnu) "we" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Pronoun System}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Person} & \textbf{Singular} & \textbf{Plural} \\
+\hline
+1st person & \textarabic{أَنَا} /ʔanaː/ (I) & \textarabic{نَحْنُ} /naħnu/ (we) \\
+\hline
+2nd person masc. & \textarabic{أَنْتَ} /ʔanta/ (you) & \textarabic{أَنْتُمْ} /ʔantum/ (you) \\
+\hline
+2nd person fem. & \textarabic{أَنْتِ} /ʔanti/ (you) & \textarabic{أَنْتُنَّ} /ʔantunna/ (you) \\
+\hline
+3rd person masc. & \textarabic{هُوَ} /huwa/ (he) & \textarabic{هُمْ} /hum/ (they) \\
+\hline
+3rd person fem. & \textarabic{هِيَ} /hija/ (she) & \textarabic{هُنَّ} /hunna/ (they) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{بِعَصْرٍ} — /biʕasˤrin/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & in an era / in a period \\
+\textbf{Root} & \textarabic{ع-ص-ر} (ʕ-sˤ-r) \\
+\textbf{Pattern} & \textarabic{فَعْل} (faʕl) with preposition \textarabic{بِ} \\
+\textbf{Grammar} & Preposition \textarabic{بِ} + masculine noun, genitive case (after preposition), indefinite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{عَصْرُ النَّهْضَةِ} — The Renaissance era /ʕasˤru nnahðˤati/\\
+2. \textarabic{فِي عَصْرِنَا} — In our era /fiː ʕasˤrinaː/\\
+3. \textarabic{عَصْرٌ جَدِيدٌ} — A new era /ʕasˤrun dʒadiːdun/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{زَمَن} (time), \textarabic{دَهْر} (age), \textarabic{حِقْبَة} (period), \textarabic{عَهْد} (epoch) \\
+\textbf{Etymology} & From root meaning "to press, squeeze"; metaphorically extended to "time period" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} & \textbf{With \textarabic{بِ}} \\
+\hline
+Nominative & \textarabic{عَصْرٌ} /ʕasˤrun/ & \textarabic{الْعَصْرُ} /alʕasˤru/ & — \\
+\hline
+Accusative & \textarabic{عَصْرًا} /ʕasˤran/ & \textarabic{الْعَصْرَ} /alʕasˤra/ & — \\
+\hline
+Genitive & \textarabic{عَصْرٍ} /ʕasˤrin/ & \textarabic{الْعَصْرِ} /alʕasˤri/ & \textarabic{بِعَصْرٍ} /biʕasˤrin/ \\
+\hline
+\end{tabular}
+
+\subsubsection*{Preposition \textarabic{بِ}}
+The preposition \textarabic{بِ} /bi/ has multiple meanings:
+\begin{itemize}
+\item \textbf{Location:} in, at — \textarabic{بِالْبَيْتِ} (at home)
+\item \textbf{Instrument:} with, by means of — \textarabic{كَتَبَ بِالْقَلَمِ} (wrote with the pen)
+\item \textbf{Association:} with — \textarabic{مَرْحَبًا بِكَ} (welcome to you)
+\item \textbf{Temporal:} in (time) — \textarabic{بِعَصْرٍ} (in an era)
+\end{itemize}
+
+\subsection{\textarabic{عَبَّاسِيٍّ} — /ʕabbaːsijjin/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & Abbasid (relating to the Abbasid dynasty/caliphate) \\
+\textbf{Root} & \textarabic{ع-ب-س} (ʕ-b-s) from proper name \textarabic{عَبَّاس} \\
+\textbf{Pattern} & \textarabic{فَعَّالِيّ} (faʕʕaːlijj) — nisba (relational) adjective \\
+\textbf{Grammar} & Nisba adjective, masculine singular, genitive case (agreeing with \textarabic{عَصْرٍ}), indefinite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْخِلَافَةُ الْعَبَّاسِيَّةُ} — The Abbasid Caliphate /alxilaːfatu lʕabbaːsijjatu/\\
+2. \textarabic{الْعَصْرُ الْعَبَّاسِيُّ الْأَوَّلُ} — The first Abbasid era /alʕasˤru lʕabbaːsijju l-ʔawwalu/\\
+3. \textarabic{شَاعِرٌ عَبَّاسِيٌّ} — An Abbasid poet /ʃaːʕirun ʕabbaːsijjun/
+}} \\
+\midrule
+\textbf{Historical Context} & The Abbasid Caliphate (750-1258 CE), known for cultural flourishing, Baghdad as capital, Golden Age of Islam \\
+\textbf{Etymology} & From \textarabic{عَبَّاس} (ʕAbbaːs), uncle of Prophet Muhammad; dynasty claimed descent from him \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Nisba Adjective Formation}
+Nisba adjectives relate nouns to places, tribes, or concepts by adding \textarabic{ـِيّ} /-ijj/:
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Base Noun} & \textbf{Nisba Adjective} & \textbf{Meaning} \\
+\hline
+\textarabic{عَبَّاس} /ʕabbaːs/ & \textarabic{عَبَّاسِيّ} /ʕabbaːsijj/ & Abbasid \\
+\hline
+\textarabic{أُمَيَّة} /ʔumajja/ & \textarabic{أُمَوِيّ} /ʔumawijj/ & Umayyad \\
+\hline
+\textarabic{مِصْر} /misˤr/ & \textarabic{مِصْرِيّ} /misˤrijj/ & Egyptian \\
+\hline
+\textarabic{عَرَب} /ʕarab/ & \textarabic{عَرَبِيّ} /ʕarabijj/ & Arab/Arabic \\
+\hline
+\end{tabular}
+
+\subsubsection*{Declension of Nisba Adjectives}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{عَبَّاسِيٌّ} /ʕabbaːsijjun/ & \textarabic{الْعَبَّاسِيُّ} /alʕabbaːsijju/ \\
+\hline
+Accusative & \textarabic{عَبَّاسِيًّا} /ʕabbaːsijjan/ & \textarabic{الْعَبَّاسِيَّ} /alʕabbaːsijja/ \\
+\hline
+Genitive & \textarabic{عَبَّاسِيٍّ} /ʕabbaːsijjin/ & \textarabic{الْعَبَّاسِيِّ} /alʕabbaːsijji/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{أَمْ} — /ʔam/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & or (in questions) \\
+\textbf{Root} & Disjunctive particle (not from triliteral root) \\
+\textbf{Pattern} & Interrogative disjunction particle \\
+\textbf{Grammar} & Coordinating conjunction used in alternative questions \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{أَأَنْتَ مُحَمَّدٌ أَمْ عَلِيٌّ؟} — Are you Muhammad or Ali? /ʔaʔanta muħammadun ʔam ʕalijjun/\\
+2. \textarabic{هَلْ تُرِيدُ شَايًا أَمْ قَهْوَةً؟} — Do you want tea or coffee? /hal turiːdu ʃaːjan ʔam qahwatan/\\
+3. \textarabic{أَنَذْهَبُ أَمْ نَبْقَى؟} — Do we go or stay? /ʔanaðhabu ʔam nabqaː/
+}} \\
+\midrule
+\textbf{Comparison} & Different from \textarabic{أَوْ} (or) which is used in statements, not questions \\
+\textbf{Etymology} & From Proto-Semitic interrogative particle \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Usage: \textarabic{أَمْ} vs. \textarabic{أَوْ}}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Particle} & \textbf{Usage} & \textbf{Example} \\
+\hline
+\textarabic{أَمْ} /ʔam/ & In questions (alternative) & \textarabic{هَلْ هَذَا أَمْ ذَاكَ؟} (Is it this or that?) \\
+\hline
+\textarabic{أَوْ} /ʔaw/ & In statements (choice) & \textarabic{خُذْ هَذَا أَوْ ذَاكَ} (Take this or that) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{عَصْرِ} — /ʕasˤri/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & era (of) / period (of) \\
+\textbf{Root} & \textarabic{ع-ص-ر} (ʕ-sˤ-r) \\
+\textbf{Pattern} & \textarabic{فَعْل} (faʕl) \\
+\textbf{Grammar} & Masculine noun, genitive case (first term of iḍāfah), definite through iḍāfah \\
+\midrule
+\textbf{Function} & First term (muḍāf) in construct state with \textarabic{الدَّوْلَةِ} \\
+\textbf{Note} & Same word as \textarabic{بِعَصْرٍ} earlier, but here in iḍāfah construction \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Iḍāfah Construction}
+\textarabic{عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ} /ʕasˤri ddawlati l-ʔumawijjati/
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Component} & \textbf{Role} & \textbf{Case} \\
+\hline
+\textarabic{عَصْرِ} & Muḍāf (possessed) & Genitive (from syntax) \\
+\hline
+\textarabic{الدَّوْلَةِ} & Muḍāf ilayh & Genitive (required) \\
+\hline
+\textarabic{الْأُمَوِيَّةِ} & Adjective & Genitive (agreement) \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{الدَّوْلَةِ} — /ddawlati/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the state / the dynasty / the empire \\
+\textbf{Root} & \textarabic{د-و-ل} (d-w-l) \\
+\textbf{Pattern} & \textarabic{فَعْلَة} (faʕlah) \\
+\textbf{Grammar} & Feminine noun, genitive case (second term of iḍāfah), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الدَّوْلَةُ الْإِسْلَامِيَّةُ} — The Islamic state /addawlatu l-ʔislaːmijjatu/\\
+2. \textarabic{رَئِيسُ الدَّوْلَةِ} — Head of state /raʔiːsu ddawlati/\\
+3. \textarabic{دَوْلَةٌ قَوِيَّةٌ} — A strong state /dawlatun qawijjatun/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{حُكُومَة} (government), \textarabic{سُلْطَة} (authority), \textarabic{مَمْلَكَة} (kingdom) \\
+\textbf{Etymology} & From root meaning "to alternate, rotate"; extended to mean "ruling power, dynasty" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{دَوْلَةٌ} /dawlatun/ & \textarabic{الدَّوْلَةُ} /addawlatu/ \\
+\hline
+Accusative & \textarabic{دَوْلَةً} /dawlatan/ & \textarabic{الدَّوْلَةَ} /addawlata/ \\
+\hline
+Genitive & \textarabic{دَوْلَةٍ} /dawlatin/ & \textarabic{الدَّوْلَةِ} /addawlati/ \\
+\hline
+\end{tabular}
+
+\subsubsection*{Related Verbal Forms}
+\par{\large \textbf{Verbal Noun}: \textarabic{دَوْلَة} /dawlah/ or \textarabic{تَدَاوُل} /tadaːwul/}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masc. sing.} & \textarabic{دَالَ} /daːla/ & \textarabic{يَدُولُ} /jaduːlu/ \\
+\hline
+\textbf{3rd person fem. sing.} & \textarabic{دَالَتْ} /daːlat/ & \textarabic{تَدُولُ} /taduːlu/ \\
+\hline
+\textbf{3rd person masc. plural} & \textarabic{دَالُوا} /daːluː/ & \textarabic{يَدُولُونَ} /jaduːluːna/ \\
+\hline
+\textbf{2nd person masc. sing.} & \textarabic{دُلْتَ} /dulta/ & \textarabic{تَدُولُ} /taduːlu/ \\
+\hline
+\textbf{1st person singular} & \textarabic{دُلْتُ} /dultu/ & \textarabic{أَدُولُ} /ʔaduːlu/ \\
+\hline
+\end{longtable}
+
+\subsection{\textarabic{الْأُمَوِيَّةِ} — /l-ʔumawijjati/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the Umayyad (relating to the Umayyad dynasty) \\
+\textbf{Root} & \textarabic{أ-م-ي} from proper name \textarabic{أُمَيَّة} \\
+\textbf{Pattern} & \textarabic{فُعَلِيَّة} (fuʕalijjah) — feminine nisba adjective \\
+\textbf{Grammar} & Nisba adjective, feminine singular, genitive case (agreeing with \textarabic{الدَّوْلَةِ}), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْخِلَافَةُ الْأُمَوِيَّةُ} — The Umayyad Caliphate /alxilaːfatu l-ʔumawijjatu/\\
+2. \textarabic{الْمَسْجِدُ الْأُمَوِيُّ} — The Umayyad Mosque /almasdʒidu l-ʔumawijju/\\
+3. \textarabic{عَصْرٌ أُمَوِيٌّ} — An Umayyad era /ʕasˤrun ʔumawijjun/
+}} \\
+\midrule
+\textbf{Historical Context} & The Umayyad Caliphate (661-750 CE), first major Islamic dynasty, capital in Damascus \\
+\textbf{Etymology} & From \textarabic{أُمَيَّة} (Umayya), ancestor of the Umayyad clan of Quraysh tribe \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension of Feminine Nisba}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{أُمَوِيَّةٌ} /ʔumawijjatun/ & \textarabic{الْأُمَوِيَّةُ} /al-ʔumawijjatu/ \\
+\hline
+Accusative & \textarabic{أُمَوِيَّةً} /ʔumawijjatan/ & \textarabic{الْأُمَوِيَّةَ} /al-ʔumawijjata/ \\
+\hline
+Genitive & \textarabic{أُمَوِيَّةٍ} /ʔumawijjatin/ & \textarabic{الْأُمَوِيَّةِ} /al-ʔumawijjati/ \\
+\hline
+\end{tabular}
+
+\subsubsection*{Historical Comparison}
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{Umayyad (661-750)} & \textbf{Abbasid (750-1258)} \\
+\hline
+Capital & Damascus & Baghdad \\
+\hline
+Founder & Muʕāwiyah ibn Abī Sufyān & Abū al-ʕAbbās as-Saffāḥ \\
+\hline
+Character & Arab aristocracy & Multi-ethnic, Persian influence \\
+\hline
+Legacy & Expansion, Arabic spread & Golden Age, sciences, culture \\
+\hline
+\end{tabular}
+
+\section{Phrase Analysis}
+\noindent
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Interrogative particle + independent pronoun (subject) + prepositional phrase with indefinite noun + nisba adjective (attribute) + disjunctive particle + iḍāfah construction (definite noun + definite noun + definite nisba adjective)
+
+\vspace{0.5em}
+\textbf{Sentence Type:} Nominal sentence (\textarabic{جُمْلَة اسْمِيَّة}) introduced by yes/no interrogative \textarabic{هَلْ}
+
+\vspace{0.5em}
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item \textbf{Yes/no question:} \textarabic{هَلْ} introduces alternative question expecting choice between two options
+\item \textbf{Subject:} \textarabic{نَحْنُ} (we) — independent pronoun functioning as subject
+\item \textbf{First predicate:} \textarabic{بِعَصْرٍ عَبَّاسِيٍّ} — prepositional phrase with indefinite noun modified by nisba adjective
+\item \textbf{Disjunction:} \textarabic{أَمْ}— "or" introduces second alternative
+\item \textbf{Second predicate:} \textarabic{عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ} — iḍāfah construction (definite through association)
+\item \textbf{Asymmetry:} First option indefinite (\textarabic{بِعَصْرٍ عَبَّاسِيٍّ}), second definite (\textarabic{عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ})
+\item \textbf{Ellipsis:} The preposition \textarabic{بِ} is understood before the second predicate (full form: \textarabic{أَمْ بِعَصْرِ الدَّوْلَةِ...})
+\item \textbf{Nisba agreement:} Both \textarabic{عَبَّاسِيٍّ} and \textarabic{الْأُمَوِيَّةِ} agree with their respective nouns in all features
+\item \textbf{Rhetorical function:} Question implies anachronistic situation or criticism of outdated governance
+\item \textbf{Historical reference:} Contrasts two major Islamic dynasties (Umayyad 661-750 CE vs. Abbasid 750-1258 CE)
+\end{itemize}
+\end{tcolorbox}
+
+\section{Syntactic Analysis}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Phrase Structure Tree:}
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=1.2cm,
+  level 1/.style={sibling distance=7cm},
+  level 2/.style={sibling distance=3.5cm},
+  level 3/.style={sibling distance=2.5cm},
+  level 4/.style={sibling distance=2cm},
+  every node/.style={rectangle, draw, rounded corners, minimum width=2.2cm, align=center, font=\small}
+]
+
+\node {Yes/No Question}
+  child {node {\textarabic{هَلْ}\\(Are?)}}
+  child {node {Nominal Sentence}
+    child {node {Subject\\\textarabic{نَحْنُ}\\(we)}}
+    child {node {Alternative\\Predicates}
+      child {node {Predicate 1}
+        child {node {\textarabic{بِعَصْرٍ}\\in era}}
+        child {node {\textarabic{عَبَّاسِيٍّ}\\Abbasid}}
+      }
+      child {node {\textarabic{أَمْ}\\(or)}}
+      child {node {Predicate 2}
+        child {node {Iḍāfah\\\textarabic{عَصْرِ الدَّوْلَةِ}\\era of state}}
+        child {node {\textarabic{الْأُمَوِيَّةِ}\\the Umayyad}}
+      }
+    }
+  };
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1em}
+\textbf{Syntactic Relationships:}
+\begin{enumerate}
+\item \textbf{Main clause:} \textarabic{هَلْ نَحْنُ...} — Yes/no interrogative nominal sentence
+\item \textbf{Subject-predicate:} \textarabic{نَحْنُ} (subject) + two alternative predicates joined by \textarabic{أَمْ}
+\item \textbf{Predicate 1 structure:} Prepositional phrase \textarabic{بِعَصْرٍ} + attributive adjective \textarabic{عَبَّاسِيٍّ}
+\item \textbf{Predicate 2 structure:} Iḍāfah chain \textarabic{عَصْرِ الدَّوْلَةِ} + attributive adjective \textarabic{الْأُمَوِيَّةِ}
+\item \textbf{Ellipsis:} Preposition \textarabic{بِ} omitted before second predicate (common in alternative constructions)
+\item \textbf{Definiteness contrast:} First predicate indefinite (any Abbasid era), second definite (the specific Umayyad state era)
+\end{enumerate}
+
+\vspace{1em}
+\textbf{Simplified Box Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[
+  box/.style={rectangle, draw, minimum width=2.5cm, minimum height=0.8cm, align=center},
+  arrow/.style={->, >=stealth, thick}
+]
+
+% Top level
+\node[box] (hal) at (0,0) {\textarabic{هَلْ}\\Are?};
+\node[box] (nahnu) at (3,0) {\textarabic{نَحْنُ}\\we};
+
+% First alternative
+\node[box] (bi3asr) at (1,-2) {\textarabic{بِعَصْرٍ}\\in an era};
+\node[box] (3abbasi) at (4,-2) {\textarabic{عَبَّاسِيٍّ}\\Abbasid};
+
+% Disjunction
+\node[box] (am) at (7,-2) {\textarabic{أَمْ}\\or};
+
+% Second alternative
+\node[box] (3asr) at (7,-4) {\textarabic{عَصْرِ}\\era (of)};
+\node[box] (dawla) at (10,-4) {\textarabic{الدَّوْلَةِ}\\the state};
+\node[box] (umawi) at (10,-6) {\textarabic{الْأُمَوِيَّةِ}\\the Umayyad};
+
+% Arrows
+\draw[arrow] (hal) -- (nahnu);
+\draw[arrow] (nahnu) -- (bi3asr);
+\draw[arrow] (bi3asr) -- (3abbasi);
+\draw[arrow] (nahnu) -- (am);
+\draw[arrow] (am) -- (3asr);
+\draw[arrow] (3asr) -- (dawla);
+\draw[arrow] (dawla) -- (umawi);
+
+\end{tikzpicture}
+\end{center}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{هَلْ نَحْنُ فِي زَمَنٍ إِسْلَامِيٍّ أَمْ زَمَنِ الْجَاهِلِيَّةِ؟}\\
+Are we in an Islamic time or the time of the pre-Islamic ignorance? /hal naħnu fiː zamanin ʔislaːmijjin ʔam zamani ldʒaːhillijjati/
+
+\item \textarabic{هَلْ أَنْتَ فِي عَصْرٍ حَدِيثٍ أَمْ عَصْرِ الْقُرُونِ الْوُسْطَى؟}\\
+Are you in a modern era or the era of the Middle Ages? /hal ʔanta fiː ʕasˤrin ħadiːθin ʔam ʕasˤri lquruːni lwustˤaː/
+
+\item \textarabic{هَلْ هَذَا وَقْتٌ فَاطِمِيٌّ أَمْ وَقْتُ الدَّوْلَةِ الْعُثْمَانِيَّةِ؟}\\
+Is this a Fatimid time or the time of the Ottoman state? /hal haːðaː waqtun faːtˤimijjun ʔam waqtu ddawlati lʕuθmaːnijjati/
+
+\item \textarabic{هَلْ نَعِيشُ فِي حِقْبَةٍ أَيُّوبِيَّةٍ أَمْ حِقْبَةِ الْمَمَالِيكِ؟}\\
+Are we living in an Ayyubid period or the period of the Mamluks? /hal naʕiːʃu fiː ħiqbatin ʔajjuːbijjatin ʔam ħiqbati lmamaːliːki/
+
+\item \textarabic{هَلْ هَذَا عَهْدٌ رَاشِدِيٌّ أَمْ عَهْدُ الْخُلَفَاءِ الْعَبَّاسِيِّينَ؟}\\
+Is this a Rashidun epoch or the epoch of the Abbasid caliphs? /hal haːðaː ʕahdun raːʃidijjun ʔam ʕahdu lxulafaːʔi lʕabbaːsijjiːna/
+
+\item \textarabic{هَلْ نَحْنُ بِدَوْلَةٍ مَمْلُوكِيَّةٍ أَمْ دَوْلَةِ الْأَنْدَلُسِ؟}\\
+Are we in a Mamluk state or the state of Andalusia? /hal naħnu bidawlatin mamluːkijjatin ʔam dawlati l-ʔandalusi/
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{نِحْنَا بِعَصْر عَبَّاسِي وَلَّا عَصْر الدَّوْلِة الْأُمَوِيِّة؟}\\[0.5em]
+\textbf{Phonetic:} /niħna biʕasˤar ʕabbaːsiː walla ʕasˤar eddawle l-ʔumawijje/\\[0.5em]
+\textbf{Translation:} Are we in an Abbasid era or the era of the Umayyad state?
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{هَلْ} → (omitted) — Yes/no questions often indicated by intonation alone in dialect
+\item \textarabic{نَحْنُ} → \textarabic{نِحْنَا} /niħna/ — Dialectal pronunciation with final vowel
+\item \textarabic{بِعَصْرٍ} → \textarabic{بِعَصْر} /biʕasˤar/ — Loss of case endings (tanwīn)
+\item \textarabic{عَبَّاسِيٍّ} → \textarabic{عَبَّاسِي} /ʕabbaːsiː/ — Loss of case endings
+\item \textarabic{أَمْ} → \textarabic{وَلَّا} /walla/ — Dialectal form meaning "or" in questions (from \textarabic{وَإِلَّا})
+\item \textarabic{عَصْرِ} → \textarabic{عَصْر} /ʕasˤar/ — Loss of case marking
+\item \textarabic{الدَّوْلَةِ} → \textarabic{الدَّوْلِة} /eddawle/ — Dialectal pronunciation
+\item \textarabic{الْأُمَوِيَّةِ} → \textarabic{الْأُمَوِيِّة} /l-ʔumawijje/ — Simplified pronunciation
+\item Overall: Loss of iʕrāb (case system) and some grammatical restructuring
+\end{itemize}
+
+\subsection{Alternative Dialectal Versions}
+
+\textbf{Egyptian Arabic:}\\
+\textarabic{إِحْنَا فِي عَصْر عَبَّاسِي وَلَّا عَصْر الدَّوْلَة الْأُمَوِيَّة؟}\\
+/ʔeħna fi ʕasˤr ʕabbaːsi walla ʕasˤr eddawla l-ʔumawejja/
+
+\textbf{Gulf Arabic:}\\
+\textarabic{نِحْنَا بِعَصْر عَبَّاسِي وِلَّا عَصْر الدَّوْلَة الْأُمَوِيَّة؟}\\
+/niħna biʕasˤir ʕabbaːsi willa ʕasˤir eddawla l-ʔumawejja/
+
+\textbf{Moroccan Arabic:}\\
+\textarabic{حْنَا فْ عَصْر عَبَّاسِي وَلَّا عَصْر الدَّوْلَة الْأُمَوِيَّة؟}\\
+/ħna f ʕasˤr ʕabbaːsi wəlla ʕasˤr eddəwla l-ʔumawejja/ 
+
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+\noindent
+\begin{tcolorbox}[breakable,colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Historical Context}]
+
+\textbf{Historical Significance:}
+\begin{itemize}
+\item \textbf{Umayyad Caliphate (661-750 CE):} First hereditary Islamic dynasty, capital Damascus, Arab aristocratic rule, rapid territorial expansion
+\item \textbf{Abbasid Caliphate (750-1258 CE):} Overthrew Umayyads, capital Baghdad, multicultural empire, Islamic Golden Age of science and culture
+\item The transition from Umayyad to Abbasid marked a shift from Arab tribal dominance to a more cosmopolitan, Persian-influenced administration
+\end{itemize}
+
+\textbf{Modern Political Usage:}
+This phrase is commonly used rhetorically in modern Arabic political discourse to:
+\begin{itemize}
+\item Criticize authoritarian or dynastic rule resembling medieval caliphates
+\item Question outdated governance models
+\item Express frustration with lack of modernization
+\item Suggest that current political systems are anachronistic
+\item Imply that leaders act like medieval monarchs rather than modern statesmen
+\end{itemize}
+
+\textbf{Rhetorical Function:}
+The question is typically rhetorical and sarcastic, implying:
+\begin{enumerate}
+\item Current governance resembles medieval dynasties
+\item Political systems haven't evolved since 7th-8th centuries
+\item Leaders behave like caliphs rather than elected officials
+\item Democratic institutions are absent or ineffective
+\end{enumerate}
+
+\textbf{Why These Two Dynasties?}
+The Umayyad-Abbasid contrast is meaningful because:
+\begin{itemize}
+\item Both represent different models of Islamic governance
+\item The Abbasid revolution (750 CE) was a major historical rupture
+\item They symbolize two distinct political philosophies
+\item Both ended centuries ago, emphasizing anachronism
+\item They're well-known reference points in Arab historical consciousness
+\end{itemize}
+
+\textbf{Grammatical Note on Asymmetry:}
+The phrase shows interesting asymmetry:
+\begin{itemize}
+\item First option: \textarabic{بِعَصْرٍ عَبَّاسِيٍّ} (indefinite) — "an Abbasid era" (generic)
+\item Second option: \textarabic{عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ} (definite) — "the era of the Umayyad state" (specific)
+\item This asymmetry may reflect historical perspective: multiple Abbasid periods vs. the singular Umayyad caliphate
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+
+\begin{enumerate}
+\item \textbf{Question Pattern:} \textarabic{هَلْ + pronoun + predicates with أَمْ} is standard for yes/no alternative questions
+
+\item \textbf{Dynasty Names:} Remember nisba formation:
+\begin{itemize}
+\item \textarabic{عَبَّاس} (ʕAbbās) + \textarabic{ـِيّ} → \textarabic{عَبَّاسِيّ} (Abbasid)
+\item \textarabic{أُمَيَّة} (Umayya) + \textarabic{ـِيّ} → \textarabic{أُمَوِيّ} (Umayyad, note the \textarabic{و} insertion)
+\end{itemize}
+
+\item \textbf{Chronological Order:} Umayyad (661-750) came BEFORE Abbasid (750-1258)
+\begin{itemize}
+\item Mnemonic: "U before A" (Umayyad before Abbasid)
+\end{itemize}
+
+\item \textbf{Capital Cities:} 
+\begin{itemize}
+\item Umayyad = Damascus (both start with "D" sound in Arabic: \textarabic{أُمَوِيّ/دِمَشْق})
+\item Abbasid = Baghdad (both have "b" sound: \textarabic{عَبَّاسِيّ/بَغْدَاد})
+\end{itemize}
+
+\item \textbf{Preposition \textarabic{بِ}:} When expressing "in an era," \textarabic{بِ} is more common than \textarabic{فِي} with \textarabic{عَصْر}
+
+\item \textbf{Alternative Questions:} Remember: \textarabic{أَمْ} for questions, \textarabic{أَوْ} for statements
+
+\item \textbf{Ellipsis Recognition:} Second predicate omits \textarabic{بِ} — this is normal in coordinated structures
+\end{enumerate}
+
+\subsection{Related Vocabulary Families}
+
+\begin{multicols}{2}
+
+\textbf{Time/Era Words:}\\
+\textarabic{عَصْر} — era /ʕasˤr/\\
+\textarabic{زَمَن} — time /zaman/\\
+\textarabic{عَهْد} — epoch /ʕahd/\\
+\textarabic{دَهْر} — age /dahr/\\
+\textarabic{حِقْبَة} — period /ħiqba/\\
+\textarabic{وَقْت} — time /waqt/\\
+\textarabic{أَوَان} — time /ʔawaːn/\\
+\textarabic{فَتْرَة} — period /fatra/\\
+
+\textbf{State/Dynasty Words:}\\
+\textarabic{دَوْلَة} — state /dawla/\\
+\textarabic{خِلَافَة} — caliphate /xilaːfa/\\
+\textarabic{إِمْبَرَاطُورِيَّة} — empire /ʔimbraːtˤuːrijja/\\
+\textarabic{مَمْلَكَة} — kingdom /mamlaka/\\
+\textarabic{سُلْطَنَة} — sultanate /sultˤana/\\
+\textarabic{حُكُومَة} — government /ħukuːma/\\
+\textarabic{نِظَام} — regime /nidˤaːm/\\
+\textarabic{إِمَارَة} — emirate /ʔimaːra/\\
+
+\textbf{Islamic Dynasties:}\\
+\textarabic{أُمَوِيّ} — Umayyad /ʔumawijj/\\
+\textarabic{عَبَّاسِيّ} — Abbasid /ʕabbaːsijj/\\
+\textarabic{فَاطِمِيّ} — Fatimid /faːtˤimijj/\\
+\textarabic{أَيُّوبِيّ} — Ayyubid /ʔajjuːbijj/\\
+\textarabic{مَمْلُوكِيّ} — Mamluk /mamluːkijj/\\
+\textarabic{عُثْمَانِيّ} — Ottoman /ʕuθmaːnijj/\\
+\textarabic{رَاشِدِيّ} — Rashidun /raːʃidijj/\\
+\textarabic{سَلْجُوقِيّ} — Seljuk /saldʒuːqijj/\\
+
+\textbf{Question Words:}\\
+\textarabic{هَلْ} — (yes/no) /hal/\\
+\textarabic{مَا} — what /maː/\\
+\textarabic{مَنْ} — who /man/\\
+\textarabic{مَتَى} — when /mataː/\\
+\textarabic{أَيْنَ} — where /ʔajna/\\
+\textarabic{كَيْفَ} — how /kajfa/\\
+\textarabic{لِمَاذَا} — why /limaːðaː/\\
+\textarabic{كَمْ} — how many /kam/\\
+
+\textbf{Conjunctions:}\\
+\textarabic{أَمْ} — or (questions) /ʔam/\\
+\textarabic{أَوْ} — or (statements) /ʔaw/\\
+\textarabic{وَ} — and /wa/\\
+\textarabic{فَ} — so, then /fa/\\
+\textarabic{لَكِنْ} — but /laːkin/\\
+\textarabic{بَلْ} — rather /bal/\\
+\textarabic{إِمَّا} — either /ʔimmaː/\\
+\textarabic{ثُمَّ} — then /θumma/\\
+
+\textbf{Historical Periods:}\\
+\textarabic{الْجَاهِلِيَّة} — pre-Islamic era /aldʒaːhillijja/\\
+\textarabic{صَدْر الْإِسْلَام} — early Islam /sˤadr al-ʔislaːm/\\
+\textarabic{الْعَصْر الذَّهَبِيّ} — Golden Age /alʕasˤr aðːðahabijj/\\
+\textarabic{الْقُرُون الْوُسْطَى} — Middle Ages /alquruːn alwustˤaː/\\
+\textarabic{عَصْر النَّهْضَة} — Renaissance /ʕasˤr annahðˤa/\\
+\textarabic{الْعَصْر الْحَدِيث} — modern era /alʕasˤr alħadiːθ/\\
+\end{multicols}
+
+\section{Grammatical Deep Dive}
+
+\subsection{Yes/No Questions with \textarabic{هَلْ}}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Function:} \textarabic{هَلْ} introduces polar questions requiring yes/no answers
+
+\textbf{Structure Patterns:}
+
+\begin{tabular}{|l|p{10cm}|}
+\hline
+\textbf{Pattern} & \textbf{Example} \\
+\hline
+\textarabic{هَلْ} + nominal sentence & \textarabic{هَلْ أَنْتَ طَالِبٌ؟} — Are you a student? \\
+\hline
+\textarabic{هَلْ} + verbal sentence & \textarabic{هَلْ ذَهَبْتَ إِلَى الْمَدْرَسَةِ؟} — Did you go to school? \\
+\hline
+\textarabic{هَلْ} + alternatives & \textarabic{هَلْ هَذَا أَمْ ذَاكَ؟} — Is it this or that? \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Expected Responses:}
+\begin{itemize}
+\item Affirmative: \textarabic{نَعَمْ} (yes), \textarabic{أَجَلْ} (yes, indeed), \textarabic{بَلَى} (yes, contradicting negative)
+\item Negative: \textarabic{لَا} (no), \textarabic{كَلَّا} (no, certainly not)
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Comparison with Other Interrogatives:}
+\begin{itemize}
+\item \textarabic{هَلْ} — yes/no questions
+\item \textarabic{أَ} — general interrogative particle (less common in MSA)
+\item \textarabic{مَا} — what questions
+\item \textarabic{مَنْ} — who questions
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Alternative Questions with \textarabic{أَمْ}}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Two Types of \textarabic{أَمْ} Questions:}
+
+
+\textbf{1. Connected Alternative (\textarabic{أَمْ الْمُتَّصِلَة}):}\\
+Used with initial \textarabic{هَلْ} or \textarabic{أَ}, offers two alternatives:
+\begin{itemize}
+\item \textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\item Are we in an Abbasid era or (in) the era of the Umayyad state?
+\end{itemize}
+
+\textbf{2. Disconnected Alternative (\textarabic{أَمْ الْمُنْقَطِعَة}):}\\
+Used independently, means "rather, but rather":
+\begin{itemize}
+\item \textarabic{هَلْ نَجَحْتَ، أَمْ أَنْتَ لَمْ تَدْرُسْ؟}
+\item Did you succeed, or did you not study?
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Ellipsis with \textarabic{أَمْ}:} \\
+Common to omit repeated elements in the second alternative:
+\begin{itemize}
+\item Full: \textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ [نَحْنُ] بِعَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\item Actual: \textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Nisba Adjectives: Formation and Usage}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Definition:} Nisba adjectives (\textarabic{النِّسْبَة}) relate nouns to places, tribes, times, or abstract concepts by adding suffix \textarabic{ـِيّ} /-ijj/ (masc.) or \textarabic{ـِيَّة} /-ijja/ (fem.)
+
+\textbf{Formation Rules:}
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Base Type} & \textbf{Process} & \textbf{Example} \\
+\hline
+Regular noun & Add \textarabic{ـِيّ} & \textarabic{مِصْر} → \textarabic{مِصْرِيّ} (Egyptian) \\
+\hline
+Tāʔ marbūṭah & Remove \textarabic{ة}, add \textarabic{ـِيّ} & \textarabic{مَكَّة} → \textarabic{مَكِّيّ} (Meccan) \\
+\hline
+Alif maqṣūrah & Change \textarabic{ى} to \textarabic{وِيّ} & \textarabic{فَتْوَى} → \textarabic{فَتْوَوِيّ} (advisory) \\
+\hline
+Hollow verb & Insert \textarabic{و} or \textarabic{ي} & \textarabic{أُمَيَّة} → \textarabic{أُمَوِيّ} (Umayyad) \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Historical Dynasty Nisbas:}
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Founder/Ancestor} & \textbf{Nisba} & \textbf{English} \\
+\hline
+\textarabic{عَبَّاس} & \textarabic{عَبَّاسِيّ} & Abbasid \\
+\hline
+\textarabic{أُمَيَّة} & \textarabic{أُمَوِيّ} & Umayyad \\
+\hline
+\textarabic{فَاطِمَة} & \textarabic{فَاطِمِيّ} & Fatimid \\
+\hline
+\textarabic{أَيُّوب} & \textarabic{أَيُّوبِيّ} & Ayyubid \\
+\hline
+\textarabic{عُثْمَان} & \textarabic{عُثْمَانِيّ} & Ottoman \\
+\hline
+\textarabic{رَشِيد} & \textarabic{رَاشِدِيّ} & Rashidun \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Agreement Pattern:}\\
+Nisba adjectives follow standard adjective agreement rules:
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Modified Noun} & \textbf{Nisba Form} & \textbf{Example} \\
+\hline
+\textarabic{عَصْرٌ} (masc. sing.) & \textarabic{عَبَّاسِيٌّ} & \textarabic{عَصْرٌ عَبَّاسِيٌّ} \\
+\hline
+\textarabic{دَوْلَةٌ} (fem. sing.) & \textarabic{عَبَّاسِيَّةٌ} & \textarabic{دَوْلَةٌ عَبَّاسِيَّةٌ} \\
+\hline
+\textarabic{عُصُورٌ} (plural) & \textarabic{عَبَّاسِيَّةٌ} & \textarabic{عُصُورٌ عَبَّاسِيَّةٌ} \\
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\subsection{Iḍāfah Construction: Definite vs. Indefinite}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Comparison of Two Structures in Our Phrase:}
+
+\textbf{Structure 1: Indefinite}\\
+\textarabic{بِعَصْرٍ عَبَّاسِيٍّ} — "in an Abbasid era"
+
+\begin{itemize}
+\item \textbf{Type:} Prepositional phrase + indefinite noun + indefinite adjective
+\item \textbf{Meaning:} Generic reference to any Abbasid period
+\item \textbf{Case marking:} Both noun and adjective show tanwīn
+\item \textbf{Definiteness:} Completely indefinite
+\end{itemize}
+
+\textbf{Structure 2: Definite Iḍāfah}\\
+\textarabic{عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ} — "the era of the Umayyad state"
+
+\begin{itemize}
+\item \textbf{Type:} Iḍāfah construction with definite second term
+\item \textbf{Components:}
+  \begin{itemize}
+  \item Muḍāf: \textarabic{عَصْرِ} (first term, no \textarabic{ال}, no tanwīn)
+  \item Muḍāf ilayh: \textarabic{الدَّوْلَةِ} (second term, definite)
+  \item Adjective: \textarabic{الْأُمَوِيَّةِ} (agrees with \textarabic{الدَّوْلَةِ})
+  \end{itemize}
+\item \textbf{Meaning:} Specific reference to the historical Umayyad state
+\item \textbf{Definiteness:} Whole construction is definite (through second term)
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Iḍāfah Rules Illustrated:}
+\begin{enumerate}
+\item First term (\textarabic{عَصْرِ}) never takes \textarabic{ال} or tanwīn
+\item First term's case depends on syntactic role (here: genitive after \textarabic{بِ})
+\item Second term (\textarabic{الدَّوْلَةِ}) must be genitive
+\item Second term's definiteness determines whole construction's definiteness
+\item Adjectives agree with the noun they modify in all features
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Adjective Placement Options:}
+
+\begin{tabular}{|l|p{6cm}|l|}
+\hline
+\textbf{Position} & \textbf{Example} & \textbf{What it modifies} \\
+\hline
+After entire iḍāfah & \textarabic{عَصْرُ الدَّوْلَةِ الْكَبِيرُ} & First term (\textarabic{عَصْر}) \\
+\hline
+After second term & \textarabic{عَصْرُ الدَّوْلَةِ الْكَبِيرَةِ} & Second term (\textarabic{دَوْلَة}) \\
+\hline
+\end{tabular}
+
+In our phrase: \textarabic{الْأُمَوِيَّةِ} modifies \textarabic{الدَّوْلَةِ} (feminine, genitive, definite)
+\end{tcolorbox}
+
+\subsection{Prepositional Phrases in Predicates}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Using Prepositions as Predicates:}
+
+In nominal sentences, prepositional phrases commonly function as predicates:
+
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Structure} & \textbf{Arabic} & \textbf{English} \\
+\hline
+Subject + \textarabic{فِي} + noun & \textarabic{الْكِتَابُ فِي الْحَقِيبَةِ} & The book is in the bag \\
+\hline
+Subject + \textarabic{عَلَى} + noun & \textarabic{الْقَلَمُ عَلَى الطَّاوِلَةِ} & The pen is on the table \\
+\hline
+Subject + \textarabic{بِ} + noun & \textarabic{نَحْنُ بِعَصْرٍ جَدِيدٍ} & We are in a new era \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Why \textarabic{بِ} Instead of \textarabic{فِي}?}
+
+Both can mean "in," but with nuances:
+\begin{itemize}
+\item \textarabic{فِي} — more literal location: \textarabic{فِي الْبَيْتِ} (in the house)
+\item \textarabic{بِ} — more abstract, metaphorical: \textarabic{بِعَصْرٍ} (in an era/circumstances)
+\item \textarabic{بِ} — emphasis on circumstance or state: \textarabic{بِحَالَةٍ جَيِّدَةٍ} (in good condition)
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Common Prepositions Governing Genitive:}
+
+\begin{multicols}{3}
+\textarabic{بِ} /bi/ — with, in\\
+\textarabic{مِنْ} /min/ — from\\
+\textarabic{إِلَى} /ʔilaː/ — to\\
+\textarabic{عَلَى} /ʕalaː/ — on\\
+\textarabic{فِي} /fiː/ — in\\
+\textarabic{عَنْ} /ʕan/ — about\\
+\textarabic{لِ} /li/ — for\\
+\textarabic{كَ} /ka/ — like\\
+\textarabic{مَعَ} /maʕa/ — with\\
+\end{multicols}
+
+All prepositions require the following noun to be in genitive case.
+\end{tcolorbox}
+
+\section{Practice Exercises}
+
+\subsection{Translation Practice}
+
+Translate the following into Arabic using similar structures:
+
+\begin{enumerate}
+\item Are we in a modern era or the era of the Middle Ages?
+\vspace{2em}
+
+\item Are you in a Fatimid state or the state of the Mamluks?
+\vspace{2em}
+
+\item Is this an Ottoman period or the period of the Rashidun Caliphate?
+\vspace{2em}
+
+\item Are they in an Islamic time or the time of ignorance?
+\vspace{2em}
+\end{enumerate}
+
+\subsection{Grammatical Transformation}
+
+Transform the original phrase in the following ways:
+
+\begin{enumerate}
+\item Change to past tense using \textarabic{كَانَ}:
+\vspace{2em}
+
+\item Change subject from "we" to "you (masc. pl.)":
+\vspace{2em}
+
+\item Make both alternatives indefinite:
+\vspace{2em}
+
+\item Add temporal context (yesterday, today, tomorrow):
+\vspace{2em}
+\end{enumerate}
+
+\subsection{Nisba Formation Practice}
+
+Form nisba adjectives from the following nouns:
+
+\begin{enumerate}
+\item \textarabic{مِصْر} (Egypt) → \underline{\hspace{3cm}}
+
+\item \textarabic{سُورِيَا} (Syria) → \underline{\hspace{3cm}}
+
+\item \textarabic{الْعِرَاق} (Iraq) → \underline{\hspace{3cm}}
+
+\item \textarabic{فَاطِمَة} (Fatima) → \underline{\hspace{3cm}}
+
+\item \textarabic{الْأَنْدَلُس} (Andalusia) → \underline{\hspace{3cm}}
+\end{enumerate}
+
+\subsection{Case Analysis}
+
+Identify the grammatical case of each underlined word and explain why:
+
+\begin{enumerate}
+\item \textarabic{هَلْ نَحْنُ بِ\underline{عَصْرٍ} \underline{عَبَّاسِيٍّ}؟}\\
+Case and reason: \underline{\hspace{8cm}}
+
+\item \textarabic{عَصْرِ \underline{الدَّوْلَةِ} \underline{الْأُمَوِيَّةِ}}\\
+Case and reason: \underline{\hspace{8cm}}
+
+\item \textarabic{هَلْ \underline{نَحْنُ} فِي بَيْتٍ؟}\\
+Case and reason: \underline{\hspace{8cm}}
+\end{enumerate}
+
+\section{Answers to Practice Exercises}
+
+\subsection{Translation Practice — Suggested Answers}
+
+\begin{enumerate}
+\item \textarabic{هَلْ نَحْنُ بِعَصْرٍ حَدِيثٍ أَمْ عَصْرِ الْقُرُونِ الْوُسْطَى؟}\\
+/hal naħnu biʕasˤrin ħadiːθin ʔam ʕasˤri lquruːni lwustˤaː/
+
+\item \textarabic{هَلْ أَنْتَ بِدَوْلَةٍ فَاطِمِيَّةٍ أَمْ دَوْلَةِ الْمَمَالِيكِ؟}\\
+/hal ʔanta bidawlatin faːtˤimijjatin ʔam dawlati lmamaːliːki/
+
+\item \textarabic{هَلْ هَذَا عَهْدٌ عُثْمَانِيٌّ أَمْ عَهْدُ الْخِلَافَةِ الرَّاشِدَةِ؟}\\
+/hal haːðaː ʕahdun ʕuθmaːnijjun ʔam ʕahdu lxilaːfati rraːʃidati/
+
+\item \textarabic{هَلْ هُمْ فِي زَمَنٍ إِسْلَامِيٍّ أَمْ زَمَنِ الْجَاهِلِيَّةِ؟}\\
+/hal hum fiː zamanin ʔislaːmijjin ʔam zamani ldʒaːhillijjati/
+\end{enumerate}
+
+\subsection{Grammatical Transformation — Answers}
+
+\begin{enumerate}
+\item \textbf{Past tense with \textarabic{كَانَ}:}\\
+\textarabic{هَلْ كُنَّا بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+/hal kunnaː biʕasˤrin ʕabbaːsijjin ʔam ʕasˤri ddawlati l-ʔumawijjati/\\
+Were we in an Abbasid era or the era of the Umayyad state?
+
+\item \textbf{Subject "you" (masc. pl.):}\\
+\textarabic{هَلْ أَنْتُمْ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+/hal ʔantum biʕasˤrin ʕabbaːsijjin ʔam ʕasˤri ddawlati l-ʔumawijjati/\\
+Are you (pl.) in an Abbasid era or the era of the Umayyad state?
+
+\item \textbf{Both alternatives indefinite:}\\
+\textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرٍ أُمَوِيٍّ؟}\\
+/hal naħnu biʕasˤrin ʕabbaːsijjin ʔam ʕasˤrin ʔumawijjin/\\
+Are we in an Abbasid era or an Umayyad era?
+
+\item \textbf{With temporal context:}\\
+\textarabic{هَلْ نَحْنُ الْيَوْمَ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+/hal naħnu ljawma biʕasˤrin ʕabbaːsijjin ʔam ʕasˤri ddawlati l-ʔumawijjati/\\
+Are we today in an Abbasid era or the era of the Umayyad state?
+\end{enumerate}
+
+\subsection{Nisba Formation — Answers}
+
+\begin{enumerate}
+\item \textarabic{مِصْر} → \textbf{\textarabic{مِصْرِيّ}} /misˤrijj/ (Egyptian)
+
+\item \textarabic{سُورِيَا} → \textbf{\textarabic{سُورِيّ}} /suːrijj/ (Syrian)
+
+\item \textarabic{الْعِرَاق} → \textbf{\textarabic{عِرَاقِيّ}} /ʕiraːqijj/ (Iraqi)
+
+\item \textarabic{فَاطِمَة} → \textbf{\textarabic{فَاطِمِيّ}} /faːtˤimijj/ (Fatimid)
+
+\item \textarabic{الْأَنْدَلُس} → \textbf{\textarabic{أَنْدَلُسِيّ}} /ʔandalusijj/ (Andalusian)
+\end{enumerate}
+
+\subsection{Case Analysis — Answers}
+
+\begin{enumerate}
+\item \textarabic{عَصْرٍ} and \textarabic{عَبَّاسِيٍّ}: \textbf{Genitive (majrūr)}\\
+Reason: Both are in genitive case because they follow the preposition \textarabic{بِ}. The adjective \textarabic{عَبَّاسِيٍّ} agrees with \textarabic{عَصْرٍ} in case, gender, number, and definiteness.
+
+\item \textarabic{الدَّوْلَةِ} and \textarabic{الْأُمَوِيَّةِ}: \textbf{Genitive (majrūr)}\\
+Reason: \textarabic{الدَّوْلَةِ} is genitive as the second term (muḍāf ilayh) of the iḍāfah construction. \textarabic{الْأُمَوِيَّةِ} is genitive because it agrees with \textarabic{الدَّوْلَةِ}.
+
+\item \textarabic{نَحْنُ}: \textbf{Nominative (marfūʕ)}\\
+Reason: As an independent pronoun serving as the subject (mubtadaʔ) of a nominal sentence, it is in the nominative case (though pronouns don't show case inflection, they are considered nominative by position).
+\end{enumerate}
+
+\section{Extended Historical Context}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Detailed Historical Background},breakable]
+
+\subsection*{The Umayyad Caliphate (661-750 CE)}
+
+\textbf{Key Features:}
+\begin{itemize}
+\item \textbf{Founder:} Muʕāwiyah ibn Abī Sufyān
+\item \textbf{Capital:} Damascus (\textarabic{دِمَشْق})
+\item \textbf{Territory:} Expanded from Spain to Central Asia
+\item \textbf{Administration:} Arab aristocratic rule, hereditary succession
+\item \textbf{Language:} Arabization of administration
+\item \textbf{Legacy:} Spread of Islam and Arabic language
+\end{itemize}
+
+\textbf{Notable Rulers:}
+\begin{itemize}
+\item Muʕāwiyah I (661-680) — Founder
+\item ʕAbd al-Malik (685-705) — Arabization, Dome of the Rock
+\item al-Walīd I (705-715) — Greatest expansion, Umayyad Mosque
+\item ʕUmar II (717-720) — Pious ruler, reforms
+\item Hishām (724-743) — Administrative consolidation
+\end{itemize}
+
+\subsection*{The Abbasid Caliphate (750-1258 CE)}
+
+\textbf{Key Features:}
+\begin{itemize}
+\item \textbf{Founder:} Abū al-ʕAbbās as-Saffāḥ
+\item \textbf{Capital:} Baghdad (\textarabic{بَغْدَاد}) — "City of Peace"
+\item \textbf{Territory:} Initially similar to Umayyad, gradually fragmented
+\item \textbf{Administration:} Persian-influenced, bureaucratic, multicultural
+\item \textbf{Culture:} Islamic Golden Age — science, philosophy, literature
+\item \textbf{Legacy:} Cultural and intellectual flourishing
+\end{itemize}
+
+\textbf{Notable Rulers:}
+\begin{itemize}
+\item Abū Jaʕfar al-Manṣūr (754-775) — Founded Baghdad
+\item Hārūn ar-Rashīd (786-809) — Golden Age apex, "Arabian Nights"
+\item al-Maʔmūn (813-833) — House of Wisdom, translation movement
+\item al-Muʕtaṣim (833-842) — Military reforms, Turkish guards
+\item al-Mutawakkil (847-861) — Last strong caliph before fragmentation
+\end{itemize}
+
+\subsection*{The Abbasid Revolution (750 CE)}
+
+\textbf{Causes:}
+\begin{itemize}
+\item Resentment of Umayyad Arab supremacy
+\item Persian (mawālī) dissatisfaction with second-class status
+\item Religious opposition from Shīʕa and Khārijites
+\item Economic grievances in outlying provinces
+\item Propaganda from Abbasid movement in Khurasan
+\end{itemize}
+
+\textbf{Consequences:}
+\begin{itemize}
+\item Near-complete elimination of Umayyad family
+\item Shift of power from Syria to Iraq
+\item Increased Persian cultural influence
+\item More inclusive, less Arab-centric empire
+\item Foundation for Islamic Golden Age
+\end{itemize}
+
+\subsection*{Modern Political Usage}
+
+This phrase has become a rhetorical device in contemporary Arab political discourse:
+
+\textbf{Common contexts:}
+\begin{itemize}
+\item Criticizing hereditary rule and dynastic politics
+\item Questioning lack of democratic institutions
+\item Highlighting outdated governance models
+\item Expressing frustration with authoritarian leadership
+\item Comparing modern states to medieval caliphates
+\end{itemize}
+
+\textbf{Implied criticism:}
+\begin{itemize}
+\item Political systems haven't evolved in 1,300+ years
+\item Leaders behave like absolute monarchs
+\item Governance resembles tribal/dynastic models
+\item Absence of modern democratic principles
+\item Succession based on family, not merit or election
+\end{itemize}
+\end{tcolorbox}
+
+\section{Additional Linguistic Notes}
+
+\subsection{Phonological Features}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Important Pronunciation Points:}
+
+\begin{enumerate}
+\item \textbf{Pharyngealized consonants:}
+\begin{itemize}
+\item \textarabic{ع} /ʕ/ — pharyngeal fricative (not in English)
+\item \textarabic{ص} /sˤ/ — emphatic s (in \textarabic{عَصْر})
+\end{itemize}
+
+\item \textbf{Doubled consonants in nisba:}
+\begin{itemize}
+\item \textarabic{عَبَّاسِيّ} — note gemination of /b/ and /j/
+\item Must pronounce both instances distinctly
+\end{itemize}
+
+\item \textbf{Case ending pronunciation:}
+\begin{itemize}
+\item Formal MSA: \textarabic{عَصْرٍ عَبَّاسِيٍّ} /ʕasˤrin ʕabbaːsijjin/
+\item Pausal form: \textarabic{عَصْر عَبَّاسِيّ} /ʕasˤr ʕabbaːsijj/
+\item Modern reading often omits short final vowels
+\end{itemize}
+
+\item \textbf{Definite article assimilation:}
+\begin{itemize}
+\item \textarabic{الدَّوْلَة} /addawla/ not */aldawla/
+\item \textarabic{د} is a "sun letter" — causes assimilation
+\item \textarabic{الْأُمَوِيَّة} /al-ʔumawijja/ — \textarabic{أ} is "moon letter"
+\end{itemize}
+\end{enumerate}
+\end{tcolorbox}
+
+\subsection{Stylistic Variations}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Alternative Ways to Express the Same Question:}
+
+\begin{enumerate}
+\item \textbf{More formal/literary:}\\
+\textarabic{أَنَحْنُ فِي عَصْرٍ عَبَّاسِيٍّ أَمْ فِي عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+(Using \textarabic{أَ} instead of \textarabic{هَلْ}, repeating \textarabic{فِي})
+
+\item \textbf{With emphasis:}\\
+\textarabic{هَلْ نَحْنُ حَقًّا بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+(Adding \textarabic{حَقًّا} "really, truly")
+
+\item \textbf{Rhetorical intensification:}\\
+\textarabic{فِي أَيِّ عَصْرٍ نَحْنُ؟ عَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+(In which era are we? An Abbasid era or the era of the Umayyad state?)
+
+\item \textbf{With temporal marker:}\\
+\textarabic{هَلْ مَا زِلْنَا فِي عَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+(Are we still in an Abbasid era or the era of the Umayyad state?)
+
+\item \textbf{Negative form:}\\
+\textarabic{أَلَسْنَا بِعَصْرٍ حَدِيثٍ بَلْ بِعَصْرٍ عَبَّاسِيٍّ أَوْ أُمَوِيٍّ؟}\\
+(Are we not in a modern era but rather in an Abbasid or Umayyad era?)
+\end{enumerate}
+\end{tcolorbox}
+
+%\clearpage
+\section{Final Summary}
+\noindent
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,breakable]
+\textbf{Key Takeaways from This Phrase:}
+
+\textbf{Grammatical Structures Mastered:}
+\begin{itemize}
+\item Yes/no questions with \textarabic{هَلْ}
+\item Alternative questions with \textarabic{أَمْ}
+\item Prepositional phrases as predicates
+\item Iḍāfah constructions (definite and indefinite)
+\item Nisba adjective formation and agreement
+\item Ellipsis in coordinate structures
+\item Case assignment in complex phrases
+\end{itemize}
+
+\textbf{Vocabulary Domains:}
+\begin{itemize}
+\item Time and era vocabulary
+\item Islamic dynasties and historical periods
+\item Political and governance terminology
+\item Question formation patterns
+\item Prepositional usage
+\end{itemize}
+
+\textbf{Cultural Knowledge:}
+\begin{itemize}
+\item Umayyad vs. Abbasid historical context
+\item Modern rhetorical usage in political discourse
+\item Understanding of anachronism as criticism
+\item Arab historical consciousness
+\item Contemporary political commentary
+\end{itemize}
+
+\textbf{Practical Application:}
+\begin{itemize}
+\item Understanding modern Arab political rhetoric
+\item Forming alternative questions in Arabic
+\item Using historical references metaphorically
+\item Constructing complex nominal sentences
+\item Applying nisba adjectives correctly
+\end{itemize}
+\end{tcolorbox}
+
+\end{document}

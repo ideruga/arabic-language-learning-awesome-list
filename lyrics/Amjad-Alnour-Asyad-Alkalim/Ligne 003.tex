@@ -1,0 +1,743 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\newfontfamily\boxdrawfont{DejaVu Sans Mono}[Scale=0.9]
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{What Use Is Speaking Words from Quraysh Times?}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large What Use Is Speaking Words from Quraysh Times?\\
+\normalsize \textarabic{ما جدوى النطق بكلمات من زمن قريش محكية}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diacritics},breakable]
+\centering
+\Large\textarabic{مَا جَدْوَى النُّطْقِ بِكَلِمَاتٍ مِنْ زَمَنِ قُرَيْشٍ مُحَكِّيَةٍ؟}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} What usefulness the-speaking with-words from time Quraysh spoken?\\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} What is the use of speaking words from the time of Quraysh that are spoken?
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{مَا} — /maː/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & what \\
+\textbf{Root} & \textarabic{م-ا} (interrogative particle, not from triliteral root) \\
+\textbf{Pattern} & Independent interrogative particle \\
+\textbf{Grammar} & Interrogative particle introducing questions about identity, nature, or quality \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{مَا اسْمُكَ؟} — What is your name? /maː sːmuka/\\
+2. \textarabic{مَا هَذَا؟} — What is this? /maː haːðaː/\\
+3. \textarabic{مَا الَّذِي حَدَثَ؟} — What happened? /maː llaːðiː ħadaθa/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{مَاذَا} (what - with \textarabic{ذَا}), \textarabic{أَيّ} (which/what kind) \\
+\textbf{Etymology} & From Proto-Semitic *mā (interrogative), related to Hebrew \texthebrew{מָה} (mah) "what" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Usage Notes}
+\begin{itemize}
+  \item \textarabic{مَا} can function as interrogative "what" or as negation "not" (context-dependent)
+  \item When interrogative, it can be followed by nouns or verbal sentences
+  \item Can combine with other particles: \textarabic{مَاذَا} (maːðaː), \textarabic{لِمَا} (limaː "why")
+  \item As negation particle (different usage): \textarabic{مَا قَالَ} "he did not say"
+\end{itemize}
+
+\subsection{\textarabic{جَدْوَى} — /dʒadwaː/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & usefulness, utility, benefit \\
+\textbf{Root} & \textarabic{ج-د-و} (dʒ-d-w) \\
+\textbf{Pattern} & \textarabic{فَعْلَى} (faʕlaː) — feminine noun pattern \\
+\textbf{Grammar} & Feminine noun, nominative case (subject of nominal sentence), indefinite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لَا جَدْوَى مِنَ الْبُكَاءِ} — There is no use in crying /laː dʒadwaː mina lbukaːʔi/\\
+2. \textarabic{مَا جَدْوَى هَذَا الْعَمَلِ؟} — What is the benefit of this work? /maː dʒadwaː haːða lʕamali/\\
+3. \textarabic{لَيْسَ لَهُ جَدْوَى} — It has no usefulness /lajsa lahu dʒadwaː/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{فَائِدَة} (benefit), \textarabic{نَفْع} (utility), \textarabic{جَدِير} (worthwhile) \\
+\textbf{Etymology} & From root \textarabic{ج-د-و} meaning "to be beneficial, to avail" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{جَدْوَى} /dʒadwaː/ & \textarabic{الْجَدْوَى} /aldʒadwaː/ \\
+\hline
+Accusative & \textarabic{جَدْوَى} /dʒadwaː/ & \textarabic{الْجَدْوَى} /aldʒadwaː/ \\
+\hline
+Genitive & \textarabic{جَدْوَى} /dʒadwaː/ & \textarabic{الْجَدْوَى} /aldʒadwaː/ \\
+\hline
+\end{tabular}
+\vspace{0.5em}
+
+\textit{Note: As a feminine singular noun ending in alif maqṣūrah (\textarabic{ى}), it remains unchanged across all three cases.}
+
+\subsection{\textarabic{النُّطْقِ} — /nnuːtˤqi/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the speaking, the pronunciation, the utterance \\
+\textbf{Root} & \textarabic{ن-ط-ق} (n-tˤ-q) \\
+\textbf{Pattern} & \textarabic{فُعْل} (fuʕl) — verbal noun (maṣdar) pattern \\
+\textbf{Grammar} & Masculine noun, genitive case (governed by \textarabic{جَدْوَى} in iḍāfah construction), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{النُّطْقُ الصَّحِيحُ مُهِمٌّ} — Correct pronunciation is important /annuːtˤqu sˤsˤaħiːħu muhimmun/\\
+2. \textarabic{يَصْعُبُ النُّطْقُ بِهَذِهِ الْكَلِمَةِ} — This word is difficult to pronounce /jasʕubu nnuːtˤqu bihaːðihi lkalimati/\\
+3. \textarabic{مَلَكَةُ النُّطْقِ} — The faculty of speech /malaakatu nnuːtˤqi/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{كَلَام} (speech), \textarabic{تَلَفُّظ} (articulation), \textarabic{لَفْظ} (utterance) \\
+\textbf{Etymology} & From root meaning "to speak, to utter, to articulate" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Related Verbal Forms}
+\par{\large \textbf{Verbal Noun (Maṣdar)}: \textarabic{نُطْق} /nutˤq/}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masc. sing.} & \textarabic{نَطَقَ} /natˤaqa/ & \textarabic{يَنْطِقُ} /jantˤiqu/ \\
+\hline
+\textbf{3rd person fem. sing.} & \textarabic{نَطَقَتْ} /natˤaqat/ & \textarabic{تَنْطِقُ} /tantˤiqu/ \\
+\hline
+\textbf{3rd person masc. plural} & \textarabic{نَطَقُوا} /natˤaquː/ & \textarabic{يَنْطِقُونَ} /jantˤiquːna/ \\
+\hline
+\textbf{2nd person masc. sing.} & \textarabic{نَطَقْتَ} /natˤaqta/ & \textarabic{تَنْطِقُ} /tantˤiqu/ \\
+\hline
+\textbf{1st person singular} & \textarabic{نَطَقْتُ} /natˤaqtu/ & \textarabic{أَنْطِقُ} /ʔantˤiqu/ \\
+\hline
+\end{longtable}
+
+\subsection{\textarabic{بِكَلِمَاتٍ} — /bikalimaːtin/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & with words \\
+\textbf{Root} & \textarabic{ك-ل-م} (k-l-m) \\
+\textbf{Pattern} & \textarabic{فَعِلَة} (faʕilah) — plural: \textarabic{فَعِلَات} (faʕilaːt) \\
+\textbf{Grammar} & Preposition \textarabic{بِ} + feminine noun plural, genitive case (after preposition), indefinite with tanwīn \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{كَلِمَةٌ وَاحِدَةٌ} — One word /kalimatun waːħidatun/\\
+2. \textarabic{تَكَلَّمَ بِكَلِمَاتٍ جَمِيلَةٍ} — He spoke with beautiful words /takallama bikalimaːtin dʒamiːlatin/\\
+3. \textarabic{الْكَلِمَاتُ الثَّلَاثُ} — The three words /alkalimaːtu θθalaːθu/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{أَلْفَاظ} (words/expressions), \textarabic{عِبَارَات} (phrases), \textarabic{مُفْرَدَات} (vocabulary) \\
+\textbf{Etymology} & From root meaning "to speak, to wound"; related to Hebrew \texthebrew{כָּלַם} "to humiliate, wound" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension of \textarabic{كَلِمَة}}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Number} & \textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+\multirow{3}{*}{Singular} & Nominative & \textarabic{كَلِمَةٌ} /kalimatun/ & \textarabic{الْكَلِمَةُ} /alkalimatu/ \\
+& Accusative & \textarabic{كَلِمَةً} /kalimatan/ & \textarabic{الْكَلِمَةَ} /alkalimata/ \\
+& Genitive & \textarabic{كَلِمَةٍ} /kalimatin/ & \textarabic{الْكَلِمَةِ} /alkalimati/ \\
+\hline
+\multirow{3}{*}{Plural} & Nominative & \textarabic{كَلِمَاتٌ} /kalimaːtun/ & \textarabic{الْكَلِمَاتُ} /alkalimaːtu/ \\
+& Accusative & \textarabic{كَلِمَاتٍ} /kalimaːtin/ & \textarabic{الْكَلِمَاتِ} /alkalimaːti/ \\
+& Genitive & \textarabic{كَلِمَاتٍ} /kalimaːtin/ & \textarabic{الْكَلِمَاتِ} /alkalimaːti/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{مِنْ} — /min/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & from \\
+\textbf{Root} & Preposition (not from triliteral root) \\
+\textbf{Pattern} & Independent preposition \\
+\textbf{Grammar} & Preposition indicating source, origin, or partitive meaning \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{جِئْتُ مِنَ الْبَيْتِ} — I came from the house /dʒiʔtu mina lbajti/\\
+2. \textarabic{هَذَا مِنْ فَضْلِ اللهِ} — This is from God's bounty /haːðaː min fadˤli llaːhi/\\
+3. \textarabic{وَاحِدٌ مِنَّا} — One of us /waːħidun minnaː/
+}} \\
+\midrule
+\textbf{Synonyms} & (context-dependent): \textarabic{عَنْ} (from/about), \textarabic{عِنْدَ} (from/at) \\
+\textbf{Etymology} & From Proto-Semitic *min; Hebrew \texthebrew{מִן} (min) "from" \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{زَمَنِ} — /zamani/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & time (of) \\
+\textbf{Root} & \textarabic{ز-م-ن} (z-m-n) \\
+\textbf{Pattern} & \textarabic{فَعَل} (faʕal) \\
+\textbf{Grammar} & Masculine noun, genitive case (after preposition \textarabic{مِنْ}), first term of iḍāfah (construct state) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{فِي ذَلِكَ الزَّمَانِ} — In that time /fiː ðaːlika zzamaːni/\\
+2. \textarabic{مَرَّ زَمَنٌ طَوِيلٌ} — A long time passed /marra zamanun tˤawiːlun/\\
+3. \textarabic{زَمَنُ الْعَرَبِ} — The time of the Arabs /zamanu lʕarabi/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{وَقْت} (time), \textarabic{عَصْر} (era/age), \textarabic{دَهْر} (age/epoch) \\
+\textbf{Etymology} & From root meaning "time, era, period" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{زَمَنٌ} /zamanun/ & \textarabic{الزَّمَنُ} /azzamanu/ \\
+\hline
+Accusative & \textarabic{زَمَنًا} /zamanan/ & \textarabic{الزَّمَنَ} /azzamana/ \\
+\hline
+Genitive & \textarabic{زَمَنٍ} /zamanin/ & \textarabic{الزَّمَنِ} /azzamani/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{قُرَيْشٍ} — /qurajiʃin/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & Quraysh (the dominant Arabian tribe at the time of Prophet Muhammad) \\
+\textbf{Root} & \textarabic{ق-ر-ش} (q-r-ʃ) \\
+\textbf{Pattern} & \textarabic{فُعَيْل} (fuʕajl) — diminutive pattern \\
+\textbf{Grammar} & Proper noun (tribe name), feminine, genitive case (second term of iḍāfah), diptote (no tanwīn) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{قُرَيْشٌ قَبِيلَةٌ عَرَبِيَّةٌ} — Quraysh is an Arab tribe /qurajiʃun qabiːlatun ʕarabijjatun/\\
+2. \textarabic{لُغَةُ قُرَيْشٍ} — The language of Quraysh /luɣatu qurajiʃin/\\
+3. \textarabic{كَانَتْ قُرَيْشٌ تَسْكُنُ مَكَّةَ} — Quraysh used to inhabit Mecca /kaːnat qurajiʃun taskunu makkah/
+}} \\
+\midrule
+\textbf{Cultural Note} & The Quraysh tribe controlled Mecca and the Kaaba. Prophet Muhammad was from Quraysh. The Quranic Arabic is based on the Qurayshi dialect, considered the purest form of Arabic. \\
+\textbf{Etymology} & Possibly from root meaning "to gather, collect" or diminutive form; various etymological theories exist \\
+\bottomrule
+\end{tabular}
+
+\subsection{\textarabic{مُحَكِّيَةٍ} — /muħakkijatin/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & spoken, narrated, recounted \\
+\textbf{Root} & \textarabic{ح-ك-ي} (ħ-k-j) \\
+\textbf{Pattern} & \textarabic{مُفَعِّلَة} (mufaʕʕilah) — Form II active participle, feminine \\
+\textbf{Grammar} & Active participle, feminine plural genitive (agreeing with \textarabic{كَلِمَاتٍ}), indefinite with tanwīn \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{حَكَى لِي قِصَّةً} — He narrated a story to me /ħakaː liː qisˤsˤatan/\\
+2. \textarabic{يُحَكِّي التَّارِيخَ} — He recounts history /juħakkiː ttaːriːxa/\\
+3. \textarabic{الْقِصَّةُ الْمُحَكِّيَّةُ} — The narrated story /alqisˤsˤatu lmuħakkijjatu/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{مَرْوِيَّة} (narrated), \textarabic{مَنْقُولَة} (transmitted), \textarabic{مُتَحَدَّث بِهَا} (spoken) \\
+\textbf{Etymology} & From root meaning "to tell, narrate, imitate, speak" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Form II Conjugation of \textarabic{حَكَّى}}
+\par{\large \textbf{Verbal Noun}: \textarabic{تَحْكِيَة} /taħkijjah/}
+
+\begin{longtable}{|>{\raggedright}p{3.5cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Perfect (Past)} & \textbf{Imperfect (Present)} \\
+\hline
+\textbf{3rd person masc. sing.} & \textarabic{حَكَّى} /ħakkaː/ & \textarabic{يُحَكِّي} /juħakkiː/ \\
+\hline
+\textbf{3rd person fem. sing.} & \textarabic{حَكَّتْ} /ħakkat/ & \textarabic{تُحَكِّي} /tuħakkiː/ \\
+\hline
+\textbf{3rd person masc. plural} & \textarabic{حَكَّوْا} /ħakkaw/ & \textarabic{يُحَكُّونَ} /juħakkuːna/ \\
+\hline
+\textbf{2nd person masc. sing.} & \textarabic{حَكَّيْتَ} /ħakkajta/ & \textarabic{تُحَكِّي} /tuħakkiː/ \\
+\hline
+\textbf{1st person singular} & \textarabic{حَكَّيْتُ} /ħakkajtu/ & \textarabic{أُحَكِّي} /ʔuħakkiː/ \\
+\hline
+\end{longtable}
+
+\subsubsection*{Active Participle Forms}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Gender/Number} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Masculine singular & \textarabic{مُحَكٍّ} /muħakkin/ & \textarabic{الْمُحَكِّي} /almuħakkiː/ \\
+\hline
+Feminine singular & \textarabic{مُحَكِّيَةٌ} /muħakkijatun/ & \textarabic{الْمُحَكِّيَةُ} /almuħakkijatu/ \\
+\hline
+Masculine plural & \textarabic{مُحَكُّونَ} /muħakkuːna/ & \textarabic{الْمُحَكُّونَ} /almuħakkuːna/ \\
+\hline
+Feminine plural & \textarabic{مُحَكِّيَاتٌ} /muħakkijaːtun/ & \textarabic{الْمُحَكِّيَاتُ} /almuħakkijaːtu/ \\
+\hline
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Interrogative particle + noun (subject) + definite verbal noun (genitive in iḍāfah) + preposition + noun plural (genitive) + preposition + noun (genitive in iḍāfah) + proper noun (genitive) + active participle (adjective, genitive)
+
+\vspace{0.5em}
+\textbf{Sentence Type:} Nominal sentence (\textarabic{جُمْلَة اسْمِيَّة}) introduced by interrogative \textarabic{مَا}
+
+\vspace{0.5em}
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item \textbf{Interrogative \textarabic{مَا}:} Opens rhetorical question about utility/benefit
+\item \textbf{Iḍāfah construction 1:} \textarabic{جَدْوَى النُّطْقِ} (the usefulness of speaking) — possessive/genitive relationship
+\item \textbf{Prepositional phrase 1:} \textarabic{بِكَلِمَاتٍ} (with words) — describes the manner of speaking
+\item \textbf{Iḍāfah construction 2:} \textarabic{زَمَنِ قُرَيْشٍ} (the time of Quraysh) — temporal-possessive relationship
+\item \textbf{Adjectival phrase:} \textarabic{مُحَكِّيَةٍ} (spoken) — Form II active participle modifying \textarabic{كَلِمَاتٍ}
+\item \textbf{Agreement:} The participle \textarabic{مُحَكِّيَةٍ} agrees with \textarabic{كَلِمَاتٍ} in gender (feminine), number (plural), case (genitive), and definiteness (indefinite)
+\item \textbf{Rhetorical nature:} Question implies skepticism about the value of using archaic Qurayshi Arabic in modern contexts
+\item \textbf{Diptote proper noun:} \textarabic{قُرَيْشٍ} lacks tanwīn in genitive case (characteristic of many proper nouns and certain patterns)
+\end{itemize}
+\end{tcolorbox}
+
+\section{Syntactic Analysis
+}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Phrase Structure Tree:}
+
+\begin{center}
+\begin{tikzpicture}[
+  box/.style={rectangle, draw, minimum width=2.5cm, minimum height=0.8cm, align=center},
+  arrow/.style={->, >=stealth, thick}
+]
+
+% Main question word
+\node[box] (ma) at (0,0) {\textarabic{مَا}\\What?};
+
+% Main predicate
+\node[box, minimum width=8cm] (pred) at (6,0) {What is being questioned};
+
+% Subject idafa
+\node[box] (jadwa) at (3,-2) {\textarabic{جَدْوَى}\\usefulness};
+\node[box] (nutq) at (6,-2) {\textarabic{النُّطْقِ}\\the speaking};
+
+% Prepositional phrases
+\node[box] (bikalimat) at (2,-4) {\textarabic{بِكَلِمَاتٍ}\\with words};
+\node[box] (min) at (6,-4) {\textarabic{مِنْ}\\from};
+\node[box] (zaman) at (9,-4) {\textarabic{زَمَنِ}\\time};
+
+% Bottom level
+\node[box] (muhakkiya) at (2,-6) {\textarabic{مُحَكِّيَةٍ}\\spoken};
+\node[box] (quraysh) at (9,-6) {\textarabic{قُرَيْشٍ}\\Quraysh};
+
+% Arrows
+\draw[arrow] (ma) -- (pred);
+\draw[arrow] (pred) -- (jadwa);
+\draw[arrow] (jadwa) -- (nutq);
+\draw[arrow] (nutq) -- (bikalimat);
+\draw[arrow] (nutq) -- (min);
+\draw[arrow] (bikalimat) -- (muhakkiya);
+\draw[arrow] (min) -- (zaman);
+\draw[arrow] (zaman) -- (quraysh);
+
+\end{tikzpicture}
+\end{center}
+
+\textbf{Syntactic Relationships:}
+\begin{enumerate}
+\item \textbf{Main clause:} \textarabic{مَا جَدْوَى...} — Interrogative nominal sentence
+\item \textbf{First iḍāfah:} \textarabic{جَدْوَى النُّطْقِ} — "usefulness of speaking" (muḍāf + muḍāf ilayh)
+\item \textbf{Adjectival modification:} \textarabic{النُّطْقِ} is further specified by prepositional phrase and relative construction
+\item \textbf{Prepositional phrase:} \textarabic{بِكَلِمَاتٍ} — instrument/means of speaking
+\item \textbf{Second iḍāfah:} \textarabic{مِنْ زَمَنِ قُرَيْشٍ} — temporal origin phrase
+\item \textbf{Participial adjective:} \textarabic{مُحَكِّيَةٍ} — modifies \textarabic{كَلِمَاتٍ}, shows agreement in all grammatical categories
+\end{enumerate}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{مَا جَدْوَى الْكِتَابَةِ بِلُغَةٍ مِنْ عَصْرِ الْجَاهِلِيَّةِ مَنْسِيَّةٍ؟}\\
+What is the use of writing in a language from the pre-Islamic era that is forgotten? /maː dʒadwaː lkitaːbati biluɣatin min ʕasˤri ldʒaːhilijjati mansijjatin/
+
+\item \textarabic{مَا فَائِدَةُ الْحَدِيثِ بِعِبَارَاتٍ مِنْ زَمَنِ الْأَجْدَادِ مَهْجُورَةٍ؟}\\
+What is the benefit of speaking with expressions from the time of ancestors that are abandoned? /maː faːʔidatu lħadiːθi biʕibaːraːtin min zamani l-ʔadʒdaːdi mahdʒuːratin/
+
+\item \textarabic{مَا نَفْعُ الْقِرَاءَةِ بِكَلِمَاتٍ مِنْ تَارِيخِ الْعَرَبِ مَتْرُوكَةٍ؟}\\
+What is the utility of reading with words from Arab history that are discarded? /maː nafʕu lqiraːʔati bikalimaːtin min taːriːxi lʕarabi matruːkatin/
+
+\item \textarabic{مَا الْفَائِدَةُ مِنَ التَّكَلُّمِ بِأَلْفَاظٍ مِنْ لُغَةِ قُرَيْشٍ قَدِيمَةٍ؟}\\
+What is the benefit of speaking with words from the language of Quraysh that are ancient? /maː lfaːʔidatu mina ttakallumi bi-ʔalfaːðˤin min luɣati qurajiʃin qadiːmatin/
+
+\item \textarabic{مَا جَدْوَى الْحِوَارِ بِمُفْرَدَاتٍ مِنْ عَهْدِ النَّبِيِّ مَنْقُولَةٍ؟}\\
+What is the use of dialogue with vocabulary from the Prophet's era that is transmitted? /maː dʒadwaː lħiwaːri bimufradaːtin min ʕahdi nnabijji manquːlatin/
+
+\item \textarabic{هَلْ هُنَاكَ جَدْوَى مِنَ اسْتِعْمَالِ كَلِمَاتٍ مِنْ زَمَنٍ مَاضٍ؟}\\
+Is there any use in using words from a past time? /hal hunaːka dʒadwaː mina stiʕmaːli kalimaːtin min zamanin maːðˤin/
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{شُو فَايْدِة الْحَكِي بِكِلْمَات مِنْ زَمَان قُرَيْش مَحْكِيِّي؟}\\[0.5em]
+\textbf{Phonetic:} /ʃuː faːjde lħakiː biklmaːt min zamaːn qurajiʃ maħkijjiː/\\[0.5em]
+\textbf{Translation:} What's the benefit of speaking with words from Quraysh times that are spoken?
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{مَا} → \textarabic{شُو} /ʃuː/ — Standard Levantine interrogative "what"
+\item \textarabic{جَدْوَى} → \textarabic{فَايْدِة} /faːjde/ — More common dialectal word for "benefit/use"
+\item \textarabic{النُّطْق} → \textarabic{الْحَكِي} /lħakiː/ — Dialectal verbal noun "speaking/talking"
+\item \textarabic{بِكَلِمَاتٍ} → \textarabic{بِكِلْمَات} /biklmaːt/ — Loss of case endings and short vowels
+\item \textarabic{مِنْ زَمَنِ} → \textarabic{مِنْ زَمَان} /min zamaːn/ — Dialectal form (elongated final vowel)
+\item \textarabic{مُحَكِّيَةٍ} → \textarabic{مَحْكِيِّي} /maħkijjiː/ — Simplified participle form without case endings
+\item Overall simplification: Loss of iʕrāb (case endings), tanwīn, and some short vowels
+\item Retention of meaning but with colloquial vocabulary and phonology
+\end{itemize}
+
+\subsection{Alternative Dialectal Versions}
+
+\textbf{Egyptian Arabic:}\\
+\textarabic{إِيهِ الْفَايْدَة مِنِ الْكَلَام بِكَلِمَات مِنْ زَمَان قُرَيْش مِتْقَالَة؟}\\
+/ʔeː elfaːjda meni lkalaːm bekalimaːt min zamaːn qurajiʃ metʔaːla/
+
+\textbf{Gulf Arabic:}\\
+\textarabic{شُو الْفَايْدَة مِنْ الْحَچِي بِكَلِمَات مِنْ أَيَّام قُرَيْش مَحْچِيَّة؟}\\
+/ʃuː elfaːjda min elħatʃiː bekalimaːt min ajjaːm qurajiʃ maħtʃijja/
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Linguistic Context},breakable]
+
+\textbf{Historical Significance of Qurayshi Arabic:}
+\begin{itemize}
+\item The Quraysh tribe was the custodian of the Kaaba in pre-Islamic Mecca and the most prestigious Arab tribe
+\item Their dialect became the foundation of Classical Arabic and the language of the Quran
+\item Qurayshi Arabic was considered the purest and most eloquent form of Arabic in the 7th century
+\item The phrase questions the relevance of using archaic Classical Arabic forms in modern contexts
+\end{itemize}
+
+\textbf{Linguistic Debate:}
+This phrase touches on ongoing debates in the Arab world:
+\begin{itemize}
+\item \textbf{Fuṣḥā vs. ʕĀmmiyyah:} Standard/Classical Arabic vs. colloquial dialects
+\item \textbf{Language modernization:} Should Arabic evolve or preserve classical forms?
+\item \textbf{Diglossia:} The coexistence of formal and informal language registers
+\item \textbf{Educational policy:} What form of Arabic should be taught and used?
+\end{itemize}
+
+\textbf{Rhetorical Function:}
+The question is typically rhetorical, implying one of two positions:
+\begin{enumerate}
+\item \textit{Skeptical view:} Ancient forms are impractical for modern communication
+\item \textit{Defensive view:} Classical forms maintain linguistic heritage and precision
+\end{enumerate}
+
+\textbf{Grammatical Complexity:}
+This phrase demonstrates several advanced Arabic features:
+\begin{itemize}
+\item Multiple iḍāfah constructions (possessive chains)
+\item Active participle as adjective with full agreement
+\item Proper noun declension (diptote pattern)
+\item Layered prepositional and adjectival modification
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+
+\begin{enumerate}
+\item \textbf{Question Structure:} Remember the pattern \textarabic{مَا جَدْوَى...؟} for asking "What's the use of...?" — commonly used in rhetorical questions
+
+\item \textbf{Iḍāfah Chain:} Visualize: \textit{usefulness} ← \textit{of speaking} ← \textit{with words} ← \textit{from time} ← \textit{of Quraysh}\\
+Each element specifies the previous one more precisely
+
+\item \textbf{Participle Agreement:} \textarabic{مُحَكِّيَةٍ} matches \textarabic{كَلِمَاتٍ} in four ways:
+\begin{itemize}
+\item Gender: feminine (\textarabic{ـَة})
+\item Number: plural (sound feminine plural pattern)
+\item Case: genitive (\textarabic{ـِ})
+\item Definiteness: indefinite (tanwīn \textarabic{ـٍ})
+\end{itemize}
+
+\item \textbf{Root Recognition:} 
+\begin{itemize}
+\item \textarabic{ن-ط-ق} → speaking/pronunciation
+\item \textarabic{ح-ك-ي} → narrating/telling/speaking
+\item \textarabic{ك-ل-م} → words/speech
+\end{itemize}
+
+\item \textbf{Diptote Alert:} Proper nouns like \textarabic{قُرَيْش} often lack tanwīn — watch for this pattern with tribal names and place names
+
+\item \textbf{Mnemonic for \textarabic{جَدْوَى}:} "Jadwa" sounds like "Java" (coffee) → "What's the use of coffee?" → asking about usefulness/benefit
+\end{enumerate}
+
+\subsection{Related Vocabulary Families}
+
+\begin{multicols}{2}
+
+\textbf{Usefulness/Benefit:}\\
+\textarabic{جَدْوَى} — usefulness /dʒadwaː/\\
+\textarabic{فَائِدَة} — benefit /faːʔida/\\
+\textarabic{نَفْع} — utility /nafʕ/\\
+\textarabic{مَنْفَعَة} — advantage /manfaʕa/\\
+\textarabic{مَصْلَحَة} — interest /masˤlaħa/\\
+\textarabic{غَايَة} — purpose /ɣaːja/\\
+
+\textbf{Speech/Speaking:}\\
+\textarabic{نُطْق} — pronunciation /nutˤq/\\
+\textarabic{كَلَام} — speech /kalaːm/\\
+\textarabic{حَدِيث} — talk /ħadiːθ/\\
+\textarabic{قَوْل} — saying /qawl/\\
+\textarabic{لَفْظ} — utterance /lafðˤ/\\
+\textarabic{تَعْبِير} — expression /taʕbiːr/\\
+
+\textbf{Time/Era:}\\
+\textarabic{زَمَن} — time /zaman/\\
+\textarabic{وَقْت} — time /waqt/\\
+\textarabic{عَصْر} — era /ʕasˤr/\\
+\textarabic{عَهْد} — epoch /ʕahd/\\
+\textarabic{دَهْر} — age /dahr/\\
+\textarabic{حِقْبَة} — period /ħiqba/\\
+
+\textbf{Words/Language:}\\
+\textarabic{كَلِمَة} — word /kalima/\\
+\textarabic{لَفْظَة} — word /lafðˤa/\\
+\textarabic{مُفْرَدَة} — vocabulary item /mufrada/\\
+\textarabic{عِبَارَة} — phrase /ʕibaːra/\\
+\textarabic{لُغَة} — language /luɣa/\\
+\textarabic{لِسَان} — tongue/language /lisaːn/\\
+
+\textbf{Narration/Speaking:}\\
+\textarabic{حِكَايَة} — narration /ħikaːja/\\
+\textarabic{رِوَايَة} — narrative /riwaːja/\\
+\textarabic{قِصَّة} — story /qisˤsˤa/\\
+\textarabic{سَرْد} — narration /sard/\\
+\textarabic{إِخْبَار} — telling /ʔixbaːr/\\
+\textarabic{نَقْل} — transmission /naql/\\
+
+\textbf{Adjectives (archaic/old):}\\
+\textarabic{قَدِيم} — ancient /qadiːm/\\
+\textarabic{عَتِيق} — old /ʕatiːq/\\
+\textarabic{مَاضٍ} — past /maːðˤin/\\
+\textarabic{بَالٍ} — worn out /baːlin/\\
+\textarabic{مَنْسِيّ} — forgotten /mansijj/\\
+\textarabic{مَهْجُور} — abandoned /mahdʒuːr/\\
+\end{multicols}
+
+\section{Grammatical Deep Dive}
+
+\subsection{The Iḍāfah Construction (\textarabic{الْإِضَافَة})}
+
+The phrase contains two iḍāfah constructions, demonstrating this fundamental Arabic grammatical structure:
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Iḍāfah 1:} \textarabic{جَدْوَى النُّطْقِ} /dʒadwaː nnuːtˤqi/
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Component} & \textbf{Grammatical Role} & \textbf{Case} \\
+\hline
+\textarabic{جَدْوَى} (muḍāf) & Possessed noun (first term) & Nominative (subject) \\
+\textarabic{النُّطْقِ} (muḍāf ilayh) & Possessing noun (second term) & Genitive (required) \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Rules applied:}
+\begin{itemize}
+\item First term (\textarabic{جَدْوَى}) cannot take the definite article or tanwīn
+\item First term takes its case from its syntactic function (here: nominative as subject)
+\item Second term (\textarabic{النُّطْقِ}) must be genitive
+\item Second term can be definite (making whole construction definite) or indefinite
+\end{itemize}
+
+\vspace{1em}
+\textbf{Iḍāfah 2:} \textarabic{زَمَنِ قُرَيْشٍ} /zamani qurajiʃin/
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Component} & \textbf{Grammatical Role} & \textbf{Case} \\
+\hline
+\textarabic{زَمَنِ} (muḍāf) & Possessed noun & Genitive (after \textarabic{مِنْ}) \\
+\textarabic{قُرَيْشٍ} (muḍāf ilayh) & Possessing noun & Genitive (required) \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Special feature:}
+\begin{itemize}
+\item \textarabic{قُرَيْشٍ} is a diptote (\textarabic{مَمْنُوع مِنَ الصَّرْف}) — proper noun that doesn't take tanwīn
+\item In genitive case, diptotes take kasrah without tanwīn: \textarabic{قُرَيْشٍ} not \textarabic{*قُرَيْشٍ}
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Active Participle as Adjective}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Participle:} \textarabic{مُحَكِّيَةٍ} /muħakkijatin/ — Form II active participle
+
+\textbf{Base form (masc. sing.):} \textarabic{مُحَكٍّ} /muħakkin/
+
+\textbf{Agreement Chain:}
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Feature} & \textbf{\textarabic{كَلِمَاتٍ}} & \textbf{\textarabic{مُحَكِّيَةٍ}} \\
+\hline
+Gender & Feminine & Feminine (\textarabic{ـَة}) \\
+Number & Plural & Plural (sound fem. pl.) \\
+Case & Genitive & Genitive (\textarabic{ـِ}) \\
+Definiteness & Indefinite & Indefinite (tanwīn \textarabic{ـٍ}) \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Why Form II?}\\
+Form II (\textarabic{فَعَّلَ}) often indicates causative, intensive, or transitive meanings:
+\begin{itemize}
+\item Form I: \textarabic{حَكَى} — "to tell, narrate" (basic meaning)
+\item Form II: \textarabic{حَكَّى} — "to narrate extensively, to imitate speech"
+\item The active participle \textarabic{مُحَكِّيَة} → "that which is being narrated/spoken"
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Rhetorical Question Formation}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Structure of \textarabic{مَا} questions:}
+
+\begin{enumerate}
+\item \textbf{Simple identification:}\\
+\textarabic{مَا هَذَا؟} — What is this? (straightforward question)
+
+\item \textbf{Quality/utility (rhetorical):}\\
+\textarabic{مَا جَدْوَى...؟} — What's the use of...? (implies skepticism)\\
+\textarabic{مَا فَائِدَةُ...؟} — What's the benefit of...? (questions value)
+
+\item \textbf{Response patterns:}\\
+Literal answer: \textarabic{جَدْوَاهُ كَذَا وَكَذَا} — Its use is such-and-such\\
+Rhetorical response: \textarabic{لَا جَدْوَى مِنْهُ} — There's no use in it
+\end{enumerate}
+
+\textbf{Other rhetorical question patterns:}
+\begin{itemize}
+\item \textarabic{مَا الْفَائِدَةُ مِنْ...؟} — What's the benefit from...?
+\item \textarabic{مَا النَّفْعُ فِي...؟} — What's the utility in...?
+\item \textarabic{هَلْ هُنَاكَ جَدْوَى...؟} — Is there any use...?
+\item \textarabic{أَيُّ فَائِدَةٍ...؟} — What benefit...?
+\end{itemize}
+\end{tcolorbox}
+
+\section{Practice Exercises}
+
+\subsection{Translation Practice}
+
+Translate the following into Arabic using the same grammatical structures:
+
+\begin{enumerate}
+\item What is the use of reading books from ancient times that are abandoned?
+\vspace{2em}
+
+\item What is the benefit of writing letters from the past era that are forgotten?
+\vspace{2em}
+
+\item What is the utility of studying words from old Arabic that are unused?
+\vspace{2em}
+\end{enumerate}
+
+\subsection{Grammatical Analysis}
+
+Identify the following in the original phrase:
+
+\begin{enumerate}
+\item Circle all words in the genitive case
+\item Underline the two iḍāfah constructions
+\item Mark the active participle and show its agreement with its noun
+\item Identify the interrogative particle
+\end{enumerate}
+
+\subsection{Transformation Exercises}
+
+\begin{enumerate}
+\item Change the phrase to past tense (if applicable): \textarabic{كَانَ مَا جَدْوَى...}
+\vspace{1.5em}
+
+\item Make it a statement instead of question: \textarabic{لَا جَدْوَى...}
+\vspace{1.5em}
+
+\item Change to Egyptian dialect
+\vspace{1.5em}
+
+\item Replace \textarabic{قُرَيْش} with \textarabic{الْجَاهِلِيَّة} and adjust grammar
+\vspace{1.5em}
+\end{enumerate}
+
+\section{Answers to Practice Exercises}
+
+\subsection{Translation Practice — Suggested Answers}
+
+\begin{enumerate}
+\item \textarabic{مَا جَدْوَى قِرَاءَةِ كُتُبٍ مِنْ أَزْمِنَةٍ قَدِيمَةٍ مَهْجُورَةٍ؟}\\
+/maː dʒadwaː qiraːʔati kutubin min ʔazminatin qadiːmatin mahdʒuːratin/
+
+\item \textarabic{مَا فَائِدَةُ كِتَابَةِ رَسَائِلَ مِنْ عَصْرٍ مَاضٍ مَنْسِيَّةٍ؟}\\
+/maː faːʔidatu kitaːbati rasaːʔila min ʕasˤrin maːðˤin mansijjatin/
+
+\item \textarabic{مَا نَفْعُ دِرَاسَةِ كَلِمَاتٍ مِنْ عَرَبِيَّةٍ عَتِيقَةٍ غَيْرِ مُسْتَعْمَلَةٍ؟}\\
+/maː nafʕu diraːsati kalimaːtin min ʕarabijjatin ʕatiːqatin ɣajri mustaʕmalatin/
+\end{enumerate}
+
+\end{document}
