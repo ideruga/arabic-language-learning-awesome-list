@@ -38,8 +38,18 @@ My next purchase, hopefully the vocabulary approach changes.
     Breakdown: [Phrase 1](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-01.pdf), [Phrase 2](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-02.pdf), [Phrase 3](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-03.pdf), [Phrase 4](https://ideruga.github.io/arabic-language-learning-awesome-list/stories/juha_and_the_thief/juha-and-the-thief-04.pdf)
 
 ### Lyrics breakdown and analysis
-- | أسياد الكلم (أمجد النور) [Youtube Video](https://youtu.be/IXXuFOyRsVY?si=OMxXQB-4a_4QRS3N)\
-[Full Text](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/full-lyrics.pdf)
+- Song by Amjad Alnour | (أسياد الكلم (أمجد النور | [Youtube Video](https://youtu.be/IXXuFOyRsVY?si=OMxXQB-4a_4QRS3N) \
+A song about Arabic language written in MSA. It is split in two: in the first part, Amjad satirically bashes Arabic as an outdated and useless language, then admits in an English interlude that he was joking and the rest is an ode to the Arabic. I think that the best approach would be to study four lines from the first part and then four lines from the second part, etc. Otherwise, you can run out of motivation before you start the good part, and it will seem that you hate the language :wink: 
+
+[Full Text](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/full-lyrics.pdf) \
+[Line 1](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne001.pdf) - 
+[Line 2](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne002.pdf) - 
+[Line 3](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne003.pdf) - 
+[Line 4](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne004.pdf)\
+[Line 39](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne039.pdf) - 
+[~~Line 40~~](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne040.pdf) - 
+[~~Line 41~~](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne041.pdf) - 
+[~~Line 42~~](https://ideruga.github.io/arabic-language-learning-awesome-list/lyrics/Amjad-Alnour-Asyad-Alkalim/Ligne042.pdf)
 
 ### [Arabic keyboard trainer](https://ideruga.github.io/arabic-language-learning-awesome-list/keyboard-trainer/index.html)
 

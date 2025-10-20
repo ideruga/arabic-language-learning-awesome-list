@@ -1,0 +1,1306 @@
+\documentclass[letterpaper,12pt]{article}
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguage{arabic}
+\setotherlanguage{hebrew}
+\usepackage{fontspec}
+\setmainfont{Charis SIL}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.2]{Amiri}
+\newfontfamily\hebrewfont{Ezra SIL}[Script=Hebrew]
+\geometry{margin=1.5cm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{multirow}
+\titlespacing*{\section}
+  {0pt}                    % left margin
+  {3.5ex plus 2ex minus 1.5ex}  % space before (more flexible)
+  {2.3ex plus 1ex minus 0.5ex}  % space after (more flexible)
+
+\setlength{\headheight}{14.49998pt}
+\addtolength{\topmargin}{-2.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\textit{We Are Not in the Abbasid Era}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usetikzlibrary{shapes,arrows,decorations.pathmorphing}
+
+% Custom colors
+\definecolor{headercolor}{RGB}{70,130,180}
+\definecolor{boxcolor}{RGB}{240,248,255}
+\definecolor{accentcolor}{RGB}{220,20,60}
+\definecolor{tableheader}{RGB}{220,220,220}
+\definecolor{dialectcolor}{RGB}{34,139,34}
+
+\begin{document}
+
+\title{\textbf{\Large Arabic Phrase Analyser}\\
+\large We Are Not in the Abbasid Era nor in the Umayyad State\\
+\normalsize \textarabic{لسنا في العصر العباسي ولسنا في الدولة الأموية}}
+\author{Igor Deruga}
+\date{}
+\maketitle
+
+% ======================== Phrase Display ========================
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,title=\textbf{Arabic Phrase with Full Diacritics},breakable]
+\centering
+\Large\textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}
+\end{tcolorbox}
+
+% ======================== Translations ========================
+\section{English Translation}
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Literal:} Not-we in the-era the-Abbasid and-not-we in the-state the-Umayyad\\
+\textit{[Arabic order retained for direct mapping]}\\[0.5em]
+\textbf{Adapted:} We are not in the Abbasid era and we are not in the Umayyad state
+\end{tcolorbox}
+
+% ======================== Detailed Word Analysis ========================
+\section{Detailed Word Analysis}
+
+\subsection{\textarabic{لَسْنَا} — /lasnaː/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & we are not \\
+\textbf{Root} & \textarabic{ل-ي-س} (l-j-s) \\
+\textbf{Pattern} & Defective verb + pronoun suffix \\
+\textbf{Grammar} & Negative verb of being, 1st person plural, with attached pronoun \textarabic{ـنَا} \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{لَسْتُ مُتَأَكِّدًا} — I am not sure /lastu mutaʔakkidan/\\
+2. \textarabic{لَيْسَ هُنَاكَ مُشْكِلَةٌ} — There is no problem /lajsa hunaːka muʃkilatun/\\
+3. \textarabic{لَسْنَا وَحْدَنَا} — We are not alone /lasnaː waħdanaː/
+}} \\
+\midrule
+\textbf{Function} & Negates nominal sentences; acts as auxiliary verb requiring predicate in accusative \\
+\textbf{Etymology} & From root meaning "to not be"; unique negative copula in Arabic \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Complete Conjugation of \textarabic{لَيْسَ}}
+\par{\large \textbf{Negative Copula - Present Tense Only}}
+
+\begin{longtable}{|>{\raggedright}p{4cm}|p{4cm}|p{5cm}|}
+\hline
+\textbf{Person} & \textbf{Form} & \textbf{Translation} \\
+\hline
+\textbf{1st person singular} & \textarabic{لَسْتُ} /lastu/ & I am not \\
+\hline
+\textbf{1st person plural} & \textarabic{لَسْنَا} /lasnaː/ & we are not \\
+\hline
+\textbf{2nd person masc. sing.} & \textarabic{لَسْتَ} /lasta/ & you (m.) are not \\
+\hline
+\textbf{2nd person fem. sing.} & \textarabic{لَسْتِ} /lasti/ & you (f.) are not \\
+\hline
+\textbf{2nd person dual} & \textarabic{لَسْتُمَا} /lastumaː/ & you (dual) are not \\
+\hline
+\textbf{2nd person masc. plural} & \textarabic{لَسْتُمْ} /lastum/ & you (m. pl.) are not \\
+\hline
+\textbf{2nd person fem. plural} & \textarabic{لَسْتُنَّ} /lastunna/ & you (f. pl.) are not \\
+\hline
+\textbf{3rd person masc. sing.} & \textarabic{لَيْسَ} /lajsa/ & he is not \\
+\hline
+\textbf{3rd person fem. sing.} & \textarabic{لَيْسَتْ} /lajsat/ & she is not \\
+\hline
+\textbf{3rd person dual} & \textarabic{لَيْسَا} /lajsaː/ & they (dual) are not \\
+\hline
+\textbf{3rd person masc. plural} & \textarabic{لَيْسُوا} /lajsuː/ & they (m.) are not \\
+\hline
+\textbf{3rd person fem. plural} & \textarabic{لَسْنَ} /lasna/ & they (f.) are not \\
+\hline
+\end{longtable}
+
+\subsubsection*{Grammatical Properties of \textarabic{لَيْسَ}}
+\begin{itemize}
+  \item \textbf{Category:} Defective verb (\textarabic{فِعْل نَاقِص}) — incomplete verb
+  \item \textbf{Function:} Negates nominal sentences only
+  \item \textbf{Tense:} Has only present tense form (no past or future conjugations)
+  \item \textbf{Case government:}
+    \begin{itemize}
+      \item Subject (\textarabic{اسم ليس}) — nominative case
+      \item Predicate (\textarabic{خبر ليس}) — accusative case
+    \end{itemize}
+  \item \textbf{Sister verbs:} Part of \textarabic{كَانَ وَأَخَوَاتُهَا} (kāna and its sisters)
+  \item \textbf{Example structure:} \textarabic{لَيْسَ الطَّالِبُ حَاضِرًا} — The student is not present
+    \begin{itemize}
+      \item \textarabic{الطَّالِبُ} (nominative) — subject
+      \item \textarabic{حَاضِرًا} (accusative) — predicate
+    \end{itemize}
+\end{itemize}
+
+\subsection{\textarabic{فِي} — /fiː/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & in, at \\
+\textbf{Root} & Preposition (not from triliteral root) \\
+\textbf{Pattern} & Independent preposition \\
+\textbf{Grammar} & Preposition indicating location (literal or metaphorical) \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{فِي الْبَيْتِ} — In the house /fiː lbajti/\\
+2. \textarabic{فِي الصَّبَاحِ} — In the morning /fiː sˤsˤabaːħi/\\
+3. \textarabic{فِي رَأْيِي} — In my opinion /fiː raʔjiː/
+}} \\
+\midrule
+\textbf{Function} & Governs genitive case on following noun \\
+\textbf{Etymology} & From Proto-Semitic *fī; Hebrew \texthebrew{בְּ} (be-) "in" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Usage Nuances}
+\begin{itemize}
+\item \textbf{Literal location:} \textarabic{فِي الْمَدْرَسَةِ} (in the school)
+\item \textbf{Temporal:} \textarabic{فِي الصَّيْفِ} (in summer)
+\item \textbf{Abstract/metaphorical:} \textarabic{فِي الْحَقِيقَةِ} (in reality)
+\item \textbf{State/condition:} \textarabic{فِي حَالَةٍ جَيِّدَةٍ} (in good condition)
+\item \textbf{With eras/periods:} \textarabic{فِي الْعَصْرِ الْحَدِيثِ} (in the modern era)
+\end{itemize}
+
+\subsection{\textarabic{الْعَصْرِ} — /alʕasˤri/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the era, the age, the period \\
+\textbf{Root} & \textarabic{ع-ص-ر} (ʕ-sˤ-r) \\
+\textbf{Pattern} & \textarabic{فَعْل} (faʕl) \\
+\textbf{Grammar} & Masculine noun, genitive case (after preposition \textarabic{فِي}), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْعَصْرُ الذَّهَبِيُّ} — The golden age /alʕasˤru ððahabijju/\\
+2. \textarabic{عَصْرُ النَّهْضَةِ} — The Renaissance era /ʕasˤru nnahðˤati/\\
+3. \textarabic{فِي هَذَا الْعَصْرِ} — In this age /fiː haːðaː lʕasˤri/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{زَمَن} (time), \textarabic{عَهْد} (epoch), \textarabic{دَهْر} (age), \textarabic{حِقْبَة} (period) \\
+\textbf{Etymology} & From root meaning "to press, squeeze"; extended to mean "time period" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{عَصْرٌ} /ʕasˤrun/ & \textarabic{الْعَصْرُ} /alʕasˤru/ \\
+\hline
+Accusative & \textarabic{عَصْرًا} /ʕasˤran/ & \textarabic{الْعَصْرَ} /alʕasˤra/ \\
+\hline
+Genitive & \textarabic{عَصْرٍ} /ʕasˤrin/ & \textarabic{الْعَصْرِ} /alʕasˤri/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{الْعَبَّاسِيِّ} — /alʕabbaːsijji/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the Abbasid \\
+\textbf{Root} & \textarabic{ع-ب-س} (ʕ-b-s) from proper name \textarabic{عَبَّاس} \\
+\textbf{Pattern} & \textarabic{الْفَعَّالِيّ} (al-faʕʕaːlijj) — definite nisba adjective \\
+\textbf{Grammar} & Nisba adjective, masculine singular, genitive case (agreeing with \textarabic{الْعَصْرِ}), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْخَلِيفَةُ الْعَبَّاسِيُّ} — The Abbasid caliph /alxaliːfatu lʕabbaːsijju/\\
+2. \textarabic{الْعَصْرُ الْعَبَّاسِيُّ الْأَوَّلُ} — The first Abbasid era /alʕasˤru lʕabbaːsijju l-ʔawwalu/\\
+3. \textarabic{الْحَضَارَةُ الْعَبَّاسِيَّةُ} — The Abbasid civilization /alħadˤaːratu lʕabbaːsijjatu/
+}} \\
+\midrule
+\textbf{Historical Context} & Abbasid Caliphate (750-1258 CE), Islamic Golden Age, capital Baghdad \\
+\textbf{Etymology} & From \textarabic{عَبَّاس} (al-ʕAbbās), uncle of Prophet Muhammad \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{عَبَّاسِيٌّ} /ʕabbaːsijjun/ & \textarabic{الْعَبَّاسِيُّ} /alʕabbaːsijju/ \\
+\hline
+Accusative & \textarabic{عَبَّاسِيًّا} /ʕabbaːsijjan/ & \textarabic{الْعَبَّاسِيَّ} /alʕabbaːsijja/ \\
+\hline
+Genitive & \textarabic{عَبَّاسِيٍّ} /ʕabbaːsijjin/ & \textarabic{الْعَبَّاسِيِّ} /alʕabbaːsijji/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{وَ} — /wa/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & and \\
+\textbf{Root} & Coordinating conjunction (not from triliteral root) \\
+\textbf{Pattern} & Prefixed conjunction \\
+\textbf{Grammar} & Coordinating conjunction connecting two clauses \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{مُحَمَّدٌ وَعَلِيٌّ} — Muhammad and Ali /muħammadun wa ʕalijjun/\\
+2. \textarabic{قَرَأْتُ وَكَتَبْتُ} — I read and wrote /qaraʔtu wa katabtu/\\
+3. \textarabic{الشَّمْسُ وَالْقَمَرُ} — The sun and the moon /aʃʃamsu walqamaru/
+}} \\
+\midrule
+\textbf{Function} & Connects words, phrases, or clauses; most common conjunction in Arabic \\
+\textbf{Etymology} & From Proto-Semitic *wa; Hebrew \texthebrew{וְ} (ve-) "and" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Phonological Variations}
+\begin{itemize}
+\item Before consonants: \textarabic{وَ} /wa/ — \textarabic{وَمُحَمَّد} /wa muħammad/
+\item Before \textarabic{ا}: becomes \textarabic{وَ} — \textarabic{وَالْكِتَاب} /walkitaːb/
+\item In connected speech: may reduce to /u/ or /i/ depending on context
+\end{itemize}
+
+\subsection{\textarabic{الدَّوْلَةِ} — /ddawlati/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the state, the dynasty, the empire \\
+\textbf{Root} & \textarabic{د-و-ل} (d-w-l) \\
+\textbf{Pattern} & \textarabic{فَعْلَة} (faʕlah) \\
+\textbf{Grammar} & Feminine noun, genitive case (after preposition \textarabic{فِي}), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الدَّوْلَةُ الْعُثْمَانِيَّةُ} — The Ottoman state /addawlatu lʕuθmaːnijjatu/\\
+2. \textarabic{رَئِيسُ الدَّوْلَةِ} — Head of state /raʔiːsu ddawlati/\\
+3. \textarabic{دَوْلَةٌ عَرَبِيَّةٌ} — An Arab state /dawlatun ʕarabijjatun/
+}} \\
+\midrule
+\textbf{Synonyms} & \textarabic{حُكُومَة} (government), \textarabic{مَمْلَكَة} (kingdom), \textarabic{سُلْطَة} (authority) \\
+\textbf{Etymology} & From root meaning "to alternate, rotate"; extended to "ruling power" \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{دَوْلَةٌ} /dawlatun/ & \textarabic{الدَّوْلَةُ} /addawlatu/ \\
+\hline
+Accusative & \textarabic{دَوْلَةً} /dawlatan/ & \textarabic{الدَّوْلَةَ} /addawlata/ \\
+\hline
+Genitive & \textarabic{دَوْلَةٍ} /dawlatin/ & \textarabic{الدَّوْلَةِ} /addawlati/ \\
+\hline
+\end{tabular}
+
+\subsection{\textarabic{الْأُمَوِيَّةِ} — /l-ʔumawijjati/}
+\begin{tabular}{p{3cm}p{10cm}}
+\toprule
+\textbf{Translation} & the Umayyad \\
+\textbf{Root} & \textarabic{أ-م-ي} from proper name \textarabic{أُمَيَّة} \\
+\textbf{Pattern} & \textarabic{الْفُعَلِيَّة} (al-fuʕalijjah) — definite feminine nisba adjective \\
+\textbf{Grammar} & Nisba adjective, feminine singular, genitive case (agreeing with \textarabic{الدَّوْلَةِ}), definite \\
+\midrule
+\textbf{Examples} & \makecell[l]{\parbox{9.5cm}{
+1. \textarabic{الْخِلَافَةُ الْأُمَوِيَّةُ} — The Umayyad Caliphate /alxilaːfatu l-ʔumawijjatu/\\
+2. \textarabic{الدَّوْلَةُ الْأُمَوِيَّةُ} — The Umayyad state /addawlatu l-ʔumawijjatu/\\
+3. \textarabic{الْمَسْجِدُ الْأُمَوِيُّ} — The Umayyad Mosque /almasdʒidu l-ʔumawijju/
+}} \\
+\midrule
+\textbf{Historical Context} & Umayyad Caliphate (661-750 CE), first major Islamic dynasty, capital Damascus \\
+\textbf{Etymology} & From \textarabic{أُمَيَّة} (Umayya), ancestor of Umayyad clan \\
+\bottomrule
+\end{tabular}
+
+\subsubsection*{Declension}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Case} & \textbf{Indefinite} & \textbf{Definite} \\
+\hline
+Nominative & \textarabic{أُمَوِيَّةٌ} /ʔumawijjatun/ & \textarabic{الْأُمَوِيَّةُ} /al-ʔumawijjatu/ \\
+\hline
+Accusative & \textarabic{أُمَوِيَّةً} /ʔumawijjatan/ & \textarabic{الْأُمَوِيَّةَ} /al-ʔumawijjata/ \\
+\hline
+Genitive & \textarabic{أُمَوِيَّةٍ} /ʔumawijjatin/ & \textarabic{الْأُمَوِيَّةِ} /al-ʔumawijjati/ \\
+\hline
+\end{tabular}
+
+% ======================== Phrase Analysis ========================
+\section{Phrase Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Grammatical Structure:}\\
+Negative copula verb (1st pl.) + prepositional phrase (definite noun + definite adjective) + coordinating conjunction + negative copula verb (1st pl.) + prepositional phrase (definite noun + definite adjective)
+
+\vspace{0.5em}
+\textbf{Sentence Type:} Two coordinated negative nominal sentences using \textarabic{لَيْسَ}
+
+\vspace{0.5em}
+\textbf{Key Grammar Points:}
+\begin{itemize}
+\item \textbf{Negative copula:} \textarabic{لَسْنَا} (we are not) — defective verb negating state of being
+\item \textbf{Parallel structure:} Two identical sentence structures connected by \textarabic{وَ}
+\item \textbf{Prepositional predicates:} Both \textarabic{فِي الْعَصْرِ الْعَبَّاسِيِّ} and \textarabic{فِي الدَّوْلَةِ الْأُمَوِيَّةِ} function as predicates
+\item \textbf{Case government by \textarabic{لَيْسَ}:}
+  \begin{itemize}
+    \item Subject (implicit \textarabic{نَحْنُ}) would be nominative
+    \item Predicate (prepositional phrases) treated as manṣūb (accusative) position
+  \end{itemize}
+\item \textbf{Definiteness:} Both alternatives are fully definite (contrast with previous question phrase)
+\item \textbf{Adjective agreement:}
+  \begin{itemize}
+    \item \textarabic{الْعَبَّاسِيِّ} agrees with \textarabic{الْعَصْرِ} (masc., sing., gen., def.)
+    \item \textarabic{الْأُمَوِيَّةِ} agrees with \textarabic{الدَّوْلَةِ} (fem., sing., gen., def.)
+  \end{itemize}
+\item \textbf{Rhetorical function:} Declarative denial — assertive statement rejecting anachronistic characterization
+\item \textbf{Emphasis through repetition:} Repeating \textarabic{لَسْنَا فِي} emphasizes rejection of both alternatives
+\end{itemize}
+\end{tcolorbox}
+
+\clearpage
+\section{Syntactic Analysis}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Phrase Structure Tree:}
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=1.2cm,
+  level 1/.style={sibling distance=6cm},
+  level 2/.style={sibling distance=3cm},
+  level 3/.style={sibling distance=2.5cm},
+  every node/.style={rectangle, draw, rounded corners, minimum width=2.2cm, align=center, font=\small}
+]
+
+\node {Compound Sentence}
+  child {node {Negative\\Sentence 1}
+    child {node {\textarabic{لَسْنَا}\\we are not}
+      child {node {Implicit\\Subject\\\textarabic{نَحْنُ}}}
+    }
+    child {node {Predicate}
+      child {node {\textarabic{فِي الْعَصْرِ}\\in the era}}
+      child {node {\textarabic{الْعَبَّاسِيِّ}\\the Abbasid}}
+    }
+  }
+  child {node {\textarabic{وَ}\\and}}
+  child {node {Negative\\Sentence 2}
+    child {node {\textarabic{لَسْنَا}\\we are not}
+      child {node {Implicit\\Subject\\\textarabic{نَحْنُ}}}
+    }
+    child {node {Predicate}
+      child {node {\textarabic{فِي الدَّوْلَةِ}\\in the state}}
+      child {node {\textarabic{الْأُمَوِيَّةِ}\\the Umayyad}}
+    }
+  };
+
+\end{tikzpicture}
+\end{center}
+
+\vspace{1em}
+\textbf{Syntactic Relationships:}
+\begin{enumerate}
+\item \textbf{Main structure:} Two coordinated negative nominal sentences
+\item \textbf{Each sentence structure:}
+  \begin{itemize}
+    \item \textbf{Negative verb:} \textarabic{لَسْنَا} (ism laysa implied: \textarabic{نَحْنُ})
+    \item \textbf{Predicate:} Prepositional phrase (khabar laysa)
+  \end{itemize}
+\item \textbf{Coordination:} \textarabic{وَ} connects two parallel negative statements
+\item \textbf{Parallel structure emphasis:} Repetition of \textarabic{لَسْنَا فِي} creates rhythmic emphasis
+\item \textbf{Adjective position:} Both nisba adjectives follow their nouns as attributes
+\item \textbf{Implicit vs. explicit:} Subject pronoun incorporated in verb, not stated separately
+\end{enumerate}
+
+\vspace{1em}
+\textbf{Box Diagram:}
+
+\begin{center}
+\begin{tikzpicture}[
+  box/.style={rectangle, draw, minimum width=2.5cm, minimum height=0.8cm, align=center},
+  arrow/.style={->, >=stealth, thick}
+]
+
+% First clause
+\node[box] (lasna1) at (0,0) {\textarabic{لَسْنَا}\\we are not};
+\node[box] (fi1) at (3,0) {\textarabic{فِي}\\in};
+\node[box] (3asr) at (5.5,0) {\textarabic{الْعَصْرِ}\\the era};
+\node[box] (3abbasi) at (5.5,-2) {\textarabic{الْعَبَّاسِيِّ}\\the Abbasid};
+
+% Conjunction
+\node[box, fill=yellow!20] (wa) at (8,-1) {\textarabic{وَ}\\and};
+
+% Second clause
+\node[box] (lasna2) at (11,0) {\textarabic{لَسْنَا}\\we are not};
+\node[box] (fi2) at (14,0) {\textarabic{فِي}\\in};
+\node[box] (dawla) at (16.5,0) {\textarabic{الدَّوْلَةِ}\\the state};
+\node[box] (umawi) at (16.5,-2) {\textarabic{الْأُمَوِيَّةِ}\\the Umayyad};
+
+% Arrows
+\draw[arrow] (lasna1) -- (fi1);
+\draw[arrow] (fi1) -- (3asr);
+\draw[arrow] (3asr) -- (3abbasi);
+\draw[arrow] (3abbasi) -- (wa);
+\draw[arrow] (wa) -- (lasna2);
+\draw[arrow] (lasna2) -- (fi2);
+\draw[arrow] (fi2) -- (dawla);
+\draw[arrow] (dawla) -- (umawi);
+
+\end{tikzpicture}
+\end{center}
+\end{tcolorbox}
+
+% ======================== Similar Phrases for Practice ========================
+\section{Similar Phrases for Practice}
+
+\begin{enumerate}
+\item \textarabic{لَسْنَا فِي الْقُرُونِ الْوُسْطَى وَلَسْنَا فِي عَصْرِ الْجَاهِلِيَّةِ}\\
+We are not in the Middle Ages and we are not in the era of pre-Islamic ignorance /lasnaː fiː lquruːni lwustˤaː wa lasnaː fiː ʕasˤri ldʒaːhillijjati/
+
+\item \textarabic{لَسْنَا فِي الْخِلَافَةِ الْعُثْمَانِيَّةِ وَلَسْنَا فِي الدَّوْلَةِ الْفَاطِمِيَّةِ}\\
+We are not in the Ottoman Caliphate and we are not in the Fatimid state /lasnaː fiː lxilaːfati lʕuθmaːnijjati wa lasnaː fiː ddawlati lfaːtˤimijjati/
+
+\item \textarabic{لَسْتُ فِي الْمَاضِي وَلَسْتُ فِي الْمُسْتَقْبَلِ، أَنَا فِي الْحَاضِرِ}\\
+I am not in the past and I am not in the future, I am in the present /lastu fiː lmaːdˤiː wa lastu fiː lmustaqbali, ʔanaː fiː lħaːdˤiri/
+
+\item \textarabic{لَيْسُوا فِي عَهْدِ الْمَمَالِيكِ وَلَيْسُوا فِي عَهْدِ الْأَيُّوبِيِّينَ}\\
+They are not in the Mamluk epoch and they are not in the Ayyubid epoch /lajsuː fiː ʕahdi lmamaːliːki wa lajsuː fiː ʕahdi l-ʔajjuːbijjiːna/
+
+\item \textarabic{لَسْنَا فِي زَمَنِ الْاِسْتِعْمَارِ وَلَسْنَا فِي زَمَنِ الْعُبُودِيَّةِ}\\
+We are not in the time of colonialism and we are not in the time of slavery /lasnaː fiː zamani l-istiʕmaːri wa lasnaː fiː zamani lʕubuːdijjati/
+
+\item \textarabic{لَسْتَ فِي بَغْدَادَ الْعَبَّاسِيَّةِ وَلَسْتَ فِي دِمَشْقَ الْأُمَوِيَّةِ}\\
+You are not in Abbasid Baghdad and you are not in Umayyad Damascus /lasta fiː baɣdaːda lʕabbaːsijjati wa lasta fiː dimaʃqa l-ʔumawijjati/
+\end{enumerate}
+
+% ======================== Levantine Dialect Version ========================
+\section{Levantine (Shami) Arabic Dialect}
+
+\begin{tcolorbox}[colback=white,colframe=dialectcolor,title=\textbf{Levantine Version},breakable]
+\textarabic{مِش نِحْنَا بِالْعَصْر الْعَبَّاسِي وَمِش نِحْنَا بِالدَّوْلِة الْأُمَوِيِّة}\\[0.5em]
+\textbf{Phonetic:} /miʃ niħna bilʕasˤar elʕabbaːsiː wmiʃ niħna biddawle l-ʔumawijje/\\[0.5em]
+\textbf{Translation:} We are not in the Abbasid era and we are not in the Umayyad state
+\end{tcolorbox}
+
+\textbf{Key Dialectal Changes:}
+\begin{itemize}
+\item \textarabic{لَسْنَا} → \textarabic{مِش نِحْنَا} /miʃ niħna/ — Dialectal negation with explicit pronoun
+\item Alternative: \textarabic{مَا نِحْنَا} /maː niħna/ — Another dialectal negation pattern
+\item \textarabic{فِي} → \textarabic{بِ} /bi/ — Preposition shift (common in Levantine)
+\item \textarabic{الْعَصْرِ} → \textarabic{الْعَصْر} /elʕasˤar/ — Loss of case endings
+\item \textarabic{الْعَبَّاسِيِّ} → \textarabic{الْعَبَّاسِي} /elʕabbaːsiː/ — Loss of case endings
+\item \textarabic{وَلَسْنَا} → \textarabic{وَمِش} /wmiʃ/ — Shortened conjunction + negation
+\item \textarabic{الدَّوْلَةِ} → \textarabic{الدَّوْلِة} /eddawle/ — Dialectal pronunciation
+\item \textarabic{الْأُمَوِيَّةِ} → \textarabic{الْأُمَوِيِّة} /l-ʔumawijje/ — Simplified ending
+\end{itemize}
+
+\subsection{Alternative Dialectal Versions}
+
+\textbf{Egyptian Arabic:}\\
+\textarabic{إِحْنَا مِش فِي الْعَصْر الْعَبَّاسِي وَمِش فِي الدَّوْلَة الْأُمَوِيَّة}\\
+/ʔeħna miʃ fi lʕasˤr elʕabbaːsi wmiʃ fi ddawla l-ʔumawejja/
+
+\textbf{Gulf Arabic:}\\
+\textarabic{مَا نِحْنَا فِي الْعَصْر الْعَبَّاسِي وَمَا نِحْنَا فِي الدَّوْلَة الْأُمَوِيَّة}\\
+/maː niħna fi lʕasˤir elʕabbaːsi wmaː niħna fi ddawla l-ʔumawejja/
+
+\textbf{Moroccan Arabic:}\\
+\textarabic{مَا حْنَا شْ فْ الْعَصْر الْعَبَّاسِي وَلَا فْ الدَّوْلَة الْأُمَوِيَّة}\\
+/maː ħnaːʃ f lʕasˤr lʕabbaːsi wəla f ddəwla l-ʔumawejja/
+
+\textbf{Iraqi Arabic:}\\
+\textarabic{مَاكُو نِحْنَا بِالْعَصْر الْعَبَّاسِي وَلَا بِالدَّوْلَة الْأُمَوِيَّة}\\
+/maːku niħna bilʕasˤar elʕabbaːsi wla biddawla l-ʔumawejja/
+
+% ======================== Additional Learning Notes ========================
+\section{Additional Learning Notes}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Cultural and Rhetorical Context},breakable]
+
+\textbf{Rhetorical Function:}\\
+This phrase serves as a declarative rebuttal to the earlier question. It represents:
+\begin{itemize}
+\item \textbf{Assertion of modernity:} Rejecting anachronistic characterizations
+\item \textbf{Political statement:} Denying that current governance resembles medieval systems
+\item \textbf{Progressive stance:} Affirming modern identity and rejecting backward-looking critiques
+\item \textbf{Defensive response:} Countering accusations of outdated political structures
+\end{itemize}
+
+\textbf{Discourse Context:}\\
+This phrase typically appears in:
+\begin{enumerate}
+\item \textbf{Political speeches:} Leaders defending their governance models
+\item \textbf{Media commentary:} Journalists discussing modernization efforts
+\item \textbf{Academic discourse:} Scholars distinguishing contemporary from historical systems
+\item \textbf{Public debates:} Citizens asserting modern political consciousness
+\item \textbf{Reform discussions:} Activists arguing for progressive change
+\end{enumerate}
+
+\textbf{Implied Continuation:}\\
+The phrase often continues with assertions about what era/system we ARE in:
+\begin{itemize}
+\item \textarabic{نَحْنُ فِي عَصْرٍ حَدِيثٍ} — We are in a modern era
+\item \textarabic{نَحْنُ فِي الْقَرْنِ الْوَاحِدِ وَالْعِشْرِينَ} — We are in the 21st century
+\item \textarabic{نَحْنُ فِي عَصْرِ الدِّيمُقْرَاطِيَّةِ} — We are in the era of democracy
+\end{itemize}
+
+\textbf{Contrast with Question Form:}\\
+Compare this declarative with the earlier interrogative:
+\begin{itemize}
+\item Question: \textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\item Answer/Rebuttal: \textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}
+\item The declarative is more assertive and emphatic through repetition
+\end{itemize}
+
+\textbf{Historical Irony:}\\
+The phrase gains additional meaning from historical context:
+\begin{itemize}
+\item Umayyad and Abbasid dynasties represent different political models
+\item Both were eventually replaced by modern nation-states
+\item The phrase acknowledges this transition while rejecting nostalgia
+\item Implicitly recognizes that those systems are incompatible with modernity
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Memory Tips}
+
+\begin{enumerate}
+\item \textbf{Negation Pattern:} Remember \textarabic{لَيْسَ} conjugates like a verb but only in present tense
+  \begin{itemize}
+    \item \textarabic{لَسْتُ} (I am not), \textarabic{لَسْنَا} (we are not), \textarabic{لَسْتَ} (you are not)
+    \item No past or future forms — use \textarabic{لَمْ يَكُنْ} (was not) for past
+  \end{itemize}
+
+\item \textbf{Parallel Structure:} The repetition of \textarabic{لَسْنَا فِي} creates emphasis
+  \begin{itemize}
+    \item Pattern: [NEG + PREP + NOUN + ADJ] + [CONJ] + [NEG + PREP + NOUN + ADJ]
+    \item Repeating the entire structure makes the denial stronger
+  \end{itemize}
+
+\item \textbf{Definiteness Change:} Compare with the question:
+  \begin{itemize}
+    \item Question had: \textarabic{بِعَصْرٍ عَبَّاسِيٍّ} (indefinite — "an Abbasid era")
+    \item Answer has: \textarabic{فِي الْعَصْرِ الْعَبَّاسِيِّ} (definite — "the Abbasid era")
+    \item Definiteness adds specificity and authority to the denial
+  \end{itemize}
+
+\item \textbf{Preposition Switch:}
+  \begin{itemize}
+    \item Question used \textarabic{بِ} (in/with — more metaphorical)
+    \item Answer uses \textarabic{فِي} (in — more literal/locational)
+    \item This makes the denial more concrete and grounded
+  \end{itemize}
+
+\item \textbf{Verb \textarabic{لَيْسَ} Mnemonic:} Think "Lay-sa" = "Lay (down) the negative" — it lays down a negative state
+
+\item \textbf{Dynasty Contrast:} Remember the key difference:
+  \begin{itemize}
+    \item Umayyad (661-750) = Damascus = Arab aristocracy
+    \item Abbasid (750-1258) = Baghdad = Cosmopolitan/Persian influence
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Related Vocabulary Families}
+
+\begin{multicols}{2}
+
+\textbf{Negation Words:}\\
+\textarabic{لَيْسَ} — is not /lajsa/\\
+\textarabic{لَا} — no, not /laː/\\
+\textarabic{مَا} — not (verbal negation) /maː/\\
+\textarabic{لَمْ} — did not /lam/\\
+\textarabic{لَنْ} — will not /lan/\\
+\textarabic{غَيْر} — non-, not /ɣajr/\\
+\textarabic{بِلَا} — without /bilaː/\\
+\textarabic{بِدُونِ} — without /biduːni/\\
+
+\textbf{Time/Era Words:}\\
+\textarabic{عَصْر} — era /ʕasˤr/\\
+\textarabic{زَمَن} — time /zaman/\\
+\textarabic{دَهْر} — age /dahr/\\
+\textarabic{عَهْد} — epoch /ʕahd/\\
+\textarabic{حِقْبَة} — period /ħiqba/\\
+\textarabic{مَرْحَلَة} — stage /marħala/\\
+\textarabic{فَتْرَة} — period /fatra/\\
+\textarabic{وَقْت} — time /waqt/\\
+
+\textbf{State/Government:}\\
+\textarabic{دَوْلَة} — state /dawla/\\
+\textarabic{حُكُومَة} — government /ħukuːma/\\
+\textarabic{خِلَافَة} — caliphate /xilaːfa/\\
+\textarabic{إِمْبَرَاطُورِيَّة} — empire /ʔimbraːtˤuːrijja/\\
+\textarabic{مَمْلَكَة} — kingdom /mamlaka/\\
+\textarabic{سُلْطَنَة} — sultanate /sultˤana/\\
+\textarabic{جُمْهُورِيَّة} — republic /dʒumhuːrijja/\\
+\textarabic{نِظَام} — regime /nidˤaːm/\\
+
+\textbf{Historical Adjectives:}\\
+\textarabic{قَدِيم} — old, ancient /qadiːm/\\
+\textarabic{حَدِيث} — modern /ħadiːθ/\\
+\textarabic{مَاضٍ} — past /maːdˤin/\\
+\textarabic{حَاضِر} — present /ħaːdˤir/\\
+\textarabic{مُسْتَقْبَلِيّ} — future /mustaqbalijj/\\
+\textarabic{عَتِيق} — antique /ʕatiːq/\\
+\textarabic{مُعَاصِر} — contemporary /muʕaːsˤir/\\
+\textarabic{تَقْلِيدِيّ} — traditional /taqliːdijj/\\
+
+\textbf{Conjunctions:}\\
+\textarabic{وَ} — and /wa/\\
+\textarabic{أَوْ} — or /ʔaw/\\
+\textarabic{أَمْ} — or (questions) /ʔam/\\
+\textarabic{لَكِنْ} — but /laːkin/\\
+\textarabic{بَلْ} — rather /bal/\\
+\textarabic{فَ} — so, then /fa/\\
+\textarabic{ثُمَّ} — then /θumma/\\
+\textarabic{حَتَّى} — until, even /ħattaː/\\
+
+\textbf{Prepositions:}\\
+\textarabic{فِي} — in /fiː/\\
+\textarabic{بِ} — in, with /bi/\\
+\textarabic{مِنْ} — from /min/\\
+\textarabic{إِلَى} — to /ʔilaː/\\
+\textarabic{عَلَى} — on /ʕalaː/\\
+\textarabic{عَنْ} — about, from /ʕan/\\
+\textarabic{مَعَ} — with /maʕa/\\
+\textarabic{لِ} — for /li/\\
+\end{multicols}
+
+\section{Grammatical Deep Dive}
+
+\subsection{The Negative Copula \textarabic{لَيْسَ}}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Special Status of \textarabic{لَيْسَ}:}
+
+\textarabic{لَيْسَ} is unique in Arabic grammar:
+\begin{itemize}
+\item \textbf{Classification:} One of \textarabic{كَانَ وَأَخَوَاتُهَا} (kāna and its sisters)
+\item \textbf{Function:} Negates nominal (equational) sentences
+\item \textbf{Tense limitation:} Only present tense (no past or future)
+\item \textbf{Case government:} Takes nominative subject and accusative predicate
+\end{itemize}
+
+\textbf{Contrast with Other Negation:}
+
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Particle} & \textbf{Usage} & \textbf{Example} \\
+\hline
+\textarabic{لَيْسَ} & Nominal sentences (present) & \textarabic{لَسْتُ طَالِبًا} (I am not a student) \\
+\hline
+\textarabic{لَا} & Categorical negation & \textarabic{لَا إِلَهَ إِلَّا اللهُ} (No god but God) \\
+\hline
+\textarabic{مَا} & Verbal negation (past) & \textarabic{مَا قَرَأْتُ} (I did not read) \\
+\hline
+\textarabic{لَمْ} & Verbal negation (jussive) & \textarabic{لَمْ أَقْرَأْ} (I did not read) \\
+\hline
+\textarabic{لَنْ} & Future negation (subjunctive) & \textarabic{لَنْ أَقْرَأَ} (I will not read) \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Case Government Example:}
+
+\textarabic{لَيْسَ الطَّالِبُ حَاضِرًا}\\
+/lajsa tˤtˤaːlibu ħaːdˤiran/\\
+The student is not present
+
+\begin{itemize}
+\item \textarabic{لَيْسَ} — negative copula
+\item \textarabic{الطَّالِبُ} — subject (ism laysa), nominative
+\item \textarabic{حَاضِرًا} — predicate (khabar laysa), accusative
+\end{itemize}
+
+\textbf{Sisters of \textarabic{كَانَ}:}
+
+These verbs all govern nominative subject + accusative predicate:
+\begin{itemize}
+\item \textarabic{كَانَ} — was, is
+\item \textarabic{أَصْبَحَ} — became (morning)
+\item \textarabic{أَضْحَى} — became (forenoon)
+\item \textarabic{أَمْسَى} — became (evening)
+\item \textarabic{ظَلَّ} — remained
+\item \textarabic{بَاتَ} — spent the night
+\item \textarabic{صَارَ} — became
+\item \textarabic{لَيْسَ} — is not
+\item \textarabic{مَا زَالَ} — still is
+\item \textarabic{مَا بَرِحَ} — has not ceased
+\item \textarabic{مَا فَتِئَ} — has not stopped
+\item \textarabic{مَا انْفَكَّ} — has not separated from
+\item \textarabic{مَا دَامَ} — as long as
+\end{itemize}
+\end{tcolorbox}
+
+\subsection{Prepositional Predicates}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Prepositional Phrases as Predicates:}
+
+In our phrase: \textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ}
+
+The prepositional phrase \textarabic{فِي الْعَصْرِ الْعَبَّاسِيِّ} functions as the predicate (khabar).
+
+\textbf{Structure Analysis:}
+\begin{itemize}
+\item \textbf{Subject:} Implicit \textarabic{نَحْنُ} (we) — incorporated in \textarabic{لَسْنَا}
+\item \textbf{Predicate:} \textarabic{فِي الْعَصْرِ الْعَبَّاسِيِّ} — prepositional phrase
+\item \textbf{Status:} The entire PP is treated as manṣūb (accusative position)
+\end{itemize}
+
+\textbf{Why Prepositional Phrases Work as Predicates:}
+
+Arabic allows PP predicates because they:
+\begin{enumerate}
+\item Provide location information about the subject
+\item Complete the meaning of the sentence
+\item Function semantically like adjectives or nouns
+\end{enumerate}
+
+\textbf{Examples of PP Predicates:}
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Arabic} & \textbf{English} \\
+\hline
+\textarabic{الْكِتَابُ عَلَى الطَّاوِلَةِ} & The book is on the table \\
+\hline
+\textarabic{نَحْنُ فِي الْمَدْرَسَةِ} & We are at school \\
+\hline
+\textarabic{هُوَ مِنْ مِصْرَ} & He is from Egypt \\
+\hline
+\textarabic{الْقَلَمُ بِيَدِي} & The pen is in my hand \\
+\hline
+\end{tabular}
+
+\textbf{With \textarabic{لَيْسَ}:}
+
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Arabic} & \textbf{English} \\
+\hline
+\textarabic{لَيْسَ الْكِتَابُ عَلَى الطَّاوِلَةِ} & The book is not on the table \\
+\hline
+\textarabic{لَسْنَا فِي الْمَدْرَسَةِ} & We are not at school \\
+\hline
+\textarabic{لَيْسَ هُوَ مِنْ مِصْرَ} & He is not from Egypt \\
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\subsection{Coordination and Parallel Structure}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Parallel Structure in Our Phrase:}
+
+\textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}
+
+\textbf{Pattern Analysis:}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Element 1} & \textbf{Conjunction} & \textbf{Element 2} \\
+\hline
+\textarabic{لَسْنَا فِي X} & \textarabic{وَ} & \textarabic{لَسْنَا فِي Y} \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Rhetorical Effect of Repetition:}
+\begin{itemize}
+\item \textbf{Emphasis:} Repeating \textarabic{لَسْنَا} strengthens the denial
+\item \textbf{Rhythm:} Creates parallel cadence for memorable impact
+\item \textbf{Completeness:} Each denial stands independently
+\item \textbf{Clarity:} No ambiguity about what is being negated
+\end{itemize}
+
+\textbf{Alternative: Elliptical Structure}
+
+Could be simplified to:
+\textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}
+
+\begin{itemize}
+\item Omits second \textarabic{لَسْنَا}
+\item Uses \textarabic{وَلَا} (and not) instead
+\item More concise but less emphatic
+\item Still grammatically correct
+\end{itemize}
+
+\textbf{Coordination Patterns:}
+
+\begin{tabular}{|l|p{8cm}|}
+\hline
+\textbf{Type} & \textbf{Example} \\
+\hline
+Full repetition & \textarabic{لَسْنَا... وَلَسْنَا...} (most emphatic) \\
+\hline
+Partial ellipsis & \textarabic{لَسْنَا... وَلَا...} (less emphatic) \\
+\hline
+Shared verb & \textarabic{لَسْنَا... أَوْ...} (for alternatives) \\
+\hline
+\end{tabular}
+\end{tcolorbox}
+
+\section{Practice Exercises}
+
+\subsection{Translation Practice}
+
+Translate into Arabic using \textarabic{لَيْسَ} structure:
+
+\begin{enumerate}
+\item I am not in the past and I am not in the future
+\vspace{2em}
+
+\item They are not in the Ottoman era and they are not in the Fatimid state
+\vspace{2em}
+
+\item You (fem. sing.) are not in Damascus and you are not in Baghdad
+\vspace{2em}
+
+\item We are not children and we are not ignorant
+\vspace{2em}
+\end{enumerate}
+
+\subsection{Grammatical Transformation}
+
+Transform the original phrase:
+
+\begin{enumerate}
+\item Change subject to 3rd person masculine plural (\textarabic{هُمْ}):
+\vspace{2em}
+
+\item Change to affirmative using \textarabic{كَانَ} (past tense):
+\vspace{2em}
+
+\item Use elliptical structure (omit second \textarabic{لَسْنَا}):
+\vspace{2em}
+
+\item Add temporal marker \textarabic{الْآنَ} (now):
+\vspace{2em}
+\end{enumerate}
+
+\subsection{Case Identification}
+
+Identify the grammatical case and explain:
+
+\begin{enumerate}
+\item \textarabic{لَسْنَا فِي الْ\underline{عَصْرِ} الْعَبَّاسِيِّ}\\
+Case: \underline{\hspace{8cm}}\\
+Reason: \underline{\hspace{8cm}}
+
+\item \textarabic{لَسْنَا فِي الْعَصْرِ الْ\underline{عَبَّاسِيِّ}}\\
+Case: \underline{\hspace{8cm}}\\
+Reason: \underline{\hspace{8cm}}
+
+\item \textarabic{لَسْنَا فِي الْ\underline{دَوْلَةِ} الْأُمَوِيَّةِ}\\
+Case: \underline{\hspace{8cm}}\\
+Reason: \underline{\hspace{8cm}}
+\end{enumerate}
+
+\subsection{Negation Conversion}
+
+Convert these affirmative sentences to negative using \textarabic{لَيْسَ}:
+
+\begin{enumerate}
+\item \textarabic{نَحْنُ فِي الْقَرْنِ الْعِشْرِينَ}\\
+Negative: \underline{\hspace{10cm}}
+
+\item \textarabic{هُوَ طَالِبٌ}\\
+Negative: \underline{\hspace{10cm}}
+
+\item \textarabic{هِيَ فِي الْمَدْرَسَةِ}\\
+Negative: \underline{\hspace{10cm}}
+
+\item \textarabic{أَنْتُمْ فِي بَغْدَادَ}\\
+Negative: \underline{\hspace{10cm}}
+\end{enumerate}
+
+\section{Answers to Practice Exercises}
+
+\subsection{Translation Practice — Suggested Answers}
+
+\begin{enumerate}
+\item \textbf{I am not in the past and I am not in the future}\\
+\textarabic{لَسْتُ فِي الْمَاضِي وَلَسْتُ فِي الْمُسْتَقْبَلِ}\\
+/lastu fiː lmaːdˤiː wa lastu fiː lmustaqbali/
+
+\item \textbf{They are not in the Ottoman era and they are not in the Fatimid state}\\
+\textarabic{لَيْسُوا فِي الْعَصْرِ الْعُثْمَانِيِّ وَلَيْسُوا فِي الدَّوْلَةِ الْفَاطِمِيَّةِ}\\
+/lajsuː fiː lʕasˤri lʕuθmaːnijji wa lajsuː fiː ddawlati lfaːtˤimijjati/
+
+\item \textbf{You (fem. sing.) are not in Damascus and you are not in Baghdad}\\
+\textarabic{لَسْتِ فِي دِمَشْقَ وَلَسْتِ فِي بَغْدَادَ}\\
+/lasti fiː dimaʃqa wa lasti fiː baɣdaːda/
+
+\item \textbf{We are not children and we are not ignorant}\\
+\textarabic{لَسْنَا أَطْفَالًا وَلَسْنَا جَاهِلِينَ}\\
+/lasnaː ʔatˤfaːlan wa lasnaː dʒaːhiliːna/
+\end{enumerate}
+
+\subsection{Grammatical Transformation — Answers}
+
+\begin{enumerate}
+\item \textbf{3rd person masculine plural:}\\
+\textarabic{لَيْسُوا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَيْسُوا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}\\
+/lajsuː fiː lʕasˤri lʕabbaːsijji wa lajsuː fiː ddawlati l-ʔumawijjati/\\
+They are not in the Abbasid era and they are not in the Umayyad state
+
+\item \textbf{Affirmative with \textarabic{كَانَ} (past):}\\
+\textarabic{كُنَّا فِي الْعَصْرِ الْعَبَّاسِيِّ وَكُنَّا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}\\
+/kunnaː fiː lʕasˤri lʕabbaːsijji wa kunnaː fiː ddawlati l-ʔumawijjati/\\
+We were in the Abbasid era and we were in the Umayyad state
+
+\item \textbf{Elliptical structure:}\\
+\textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}\\
+/lasnaː fiː lʕasˤri lʕabbaːsijji wa laː fiː ddawlati l-ʔumawijjati/\\
+We are not in the Abbasid era nor in the Umayyad state
+
+\item \textbf{With temporal marker \textarabic{الْآنَ}:}\\
+\textarabic{لَسْنَا الْآنَ فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}\\
+/lasnaː l-ʔaːna fiː lʕasˤri lʕabbaːsijji wa lasnaː fiː ddawlati l-ʔumawijjati/\\
+We are not now in the Abbasid era and we are not in the Umayyad state
+\end{enumerate}
+
+\subsection{Case Identification — Answers}
+
+\begin{enumerate}
+\item \textbf{\textarabic{الْعَصْرِ}}: \textbf{Genitive (majrūr)}\\
+Reason: Genitive case because it follows the preposition \textarabic{فِي}. All nouns after prepositions must be in the genitive case.
+
+\item \textbf{\textarabic{الْعَبَّاسِيِّ}}: \textbf{Genitive (majrūr)}\\
+Reason: Genitive case because it is an adjective modifying \textarabic{الْعَصْرِ}, and adjectives must agree with their nouns in case, gender, number, and definiteness.
+
+\item \textbf{\textarabic{الدَّوْلَةِ}}: \textbf{Genitive (majrūr)}\\
+Reason: Genitive case because it follows the preposition \textarabic{فِي}. The feminine singular genitive ending is \textarabic{ـِ} (kasrah).
+\end{enumerate}
+
+\subsection{Negation Conversion — Answers}
+
+\begin{enumerate}
+\item \textbf{Affirmative:} \textarabic{نَحْنُ فِي الْقَرْنِ الْعِشْرِينَ}\\
+\textbf{Negative:} \textarabic{لَسْنَا فِي الْقَرْنِ الْعِشْرِينَ}\\
+/lasnaː fiː lqarni lʕiʃriːna/\\
+We are not in the twentieth century
+
+\item \textbf{Affirmative:} \textarabic{هُوَ طَالِبٌ}\\
+\textbf{Negative:} \textarabic{لَيْسَ هُوَ طَالِبًا} or \textarabic{لَيْسَ طَالِبًا}\\
+/lajsa huwa tˤaːliban/ or /lajsa tˤaːliban/\\
+He is not a student\\
+(Note: Predicate \textarabic{طَالِبًا} becomes accusative)
+
+\item \textbf{Affirmative:} \textarabic{هِيَ فِي الْمَدْرَسَةِ}\\
+\textbf{Negative:} \textarabic{لَيْسَتْ هِيَ فِي الْمَدْرَسَةِ} or \textarabic{لَيْسَتْ فِي الْمَدْرَسَةِ}\\
+/lajsat hija fiː lmadrasti/ or /lajsat fiː lmadrasti/\\
+She is not in the school
+
+\item \textbf{Affirmative:} \textarabic{أَنْتُمْ فِي بَغْدَادَ}\\
+\textbf{Negative:} \textarabic{لَسْتُمْ فِي بَغْدَادَ}\\
+/lastum fiː baɣdaːda/\\
+You (pl.) are not in Baghdad
+\end{enumerate}
+
+\section{Extended Context: Discourse Analysis}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,title=\textbf{Question-Answer Dialogue},breakable]
+
+\textbf{Complete Conversational Exchange:}
+
+\textbf{Speaker A (Critic):}\\
+\textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}\\
+Are we in an Abbasid era or the era of the Umayyad state?\\
+\textit{[Rhetorical question implying outdated governance]}
+
+\textbf{Speaker B (Defender):}\\
+\textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}\\
+We are not in the Abbasid era and we are not in the Umayyad state\\
+\textit{[Direct rebuttal asserting modernity]}
+
+\textbf{Possible Continuation:}\\
+\textarabic{نَحْنُ فِي الْقَرْنِ الْوَاحِدِ وَالْعِشْرِينَ}\\
+We are in the twenty-first century\\
+\textit{[Positive assertion of contemporary identity]}
+
+\vspace{0.5em}
+\textbf{Rhetorical Analysis:}
+
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Feature} & \textbf{Question} & \textbf{Answer} \\
+\hline
+Structure & Interrogative with alternatives & Declarative with parallel negations \\
+\hline
+Definiteness & Mixed (indef. + def.) & Both definite \\
+\hline
+Preposition & \textarabic{بِ} (metaphorical) & \textarabic{فِي} (literal) \\
+\hline
+Tone & Skeptical, accusatory & Defensive, assertive \\
+\hline
+Function & Challenge authority & Defend modernity \\
+\hline
+Implication & System is outdated & System is contemporary \\
+\hline
+\end{tabular}
+
+\vspace{0.5em}
+\textbf{Linguistic Strategies:}
+
+\textbf{In the Question:}
+\begin{itemize}
+\item Uses indefinite for first option (generic criticism)
+\item Creates false dilemma (either/or)
+\item Implies no modern alternative exists
+\item Rhetorical tone suggests answer is "yes"
+\end{itemize}
+
+\textbf{In the Answer:}
+\begin{itemize}
+\item Uses definite articles (specific historical periods)
+\item Employs parallel structure for emphasis
+\item Categorically rejects both alternatives
+\item Creates space for modern identity assertion
+\item More literal preposition grounds response in reality
+\end{itemize}
+\end{tcolorbox}
+
+\section{Comparative Analysis: Question vs. Statement}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Side-by-Side Comparison:}
+
+\begin{center}
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Question Form} & \textbf{Statement Form} \\
+\hline
+\textbf{Sentence Type} & Interrogative & Declarative \\
+\hline
+\textbf{Opening} & \textarabic{هَلْ} (question particle) & \textarabic{لَسْنَا} (negative verb) \\
+\hline
+\textbf{Subject} & \textarabic{نَحْنُ} (explicit) & Implicit in verb \\
+\hline
+\textbf{Preposition} & \textarabic{بِ} & \textarabic{فِي} \\
+\hline
+\textbf{First Option} & \textarabic{بِعَصْرٍ عَبَّاسِيٍّ} (indef.) & \textarabic{فِي الْعَصْرِ الْعَبَّاسِيِّ} (def.) \\
+\hline
+\textbf{Connector} & \textarabic{أَمْ} (or) & \textarabic{وَلَسْنَا} (and we are not) \\
+\hline
+\textbf{Second Option} & \textarabic{عَصْرِ الدَّوْلَةِ...} (def.) & \textarabic{فِي الدَّوْلَةِ...} (def.) \\
+\hline
+\textbf{Structure} & Alternative question & Parallel negations \\
+\hline
+\textbf{Verb Repetition} & None (elliptical) & Full (\textarabic{لَسْنَا...وَلَسْنَا}) \\
+\hline
+\textbf{Tone} & Skeptical, challenging & Assertive, defensive \\
+\hline
+\textbf{Function} & Criticize & Refute \\
+\hline
+\textbf{Expectation} & Invites agreement & Demands acceptance \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5em}
+\textbf{Grammatical Differences:}
+
+\begin{enumerate}
+\item \textbf{Question uses \textarabic{هَلْ} + nominal sentence:}
+\begin{itemize}
+\item \textarabic{هَلْ نَحْنُ بِعَصْرٍ...} — neutral questioning
+\item Expects yes/no or alternative answer
+\end{itemize}
+
+\item \textbf{Statement uses \textarabic{لَيْسَ} negative verb:}
+\begin{itemize}
+\item \textarabic{لَسْنَا فِي الْعَصْرِ...} — categorical negation
+\item Asserts negative fact, no response expected
+\end{itemize}
+
+\item \textbf{Definiteness shift:}
+\begin{itemize}
+\item Question: \textarabic{عَصْرٍ عَبَّاسِيٍّ} — "an Abbasid era" (any)
+\item Statement: \textarabic{الْعَصْرِ الْعَبَّاسِيِّ} — "the Abbasid era" (specific)
+\item Definiteness makes denial more concrete and authoritative
+\end{itemize}
+
+\item \textbf{Preposition choice:}
+\begin{itemize}
+\item \textarabic{بِ} — more abstract, metaphorical ("in/with circumstances of")
+\item \textarabic{فِي} — more concrete, locational ("located in")
+\item Shift to \textarabic{فِي} makes denial more grounded in reality
+\end{itemize}
+\end{enumerate}
+\end{tcolorbox}
+
+\section{Modern Political Discourse Usage}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=headercolor,breakable]
+\textbf{Contemporary Context:}
+
+These phrases appear frequently in modern Arab political discourse, particularly in discussions about:
+
+\textbf{1. Governance Models:}
+\begin{itemize}
+\item Debates about democracy vs. authoritarianism
+\item Discussions of hereditary vs. elected leadership
+\item Critiques of dynastic political systems
+\item Calls for modernization and reform
+\end{itemize}
+
+\textbf{2. Historical Consciousness:}
+\begin{itemize}
+\item Arab societies' relationship with their past
+\item Tension between tradition and modernity
+\item Islamic heritage vs. secular governance
+\item National identity formation
+\end{itemize}
+
+\textbf{3. Reform Movements:}
+\begin{itemize}
+\item Arab Spring rhetoric (2011+)
+\item Youth movements demanding change
+\item Intellectual debates about progress
+\item Civil society advocacy
+\end{itemize}
+
+\textbf{Example Contexts:}
+
+\textbf{Political Speech:}\\
+\textit{"Critics claim we live in a medieval system, but this is false. We are not in the Abbasid era and we are not in the Umayyad state. We are building a modern nation based on contemporary principles."}
+
+\textbf{Op-Ed Article:}\\
+\textit{"The question 'Are we in an Abbasid or Umayyad era?' reflects deep frustration with governance. The answer should be obvious: we are not in either. Yet the question persists because many still feel governed by antiquated systems."}
+
+\textbf{Social Media Debate:}\\
+\textit{User 1: "Which medieval caliphate are we living in?"\\
+User 2: "We're not in the Abbasid era and not in the Umayyad state. Stop the false comparison."\\
+User 3: "Then why does power pass from father to son?"}
+
+\textbf{Academic Analysis:}\\
+\textit{"While formally modern nation-states, several Arab countries exhibit governance patterns reminiscent of historical dynasties, prompting the recurring question about which era we truly inhabit."}
+\end{tcolorbox}
+
+\section{Cultural Notes: Historical Memory}
+
+\begin{tcolorbox}[colback=white,colframe=accentcolor,breakable]
+\textbf{Why These Specific Dynasties?}
+
+The Umayyad and Abbasid periods are referenced because they:
+
+\textbf{1. Historical Significance:}
+\begin{itemize}
+\item Represent the formative centuries of Islamic civilization
+\item Created governmental structures that lasted for centuries
+\item Established cultural and religious norms
+\item Defined Arabic as language of administration and culture
+\end{itemize}
+
+\textbf{2. Collective Memory:}
+\begin{itemize}
+\item Every educated Arab knows these dynasties
+\item Taught extensively in schools across Arab world
+\item Referenced in literature, poetry, media
+\item Part of shared cultural heritage
+\end{itemize}
+
+\textbf{3. Symbolic Value:}
+\begin{itemize}
+\item Umayyad = Arab aristocracy, military expansion
+\item Abbasid = Cultural golden age, intellectual flourishing
+\item Both = Pre-modern governance models
+\item Neither = Democratic or contemporary systems
+\end{itemize}
+
+\textbf{4. Rhetorical Power:}
+\begin{itemize}
+\item Instantly recognizable reference points
+\item Carry weight of historical authority
+\item Evoke specific imagery and associations
+\item Enable sophisticated political critique
+\end{itemize}
+
+\textbf{The Nostalgia vs. Critique Tension:}
+
+\begin{tabular}{|l|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspect} & \textbf{Nostalgic View} & \textbf{Critical View} \\
+\hline
+Umayyad/Abbasid & Golden age of Islamic civilization & Authoritarian dynastic rule \\
+\hline
+Modern reference & "Return to our glorious past" & "Escape from medieval thinking" \\
+\hline
+Governance & Strong unified leadership & Undemocratic hereditary power \\
+\hline
+Culture & Authentic Islamic values & Outdated social structures \\
+\hline
+Implication & We should emulate them & We must move beyond them \\
+\hline
+\end{tabular}
+
+\textbf{The phrases in our analysis reflect the CRITICAL view, rejecting both nostalgia and the accusation of living in the past.}
+\end{tcolorbox}
+
+\clearpage
+
+\section{Final Summary}
+
+\begin{tcolorbox}[colback=boxcolor,colframe=accentcolor,breakable]
+\textbf{Key Takeaways from This Phrase:}
+
+\textbf{Grammatical Structures Mastered:}
+\begin{itemize}
+\item Negative copula \textarabic{لَيْسَ} and its complete conjugation
+\item Use of \textarabic{لَيْسَ} with prepositional phrase predicates
+\item Parallel structure with coordinating conjunctions
+\item Case government: nominative subject + accusative predicate (with \textarabic{لَيْسَ})
+\item Prepositional phrases functioning as predicates
+\item Adjective agreement in gender, number, case, and definiteness
+\item Difference between \textarabic{فِي} and \textarabic{بِ} prepositions
+\item Full repetition vs. elliptical coordination
+\end{itemize}
+
+\textbf{Vocabulary Domains:}
+\begin{itemize}
+\item Negation patterns and particles
+\item Historical dynasties and periods
+\item Political and governmental terminology
+\item Time and era vocabulary
+\item Coordinating conjunctions
+\item Nisba adjective usage
+\end{itemize}
+
+\textbf{Cultural Knowledge:}
+\begin{itemize}
+\item Umayyad and Abbasid historical context
+\item Modern Arab political discourse patterns
+\item Rhetorical use of historical references
+\item Tension between tradition and modernity
+\item Question-answer debate structures
+\item Historical memory in contemporary politics
+\end{itemize}
+
+\textbf{Discourse Skills:}
+\begin{itemize}
+\item Understanding rhetorical questions vs. declarative statements
+\item Recognizing parallel structure for emphasis
+\item Analyzing tone and implication in political language
+\item Comparing question and answer formulations
+\item Identifying defensive vs. offensive rhetorical strategies
+\end{itemize}
+
+\textbf{Practical Application:}
+\begin{itemize}
+\item Expressing categorical negation in Arabic
+\item Formulating emphatic denials
+\item Engaging in political and historical discussions
+\item Understanding contemporary Arab media discourse
+\item Using historical references appropriately
+\item Constructing parallel structures for rhetorical effect
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Connection to Previous Phrase:}
+
+This declarative statement serves as a direct response to the earlier interrogative:
+\begin{itemize}
+\item Question: \textarabic{هَلْ نَحْنُ بِعَصْرٍ عَبَّاسِيٍّ أَمْ عَصْرِ الدَّوْلَةِ الْأُمَوِيَّةِ؟}
+\item Answer: \textarabic{لَسْنَا فِي الْعَصْرِ الْعَبَّاسِيِّ وَلَسْنَا فِي الدَّوْلَةِ الْأُمَوِيَّةِ}
+\item Together they form a complete dialogue demonstrating question-answer patterns in Arabic political discourse
+\end{itemize}
+\end{tcolorbox}
+
+\end{document}
