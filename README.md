@@ -77,6 +77,7 @@ A song about Arabic language written in MSA. It is split in two: in the first pa
 ## 📱 Apps & Tools
 
 - [Duolingo Arabic](https://www.duolingo.com/)
+- [3ammiya](https://3ammiya.com/en/): Free Egyptian Arabic dictionary and phrase guide with Arabic and Franco (Arabizi) search, English meanings, examples, and usage in context.
 - [Write It! Arabic (Handwriting Trainer)](https://play.google.com/store/apps/details?id=com.jernung.writeit.arabic)
 - [Tandem (Language Exchange)](https://www.tandem.net/)
 
